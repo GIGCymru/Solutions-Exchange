@@ -59,15 +59,51 @@
             <div class="description-section">
                 <p class="lead">Welcome to the NHS Wales Solutions Exchange! This platform showcases innovative healthcare solutions, digital tools, and collaborative projects developed across NHS Wales organizations.</p>
                 <p>Discover cutting-edge solutions that are improving patient care, enhancing operational efficiency, and driving digital transformation across our healthcare system. Each solution represents the collective expertise and innovation of our dedicated teams working to deliver better health outcomes for the people of Wales.</p>
+                
+                <!-- Metrics Section -->
+                <div class="metrics-row mt-4">
+                    <div class="row text-center">
+                        <div class="col-md-4">
+                            <div class="metric-card">
+                                <i class="fas fa-code-branch fa-2x mb-2"></i>
+                                <h3 id="totalRepos">-</h3>
+                                <p>Solutions Available</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="metric-card">
+                                <i class="fas fa-building fa-2x mb-2"></i>
+                                <h3 id="totalOrgs">-</h3>
+                                <p>NHS Wales Organizations</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="metric-card">
+                                <i class="fas fa-star fa-2x mb-2"></i>
+                                <h3 id="totalStars">-</h3>
+                                <p>Community Recognition</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- Filter Controls -->
             <div class="filter-section">
                 <div class="row">
                     <div class="col-md-12">
+                        <span class="filter-label"><i class="fas fa-search me-1"></i>Search Solutions:</span>
+                        <div class="filter-row mb-3">
+                            <input type="text" id="searchInput" class="form-control" placeholder="Search by name, description, or topics..." onkeyup="performSearch()">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-12">
                         <span class="filter-label"><i class="fas fa-filter me-1"></i>Filter by Project Status:</span>
                         <div class="filter-row">
-                            <button class="btn btn-primary me-2" onclick="filterProjects('all')">
+                            <button class="btn btn-primary me-2 active" onclick="filterProjects('all')">
                                 <i class="fas fa-list me-1"></i>All Solutions
                             </button>
                             <button class="btn btn-secondary me-2" onclick="filterProjects('internal')">
@@ -81,15 +117,40 @@
                 </div>
 
                 <div class="row mt-3">
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <span class="filter-label"><i class="fas fa-tags me-1"></i>Filter by Topic:</span>
                         <div id="topicButtons" class="filter-row"></div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <span class="filter-label"><i class="fas fa-building me-1"></i>Filter by Organisation:</span>
                         <select id="ownerDropdown" class="form-select" onchange="filterByOwner()">
                             <option value="all">All Organisations</option>
                         </select>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="filter-label"><i class="fas fa-code me-1"></i>Filter by Language:</span>
+                        <select id="languageDropdown" class="form-select" onchange="filterByLanguage()">
+                            <option value="all">All Languages</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <span class="filter-label"><i class="fas fa-sort me-1"></i>Sort by:</span>
+                        <select id="sortDropdown" class="form-select" onchange="sortResults()">
+                            <option value="updated">Most Recently Updated</option>
+                            <option value="name">Name (A-Z)</option>
+                            <option value="stars">Most Stars</option>
+                            <option value="created">Newest First</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="filter-row mt-4">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="clearAllFilters()">
+                                <i class="fas fa-times me-1"></i>Clear All Filters
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -110,8 +171,11 @@
                     let currentFilters = {
                         status: 'all',
                         topic: null,
-                        owner: 'all'
+                        owner: 'all',
+                        language: 'all',
+                        search: ''
                     };
+                    let currentSort = 'updated';
 
                     // Function to load JSON and render topics, owners, and project cards
                     function loadJSON() {
@@ -127,13 +191,33 @@
                                 renderProjects(data);
                                 renderTopicButtons(data);
                                 renderOwnerDropdown(data);
+                                renderLanguageDropdown(data);
                                 updateResultsSummary(data);
+                                updateMetrics(data);
                             })
                             .catch(error => {
                                 console.error('Error loading JSON:', error);
                                 document.getElementById('jsonData').innerHTML = 
                                     '<div class="no-results"><i class="fas fa-exclamation-triangle"></i><h4>Unable to load solutions</h4><p>Please try again later or contact support.</p></div>';
                             });
+                    }
+
+                    // Function to update metrics
+                    function updateMetrics(data) {
+                        const totalRepos = data.length;
+                        const uniqueOrgs = [...new Set(data.map(repo => repo.owner.login))].length;
+                        const totalStars = data.reduce((sum, repo) => sum + (repo.stargazers_count || 0), 0);
+                        
+                        document.getElementById('totalRepos').textContent = totalRepos;
+                        document.getElementById('totalOrgs').textContent = uniqueOrgs;
+                        document.getElementById('totalStars').textContent = totalStars;
+                    }
+
+                    // Enhanced search function
+                    function performSearch() {
+                        const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+                        currentFilters.search = searchTerm;
+                        applyFilters();
                     }
 
                     // Function to filter projects based on status
@@ -168,9 +252,79 @@
                         if (currentFilters.owner !== 'all') {
                             filtered = filtered.filter(repo => repo.owner.login === currentFilters.owner);
                         }
+
+                        // Filter by language
+                        if (currentFilters.language !== 'all') {
+                            filtered = filtered.filter(repo => repo.language === currentFilters.language);
+                        }
+                        
+                        // Filter by search term
+                        if (currentFilters.search) {
+                            filtered = filtered.filter(repo => {
+                                const searchFields = [
+                                    repo.name,
+                                    repo.description || '',
+                                    repo.language || '',
+                                    ...(repo.topics || [])
+                                ].join(' ').toLowerCase();
+                                return searchFields.includes(currentFilters.search);
+                            });
+                        }
+                        
+                        // Apply sorting
+                        filtered = sortRepositories(filtered, currentSort);
                         
                         renderProjects(filtered);
                         updateResultsSummary(filtered);
+                    }
+
+                    // Function to sort repositories
+                    function sortRepositories(data, sortBy) {
+                        const sorted = [...data];
+                        switch(sortBy) {
+                            case 'name':
+                                return sorted.sort((a, b) => a.name.localeCompare(b.name));
+                            case 'stars':
+                                return sorted.sort((a, b) => (b.stargazers_count || 0) - (a.stargazers_count || 0));
+                            case 'created':
+                                return sorted.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+                            case 'updated':
+                            default:
+                                return sorted.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
+                        }
+                    }
+
+                    // Function to handle sorting
+                    function sortResults() {
+                        currentSort = document.getElementById('sortDropdown').value;
+                        applyFilters();
+                    }
+
+                    // Function to clear all filters
+                    function clearAllFilters() {
+                        currentFilters = {
+                            status: 'all',
+                            topic: null,
+                            owner: 'all',
+                            language: 'all',
+                            search: ''
+                        };
+                        currentSort = 'updated';
+                        
+                        // Reset UI elements
+                        document.getElementById('searchInput').value = '';
+                        document.getElementById('ownerDropdown').value = 'all';
+                        document.getElementById('languageDropdown').value = 'all';
+                        document.getElementById('sortDropdown').value = 'updated';
+                        
+                        // Reset filter buttons
+                        document.querySelectorAll('.filter-section .btn').forEach(btn => {
+                            btn.classList.remove('active');
+                        });
+                        document.querySelector('button[onclick="filterProjects(\'all\')"]').classList.add('active');
+                        
+                        renderTopicButtons(repositories);
+                        applyFilters();
                     }
 
                     // Function to render project cards with improved design
@@ -197,6 +351,14 @@
                                         ${repo.topics && repo.topics.length > 0 ? 
                                             `<div class="mb-3">
                                                 ${repo.topics.map(topic => `<span class="topic-tag" onclick="filterByTopic('${topic}')">${topic}</span>`).join('')}
+                                            </div>` : ''
+                                        }
+                                        ${repo.stargazers_count > 0 ? 
+                                            `<div class="mb-2">
+                                                <small class="text-muted">
+                                                    <i class="fas fa-star text-warning me-1"></i>${repo.stargazers_count} stars
+                                                    <i class="fas fa-code-branch text-info me-1 ms-2"></i>${repo.forks_count || 0} forks
+                                                </small>
                                             </div>` : ''
                                         }
                                     </div>
@@ -268,10 +430,27 @@
                         `;
                     }
 
+                    // Function to render language dropdown
+                    function renderLanguageDropdown(data) {
+                        const allLanguages = [...new Set(data.map(repo => repo.language).filter(lang => lang))].sort();
+                        const languageDropdown = document.getElementById('languageDropdown');
+                        languageDropdown.innerHTML = `
+                            <option value="all">All Languages</option>
+                            ${allLanguages.map(language => `<option value="${language}" ${currentFilters.language === language ? 'selected' : ''}>${language}</option>`).join('')}
+                        `;
+                    }
+
                     // Function to filter projects by owner
                     function filterByOwner() {
                         const selectedOwner = document.getElementById('ownerDropdown').value;
                         currentFilters.owner = selectedOwner;
+                        applyFilters();
+                    }
+
+                    // Function to filter projects by language
+                    function filterByLanguage() {
+                        const selectedLanguage = document.getElementById('languageDropdown').value;
+                        currentFilters.language = selectedLanguage;
                         applyFilters();
                     }
 
