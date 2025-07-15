@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NHS Wales Solutions Exchange - Guides</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://digitalhealth.wales/sites/default/files/2022-05/Logo-digital-health-and-care-wales.png" alt="NHS Wales Logo" style="height: 40px;">
+                <span class="ms-2">Solutions Exchange</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="solutions.html">Browse Solutions</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="guides.html">Guides</a></li>
+                    <li class="nav-item"><a class="nav-link" href="signup.html">Sign Up</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header bg-light py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-5 fw-bold text-primary">
+                        <i class="fas fa-book-open me-3"></i>Guides & Documentation
+                    </h1>
+                    <p class="lead">Comprehensive guides to help you navigate, contribute to, and make the most of the NHS Wales Solutions Exchange.</p>
+                </div>
+                <div class="col-lg-4 text-end">
+                    <i class="fas fa-graduation-cap text-primary" style="font-size: 4rem; opacity: 0.3;"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Guides Section -->
+    <section id="guides" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="accordion" id="guidesAccordion">
+                        
+                        <!-- Getting Started Guide -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="gettingStartedHeading">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#gettingStarted" aria-expanded="true" aria-controls="gettingStarted">
+                                    <i class="fas fa-rocket me-2"></i>Getting Started with NHS Wales Solutions Exchange
+                                </button>
+                            </h2>
+                            <div id="gettingStarted" class="accordion-collapse collapse show" aria-labelledby="gettingStartedHeading" data-bs-parent="#guidesAccordion">
+                                <div class="accordion-body">
+                                    <p>Welcome to the NHS Wales Solutions Exchange! This guide will help you navigate and make the most of our platform.</p>
+                                    <h5>What is the Solutions Exchange?</h5>
+                                    <p>The Solutions Exchange is a central hub for discovering and sharing innovative healthcare solutions developed across NHS Wales organizations. It showcases open-source projects, tools, and collaborative initiatives that are improving patient care and operational efficiency across Wales.</p>
+                                    
+                                    <h5>How to Browse Solutions</h5>
+                                    <ul>
+                                        <li>Use the <a href="solutions.html" class="text-primary">Browse Solutions</a> page to explore all available projects</li>
+                                        <li>Filter by organization to see solutions from specific NHS Wales bodies</li>
+                                        <li>Filter by programming language to find projects using your preferred technology</li>
+                                        <li>Use topic tags to discover solutions in specific healthcare domains</li>
+                                        <li>Use the search function to find specific solutions by name or description</li>
+                                        <li>Sort by update date, stars, or name to find what you need quickly</li>
+                                    </ul>
+
+                                    <h5>Understanding Solution Information</h5>
+                                    <p>Each solution card displays:</p>
+                                    <ul>
+                                        <li><strong>Name and Description:</strong> What the solution does</li>
+                                        <li><strong>Organization:</strong> Which NHS Wales body developed it</li>
+                                        <li><strong>Programming Language:</strong> Technical stack used</li>
+                                        <li><strong>Status:</strong> Public (open source) or Internal (NHS Wales only)</li>
+                                        <li><strong>Topics:</strong> Healthcare domains and technology categories</li>
+                                        <li><strong>Community Metrics:</strong> Stars and forks from GitHub</li>
+                                        <li><strong>Last Updated:</strong> How recently the project was maintained</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contributing Guide -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="contributingHeading">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#contributing" aria-expanded="false" aria-controls="contributing">
+                                    <i class="fas fa-hands-helping me-2"></i>How to Contribute Your Solutions
+                                </button>
+                            </h2>
+                            <div id="contributing" class="accordion-collapse collapse" aria-labelledby="contributingHeading" data-bs-parent="#guidesAccordion">
+                                <div class="accordion-body">
+                                    <p>Share your innovative healthcare solutions with the NHS Wales community and help others benefit from your work.</p>
+                                    
+                                    <h5>Step 1: Prepare Your Repository</h5>
+                                    <ul>
+                                        <li><strong>Create a Clear README.md:</strong> Explain what your solution does, how to install it, and how to use it</li>
+                                        <li><strong>Add Relevant Topic Tags:</strong> Help others discover your solution with appropriate healthcare and technology tags</li>
+                                        <li><strong>Include Documentation:</strong> Provide installation instructions, API documentation, and user guides</li>
+                                        <li><strong>Add a License File:</strong> Clarify usage rights (MIT, Apache 2.0, or GPL are common choices)</li>
+                                        <li><strong>Include Screenshots/Demos:</strong> Show your solution in action when possible</li>
+                                    </ul>
+                                    
+                                    <h5>Step 2: Submit Your Solution</h5>
+                                    <p>To get your solution included in the Solutions Exchange:</p>
+                                    <ol>
+                                        <li>Ensure your repository is hosted on GitHub under an NHS Wales organization</li>
+                                        <li>Contact the GitHub GIG Cymru team to request inclusion</li>
+                                        <li>Provide the repository URL and a brief description of your solution</li>
+                                        <li>Our team will review your submission and add it to our automated collection system</li>
+                                    </ol>
+                                    
+                                    <h5>Best Practices for Solutions</h5>
+                                    <ul>
+                                        <li><strong>Descriptive Names:</strong> Use clear, descriptive repository names that explain the purpose</li>
+                                        <li><strong>Comprehensive Descriptions:</strong> Write detailed descriptions explaining the healthcare problem you're solving</li>
+                                        <li><strong>Active Maintenance:</strong> Respond to issues, update dependencies, and maintain your projects</li>
+                                        <li><strong>Security First:</strong> Follow NHS Wales coding standards and security guidelines</li>
+                                        <li><strong>Collaboration:</strong> Welcome contributions from other NHS Wales developers</li>
+                                        <li><strong>Documentation:</strong> Keep documentation up-to-date as your solution evolves</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- GitHub Best Practices -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="githubBestPracticesHeading">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#githubBestPractices" aria-expanded="false" aria-controls="githubBestPractices">
+                                    <i class="fab fa-github me-2"></i>GitHub Best Practices for NHS Wales
+                                </button>
+                            </h2>
+                            <div id="githubBestPractices" class="accordion-collapse collapse" aria-labelledby="githubBestPracticesHeading" data-bs-parent="#guidesAccordion">
+                                <div class="accordion-body">
+                                    <p>Follow these guidelines to maintain high-quality, secure, and collaborative repositories within the NHS Wales ecosystem.</p>
+                                    
+                                    <h5>Repository Setup</h5>
+                                    <ul>
+                                        <li><strong>Clear Repository Names:</strong> Use descriptive names that explain the project's purpose</li>
+                                        <li><strong>Comprehensive README:</strong> Include purpose, installation, usage, and contribution guidelines</li>
+                                        <li><strong>LICENSE File:</strong> Choose an appropriate open-source license (MIT or Apache 2.0 recommended)</li>
+                                        <li><strong>CONTRIBUTING.md:</strong> Provide clear guidelines for how others can contribute</li>
+                                        <li><strong>.gitignore:</strong> Exclude sensitive files and build artifacts</li>
+                                        <li><strong>Issue Templates:</strong> Create templates for bug reports and feature requests</li>
+                                    </ul>
+                                    
+                                    <h5>Security Considerations</h5>
+                                    <ul>
+                                        <li><strong>No Sensitive Data:</strong> Never commit passwords, API keys, or patient data</li>
+                                        <li><strong>Environment Variables:</strong> Use .env files for configuration (and include .env in .gitignore)</li>
+                                        <li><strong>Security Alerts:</strong> Enable GitHub security alerts and dependency scanning</li>
+                                        <li><strong>Information Governance:</strong> Follow NHS Wales information governance policies</li>
+                                        <li><strong>Code Scanning:</strong> Use GitHub's built-in security scanning tools</li>
+                                        <li><strong>Dependency Management:</strong> Keep dependencies up-to-date and review security advisories</li>
+                                    </ul>
+                                    
+                                    <h5>Collaboration Workflows</h5>
+                                    <ul>
+                                        <li><strong>Meaningful Commits:</strong> Write clear, descriptive commit messages</li>
+                                        <li><strong>Feature Branches:</strong> Create separate branches for new developments</li>
+                                        <li><strong>Pull Requests:</strong> Use pull requests for code reviews and collaboration</li>
+                                        <li><strong>Code Reviews:</strong> Have team members review code before merging</li>
+                                        <li><strong>Release Management:</strong> Tag releases with semantic versioning (v1.0.0, v1.1.0, etc.)</li>
+                                        <li><strong>Continuous Integration:</strong> Set up automated testing and deployment where appropriate</li>
+                                    </ul>
+
+                                    <h5>Documentation Standards</h5>
+                                    <ul>
+                                        <li><strong>API Documentation:</strong> Document all APIs with examples</li>
+                                        <li><strong>User Guides:</strong> Provide step-by-step guides for end users</li>
+                                        <li><strong>Developer Documentation:</strong> Include setup instructions for development environments</li>
+                                        <li><strong>Changelog:</strong> Maintain a changelog documenting all significant changes</li>
+                                        <li><strong>Architecture Documentation:</strong> Explain the technical architecture and design decisions</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Technical Support -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="technicalSupportHeading">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#technicalSupport" aria-expanded="false" aria-controls="technicalSupport">
+                                    <i class="fas fa-life-ring me-2"></i>Technical Support & Resources
+                                </button>
+                            </h2>
+                            <div id="technicalSupport" class="accordion-collapse collapse" aria-labelledby="technicalSupportHeading" data-bs-parent="#guidesAccordion">
+                                <div class="accordion-body">
+                                    <p>Get help and access additional resources for your development projects within the NHS Wales ecosystem.</p>
+                                    
+                                    <h5>Getting Help</h5>
+                                    <ul>
+                                        <li><strong>GitHub GIG Cymru Wiki:</strong> Visit the <a href="https://github.com/GIGCymru/GitHub-GIG-Cymru/wiki" target="_blank" class="text-primary">official wiki</a> for detailed documentation</li>
+                                        <li><strong>FAQ Repository:</strong> Check the <a href="https://github.com/GIGCymru/GitHub-GIG-Cymru-FAQ" target="_blank" class="text-primary">FAQ repository</a> for common questions and answers</li>
+                                        <li><strong>Technical Support:</strong> Contact the Digital Health and Care Wales team for technical assistance</li>
+                                        <li><strong>Community Discussions:</strong> Join discussions in GitHub Issues and project repositories</li>
+                                        <li><strong>Slack Channels:</strong> Connect with other NHS Wales developers in official Slack channels</li>
+                                    </ul>
+                                    
+                                    <h5>Development Resources</h5>
+                                    <ul>
+                                        <li><strong>Coding Standards:</strong> NHS Wales coding standards and style guides</li>
+                                        <li><strong>Technology Stacks:</strong> Approved frameworks and libraries for NHS Wales projects</li>
+                                        <li><strong>Security Guidelines:</strong> Information security and compliance documentation</li>
+                                        <li><strong>Testing Frameworks:</strong> Recommended testing tools and best practices</li>
+                                        <li><strong>Deployment Guides:</strong> Instructions for deploying applications in NHS Wales environments</li>
+                                        <li><strong>API Standards:</strong> Guidelines for creating and documenting APIs</li>
+                                    </ul>
+                                    
+                                    <h5>Training Opportunities</h5>
+                                    <ul>
+                                        <li><strong>GitHub Training:</strong> Regular training sessions for NHS Wales staff on GitHub usage</li>
+                                        <li><strong>Development Workshops:</strong> Hands-on workshops covering modern development practices</li>
+                                        <li><strong>Healthcare Technology Seminars:</strong> Sessions on applying technology to healthcare challenges</li>
+                                        <li><strong>Collaborative Coding Events:</strong> Hackathons and coding events focused on healthcare solutions</li>
+                                        <li><strong>Open Source Workshops:</strong> Training on contributing to and managing open-source projects</li>
+                                    </ul>
+
+                                    <h5>Community Resources</h5>
+                                    <ul>
+                                        <li><strong>Solution Showcases:</strong> Regular presentations of innovative NHS Wales solutions</li>
+                                        <li><strong>Technical Meetups:</strong> Local and virtual meetups for NHS Wales developers</li>
+                                        <li><strong>Knowledge Sharing:</strong> Internal conferences and knowledge-sharing sessions</li>
+                                        <li><strong>Mentorship Programs:</strong> Connect with experienced developers for guidance</li>
+                                        <li><strong>Innovation Challenges:</strong> Participate in healthcare innovation competitions</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="d-flex footer-navbar col-12">
+                <div class="col-lg-12 mb-12 p-2 flex-fill footer-logo">
+                    <img class="nav-large-image" src="https://digitalhealth.wales/sites/default/files/2022-05/Logo-digital-health-and-care-wales.png" alt="NHS Wales | Digital Health and Care Wales">
+                </div>
+                
+                <section class="p-2 flex-fill footer-section">
+                    <ul class="justify-content-center">
+                        <li><a href="#" class="nav-link" target="_self">Accessibility Statement</a></li>
+                        <li><a href="#" class="nav-link" target="_self">Terms of use</a></li>
+                        <li><a href="#" class="nav-link" target="_self">Privacy Notice</a></li>
+                        <li><a href="#" class="nav-link" target="_self">Freedom of information</a></li>
+                    </ul>
+                </section>
+            </div>
+
+            <div class="builtBy">
+                Built by <a href="https://dhcw.nhs.wales/" target="_self">Digital Health and Care Wales</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
