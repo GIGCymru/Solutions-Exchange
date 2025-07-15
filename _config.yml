@@ -1,0 +1,11 @@
+include:
+  - index.html
+  - css/
+  - data/repositories.json
+
+exclude:
+  - scripts/
+  - docs/
+  - requirements.txt
+  - "*.md"
+  - .github/
