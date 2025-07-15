@@ -1,0 +1,15 @@
+include:
+  - index.html
+  - css/
+  - repositories.json
+
+exclude:
+  - fetch_repositories.py
+  - test_setup.py
+  - requirements.txt
+  - main (1).py
+  - "*.md"
+  - "*.docx"
+  - "*.xlsx"
+  - "*.png"
+  - .github/
