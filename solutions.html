@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NHS Wales Solutions Exchange</title>
+    <meta name="description" content="Discover and share innovative healthcare solutions across NHS Wales organizations">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-exchange-alt me-2"></i>
+                NHS Wales Solutions Exchange
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="fas fa-home me-1"></i>Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="solutions.html"><i class="fas fa-search me-1"></i>Browse Solutions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="guides.html"><i class="fas fa-book me-1"></i>Guides</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="signup.html"><i class="fas fa-user-plus me-1"></i>Sign Up</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <script>
+        document.body.className = document.body.className
+            ? document.body.className + " js-enabled"
+            : "js-enabled";
+    </script>
+
+    <div class="main-container">
+        <div class="container">
+            <div class="page-title">
+                <h1><i class="fas fa-lightbulb me-2"></i>Healthcare Solutions Exchange</h1>
+            </div>
+
+            <!-- Description Section -->
+            <div class="description-section">
+                <p class="lead">Welcome to the NHS Wales Solutions Exchange! This platform showcases innovative healthcare solutions, digital tools, and collaborative projects developed across NHS Wales organizations.</p>
+                <p>Discover cutting-edge solutions that are improving patient care, enhancing operational efficiency, and driving digital transformation across our healthcare system. Each solution represents the collective expertise and innovation of our dedicated teams working to deliver better health outcomes for the people of Wales.</p>
+                
+                <!-- Metrics Section -->
+                <div class="metrics-row mt-4">
+                    <div class="row text-center">
+                        <div class="col-md-4">
+                            <div class="metric-card">
+                                <i class="fas fa-code-branch fa-2x mb-2"></i>
+                                <h3 id="totalRepos">-</h3>
+                                <p>Solutions Available</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="metric-card">
+                                <i class="fas fa-building fa-2x mb-2"></i>
+                                <h3 id="totalOrgs">-</h3>
+                                <p>NHS Wales Organizations</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="metric-card">
+                                <i class="fas fa-star fa-2x mb-2"></i>
+                                <h3 id="totalStars">-</h3>
+                                <p>Community Recognition</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content Area with Sidebar Layout -->
+            <div class="row">
+                <!-- Left Sidebar - Filter Controls -->
+                <div class="col-lg-3 col-md-4">
+                    <div class="filter-sidebar">
+                        <div class="filter-section mb-4">
+                            <h5 class="filter-heading"><i class="fas fa-search me-2"></i>Search & Filters</h5>
+                            
+                            <!-- Search -->
+                            <div class="mb-3">
+                                <label class="filter-label"><i class="fas fa-search me-1"></i>Search Solutions:</label>
+                                <input type="text" id="searchInput" class="form-control" placeholder="Search by name, description, or topics..." onkeyup="performSearch()">
+                            </div>
+
+                            <!-- Project Status Filter -->
+                            <div class="mb-3">
+                                <label class="filter-label"><i class="fas fa-filter me-1"></i>Project Status:</label>
+                                <div class="btn-group-vertical d-grid gap-2" role="group">
+                                    <button class="btn btn-primary active" onclick="filterProjects('all')">
+                                        <i class="fas fa-list me-2"></i>All Solutions
+                                    </button>
+                                    <button class="btn btn-outline-secondary" onclick="filterProjects('internal')">
+                                        <i class="fas fa-lock me-2"></i>Internal
+                                    </button>
+                                    <button class="btn btn-outline-success" onclick="filterProjects('public')">
+                                        <i class="fas fa-globe me-2"></i>Public
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Organisation Filter -->
+                            <div class="mb-3">
+                                <label class="filter-label"><i class="fas fa-building me-1"></i>Organisation:</label>
+                                <select id="ownerDropdown" class="form-select" onchange="filterByOwner()">
+                                    <option value="all">All Organisations</option>
+                                </select>
+                            </div>
+
+                            <!-- Language Filter -->
+                            <div class="mb-3">
+                                <label class="filter-label"><i class="fas fa-code me-1"></i>Language:</label>
+                                <select id="languageDropdown" class="form-select" onchange="filterByLanguage()">
+                                    <option value="all">All Languages</option>
+                                </select>
+                            </div>
+
+                            <!-- Topic Filter -->
+                            <div class="mb-3">
+                                <label class="filter-label"><i class="fas fa-tags me-1"></i>Topics:</label>
+                                <div id="topicButtons" class="topic-filter-container"></div>
+                            </div>
+
+                            <!-- Sort -->
+                            <div class="mb-3">
+                                <label class="filter-label"><i class="fas fa-sort me-1"></i>Sort by:</label>
+                                <select id="sortDropdown" class="form-select" onchange="sortResults()">
+                                    <option value="updated">Most Recently Updated</option>
+                                    <option value="name">Name (A-Z)</option>
+                                    <option value="stars">Most Stars</option>
+                                    <option value="created">Newest First</option>
+                                </select>
+                            </div>
+
+                            <!-- Clear Filters -->
+                            <div class="mb-3">
+                                <button class="btn btn-outline-secondary w-100" onclick="clearAllFilters()">
+                                    <i class="fas fa-times me-2"></i>Clear All Filters
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Content Area - Results and Solutions -->
+                <div class="col-lg-9 col-md-8">
+                    <!-- Results Summary -->
+                    <div id="resultsSummary" class="mb-3">
+                        <small class="text-muted">Loading solutions...</small>
+                    </div>
+
+                    <!-- Solutions Grid -->
+                    <div id="jsonData" class="row"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                <script>
+                    // Global variable to store loaded data
+                    let repositories = [];
+                    let currentFilters = {
+                        status: 'all',
+                        topic: null,
+                        owner: 'all',
+                        language: 'all',
+                        search: ''
+                    };
+                    let currentSort = 'updated';
+
+                    // Function to load JSON and render topics, owners, and project cards
+                    function loadJSON() {
+                        fetch('data/repositories.json')
+                            .then(response => {
+                                if (!response.ok) {
+                                    throw new Error('Failed to load data');
+                                }
+                                return response.json();
+                            })
+                            .then(data => {
+                                repositories = data;
+                                renderProjects(data);
+                                renderTopicButtons(data);
+                                renderOwnerDropdown(data);
+                                renderLanguageDropdown(data);
+                                updateResultsSummary(data);
+                                updateMetrics(data);
+                            })
+                            .catch(error => {
+                                console.error('Error loading JSON:', error);
+                                document.getElementById('jsonData').innerHTML = 
+                                    '<div class="no-results"><i class="fas fa-exclamation-triangle"></i><h4>Unable to load solutions</h4><p>Please try again later or contact support.</p></div>';
+                            });
+                    }
+
+                    // Function to update metrics
+                    function updateMetrics(data) {
+                        const totalRepos = data.length;
+                        const uniqueOrgs = [...new Set(data.map(repo => repo.owner.login))].length;
+                        const totalStars = data.reduce((sum, repo) => sum + (repo.stargazers_count || 0), 0);
+                        
+                        document.getElementById('totalRepos').textContent = totalRepos;
+                        document.getElementById('totalOrgs').textContent = uniqueOrgs;
+                        document.getElementById('totalStars').textContent = totalStars;
+                    }
+
+                    // Enhanced search function
+                    function performSearch() {
+                        const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+                        currentFilters.search = searchTerm;
+                        applyFilters();
+                    }
+
+                    // Function to filter projects based on status
+                    function filterProjects(status) {
+                        currentFilters.status = status;
+                        applyFilters();
+                        
+                        // Update button states for the new vertical button group
+                        const buttons = document.querySelectorAll('.btn-group-vertical .btn');
+                        buttons.forEach(btn => {
+                            btn.classList.remove('active', 'btn-primary', 'btn-outline-secondary', 'btn-outline-success');
+                        });
+                        
+                        // Set active state based on status
+                        if (status === 'all') {
+                            buttons[0].classList.add('active', 'btn-primary');
+                            buttons[1].classList.add('btn-outline-secondary');
+                            buttons[2].classList.add('btn-outline-success');
+                        } else if (status === 'internal') {
+                            buttons[0].classList.add('btn-outline-primary');
+                            buttons[1].classList.add('active', 'btn-secondary');
+                            buttons[2].classList.add('btn-outline-success');
+                        } else if (status === 'public') {
+                            buttons[0].classList.add('btn-outline-primary');
+                            buttons[1].classList.add('btn-outline-secondary');
+                            buttons[2].classList.add('active', 'btn-success');
+                        }
+                    }
+
+                    // Function to apply all current filters
+                    function applyFilters() {
+                        let filtered = repositories;
+                        
+                        // Filter by status
+                        if (currentFilters.status !== 'all') {
+                            filtered = filtered.filter(repo => 
+                                currentFilters.status === 'internal' ? repo.visibility === 'internal' : repo.visibility === 'public'
+                            );
+                        }
+                        
+                        // Filter by topic
+                        if (currentFilters.topic) {
+                            filtered = filtered.filter(repo => repo.topics && repo.topics.includes(currentFilters.topic));
+                        }
+                        
+                        // Filter by owner
+                        if (currentFilters.owner !== 'all') {
+                            filtered = filtered.filter(repo => repo.owner.login === currentFilters.owner);
+                        }
+
+                        // Filter by language
+                        if (currentFilters.language !== 'all') {
+                            filtered = filtered.filter(repo => repo.language === currentFilters.language);
+                        }
+                        
+                        // Filter by search term
+                        if (currentFilters.search) {
+                            filtered = filtered.filter(repo => {
+                                const searchFields = [
+                                    repo.name,
+                                    repo.description || '',
+                                    repo.language || '',
+                                    ...(repo.topics || [])
+                                ].join(' ').toLowerCase();
+                                return searchFields.includes(currentFilters.search);
+                            });
+                        }
+                        
+                        // Apply sorting
+                        filtered = sortRepositories(filtered, currentSort);
+                        
+                        renderProjects(filtered);
+                        updateResultsSummary(filtered);
+                    }
+
+                    // Function to sort repositories
+                    function sortRepositories(data, sortBy) {
+                        const sorted = [...data];
+                        switch(sortBy) {
+                            case 'name':
+                                return sorted.sort((a, b) => a.name.localeCompare(b.name));
+                            case 'stars':
+                                return sorted.sort((a, b) => (b.stargazers_count || 0) - (a.stargazers_count || 0));
+                            case 'created':
+                                return sorted.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+                            case 'updated':
+                            default:
+                                return sorted.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
+                        }
+                    }
+
+                    // Function to handle sorting
+                    function sortResults() {
+                        currentSort = document.getElementById('sortDropdown').value;
+                        applyFilters();
+                    }
+
+                    // Function to clear all filters
+                    function clearAllFilters() {
+                        currentFilters = {
+                            status: 'all',
+                            topic: null,
+                            owner: 'all',
+                            language: 'all',
+                            search: ''
+                        };
+                        currentSort = 'updated';
+                        
+                        // Reset UI elements
+                        document.getElementById('searchInput').value = '';
+                        document.getElementById('ownerDropdown').value = 'all';
+                        document.getElementById('languageDropdown').value = 'all';
+                        document.getElementById('sortDropdown').value = 'updated';
+                        
+                        // Reset filter buttons
+                        document.querySelectorAll('.filter-section .btn').forEach(btn => {
+                            btn.classList.remove('active');
+                        });
+                        document.querySelector('button[onclick="filterProjects(\'all\')"]').classList.add('active');
+                        
+                        renderTopicButtons(repositories);
+                        applyFilters();
+                    }
+
+                    // Function to render project cards with improved design
+                    function renderProjects(data) {
+                        const jsonDataDiv = document.getElementById('jsonData');
+                        
+                        if (data.length === 0) {
+                            jsonDataDiv.innerHTML = '<div class="no-results"><i class="fas fa-search"></i><h4>No solutions found</h4><p>Try adjusting your filters to see more results.</p></div>';
+                            return;
+                        }
+                        
+                        jsonDataDiv.innerHTML = data.map(repo => `
+                            <div class="col-lg-6 col-xl-4 mb-4">
+                                <div class="card solution-card h-100">
+                                    <div class="card-header-custom">
+                                        <h5 class="card-title mb-0">
+                                            <a href="${repo.html_url}" target="_blank" rel="noopener noreferrer">
+                                                <i class="fas fa-code me-2"></i>${repo.name}
+                                            </a>
+                                        </h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text">${repo.description || 'No description provided'}</p>
+                                        ${repo.topics && repo.topics.length > 0 ? 
+                                            `<div class="mb-3">
+                                                ${repo.topics.map(topic => `<span class="topic-tag" onclick="filterByTopic('${topic}')">${topic}</span>`).join('')}
+                                            </div>` : ''
+                                        }
+                                        ${repo.stargazers_count > 0 ? 
+                                            `<div class="mb-2">
+                                                <small class="text-muted">
+                                                    <i class="fas fa-star text-warning me-1"></i>${repo.stargazers_count} stars
+                                                    <i class="fas fa-code-branch text-info me-1 ms-2"></i>${repo.forks_count || 0} forks
+                                                </small>
+                                            </div>` : ''
+                                        }
+                                    </div>
+                                    <div class="solution-meta">
+                                        <div class="meta-item">
+                                            <span class="meta-label"><i class="fas fa-building me-1"></i>Organisation:</span>
+                                            <span class="meta-value">
+                                                <a href="${repo.owner.html_url}" target="_blank" rel="noopener noreferrer">${repo.owner.login}</a>
+                                            </span>
+                                        </div>
+                                        <div class="meta-item">
+                                            <span class="meta-label"><i class="fas fa-code me-1"></i>Language:</span>
+                                            <span class="meta-value">${repo.language || 'Not specified'}</span>
+                                        </div>
+                                        <div class="meta-item">
+                                            <span class="meta-label"><i class="fas fa-eye me-1"></i>Status:</span>
+                                            <span class="status-badge ${repo.visibility === 'internal' ? 'status-internal' : 'status-public'}">
+                                                <i class="fas ${repo.visibility === 'internal' ? 'fa-lock' : 'fa-globe'} me-1"></i>
+                                                ${repo.visibility === 'internal' ? 'Internal' : 'Public'}
+                                            </span>
+                                        </div>
+                                        <div class="meta-item">
+                                            <span class="meta-label"><i class="fas fa-calendar me-1"></i>Updated:</span>
+                                            <span class="meta-value">${new Date(repo.updated_at).toLocaleDateString()}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        `).join('');
+                    }
+
+                    // Function to render buttons for topics
+                    function renderTopicButtons(data) {
+                        const allTopics = [...new Set(data.flatMap(repo => repo.topics || []))].sort();
+                        const topicButtonsDiv = document.getElementById('topicButtons');
+                        topicButtonsDiv.innerHTML = `
+                            <button class="btn btn-outline-info ${!currentFilters.topic ? 'active' : ''}" onclick="clearTopicFilter()">
+                                <i class="fas fa-times me-1"></i>All Topics
+                            </button>
+                            ${allTopics.map(topic => `
+                                <button class="btn btn-outline-info ${currentFilters.topic === topic ? 'active' : ''}" onclick="filterByTopic('${topic}')">
+                                    ${topic}
+                                </button>
+                            `).join('')}
+                        `;
+                    }
+
+                    // Function to filter projects by topic
+                    function filterByTopic(topic) {
+                        currentFilters.topic = topic;
+                        applyFilters();
+                        renderTopicButtons(repositories);
+                    }
+
+                    // Function to clear topic filter
+                    function clearTopicFilter() {
+                        currentFilters.topic = null;
+                        applyFilters();
+                        renderTopicButtons(repositories);
+                    }
+
+                    // Function to render owner dropdown
+                    function renderOwnerDropdown(data) {
+                        const allOwners = [...new Set(data.map(repo => repo.owner.login))].sort();
+                        const ownerDropdown = document.getElementById('ownerDropdown');
+                        ownerDropdown.innerHTML = `
+                            <option value="all">All Organisations</option>
+                            ${allOwners.map(owner => `<option value="${owner}" ${currentFilters.owner === owner ? 'selected' : ''}>${owner}</option>`).join('')}
+                        `;
+                    }
+
+                    // Function to render language dropdown
+                    function renderLanguageDropdown(data) {
+                        const allLanguages = [...new Set(data.map(repo => repo.language).filter(lang => lang))].sort();
+                        const languageDropdown = document.getElementById('languageDropdown');
+                        languageDropdown.innerHTML = `
+                            <option value="all">All Languages</option>
+                            ${allLanguages.map(language => `<option value="${language}" ${currentFilters.language === language ? 'selected' : ''}>${language}</option>`).join('')}
+                        `;
+                    }
+
+                    // Function to filter projects by owner
+                    function filterByOwner() {
+                        const selectedOwner = document.getElementById('ownerDropdown').value;
+                        currentFilters.owner = selectedOwner;
+                        applyFilters();
+                    }
+
+                    // Function to filter projects by language
+                    function filterByLanguage() {
+                        const selectedLanguage = document.getElementById('languageDropdown').value;
+                        currentFilters.language = selectedLanguage;
+                        applyFilters();
+                    }
+
+                    // Function to update results summary
+                    function updateResultsSummary(data) {
+                        const summaryDiv = document.getElementById('resultsSummary');
+                        const total = repositories.length;
+                        const filtered = data.length;
+                        
+                        if (filtered === total) {
+                            summaryDiv.innerHTML = `<small class="text-muted">Showing all ${total} solutions</small>`;
+                        } else {
+                            summaryDiv.innerHTML = `<small class="text-muted">Showing ${filtered} of ${total} solutions</small>`;
+                        }
+                    }
+
+                    // Initialize on page load
+                    window.onload = loadJSON;
+                </script>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
+
