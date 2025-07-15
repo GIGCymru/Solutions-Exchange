@@ -138,15 +138,15 @@ def main():
     # Create output files
     try:
         # Save as JSON for the web application
-        with open('repositories.json', 'w', encoding='utf-8') as f:
+        with open('data/repositories.json', 'w', encoding='utf-8') as f:
             json.dump(all_repositories, f, indent=2, ensure_ascii=False)
         
         # Save as CSV for analysis
         df = pd.DataFrame(all_repositories)
-        df.to_csv('repositories.csv', index=False)
+        df.to_csv('data/repositories.csv', index=False)
         
         print(f"\n✅ Successfully processed {len(all_repositories)} repositories")
-        print(f"📊 Data saved to 'repositories.json' and 'repositories.csv'")
+        print(f"📊 Data saved to 'data/repositories.json' and 'data/repositories.csv'")
         
         # Print summary statistics
         print("\n📈 Summary Statistics:")

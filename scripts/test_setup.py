@@ -10,10 +10,10 @@ import sys
 def test_json_file():
     """Test that repositories.json exists and is valid JSON"""
     try:
-        with open('repositories.json', 'r') as f:
+        with open('data/repositories.json', 'r') as f:
             data = json.load(f)
         
-        print(f"✅ repositories.json is valid JSON with {len(data)} repositories")
+        print(f"✅ data/repositories.json is valid JSON with {len(data)} repositories")
         
         # Check structure of first repository
         if data and len(data) > 0:
@@ -28,10 +28,10 @@ def test_json_file():
         
         return True
     except FileNotFoundError:
-        print("❌ repositories.json not found")
+        print("❌ data/repositories.json not found")
         return False
     except json.JSONDecodeError as e:
-        print(f"❌ repositories.json is not valid JSON: {e}")
+        print(f"❌ data/repositories.json is not valid JSON: {e}")
         return False
 
 def test_html_file():
@@ -42,7 +42,7 @@ def test_html_file():
         
         required_elements = [
             'NHS Wales Solutions Exchange',
-            'repositories.json',
+            'data/repositories.json',
             'filterProjects',
             'jsonData'
         ]
@@ -72,7 +72,7 @@ def test_css_file():
 def test_python_script():
     """Test that Python script exists and has required imports"""
     try:
-        with open('fetch_repositories.py', 'r') as f:
+        with open('scripts/fetch_repositories.py', 'r') as f:
             content = f.read()
         
         required_imports = ['requests', 'pandas', 'json']
@@ -86,7 +86,7 @@ def test_python_script():
             return True
             
     except FileNotFoundError:
-        print("❌ fetch_repositories.py not found")
+        print("❌ scripts/fetch_repositories.py not found")
         return False
 
 def main():

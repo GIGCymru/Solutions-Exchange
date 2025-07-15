@@ -24,9 +24,9 @@ Visit the live Solutions Exchange: [https://danthornendr.github.io/Solutions-Exc
 - **Interactive Filtering**: Real-time filtering and search capabilities
 
 ### Data Pipeline
-- **Python Script**: `fetch_repositories.py` fetches data from GitHub API
+- **Python Script**: `scripts/fetch_repositories.py` fetches data from GitHub API
 - **GitHub Actions**: Automated daily updates at 6 AM UTC
-- **JSON Storage**: Processed data stored in `repositories.json`
+- **JSON Storage**: Processed data stored in `data/repositories.json`
 
 ### Organizations Monitored
 The platform tracks repositories from these NHS Wales organizations:
@@ -68,7 +68,7 @@ The platform tracks repositories from these NHS Wales organizations:
 
 4. **Fetch repository data**:
    ```bash
-   python fetch_repositories.py
+   python scripts/fetch_repositories.py
    ```
 
 5. **Serve the website locally**:
@@ -114,7 +114,7 @@ Each solution includes:
 - Bootstrap 5 for responsive layout
 
 ### Organizations
-To add/remove organizations, edit the `organizations` list in `fetch_repositories.py`
+To add/remove organizations, edit the `organizations` list in `scripts/fetch_repositories.py`
 
 ### Topics/Filtering
 Topics are automatically extracted from GitHub repository topics. To enhance filtering:
@@ -127,11 +127,11 @@ Topics are automatically extracted from GitHub repository topics. To enhance fil
 The site is automatically deployed to GitHub Pages via GitHub Actions.
 
 ### Manual Deployment
-1. Build the data: `python fetch_repositories.py`
+1. Build the data: `python scripts/fetch_repositories.py`
 2. Deploy the following files to your web server:
    - `index.html`
    - `css/style.css`
-   - `repositories.json`
+   - `data/repositories.json`
 
 ## 🤝 Contributing
 
@@ -162,7 +162,7 @@ Based on the Solutions Exchange Project Initiation Document:
 
 ### Common Issues
 
-1. **No data showing**: Check that `repositories.json` exists and is valid JSON
+1. **No data showing**: Check that `data/repositories.json` exists and is valid JSON
 2. **GitHub API rate limits**: Ensure GitHub token is set correctly
 3. **Build failures**: Check GitHub Actions logs for error details
 

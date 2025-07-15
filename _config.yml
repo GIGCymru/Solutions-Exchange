@@ -1,15 +1,11 @@
 include:
   - index.html
   - css/
-  - repositories.json
+  - data/repositories.json
 
 exclude:
-  - fetch_repositories.py
-  - test_setup.py
+  - scripts/
+  - docs/
   - requirements.txt
-  - main (1).py
   - "*.md"
-  - "*.docx"
-  - "*.xlsx"
-  - "*.png"
   - .github/

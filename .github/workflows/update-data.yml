@@ -35,12 +35,12 @@ jobs:
       env:
         GH_SECRET: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        python fetch_repositories.py
+        python scripts/fetch_repositories.py
         
     - name: Check for changes
       id: check_changes
       run: |
-        if git diff --quiet repositories.json; then
+        if git diff --quiet data/repositories.json; then
           echo "changes=false" >> $GITHUB_OUTPUT
         else
           echo "changes=true" >> $GITHUB_OUTPUT
@@ -51,7 +51,7 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add repositories.json repositories.csv
+        git add data/repositories.json
         git commit -m "📊 Update solutions data - $(date '+%Y-%m-%d %H:%M UTC')"
         git push
         
