@@ -461,6 +461,88 @@ footer {
     font-weight: 600;
 }
 
+/* News Section */
+#news {
+    background-color: #fafbfc;
+}
+
+.news-card {
+    transition: all 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-2px);
+}
+
+.news-card .card {
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.news-card:hover .card {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    border-color: var(--primary-color);
+}
+
+.news-date {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.news-date .day {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.news-date .month {
+    display: block;
+    font-size: 0.9rem;
+    opacity: 0.9;
+    line-height: 1.2;
+}
+
+.news-card .card-title {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.news-card .card-text {
+    color: #6c757d;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.news-meta {
+    margin-bottom: 1rem;
+}
+
+.news-meta .badge {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 20px;
+}
+
+/* Responsive news cards */
+@media (max-width: 768px) {
+    .news-date {
+        margin-bottom: 1.5rem;
+    }
+    
+    .news-card .card-body {
+        padding: 1.5rem 1rem;
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .main-container {
