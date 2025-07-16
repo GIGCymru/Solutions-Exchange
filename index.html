@@ -14,8 +14,8 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="assets/img/nhs_wales_logo.png" alt="NHS Wales Logo" style="height: 40px;">
-                <span class="ms-2">Solutions Exchange</span>
+                <img src="assets/img/nhswales_logo_black and white.jpg" alt="NHS Wales Logo" style="height: 40px;">
+                <span class="ms-2">GitHub GIG Cymru: Solutions Exchange</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -23,9 +23,9 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="solutions.html">Browse Solutions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="solutions.html">Solutions Exchange</a></li>
                     <li class="nav-item"><a class="nav-link" href="guides.html">Guides</a></li>
-                    <li class="nav-item"><a class="nav-link" href="signup.html">Sign Up</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-primary text-white ms-2 px-3" href="signup.html">Sign Up</a></li>
                 </ul>
             </div>
         </div>
@@ -229,26 +229,182 @@
         </div>
     </section>
 
+    <!-- Health Boards Carousel Section -->
+    <section class="health-boards-carousel py-5 bg-white">
+        <div class="container">
+            <h2 class="text-center mb-5">Explore Health Board Solutions</h2>
+            <p class="text-center text-muted mb-4">Discover innovative solutions from across NHS Wales health boards and organizations</p>
+            
+            <div id="healthBoardsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#healthBoardsCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#healthBoardsCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#healthBoardsCarousel" data-bs-slide-to="2"></button>
+                </div>
+                
+                <div class="carousel-inner">
+                    <!-- Slide 1: Major Health Boards -->
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center">
+                            <div class="col-md-4 mb-4">
+                                <div class="health-board-card text-center p-4">
+                                    <div class="health-board-icon mb-3">
+                                        <i class="fas fa-hospital text-primary" style="font-size: 3rem;"></i>
+                                    </div>
+                                    <h5>Cardiff and Vale UHB</h5>
+                                    <p class="text-muted">Serving Cardiff, Vale of Glamorgan and beyond with innovative healthcare solutions</p>
+                                    <a href="solutions.html?org=Cardiff" class="btn btn-outline-primary">
+                                        <i class="fab fa-github me-2"></i>View Solutions
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="health-board-card text-center p-4">
+                                    <div class="health-board-icon mb-3">
+                                        <i class="fas fa-heart text-danger" style="font-size: 3rem;"></i>
+                                    </div>
+                                    <h5>Swansea Bay UHB</h5>
+                                    <p class="text-muted">Leading digital health innovation across Swansea Bay region</p>
+                                    <a href="solutions.html?org=Swansea" class="btn btn-outline-primary">
+                                        <i class="fab fa-github me-2"></i>View Solutions
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="health-board-card text-center p-4">
+                                    <div class="health-board-icon mb-3">
+                                        <i class="fas fa-stethoscope text-success" style="font-size: 3rem;"></i>
+                                    </div>
+                                    <h5>Aneurin Bevan UHB</h5>
+                                    <p class="text-muted">Transforming healthcare delivery in Gwent with cutting-edge technology</p>
+                                    <a href="solutions.html?org=AneurinBevan" class="btn btn-outline-primary">
+                                        <i class="fab fa-github me-2"></i>View Solutions
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2: Regional Health Boards -->
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-md-4 mb-4">
+                                <div class="health-board-card text-center p-4">
+                                    <div class="health-board-icon mb-3">
+                                        <i class="fas fa-mountain text-info" style="font-size: 3rem;"></i>
+                                    </div>
+                                    <h5>Betsi Cadwaladr UHB</h5>
+                                    <p class="text-muted">Comprehensive healthcare solutions across North Wales</p>
+                                    <a href="solutions.html?org=BetsiCadwaladr" class="btn btn-outline-primary">
+                                        <i class="fab fa-github me-2"></i>View Solutions
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="health-board-card text-center p-4">
+                                    <div class="health-board-icon mb-3">
+                                        <i class="fas fa-bridge text-warning" style="font-size: 3rem;"></i>
+                                    </div>
+                                    <h5>Cwm Taf Morgannwg UHB</h5>
+                                    <p class="text-muted">Digital health solutions for the valleys and surrounding communities</p>
+                                    <a href="solutions.html?org=CwmTaf" class="btn btn-outline-primary">
+                                        <i class="fab fa-github me-2"></i>View Solutions
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="health-board-card text-center p-4">
+                                    <div class="health-board-icon mb-3">
+                                        <i class="fas fa-water text-primary" style="font-size: 3rem;"></i>
+                                    </div>
+                                    <h5>Hywel Dda UHB</h5>
+                                    <p class="text-muted">Healthcare innovation across West Wales communities</p>
+                                    <a href="solutions.html?org=HywelDda" class="btn btn-outline-primary">
+                                        <i class="fab fa-github me-2"></i>View Solutions
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 3: National Organizations -->
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-md-4 mb-4">
+                                <div class="health-board-card text-center p-4">
+                                    <div class="health-board-icon mb-3">
+                                        <i class="fas fa-leaf text-success" style="font-size: 3rem;"></i>
+                                    </div>
+                                    <h5>Powys Teaching Health Board</h5>
+                                    <p class="text-muted">Rural healthcare solutions and community-focused innovations</p>
+                                    <a href="solutions.html?org=Powys" class="btn btn-outline-primary">
+                                        <i class="fab fa-github me-2"></i>View Solutions
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="health-board-card text-center p-4">
+                                    <div class="health-board-icon mb-3">
+                                        <i class="fas fa-code text-dark" style="font-size: 3rem;"></i>
+                                    </div>
+                                    <h5>Digital Health and Care Wales</h5>
+                                    <p class="text-muted">National digital transformation and infrastructure solutions</p>
+                                    <a href="solutions.html?org=DHCW" class="btn btn-outline-primary">
+                                        <i class="fab fa-github me-2"></i>View Solutions
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="health-board-card text-center p-4">
+                                    <div class="health-board-icon mb-3">
+                                        <i class="fab fa-github text-secondary" style="font-size: 3rem;"></i>
+                                    </div>
+                                    <h5>GitHub GIG Cymru</h5>
+                                    <p class="text-muted">Open source collaboration hub for Welsh healthcare innovation</p>
+                                    <a href="https://github.com/GIGCymru" target="_blank" class="btn btn-outline-primary">
+                                        <i class="fab fa-github me-2"></i>Visit GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="carousel-control-prev" type="button" data-bs-target="#healthBoardsCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#healthBoardsCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer>
         <div class="container">
             <div class="d-flex footer-navbar col-12">
                 <div class="col-lg-12 mb-12 p-2 flex-fill footer-logo">
-                    <img class="nav-large-image" src="assets/img/nhs_wales_logo.png" alt="NHS Wales | Digital Health and Care Wales">
+                    <img class="nav-large-image" src="assets/img/nhswales_logo_black and white.jpg" alt="NHS Wales | GIG CYMRU Logo">
                 </div>
                 
                 <section class="p-2 flex-fill footer-section">
                     <ul class="justify-content-center">
-                        <li><a href="#" class="nav-link" target="_self">Accessibility Statement</a></li>
-                        <li><a href="#" class="nav-link" target="_self">Terms of use</a></li>
-                        <li><a href="#" class="nav-link" target="_self">Privacy Notice</a></li>
-                        <li><a href="#" class="nav-link" target="_self">Freedom of information</a></li>
+                        <li><a href="https://dhcw.nhs.wales//use-of-site/accessibility/" class="nav-link" target="_self">Accessibility statement</a></li>
+							
+								<li><a href="https://dhcw.nhs.wales//use-of-site/terms-of-use/" class="nav-link" target="_self">Terms of use</a></li>
+							
+								<li><a href="https://dhcw.nhs.wales//use-of-site/freedom-of-information/" class="nav-link" target="_self">Freedom of information</a></li>
+							
+								<li><a href="https://dhcw.nhs.wales//use-of-site/privacy-policy/" class="nav-link" target="_self">Privacy Policy</a></li>
                     </ul>
                 </section>
             </div>
 
             <div class="builtBy">
-                Built by <a href="https://dhcw.nhs.wales/" target="_self">Digital Health and Care Wales</a>
+                Built by <a href="https://dhcw.nhs.wales/our-programmes/national-data-resource1/" target="_self">NDR - National Data Resource</a>
             </div>
         </div>
     </footer>
