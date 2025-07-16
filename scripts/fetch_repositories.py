@@ -27,6 +27,10 @@ except LookupError:
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 
+
+from dotenv import load_dotenv
+
+load_dotenv()  # This loads variables from .env into environment
 # Replace this with your actual GitHub personal access token
 GITHUB_TOKEN = os.getenv('GH_SECRET')
 
