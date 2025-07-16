@@ -9,6 +9,48 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        .quality-badge {
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .tag-clickable {
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .tag-clickable:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .featured-card {
+            border: 2px solid #ffc107 !important;
+            position: relative;
+        }
+        
+        .featured-card::before {
+            content: '★ FEATURED';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #ffc107;
+            color: #000;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            z-index: 10;
+        }
+        
+        .repo-stats .quality-score {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -202,16 +244,17 @@
             }
         }
 
-        // Display featured solutions based on feature flags
+        // Display featured solutions based on enhanced data
         function displayFeaturedSolutions() {
             const featuredContainer = document.getElementById('featuredSolutionsList');
             const fallbackContainer = document.getElementById('featuredFallback');
             
-            // Get repositories eligible for featuring, sorted by score
-            const featuredRepos = repositories
-                .filter(repo => repo.featured && repo.featured.eligible)
-                .sort((a, b) => b.featured.score - a.featured.score)
-                .slice(0, 6); // Show up to 6 featured solutions
+            // Get repositories marked as featured and select 3 at random
+            const allFeaturedRepos = repositories.filter(repo => repo.featured === true);
+            
+            // Shuffle and select 3 random featured solutions
+            const shuffledFeatured = allFeaturedRepos.sort(() => 0.5 - Math.random());
+            const featuredRepos = shuffledFeatured.slice(0, 3); // Show exactly 3 random featured solutions
             
             if (featuredRepos.length > 0) {
                 featuredContainer.innerHTML = featuredRepos.map(repo => createFeaturedCard(repo)).join('');
@@ -227,9 +270,9 @@
         function createFeaturedCard(repo) {
             const isPublic = repo.private === false;
             const lastUpdated = new Date(repo.updated_at).toLocaleDateString('en-GB');
-            const allTags = [...(repo.topics || []), ...(repo.generated_tags || [])];
+            const allTags = repo.all_tags || [...(repo.topics || []), ...(repo.generated_tags || [])];
             const displayTags = allTags.slice(0, 3); // Show first 3 tags
-            const score = repo.featured ? repo.featured.score : 0;
+            const qualityScore = repo.quality_score || 0;
             
             // Choose appropriate image based on tags or default
             let cardImage = 'assets/img/information.jpg';
@@ -257,10 +300,11 @@
                             
                             <!-- Quality Score -->
                             <div class="mb-2">
-                                <small class="text-muted">
-                                    <i class="fas fa-star text-warning me-1"></i>
-                                    Quality Score: ${score}/100
-                                </small>
+                                <span class="badge ${qualityScore >= 80 ? 'bg-success' : qualityScore >= 60 ? 'bg-warning text-dark' : 'bg-secondary'} me-2">
+                                    <i class="fas fa-star me-1"></i>
+                                    Quality: ${qualityScore}/100
+                                </span>
+                                <i class="fas fa-crown text-warning" title="Featured Solution"></i>
                             </div>
                             
                             <!-- Tags -->
@@ -480,30 +524,45 @@
             const isPublic = repo.private === false;
             const visibilityLabel = isPublic ? 'PUBLIC' : 'INTERNAL';
             const visibilityClass = isPublic ? 'bg-success' : 'bg-primary';
-            const rating = Math.floor(Math.random() * 5) + 6; // Random rating 6-10
+            const qualityScore = repo.quality_score || Math.floor(Math.random() * 30) + 60; // Use enhanced data or fallback
             const license = repo.license ? repo.license.name : 'MIT';
             
-            // Get meaningful tags from topics and language
+            // Use enhanced AI-generated tags if available, otherwise fallback to original logic
             const tags = [];
-            if (repo.language) tags.push({ name: repo.language, type: 'language' });
-            if (repo.topics && repo.topics.length > 0) {
-                repo.topics.slice(0, 2).forEach(topic => {
-                    tags.push({ name: topic, type: 'topic' });
+            
+            // Priority 1: Use AI-generated tags from enhanced data
+            if (repo.all_tags && repo.all_tags.length > 0) {
+                repo.all_tags.slice(0, 6).forEach(tag => {
+                    let type = 'ai-generated';
+                    if (repo.language && tag.toLowerCase() === repo.language.toLowerCase()) {
+                        type = 'language';
+                    } else if (repo.topics && repo.topics.includes(tag)) {
+                        type = 'topic';
+                    }
+                    tags.push({ name: tag, type: type });
                 });
-            }
-            
-            // Add some sample department/purpose tags based on repo name/description
-            const name = repo.name.toLowerCase();
-            const desc = (repo.description || '').toLowerCase();
-            
-            if (name.includes('emergency') || desc.includes('emergency') || name.includes('ed')) {
-                tags.push({ name: 'Emergency Department', type: 'department' });
-            }
-            if (name.includes('forecast') || desc.includes('forecast') || name.includes('predict')) {
-                tags.push({ name: 'Forecast', type: 'purpose' });
-            }
-            if (name.includes('analysis') || desc.includes('analysis') || name.includes('analytics')) {
-                tags.push({ name: 'Analytics', type: 'purpose' });
+            } else {
+                // Fallback to original logic
+                if (repo.language) tags.push({ name: repo.language, type: 'language' });
+                if (repo.topics && repo.topics.length > 0) {
+                    repo.topics.slice(0, 2).forEach(topic => {
+                        tags.push({ name: topic, type: 'topic' });
+                    });
+                }
+                
+                // Add some sample department/purpose tags based on repo name/description
+                const name = repo.name.toLowerCase();
+                const desc = (repo.description || '').toLowerCase();
+                
+                if (name.includes('emergency') || desc.includes('emergency') || name.includes('ed')) {
+                    tags.push({ name: 'Emergency Department', type: 'department' });
+                }
+                if (name.includes('forecast') || desc.includes('forecast') || name.includes('predict')) {
+                    tags.push({ name: 'Forecast', type: 'purpose' });
+                }
+                if (name.includes('analysis') || desc.includes('analysis') || name.includes('analytics')) {
+                    tags.push({ name: 'Analytics', type: 'purpose' });
+                }
             }
             
             return `
@@ -542,8 +601,10 @@
                                     if (tag.type === 'language') badgeClass = 'bg-info';
                                     if (tag.type === 'department') badgeClass = 'bg-warning';
                                     if (tag.type === 'purpose') badgeClass = 'bg-success';
+                                    if (tag.type === 'ai-generated') badgeClass = 'bg-primary';
+                                    if (tag.type === 'topic') badgeClass = 'bg-dark';
                                     
-                                    return `<span class="badge ${badgeClass} me-1 mb-1 tag-clickable" onclick="filterByTag('${tag.name}')">${tag.name}</span>`;
+                                    return `<span class="badge ${badgeClass} me-1 mb-1 tag-clickable" onclick="filterByTag('${tag.name}')" title="Type: ${tag.type}">${tag.name}</span>`;
                                 }).join('')}
                             </div>
                             
@@ -569,12 +630,13 @@
                                 </div>
                                 <div class="col-md-6 text-end">
                                     <div class="repo-stats">
-                                        <!-- Rating -->
-                                        <div class="rating-display mb-1">
-                                            <span class="rating-stars text-warning">
-                                                ${'★'.repeat(Math.floor(rating/2))}${'☆'.repeat(5-Math.floor(rating/2))}
+                                        <!-- Quality Score -->
+                                        <div class="quality-score mb-1">
+                                            <span class="badge ${qualityScore >= 80 ? 'bg-success' : qualityScore >= 60 ? 'bg-warning text-dark' : 'bg-secondary'} quality-badge">
+                                                <i class="fas fa-star me-1"></i>
+                                                Quality: ${qualityScore}/100
                                             </span>
-                                            <small class="text-muted ms-1">${rating}/10</small>
+                                            ${repo.featured ? '<i class="fas fa-crown text-warning ms-1" title="Featured Solution"></i>' : ''}
                                         </div>
                                         <!-- License -->
                                         <div class="license-info">
