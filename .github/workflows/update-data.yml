@@ -7,7 +7,7 @@ on:
   workflow_dispatch: # Allow manual triggering
   push:
     paths:
-      - 'fetch_repositories.py'
+      - 'scripts/update_repositories.py'
       - '.github/workflows/update-data.yml'
 
 jobs:
@@ -29,25 +29,69 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install requests pandas
+        pip install -r requirements.txt
         
-    - name: Fetch repository data
+    - name: Fetch and update repository data
       env:
-        GH_SECRET: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        python scripts/fetch_repositories.py
+        python scripts/update_repositories.py
         
     - name: Check for changes
       id: check_changes
       run: |
         if git diff --quiet data/repositories.json; then
           echo "changes=false" >> $GITHUB_OUTPUT
+          echo "No changes detected in repository data"
         else
           echo "changes=true" >> $GITHUB_OUTPUT
+          echo "Changes detected in repository data"
+          git diff --stat data/repositories.json
         fi
         
     - name: Commit and push changes
       if: steps.check_changes.outputs.changes == 'true'
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add data/repositories.json
+        git commit -m "🤖 Automated update of Solutions Exchange data
+        
+        - Updated repository information
+        - Enhanced with AI-generated tags
+        - Quality scores calculated
+        - Featured solutions identified
+        
+        Triggered by: ${{ github.event_name }}
+        Commit: ${{ github.sha }}"
+        git push
+        
+    - name: Create update summary
+      if: steps.check_changes.outputs.changes == 'true'
+      run: |
+        echo "## 📊 Solutions Exchange Data Update" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "✅ Repository data has been successfully updated!" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### Changes Made:" >> $GITHUB_STEP_SUMMARY
+        echo "- Fetched latest repository information from NHS Wales organizations" >> $GITHUB_STEP_SUMMARY
+        echo "- Generated AI-powered tags for improved discoverability" >> $GITHUB_STEP_SUMMARY
+        echo "- Calculated quality scores based on activity and documentation" >> $GITHUB_STEP_SUMMARY
+        echo "- Identified featured solutions using quality criteria" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### Next Steps:" >> $GITHUB_STEP_SUMMARY
+        echo "- Changes have been committed to the repository" >> $GITHUB_STEP_SUMMARY
+        echo "- Website will automatically reflect updated data" >> $GITHUB_STEP_SUMMARY
+        echo "- Featured solutions section will show new recommendations" >> $GITHUB_STEP_SUMMARY
+        
+    - name: No changes summary
+      if: steps.check_changes.outputs.changes == 'false'
+      run: |
+        echo "## 📊 Solutions Exchange Data Update" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "ℹ️ No changes detected in repository data." >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "The Solutions Exchange data is already up to date!" >> $GITHUB_STEP_SUMMARY
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"

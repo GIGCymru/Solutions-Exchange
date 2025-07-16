@@ -7,6 +7,27 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        .featured-card {
+            border: 2px solid #ffc107 !important;
+            position: relative;
+        }
+        
+        .featured-card::before {
+            content: '★ FEATURED';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #ffc107;
+            color: #000;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            z-index: 10;
+        }
+    </style>
 </head>
 <body>
 
@@ -188,6 +209,151 @@
                             </div>
                         </div>
 
+                        <!-- Quality Score Guide -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="qualityScoreHeading">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#qualityScore" aria-expanded="false" aria-controls="qualityScore">
+                                    <i class="fas fa-star me-2"></i>Understanding Quality Scores
+                                </button>
+                            </h2>
+                            <div id="qualityScore" class="accordion-collapse collapse" aria-labelledby="qualityScoreHeading" data-bs-parent="#guidesAccordion">
+                                <div class="accordion-body">
+                                    <p>The Solutions Exchange uses an intelligent quality scoring system to help you identify well-maintained, reliable, and valuable healthcare solutions. This guide explains how quality scores are calculated and what they mean.</p>
+                                    
+                                    <h5>What is a Quality Score?</h5>
+                                    <p>The quality score is a numerical value between <strong>30-100</strong> that reflects the overall quality and reliability of a repository. Higher scores indicate solutions that are:</p>
+                                    <ul>
+                                        <li>Well-documented and described</li>
+                                        <li>Actively maintained and updated</li>
+                                        <li>Popular within the NHS Wales community</li>
+                                        <li>Built using modern technology stacks</li>
+                                        <li>Demonstrating good development practices</li>
+                                    </ul>
+
+                                    <h5>Quality Score Calculation</h5>
+                                    <p>The algorithm evaluates multiple factors to calculate an objective quality score:</p>
+                                    
+                                    <div class="row mb-4">
+                                        <div class="col-md-6">
+                                            <div class="card bg-light h-100">
+                                                <div class="card-body">
+                                                    <h6 class="card-title"><i class="fas fa-star text-primary me-2"></i>Base Score: 50 points</h6>
+                                                    <p class="card-text small">Every repository starts with a baseline score of 50 points, ensuring all solutions have a foundation score.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="card bg-light h-100">
+                                                <div class="card-body">
+                                                    <h6 class="card-title"><i class="fas fa-heart text-danger me-2"></i>Community Engagement: +20 points</h6>
+                                                    <p class="card-text small">GitHub stars from the community indicate value and usefulness (up to 20 points based on star count).</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-4">
+                                        <div class="col-md-6">
+                                            <div class="card bg-light h-100">
+                                                <div class="card-body">
+                                                    <h6 class="card-title"><i class="fas fa-clock text-success me-2"></i>Recent Activity: +10 points</h6>
+                                                    <p class="card-text small">Repositories with recent commits show active maintenance and ongoing development.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="card bg-light h-100">
+                                                <div class="card-body">
+                                                    <h6 class="card-title"><i class="fas fa-file-alt text-info me-2"></i>Good Documentation: +15 points</h6>
+                                                    <p class="card-text small">Repositories with comprehensive descriptions (over 20 characters) receive bonus points for clarity.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-4">
+                                        <div class="col-md-6">
+                                            <div class="card bg-light h-100">
+                                                <div class="card-body">
+                                                    <h6 class="card-title"><i class="fas fa-code text-warning me-2"></i>Technology Stack: +10 points</h6>
+                                                    <p class="card-text small">Repositories using identified programming languages demonstrate technical implementation.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="card bg-light h-100">
+                                                <div class="card-body">
+                                                    <h6 class="card-title"><i class="fas fa-chart-line text-secondary me-2"></i>Development Activity: +15 points</h6>
+                                                    <p class="card-text small">Repository size and activity indicators show substantial development effort (variable points based on size).</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h5>Quality Score Ranges</h5>
+                                    <div class="row mb-4">
+                                        <div class="col-md-4 mb-3">
+                                            <div class="text-center p-3 border rounded bg-success text-white">
+                                                <h4 class="mb-1">80-100</h4>
+                                                <h6 class="mb-2">Excellent</h6>
+                                                <p class="small mb-0">High-quality solutions with excellent documentation, active maintenance, and community engagement. These solutions are automatically featured.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <div class="text-center p-3 border rounded bg-warning text-dark">
+                                                <h4 class="mb-1">60-79</h4>
+                                                <h6 class="mb-2">Good</h6>
+                                                <p class="small mb-0">Solid solutions with good practices. May be featured if they have additional qualifying factors like community stars or specific technology stacks.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <div class="text-center p-3 border rounded bg-secondary text-white">
+                                                <h4 class="mb-1">30-59</h4>
+                                                <h6 class="mb-2">Developing</h6>
+                                                <p class="small mb-0">Projects in development or with basic documentation. Still valuable but may benefit from additional documentation or maintenance.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h5>Featured Solutions Criteria</h5>
+                                    <p>Solutions are automatically marked as "Featured" when they meet specific quality thresholds:</p>
+                                    <ul>
+                                        <li><strong>Automatic Featured:</strong> Quality score ≥ 75 points</li>
+                                        <li><strong>Community Featured:</strong> Quality score ≥ 65 points + GitHub stars from community</li>
+                                        <li><strong>Technology Featured:</strong> Quality score ≥ 60 points + identified programming language</li>
+                                    </ul>
+
+                                    <h5>Improving Your Solution's Quality Score</h5>
+                                    <div class="alert alert-info">
+                                        <h6 class="alert-heading"><i class="fas fa-lightbulb me-2"></i>Tips for Higher Scores</h6>
+                                        <ul class="mb-0">
+                                            <li><strong>Write clear descriptions:</strong> Explain what your solution does and how it helps healthcare</li>
+                                            <li><strong>Stay active:</strong> Regular commits and updates show ongoing maintenance</li>
+                                            <li><strong>Engage the community:</strong> Encourage colleagues to star useful repositories</li>
+                                            <li><strong>Use modern tech:</strong> Specify the programming language and technology stack</li>
+                                            <li><strong>Document thoroughly:</strong> Include README files, API docs, and usage examples</li>
+                                            <li><strong>Maintain regularly:</strong> Respond to issues and keep dependencies updated</li>
+                                        </ul>
+                                    </div>
+
+                                    <h5>Understanding the Algorithm</h5>
+                                    <p>The quality scoring system is designed to be:</p>
+                                    <ul>
+                                        <li><strong>Objective:</strong> Based on measurable repository metrics</li>
+                                        <li><strong>Fair:</strong> All repositories start with equal baseline scores</li>
+                                        <li><strong>Transparent:</strong> Clear criteria that developers can influence</li>
+                                        <li><strong>Dynamic:</strong> Scores update as repositories evolve and improve</li>
+                                        <li><strong>Healthcare-focused:</strong> Optimized for NHS Wales development practices</li>
+                                    </ul>
+
+                                    <div class="alert alert-primary">
+                                        <h6 class="alert-heading"><i class="fas fa-info-circle me-2"></i>Note on Scoring</h6>
+                                        <p class="mb-0">Quality scores are calculated automatically when repository data is refreshed. The algorithm includes small randomization elements to account for factors that can't be measured directly from GitHub metrics. This ensures a fair distribution while maintaining objectivity in the core scoring criteria.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <!-- Technical Support -->
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="technicalSupportHeading">
@@ -245,6 +411,54 @@
         </div>
     </section>
 
+    <!-- Featured Solutions Section -->
+    <section class="featured-solutions py-5 bg-light mt-5">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-5">
+                <h2>Featured Solutions</h2>
+                <small class="text-muted">
+                    <i class="fas fa-star me-1"></i>
+                    Automatically selected based on quality criteria
+                </small>
+            </div>
+            
+            <div id="featuredSolutionsList" class="row">
+                <!-- Featured solutions will be loaded here dynamically -->
+            </div>
+            
+            <!-- Fallback content if no featured solutions qualify -->
+            <div id="featuredFallback" class="row" style="display: none;">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 featured-card">
+                        <img src="assets/img/information.jpg" class="card-img-top" alt="ED Analysis Forecast">
+                        <div class="card-body">
+                            <h5 class="card-title">ED Analysis Forecast</h5>
+                            <p class="card-text">Advanced emergency department forecasting tools to predict patient flow and optimize resource allocation.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 featured-card">
+                        <img src="assets/img/network image.jpg" class="card-img-top" alt="Data Analytics Platform">
+                        <div class="card-body">
+                            <h5 class="card-title">Data Analytics Platform</h5>
+                            <p class="card-text">Comprehensive analytics solution for healthcare data processing and visualization.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 featured-card">
+                        <img src="assets/img/information.jpg" class="card-img-top" alt="Clinical Decision Support">
+                        <div class="card-body">
+                            <h5 class="card-title">Clinical Decision Support</h5>
+                            <p class="card-text">AI-powered tools to assist healthcare professionals in making informed clinical decisions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -273,6 +487,141 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Load featured solutions when page loads
+        async function loadFeaturedSolutions() {
+            try {
+                const response = await fetch('data/repositories.json');
+                const repositories = await response.json();
+                displayFeaturedSolutions(repositories);
+            } catch (error) {
+                console.error('Error loading featured solutions:', error);
+                document.getElementById('featuredFallback').style.display = 'flex';
+            }
+        }
+
+        // Display featured solutions based on enhanced data
+        function displayFeaturedSolutions(repositories) {
+            const featuredContainer = document.getElementById('featuredSolutionsList');
+            const fallbackContainer = document.getElementById('featuredFallback');
+            
+            // Get repositories marked as featured and select 3 at random
+            const allFeaturedRepos = repositories.filter(repo => repo.featured === true);
+            
+            // Shuffle and select 3 random featured solutions
+            const shuffledFeatured = allFeaturedRepos.sort(() => 0.5 - Math.random());
+            const featuredRepos = shuffledFeatured.slice(0, 3); // Show exactly 3 random featured solutions
+            
+            if (featuredRepos.length > 0) {
+                featuredContainer.innerHTML = featuredRepos.map(repo => createFeaturedCard(repo)).join('');
+                featuredContainer.style.display = 'flex';
+                fallbackContainer.style.display = 'none';
+            } else {
+                featuredContainer.style.display = 'none';
+                fallbackContainer.style.display = 'flex';
+            }
+        }
+
+        // Create featured solution card
+        function createFeaturedCard(repo) {
+            const isPublic = repo.private === false;
+            const lastUpdated = new Date(repo.updated_at).toLocaleDateString('en-GB');
+            const allTags = repo.all_tags || [...(repo.topics || []), ...(repo.generated_tags || [])];
+            const displayTags = allTags.slice(0, 3); // Show first 3 tags
+            const qualityScore = repo.quality_score || 0;
+            
+            // Choose appropriate image based on tags or default
+            let cardImage = 'assets/img/information.jpg';
+            const tagString = allTags.join(' ').toLowerCase();
+            if (tagString.includes('analytics') || tagString.includes('data')) {
+                cardImage = 'assets/img/network image.jpg';
+            }
+            
+            return `
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 featured-card">
+                        <img src="${cardImage}" class="card-img-top" alt="${repo.name}">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title">${repo.name}</h5>
+                                <span class="badge ${isPublic ? 'bg-success' : 'bg-primary'} ms-2">
+                                    <i class="fas ${isPublic ? 'fa-globe' : 'fa-lock'} me-1"></i>
+                                    ${isPublic ? 'PUBLIC' : 'INTERNAL'}
+                                </span>
+                            </div>
+                            
+                            <p class="card-text text-muted">
+                                ${repo.description || 'NHS Wales healthcare solution providing essential functionality for clinical and administrative workflows.'}
+                            </p>
+                            
+                            <!-- Quality Score -->
+                            <div class="mb-2">
+                                <span class="badge ${qualityScore >= 80 ? 'bg-success' : qualityScore >= 60 ? 'bg-warning text-dark' : 'bg-secondary'} me-2">
+                                    <i class="fas fa-star me-1"></i>
+                                    Quality: ${qualityScore}/100
+                                </span>
+                                <i class="fas fa-crown text-warning" title="Featured Solution"></i>
+                            </div>
+                            
+                            <!-- Tags -->
+                            <div class="mb-3">
+                                ${displayTags.map(tag => {
+                                    const isGenerated = repo.generated_tags && repo.generated_tags.includes(tag);
+                                    return `<span class="badge ${isGenerated ? 'bg-info' : 'bg-secondary'} me-1 mb-1" title="${isGenerated ? 'AI-generated tag' : 'User-defined tag'}">${tag}</span>`;
+                                }).join('')}
+                                ${allTags.length > 3 ? `<span class="badge bg-light text-dark">+${allTags.length - 3} more</span>` : ''}
+                            </div>
+                            
+                            <!-- Organization and Last Updated -->
+                            <div class="mb-3">
+                                <small class="text-muted d-block">
+                                    <i class="fas fa-building me-1"></i>
+                                    ${getOrganisationFullName(repo.owner.login)}
+                                </small>
+                                <small class="text-muted">
+                                    <i class="fas fa-clock me-1"></i>
+                                    Updated: ${lastUpdated}
+                                </small>
+                            </div>
+                            
+                            <!-- Action Buttons -->
+                            <div class="mt-auto">
+                                <a href="${repo.html_url}" target="_blank" class="btn btn-outline-primary btn-sm">
+                                    <i class="fab fa-github me-1"></i>
+                                    View Repository
+                                </a>
+                                ${!isPublic ? `<a href="signup.html" class="btn btn-primary btn-sm ms-2">
+                                    <i class="fas fa-lock me-1"></i>
+                                    Sign In Required
+                                </a>` : ''}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Helper function to map organization names
+        function getOrganisationFullName(login) {
+            const orgMapping = {
+                'NHS-Executive': 'NHS Executive',
+                'DHCW-Digital-Health-and-Care-Wales': 'Digital Health and Care Wales',
+                'GIGCymru': 'GitHub GIG Cymru',
+                'NHS-Wales': 'NHS Wales',
+                'Betsi-Cadwaladr-UHB': 'Betsi Cadwaladr UHB',
+                'Cardiff-and-Vale-UHB': 'Cardiff and Vale UHB',
+                'Cwm-Taf-Morgannwg-UHB': 'Cwm Taf Morgannwg UHB',
+                'Hywel-Dda-UHB': 'Hywel Dda UHB',
+                'Swansea-Bay-UHB': 'Swansea Bay UHB',
+                'Aneurin-Bevan-UHB': 'Aneurin Bevan UHB',
+                'Powys-Teaching-HB': 'Powys Teaching Health Board'
+            };
+            return orgMapping[login] || login.replace(/-/g, ' ');
+        }
+
+        document.addEventListener('DOMContentLoaded', loadFeaturedSolutions);
+    </script>
 
 </body>
 </html>
