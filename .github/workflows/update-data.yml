@@ -33,7 +33,7 @@ jobs:
         
     - name: Fetch and update repository data
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        solutions_exchange_secret: ${{ secrets.solutions_exchange_secret }}
       run: |
         python scripts/update_repositories.py
         
