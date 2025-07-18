@@ -28,10 +28,21 @@ class NHSWalesRepositoryFetcher:
     """Fetches and enhances NHS Wales repository data for the Solutions Exchange."""
     
     def __init__(self):
-        self.github_token = os.getenv('GH_SECRET') or os.getenv('GITHUB_TOKEN')
+        self.github_token = os.getenv('solutions_exchange_secret')
         if not self.github_token:
-            logger.error("GitHub token not found. Set GH_SECRET or GITHUB_TOKEN environment variable.")
+            logger.error("GitHub token not found. Set solutions_exchange_secret environment variable.")
             sys.exit(1)
+        
+        # Log token type for debugging
+        token_type = "Unknown"
+        if self.github_token.startswith('ghp_'):
+            token_type = "Classic Personal Access Token (ghp_)"
+        elif self.github_token.startswith('ghu_'):
+            token_type = "Fine-grained Personal Access Token (ghu_)"
+        elif self.github_token.startswith('github_pat_'):
+            token_type = "Fine-grained Personal Access Token (github_pat_)"
+        
+        logger.info(f"Using token type: {token_type}")
             
         self.headers = {
             'Authorization': f'token {self.github_token}',
@@ -39,7 +50,7 @@ class NHSWalesRepositoryFetcher:
             'User-Agent': 'NHS-Wales-Solutions-Exchange/1.0'
         }
         
-        # NHS Wales organizations
+        # NHS Wales organizations - Updated to match working local script
         self.organizations = [
             "Analytics-Learning-Programme", 
             "Aneurin-Bevan-University-Health-Board",
@@ -47,54 +58,60 @@ class NHSWalesRepositoryFetcher:
             "Cwm-Taf-Morgannwg-UHB",
             "DHCW-Digital-Health-and-Care-Wales", 
             "GIGCymru",
-            "HDUHB-Hywel-Dda-University-Health-Board", 
-            "National-Data-Resource-NDR",
+            "HDUHB-Hywel-Dda-University-Health-Board",
             "NHS-Executive", 
             "Powys-Teaching-Health-Board",
             "Swansea-Bay-University-Health-Board",
-            "TBUHB-Cwm-Taf-Morgannwg-University-Health-Board"
+            "Advanced-Analytics-NHS-Wales",
+            "Betsi-Cadwaladr-University-Health-Board",
+            "Genomics-Partnership-Wales",
+            "National-Data-Resource",
+            "Velindre-University-NHS-Trust",
+            "Welsh-Ambulance-Services-NHS-Trust"
         ]
         
         self.output_file = 'data/repositories.json'
-        
-    def fetch_organization_repositories(self, org: str) -> List[Dict[str, Any]]:
+
+    
+    def fetch_organization_repositories(self, organization: str) -> List[Dict[str, Any]]:
         """Fetch all repositories for a given organization."""
-        repositories = []
+        repos = []
         page = 1
         
+        logger.info(f"Fetching repositories for organization: {organization}")
+        
         while True:
-            url = f'https://api.github.com/orgs/{org}/repos'
-            params = {
-                'per_page': 100,
-                'page': page,
-                'sort': 'updated',
-                'direction': 'desc'
-            }
+            api_url = f'https://api.github.com/orgs/{organization}/repos'
+            params = {'per_page': 100, 'page': page, 'type': 'all'}
             
             try:
-                logger.info(f"Fetching page {page} for organization: {org}")
-                response = requests.get(url, headers=self.headers, params=params)
-                response.raise_for_status()
+                response = requests.get(api_url, headers=self.headers, params=params, timeout=30)
                 
-                repos = response.json()
-                if not repos:  # No more repositories
+                if response.status_code == 404:
+                    logger.warning(f"Organization {organization} not found or not accessible")
                     break
-                    
-                repositories.extend(repos)
+                elif response.status_code != 200:
+                    logger.error(f"Error fetching repositories for {organization}: {response.status_code}, {response.text}")
+                    break
+                
+                data = response.json()
+                
+                if not data:
+                    break  # No more data to fetch
+                
+                # Filter repositories by visibility: only "public" or "internal"
+                filtered_repos = [repo for repo in data if repo.get('visibility') in ['public', 'internal']]
+                repos.extend(filtered_repos)
+                
+                logger.debug(f"Page {page}: Found {len(filtered_repos)} public/internal repos out of {len(data)} total")
                 page += 1
                 
-                # Respect rate limits
-                if 'X-RateLimit-Remaining' in response.headers:
-                    remaining = int(response.headers['X-RateLimit-Remaining'])
-                    if remaining < 10:
-                        logger.warning(f"Rate limit low: {remaining} requests remaining")
-                        
             except requests.exceptions.RequestException as e:
-                logger.error(f"Error fetching repositories for {org}: {e}")
+                logger.error(f"Request failed for {organization}: {e}")
                 break
-                
-        logger.info(f"Fetched {len(repositories)} repositories from {org}")
-        return repositories
+        
+        logger.info(f"Total repositories for {organization}: {len(repos)}")
+        return repos
     
     def generate_ai_tags(self, repo: Dict[str, Any]) -> List[str]:
         """Generate AI-like tags based on repository characteristics."""
@@ -244,11 +261,15 @@ class NHSWalesRepositoryFetcher:
         # Determine featured status
         featured = self.determine_featured_status(repo, quality_score)
         
+        # Determine visibility status
+        visibility = "Internal" if repo.get('private', False) else "Public"
+        
         # Add enhancement fields
         repo['generated_tags'] = generated_tags
         repo['all_tags'] = all_tags
         repo['quality_score'] = quality_score
         repo['featured'] = featured
+        repo['visibility'] = visibility
         repo['last_updated'] = datetime.now().isoformat()
         
         return repo

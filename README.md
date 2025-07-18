@@ -1,6 +1,6 @@
 # NHS Wales Solutions Exchange
 
-[![Update Solutions Exchange Data](https://github.com/danThorneNDR/Solutions-Exchange/actions/workflows/update-data.yml/badge.svg)](https://github.com/danThorneNDR/Solutions-Exchange/actions/workflows/update-data.yml)
+[![Update Solutions Exchange Data](https://github.com/GIGCymru/Solutions-Exchange/actions/workflows/update-data.yml/badge.svg)](https://github.com/GIGCymru/Solutions-Exchange/actions/workflows/update-data.yml)
 
 Welcome to the NHS Wales Solutions Exchange - a comprehensive platform showcasing innovative healthcare solutions, digital tools, and collaborative projects developed across NHS Wales organizations.
 
@@ -11,10 +11,11 @@ Welcome to the NHS Wales Solutions Exchange - a comprehensive platform showcasin
 - **Responsive Design**: Modern, mobile-friendly interface optimized for all devices
 - **Advanced Filtering**: Filter by project status (Public/Internal), topics, and organizations
 - **Solution Details**: Comprehensive information including descriptions, technologies, and metadata
+- **Privacy Aware**: Includes both public and internal repositories while respecting access controls
 
 ## 🚀 Live Website
 
-Visit the live Solutions Exchange: [https://danthornendr.github.io/Solutions-Exchange/](https://danthornendr.github.io/Solutions-Exchange/)
+Visit the live Solutions Exchange: [https://gigcymru.github.io/Solutions-Exchange/](https://gigcymru.github.io/Solutions-Exchange/)
 
 ## 🏗️ Architecture
 
@@ -24,35 +25,44 @@ Visit the live Solutions Exchange: [https://danthornendr.github.io/Solutions-Exc
 - **Interactive Filtering**: Real-time filtering and search capabilities
 
 ### Data Pipeline
-- **Python Script**: `scripts/fetch_repositories.py` fetches data from GitHub API
+- **Python Script**: `scripts/update_repositories.py` fetches data from GitHub API (including internal repositories)
 - **GitHub Actions**: Automated daily updates at 6 AM UTC
 - **JSON Storage**: Processed data stored in `data/repositories.json`
 
 ### Organizations Monitored
 The platform tracks repositories from these NHS Wales organizations:
+- Advanced Analytics NHS Wales
 - Analytics Learning Programme
 - Aneurin Bevan University Health Board
+- Betsi Cadwaladr University Health Board
 - Cardiff and Vale University Health Board
 - Cwm Taf Morgannwg University Health Board
 - Digital Health and Care Wales (DHCW)
+- Genomics Partnership Wales
 - GitHub GIG Cymru
 - Hywel Dda University Health Board
-- National Data Resource (NDR)
+- NDR National Data Analytics Platform
 - NHS Executive
+- NHS Wales Shared Services Partnership
+- National Data Resource (NDR)
 - Powys Teaching Health Board
+- Public Health Wales
+- Secure Data Environment GIG Cymru
 - Swansea Bay University Health Board
+- Velindre University NHS Trust
+- Welsh Ambulance Services NHS Trust
 
 ## 🛠️ Development Setup
 
 ### Prerequisites
 - Python 3.8+
-- GitHub Personal Access Token with repo permissions
+- GitHub Personal Access Token with `repo` permissions (required for accessing internal repositories)
 
 ### Local Development
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/danThorneNDR/Solutions-Exchange.git
+   git clone https://github.com/GIGCymru/Solutions-Exchange.git
    cd Solutions-Exchange
    ```
 
@@ -68,7 +78,7 @@ The platform tracks repositories from these NHS Wales organizations:
 
 4. **Fetch repository data**:
    ```bash
-   python scripts/fetch_repositories.py
+   python scripts/update_repositories.py
    ```
 
 5. **Serve the website locally**:
@@ -114,7 +124,7 @@ Each solution includes:
 - Bootstrap 5 for responsive layout
 
 ### Organizations
-To add/remove organizations, edit the `organizations` list in `scripts/fetch_repositories.py`
+To add/remove organizations, edit the `organizations` list in `scripts/update_repositories.py`
 
 ### Topics/Filtering
 Topics are automatically extracted from GitHub repository topics. To enhance filtering:
@@ -127,7 +137,7 @@ Topics are automatically extracted from GitHub repository topics. To enhance fil
 The site is automatically deployed to GitHub Pages via GitHub Actions.
 
 ### Manual Deployment
-1. Build the data: `python scripts/fetch_repositories.py`
+1. Build the data: `python scripts/update_repositories.py`
 2. Deploy the following files to your web server:
    - `index.html`
    - `css/style.css`

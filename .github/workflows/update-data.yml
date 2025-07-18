@@ -33,7 +33,7 @@ jobs:
         
     - name: Fetch and update repository data
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        solutions_exchange_secret: ${{ secrets.solutions_exchange_secret }}
       run: |
         python scripts/update_repositories.py
         
@@ -92,18 +92,12 @@ jobs:
         echo "ℹ️ No changes detected in repository data." >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
         echo "The Solutions Exchange data is already up to date!" >> $GITHUB_STEP_SUMMARY
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add data/repositories.json
-        git commit -m "📊 Update solutions data - $(date '+%Y-%m-%d %H:%M UTC')"
-        git push
         
     - name: Create deployment artifact
       if: steps.check_changes.outputs.changes == 'true'
       run: |
         echo "Solutions Exchange data updated successfully at $(date)" > deployment-log.txt
-        echo "Total repositories processed: $(jq length repositories.json)" >> deployment-log.txt
+        echo "Total repositories processed: $(jq length data/repositories.json)" >> deployment-log.txt
         
     - name: Deploy to GitHub Pages
       if: steps.check_changes.outputs.changes == 'true'

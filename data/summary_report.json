@@ -1,193 +1,60 @@
 {
-  "generated_at": "2025-07-16T16:18:50.983075",
+  "generated_at": "2025-07-18T10:42:05.488468",
   "statistics": {
-    "total_repositories": 61,
-    "featured_repositories": 50,
-    "featured_percentage": 82.0,
-    "average_quality_score": 83.8,
-    "recently_active": 21,
+    "total_repositories": 14,
+    "featured_repositories": 0,
+    "featured_percentage": 0.0,
+    "average_quality_score": 0.0,
+    "recently_active": 5,
     "languages": {
-      "Python": 16,
-      "HCL": 7,
       "C#": 5,
-      "HTML": 4,
-      "R": 3,
-      "Jupyter Notebook": 3,
-      "Shell": 2,
-      "JavaScript": 2,
-      "TSQL": 1,
-      "Java": 1
+      "HTML": 3,
+      "Java": 1,
+      "Jupyter Notebook": 1
     },
     "organizations": {
-      "DHCW-Digital-Health-and-Care-Wales": 19,
-      "NHS-Executive": 18,
-      "GIGCymru": 14,
-      "Cwm-Taf-Morgannwg-UHB": 4,
-      "Swansea-Bay-University-Health-Board": 3,
-      "Analytics-Learning-Programme": 2,
-      "Aneurin-Bevan-University-Health-Board": 1
+      "DHCW-Digital-Health-and-Care-Wales": 10,
+      "GIGCymru": 3,
+      "NHS-Executive": 1
     }
   },
   "validation": {
     "valid": true,
     "errors": [],
-    "warnings": [],
+    "warnings": [
+      "Solutions-Exchange: Missing enhanced field 'quality_score'",
+      ".github: Missing enhanced field 'quality_score'",
+      "Integration-Hub-POC: Missing enhanced field 'quality_score'",
+      "shared-medicines-guide: Missing enhanced field 'quality_score'",
+      "allergy-guide: Missing enhanced field 'quality_score'",
+      "Integration-Hub-MSMQ-Bridge: Missing enhanced field 'quality_score'",
+      "kainos: Missing enhanced field 'quality_score'",
+      "wccg-pas-referrals-api: Missing enhanced field 'quality_score'",
+      "wccg-pas-referrals-mock-ui: Missing enhanced field 'quality_score'",
+      "wccg-dental-mock-ui: Missing enhanced field 'quality_score'",
+      "wccg-eReferrals-service-app: Missing enhanced field 'quality_score'",
+      "Integration-Hub-SampleRepo: Missing enhanced field 'quality_score'",
+      "GoogleColab_NHFD_WebScraper: Missing enhanced field 'quality_score'",
+      "demo-repository: Missing enhanced field 'quality_score'"
+    ],
     "statistics": {
-      "total_repositories": 61,
-      "featured_repositories": 50,
-      "featured_percentage": 82.0,
-      "average_quality_score": 83.8,
-      "recently_active": 21,
+      "total_repositories": 14,
+      "featured_repositories": 0,
+      "featured_percentage": 0.0,
+      "average_quality_score": 0.0,
+      "recently_active": 5,
       "languages": {
-        "Python": 16,
-        "HCL": 7,
         "C#": 5,
-        "HTML": 4,
-        "R": 3,
-        "Jupyter Notebook": 3,
-        "Shell": 2,
-        "JavaScript": 2,
-        "TSQL": 1,
-        "Java": 1
+        "HTML": 3,
+        "Java": 1,
+        "Jupyter Notebook": 1
       },
       "organizations": {
-        "DHCW-Digital-Health-and-Care-Wales": 19,
-        "NHS-Executive": 18,
-        "GIGCymru": 14,
-        "Cwm-Taf-Morgannwg-UHB": 4,
-        "Swansea-Bay-University-Health-Board": 3,
-        "Analytics-Learning-Programme": 2,
-        "Aneurin-Bevan-University-Health-Board": 1
+        "DHCW-Digital-Health-and-Care-Wales": 10,
+        "GIGCymru": 3,
+        "NHS-Executive": 1
       }
     }
   },
-  "featured_repositories": [
-    {
-      "name": "Integration-Hub-Beta",
-      "organization": "Digital Health and Care Wales",
-      "quality_score": 95,
-      "url": "https://github.com/DHCW-Digital-Health-and-Care-Wales/Integration-Hub-Beta",
-      "tags": [
-        "python",
-        "medical",
-        "api",
-        "user-friendly",
-        "scalable"
-      ]
-    },
-    {
-      "name": "test-cloud-fun-BQ-SP",
-      "organization": "NHS Executive",
-      "quality_score": 77,
-      "url": "https://github.com/NHS-Executive/test-cloud-fun-BQ-SP",
-      "tags": [
-        "efficient",
-        "quality-assurance",
-        "healthcare",
-        "testing",
-        "digital-health"
-      ]
-    },
-    {
-      "name": "Integration-Hub-Terraform",
-      "organization": "Digital Health and Care Wales",
-      "quality_score": 84,
-      "url": "https://github.com/DHCW-Digital-Health-and-Care-Wales/Integration-Hub-Terraform",
-      "tags": [
-        "secure",
-        "healthcare",
-        "patient-care",
-        "robust"
-      ]
-    },
-    {
-      "name": "VPW_Vaccine",
-      "organization": "NHS Executive",
-      "quality_score": 95,
-      "url": "https://github.com/NHS-Executive/VPW_Vaccine",
-      "tags": [
-        "user-friendly",
-        "clinical",
-        "medical",
-        "robust"
-      ]
-    },
-    {
-      "name": "hme",
-      "organization": "Cwm Taf Morgannwg UHB",
-      "quality_score": 80,
-      "url": "https://github.com/Cwm-Taf-Morgannwg-UHB/hme",
-      "tags": [
-        "efficient",
-        "python",
-        "api",
-        "user-friendly",
-        "patient-care"
-      ]
-    },
-    {
-      "name": "Integration-Hub-tests",
-      "organization": "Digital Health and Care Wales",
-      "quality_score": 95,
-      "url": "https://github.com/DHCW-Digital-Health-and-Care-Wales/Integration-Hub-tests",
-      "tags": [
-        "efficient",
-        "clinical",
-        "python",
-        "quality-assurance",
-        "medical"
-      ]
-    },
-    {
-      "name": "doccla-unifhir-tie-integration",
-      "organization": "Cwm Taf Morgannwg UHB",
-      "quality_score": 93,
-      "url": "https://github.com/Cwm-Taf-Morgannwg-UHB/doccla-unifhir-tie-integration",
-      "tags": [
-        "efficient",
-        "python",
-        "medical",
-        "api",
-        "patient-care"
-      ]
-    },
-    {
-      "name": "malinko-api-integration",
-      "organization": "Cwm Taf Morgannwg UHB",
-      "quality_score": 95,
-      "url": "https://github.com/Cwm-Taf-Morgannwg-UHB/malinko-api-integration",
-      "tags": [
-        "integration",
-        "efficient",
-        "clinical",
-        "python",
-        "api"
-      ]
-    },
-    {
-      "name": "new-user-process",
-      "organization": "GitHub GIG Cymru",
-      "quality_score": 94,
-      "url": "https://github.com/GIGCymru/new-user-process",
-      "tags": [
-        "efficient",
-        "secure",
-        "clinical",
-        "medical"
-      ]
-    },
-    {
-      "name": "Respiratory-Baseline-Dashboard",
-      "organization": "NHS Executive",
-      "quality_score": 85,
-      "url": "https://github.com/NHS-Executive/Respiratory-Baseline-Dashboard",
-      "tags": [
-        "data-analysis",
-        "medical",
-        "statistics",
-        "healthcare",
-        "research"
-      ]
-    }
-  ]
+  "featured_repositories": []
 }
