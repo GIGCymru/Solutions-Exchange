@@ -1,6 +1,6 @@
 # NHS Wales Solutions Exchange
 
-[![Update Solutions Exchange Data](https://github.com/danThorneNDR/Solutions-Exchange/actions/workflows/update-data.yml/badge.svg)](https://github.com/danThorneNDR/Solutions-Exchange/actions/workflows/update-data.yml)
+[![Update Solutions Exchange Data](https://github.com/GIGCymru/Solutions-Exchange/actions/workflows/update-data.yml/badge.svg)](https://github.com/GIGCymru/Solutions-Exchange/actions/workflows/update-data.yml)
 
 Welcome to the NHS Wales Solutions Exchange - a comprehensive platform showcasing innovative healthcare solutions, digital tools, and collaborative projects developed across NHS Wales organizations.
 
@@ -15,7 +15,7 @@ Welcome to the NHS Wales Solutions Exchange - a comprehensive platform showcasin
 
 ## 🚀 Live Website
 
-Visit the live Solutions Exchange: [https://danthornendr.github.io/Solutions-Exchange/](https://danthornendr.github.io/Solutions-Exchange/)
+Visit the live Solutions Exchange: [https://gigcymru.github.io/Solutions-Exchange/](https://gigcymru.github.io/Solutions-Exchange/)
 
 ## 🏗️ Architecture
 
@@ -62,7 +62,7 @@ The platform tracks repositories from these NHS Wales organizations:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/danThorneNDR/Solutions-Exchange.git
+   git clone https://github.com/GIGCymru/Solutions-Exchange.git
    cd Solutions-Exchange
    ```
 
