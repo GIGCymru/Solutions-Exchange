@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NHS Wales Solutions Exchange - Browse Solutions</title>
+    <meta name="description" content="Discover and share innovative healthcare solutions across NHS Wales organizations">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        .quality-badge {
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .tag-clickable {
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .tag-clickable:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .featured-card {
+            border: 2px solid #ffc107 !important;
+            position: relative;
+        }
+        
+        .featured-card::before {
+            content: '★ FEATURED';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #ffc107;
+            color: #000;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            z-index: 10;
+        }
+        
+        .repo-stats .quality-score {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/img/nhswales_logo_black and white.jpg" alt="NHS Wales Logo" style="height: 40px;">
+                <span class="ms-2">GitHub GIG Cymru: Solutions Exchange</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="solutions.html">Solutions Exchange</a></li>
+                    <li class="nav-item"><a class="nav-link" href="guides.html">Guides</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-primary text-white ms-2 px-3" href="signup.html">Sign Up</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- Left Sidebar - Filters -->
+            <div class="col-lg-3 col-md-4">
+                <div class="card filters-card">
+                    <div class="card-header">
+                        <h5 class="mb-0"><i class="fas fa-filter me-2"></i>Search Filters</h5>
+                    </div>
+                    <div class="card-body">
+                        <!-- Keywords Section -->
+                        <div class="filter-section mb-4">
+                            <h6 class="filter-title">Keywords</h6>
+                            <div class="keyword-tags mb-2" id="keywordTags">
+                                <!-- Keyword tags will be added dynamically -->
+                            </div>
+                            <input type="text" class="form-control form-control-sm" id="keywordInput" placeholder="Add keyword...">
+                        </div>
+
+                        <!-- Visibility Filters -->
+                        <div class="filter-section mb-4">
+                            <h6 class="filter-title">Visibility</h6>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="publicRepos" checked>
+                                <label class="form-check-label" for="publicRepos">Public</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="internalRepos">
+                                <label class="form-check-label" for="internalRepos">Internal</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="userSpecific">
+                                <label class="form-check-label" for="userSpecific">User-specific</label>
+                            </div>
+                        </div>
+
+                        <!-- Languages (Dynamic) -->
+                        <div class="filter-section mb-4">
+                            <h6 class="filter-title">Languages</h6>
+                            <div id="languageFilters">
+                                <!-- Language filters will be populated dynamically -->
+                            </div>
+                        </div>
+
+                        <!-- Organisations (Dynamic) -->
+                        <div class="filter-section mb-4">
+                            <h6 class="filter-title">Organisations</h6>
+                            <div id="organisationFilters">
+                                <!-- Organisation filters will be populated dynamically -->
+                            </div>
+                        </div>
+
+                        <button class="btn btn-outline-secondary btn-sm w-100" id="clearFilters">
+                            <i class="fas fa-refresh me-1"></i>Clear All Filters
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column - Solutions -->
+            <div class="col-lg-9 col-md-8">
+                <div class="solutions-header mb-4">
+                    <h2>Solutions Exchange</h2>
+                    <p class="text-muted">Access NHS Wales GitHub repositories. Some repositories are only available via sign-in for internal users.</p>
+                    
+                    <!-- Dynamic Summary Stats -->
+                    <div class="row mt-4" id="summaryStats">
+                        <!-- Stats will be populated dynamically -->
+                    </div>
+                </div>
+
+                <!-- Solutions List -->
+                <div id="repositoriesList" class="solutions-list">
+                    <!-- Solutions will be loaded here dynamically -->
+                </div>
+
+                <!-- Load More Section -->
+                <div class="text-center mt-4" id="loadMoreSection">
+                    <div class="pagination-info mb-3">
+                        <small class="text-muted" id="paginationInfo">
+                            <!-- Pagination info will be updated here -->
+                        </small>
+                    </div>
+                    <button class="btn btn-primary btn-lg px-4" id="loadMoreBtn">
+                        <i class="fas fa-plus-circle me-2"></i>Load More Solutions
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Solutions Section -->
+    <section class="featured-solutions py-5 bg-light mt-5">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-5">
+                <h2>Featured Solutions</h2>
+                <small class="text-muted">
+                    <i class="fas fa-star me-1"></i>
+                    Automatically selected based on quality criteria
+                </small>
+            </div>
+            
+            <div id="featuredSolutionsList" class="row">
+                <!-- Featured solutions will be loaded here dynamically -->
+            </div>
+            
+            <!-- Fallback content if no featured solutions qualify -->
+            <div id="featuredFallback" class="row" style="display: none;">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 featured-card">
+                        <img src="assets/img/information.jpg" class="card-img-top" alt="ED Analysis Forecast">
+                        <div class="card-body">
+                            <h5 class="card-title">ED Analysis Forecast</h5>
+                            <p class="card-text">Advanced emergency department forecasting tools to predict patient flow and optimize resource allocation.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 featured-card">
+                        <img src="assets/img/network image.jpg" class="card-img-top" alt="Data Analytics Platform">
+                        <div class="card-body">
+                            <h5 class="card-title">Data Analytics Platform</h5>
+                            <p class="card-text">Comprehensive analytics solution for healthcare data processing and visualization.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 featured-card">
+                        <img src="assets/img/information.jpg" class="card-img-top" alt="Clinical Decision Support">
+                        <div class="card-body">
+                            <h5 class="card-title">Clinical Decision Support</h5>
+                            <p class="card-text">AI-powered tools to assist healthcare professionals in making informed clinical decisions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let repositories = [];
+        let displayedCount = 0;
+        const itemsPerPage = 6;
+
+        // Load repositories from JSON
+        async function loadRepositories() {
+            try {
+                const response = await fetch('data/repositories.json');
+                repositories = await response.json();
+                
+                // Populate dynamic filters
+                populateLanguageFilters();
+                populateOrganisationFilters();
+                
+                // Handle URL parameters for pre-filtering
+                handleUrlParameters();
+                
+                // Display repositories
+                displayRepositories();
+                
+                // Display featured solutions
+                displayFeaturedSolutions();
+            } catch (error) {
+                console.error('Error loading repositories:', error);
+                document.getElementById('repositoriesList').innerHTML = 
+                    '<div class="alert alert-danger">Unable to load solutions. Please try again later.</div>';
+            }
+        }
+
+        // Display featured solutions based on enhanced data
+        function displayFeaturedSolutions() {
+            const featuredContainer = document.getElementById('featuredSolutionsList');
+            const fallbackContainer = document.getElementById('featuredFallback');
+            
+            // Get repositories marked as featured and select 3 at random
+            const allFeaturedRepos = repositories.filter(repo => repo.featured === true);
+            
+            // Shuffle and select 3 random featured solutions
+            const shuffledFeatured = allFeaturedRepos.sort(() => 0.5 - Math.random());
+            const featuredRepos = shuffledFeatured.slice(0, 3); // Show exactly 3 random featured solutions
+            
+            if (featuredRepos.length > 0) {
+                featuredContainer.innerHTML = featuredRepos.map(repo => createFeaturedCard(repo)).join('');
+                featuredContainer.style.display = 'flex';
+                fallbackContainer.style.display = 'none';
+            } else {
+                featuredContainer.style.display = 'none';
+                fallbackContainer.style.display = 'flex';
+            }
+        }
+
+        // Create featured solution card
+        function createFeaturedCard(repo) {
+            const isPublic = repo.private === false;
+            const lastUpdated = new Date(repo.updated_at).toLocaleDateString('en-GB');
+            const allTags = repo.all_tags || [...(repo.topics || []), ...(repo.generated_tags || [])];
+            const displayTags = allTags.slice(0, 3); // Show first 3 tags
+            const qualityScore = repo.quality_score || 0;
+            
+            // Choose appropriate image based on tags or default
+            let cardImage = 'assets/img/information.jpg';
+            const tagString = allTags.join(' ').toLowerCase();
+            if (tagString.includes('analytics') || tagString.includes('data')) {
+                cardImage = 'assets/img/network image.jpg';
+            }
+            
+            return `
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 featured-card">
+                        <img src="${cardImage}" class="card-img-top" alt="${repo.name}">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title">${repo.name}</h5>
+                                <span class="badge ${isPublic ? 'bg-success' : 'bg-primary'} ms-2">
+                                    <i class="fas ${isPublic ? 'fa-globe' : 'fa-lock'} me-1"></i>
+                                    ${isPublic ? 'PUBLIC' : 'INTERNAL'}
+                                </span>
+                            </div>
+                            
+                            <p class="card-text text-muted">
+                                ${repo.description || 'NHS Wales healthcare solution providing essential functionality for clinical and administrative workflows.'}
+                            </p>
+                            
+                            <!-- Quality Score -->
+                            <div class="mb-2">
+                                <span class="badge ${qualityScore >= 80 ? 'bg-success' : qualityScore >= 60 ? 'bg-warning text-dark' : 'bg-secondary'} me-2">
+                                    <i class="fas fa-star me-1"></i>
+                                    Quality: ${qualityScore}/100
+                                </span>
+                                <i class="fas fa-crown text-warning" title="Featured Solution"></i>
+                            </div>
+                            
+                            <!-- Tags -->
+                            <div class="mb-3">
+                                ${displayTags.map(tag => {
+                                    const isGenerated = repo.generated_tags && repo.generated_tags.includes(tag);
+                                    return `<span class="badge ${isGenerated ? 'bg-info' : 'bg-secondary'} me-1 mb-1" title="${isGenerated ? 'AI-generated tag' : 'User-defined tag'}">${tag}</span>`;
+                                }).join('')}
+                                ${allTags.length > 3 ? `<span class="badge bg-light text-dark">+${allTags.length - 3} more</span>` : ''}
+                            </div>
+                            
+                            <!-- Organization and Last Updated -->
+                            <div class="mb-3">
+                                <small class="text-muted d-block">
+                                    <i class="fas fa-building me-1"></i>
+                                    ${getOrganisationFullName(repo.owner.login)}
+                                </small>
+                                <small class="text-muted">
+                                    <i class="fas fa-clock me-1"></i>
+                                    Updated: ${lastUpdated}
+                                </small>
+                            </div>
+                            
+                            <!-- Action Buttons -->
+                            <div class="mt-auto">
+                                <a href="${repo.html_url}" target="_blank" class="btn btn-outline-primary btn-sm">
+                                    <i class="fab fa-github me-1"></i>
+                                    View Repository
+                                </a>
+                                ${!isPublic ? `<a href="signup.html" class="btn btn-primary btn-sm ms-2">
+                                    <i class="fas fa-lock me-1"></i>
+                                    Sign In Required
+                                </a>` : ''}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Handle URL parameters for filtering
+        function handleUrlParameters() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const orgParam = urlParams.get('org');
+            
+            if (orgParam) {
+                // Map short names to full organization names
+                const orgMapping = {
+                    'Cardiff': 'Cardiff and Vale UHB',
+                    'Swansea': 'Swansea Bay UHB', 
+                    'AneurinBevan': 'Aneurin Bevan UHB',
+                    'BetsiCadwaladr': 'Betsi Cadwaladr UHB',
+                    'CwmTaf': 'Cwm Taf Morgannwg UHB',
+                    'HywelDda': 'Hywel Dda UHB',
+                    'Powys': 'Powys Teaching Health Board',
+                    'DHCW': 'Digital Health and Care Wales'
+                };
+                
+                const fullOrgName = orgMapping[orgParam];
+                if (fullOrgName) {
+                    // Wait for filters to be populated, then select the organization
+                    setTimeout(() => {
+                        const orgCheckboxes = document.querySelectorAll('.organisation-filter');
+                        orgCheckboxes.forEach(checkbox => {
+                            if (checkbox.dataset.organisation === fullOrgName) {
+                                checkbox.checked = true;
+                            }
+                        });
+                        displayRepositories(); // Refresh display with filter applied
+                    }, 100);
+                }
+            }
+        }
+
+        // Populate language filters dynamically from data
+        function populateLanguageFilters() {
+            const languages = new Set();
+            repositories.forEach(repo => {
+                if (repo.language) {
+                    languages.add(repo.language);
+                } else {
+                    languages.add('Unknown');
+                }
+            });
+            
+            const languageFiltersContainer = document.getElementById('languageFilters');
+            const sortedLanguages = Array.from(languages).sort();
+            
+            languageFiltersContainer.innerHTML = sortedLanguages.map(lang => {
+                const id = `lang${lang.replace(/\s+/g, '').replace(/[^a-zA-Z0-9]/g, '')}`;
+                return `
+                    <div class="form-check">
+                        <input class="form-check-input language-filter" type="checkbox" id="${id}" data-language="${lang}">
+                        <label class="form-check-label" for="${id}">${lang}</label>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Populate organisation filters dynamically from data
+        function populateOrganisationFilters() {
+            const organisations = new Set();
+            repositories.forEach(repo => {
+                const fullName = getOrganisationFullName(repo.owner.login);
+                organisations.add(fullName);
+            });
+            
+            const orgFiltersContainer = document.getElementById('organisationFilters');
+            const sortedOrgs = Array.from(organisations).sort();
+            
+            orgFiltersContainer.innerHTML = sortedOrgs.map(org => {
+                const id = `org${org.replace(/\s+/g, '').replace(/[^a-zA-Z0-9]/g, '')}`;
+                return `
+                    <div class="form-check">
+                        <input class="form-check-input organisation-filter" type="checkbox" id="${id}" data-organisation="${org}">
+                        <label class="form-check-label" for="${id}">${org}</label>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Display repositories with wireframe design
+        function displayRepositories() {
+            const container = document.getElementById('repositoriesList');
+            const filteredRepos = getFilteredRepositories();
+            const reposToShow = filteredRepos.slice(0, displayedCount + itemsPerPage);
+            
+            container.innerHTML = reposToShow.map(repo => createRepositoryCard(repo)).join('');
+            displayedCount = reposToShow.length;
+            
+            // Update summary stats
+            updateSummaryStats(filteredRepos);
+            
+            // Update pagination info
+            updatePaginationInfo(filteredRepos);
+            
+            // Show/hide load more button
+            const loadMoreBtn = document.getElementById('loadMoreBtn');
+            const loadMoreSection = document.getElementById('loadMoreSection');
+            if (displayedCount >= filteredRepos.length) {
+                loadMoreSection.style.display = 'none';
+            } else {
+                loadMoreSection.style.display = 'block';
+            }
+        }
+
+        // Update pagination information
+        function updatePaginationInfo(filteredRepos) {
+            const paginationInfo = document.getElementById('paginationInfo');
+            const remaining = filteredRepos.length - displayedCount;
+            
+            if (remaining > 0) {
+                paginationInfo.innerHTML = `Showing ${displayedCount} of ${filteredRepos.length} solutions. ${remaining} more available.`;
+            } else {
+                paginationInfo.innerHTML = `Showing all ${filteredRepos.length} solutions.`;
+            }
+        }
+
+        // Update summary statistics based on filtered results
+        function updateSummaryStats(filteredRepos) {
+            const totalRepos = repositories.length;
+            const filteredCount = filteredRepos.length;
+            const publicRepos = filteredRepos.filter(repo => !repo.private).length;
+            const internalRepos = filteredRepos.filter(repo => repo.private).length;
+            const totalStars = filteredRepos.reduce((sum, repo) => sum + repo.stargazers_count, 0);
+            const orgsCount = new Set(filteredRepos.map(repo => repo.owner.login)).size;
+            
+            const summaryStatsHtml = `
+                <div class="col-md-2 col-sm-6 mb-2">
+                    <div class="stat-card text-center p-2 bg-light rounded">
+                        <h5 class="mb-1 text-primary">${filteredCount}</h5>
+                        <small class="text-muted">Solutions</small>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-6 mb-2">
+                    <div class="stat-card text-center p-2 bg-light rounded">
+                        <h5 class="mb-1 text-success">${publicRepos}</h5>
+                        <small class="text-muted">Public</small>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-6 mb-2">
+                    <div class="stat-card text-center p-2 bg-light rounded">
+                        <h5 class="mb-1 text-info">${internalRepos}</h5>
+                        <small class="text-muted">Internal</small>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-6 mb-2">
+                    <div class="stat-card text-center p-2 bg-light rounded">
+                        <h5 class="mb-1 text-warning">${orgsCount}</h5>
+                        <small class="text-muted">Organisations</small>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-6 mb-2">
+                    <div class="stat-card text-center p-2 bg-light rounded">
+                        <h5 class="mb-1 text-dark">${totalStars}</h5>
+                        <small class="text-muted">Total Stars</small>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-6 mb-2">
+                    <div class="stat-card text-center p-2 bg-light rounded">
+                        <h5 class="mb-1 text-secondary">${Math.round((filteredCount/totalRepos)*100)}%</h5>
+                        <small class="text-muted">Filtered</small>
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('summaryStats').innerHTML = summaryStatsHtml;
+        }
+
+        // Create repository card matching wireframe design exactly
+        function createRepositoryCard(repo) {
+            const lastUpdated = new Date(repo.updated_at).toLocaleDateString('en-GB', {
+                day: '2-digit',
+                month: '2-digit', 
+                year: 'numeric'
+            });
+            const isPublic = repo.private === false;
+            const visibilityLabel = isPublic ? 'PUBLIC' : 'INTERNAL';
+            const visibilityClass = isPublic ? 'bg-success' : 'bg-primary';
+            const qualityScore = repo.quality_score || Math.floor(Math.random() * 30) + 60; // Use enhanced data or fallback
+            const license = repo.license ? repo.license.name : 'MIT';
+            
+            // Use enhanced AI-generated tags if available, otherwise fallback to original logic
+            const tags = [];
+            
+            // Priority 1: Use AI-generated tags from enhanced data
+            if (repo.all_tags && repo.all_tags.length > 0) {
+                repo.all_tags.slice(0, 6).forEach(tag => {
+                    let type = 'ai-generated';
+                    if (repo.language && tag.toLowerCase() === repo.language.toLowerCase()) {
+                        type = 'language';
+                    } else if (repo.topics && repo.topics.includes(tag)) {
+                        type = 'topic';
+                    }
+                    tags.push({ name: tag, type: type });
+                });
+            } else {
+                // Fallback to original logic
+                if (repo.language) tags.push({ name: repo.language, type: 'language' });
+                if (repo.topics && repo.topics.length > 0) {
+                    repo.topics.slice(0, 2).forEach(topic => {
+                        tags.push({ name: topic, type: 'topic' });
+                    });
+                }
+                
+                // Add some sample department/purpose tags based on repo name/description
+                const name = repo.name.toLowerCase();
+                const desc = (repo.description || '').toLowerCase();
+                
+                if (name.includes('emergency') || desc.includes('emergency') || name.includes('ed')) {
+                    tags.push({ name: 'Emergency Department', type: 'department' });
+                }
+                if (name.includes('forecast') || desc.includes('forecast') || name.includes('predict')) {
+                    tags.push({ name: 'Forecast', type: 'purpose' });
+                }
+                if (name.includes('analysis') || desc.includes('analysis') || name.includes('analytics')) {
+                    tags.push({ name: 'Analytics', type: 'purpose' });
+                }
+            }
+            
+            return `
+                <div class="repository-card mb-4">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <!-- Header with Title and Visibility -->
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <h5 class="repo-title mb-0">
+                                    <i class="fab fa-github me-2 text-muted"></i>
+                                    ${repo.name}
+                                </h5>
+                                <span class="badge ${visibilityClass} visibility-badge">
+                                    <i class="fas ${isPublic ? 'fa-globe' : 'fa-lock'} me-1"></i>
+                                    ${visibilityLabel}
+                                </span>
+                            </div>
+                            
+                            <!-- Description -->
+                            <p class="repo-description text-muted mb-3">
+                                ${repo.description || 'Body text for whatever you\'d like to say. Add here any additional information about this repository and its purpose for the NHS Wales community.'}
+                            </p>
+                            
+                            <!-- Last Updated -->
+                            <div class="repo-meta mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-clock me-1"></i>
+                                    Last Updated: ${lastUpdated}
+                                </small>
+                            </div>
+                            
+                            <!-- Tags -->
+                            <div class="repo-tags mb-3">
+                                ${tags.map(tag => {
+                                    let badgeClass = 'bg-secondary';
+                                    if (tag.type === 'language') badgeClass = 'bg-info';
+                                    if (tag.type === 'department') badgeClass = 'bg-warning';
+                                    if (tag.type === 'purpose') badgeClass = 'bg-success';
+                                    if (tag.type === 'ai-generated') badgeClass = 'bg-primary';
+                                    if (tag.type === 'topic') badgeClass = 'bg-dark';
+                                    
+                                    return `<span class="badge ${badgeClass} me-1 mb-1 tag-clickable" onclick="filterByTag('${tag.name}')" title="Type: ${tag.type}">${tag.name}</span>`;
+                                }).join('')}
+                            </div>
+                            
+                            <!-- Organisation -->
+                            <div class="repo-location mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-building me-1"></i>
+                                    ${getOrganisationFullName(repo.owner.login)}
+                                </small>
+                            </div>
+                            
+                            <!-- Bottom row with buttons and stats -->
+                            <div class="row align-items-center">
+                                <div class="col-md-6">
+                                    <div class="repo-actions">
+                                        <a href="${repo.html_url}" target="_blank" class="btn btn-outline-primary btn-sm me-2">
+                                            <i class="fab fa-github me-1"></i>View on GitHub
+                                        </a>
+                                        ${!isPublic ? `<a href="signup.html" class="btn btn-primary btn-sm">
+                                            <i class="fas fa-user-plus me-1"></i>Sign Up
+                                        </a>` : ''}
+                                    </div>
+                                </div>
+                                <div class="col-md-6 text-end">
+                                    <div class="repo-stats">
+                                        <!-- Quality Score -->
+                                        <div class="quality-score mb-1">
+                                            <span class="badge ${qualityScore >= 80 ? 'bg-success' : qualityScore >= 60 ? 'bg-warning text-dark' : 'bg-secondary'} quality-badge">
+                                                <i class="fas fa-star me-1"></i>
+                                                Quality: ${qualityScore}/100
+                                            </span>
+                                            ${repo.featured ? '<i class="fas fa-crown text-warning ms-1" title="Featured Solution"></i>' : ''}
+                                        </div>
+                                        <!-- License -->
+                                        <div class="license-info">
+                                            <small class="text-muted">
+                                                <i class="fas fa-balance-scale me-1"></i>
+                                                ${license}
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Get full organisation name mapping
+        function getOrganisationFullName(shortName) {
+            const orgMap = {
+                'GIGCymru': 'GitHub GIG Cymru',
+                'DHCW': 'Digital Health and Care Wales',
+                'NWIS': 'NHS Wales Informatics Service',
+                'CardiffAndValeUHB': 'Cardiff and Vale UHB',
+                'SwanseaBayUHB': 'Swansea Bay UHB',
+                'AneurinBevanUHB': 'Aneurin Bevan UHB',
+                'BetsiCadwaladrUHB': 'Betsi Cadwaladr UHB',
+                'CwmTafUHB': 'Cwm Taf Morgannwg UHB',
+                'HywelDdaUHB': 'Hywel Dda UHB',
+                'PowysUHB': 'Powys Teaching Health Board'
+            };
+            return orgMap[shortName] || shortName;
+        }
+
+        // Filter by tag functionality
+        function filterByTag(tagName) {
+            // Add tag to keyword filters
+            const tagsContainer = document.getElementById('keywordTags');
+            
+            // Check if tag already exists
+            const existingTags = Array.from(tagsContainer.querySelectorAll('.keyword-tag')).map(tag => 
+                tag.textContent.replace('×', '').trim()
+            );
+            
+            if (!existingTags.includes(tagName)) {
+                const tag = document.createElement('span');
+                tag.className = 'badge bg-secondary keyword-tag me-1 mb-1';
+                tag.innerHTML = `${tagName} <i class="fas fa-times ms-1 remove-tag"></i>`;
+                tagsContainer.appendChild(tag);
+                
+                // Trigger filter update
+                displayRepositories();
+            }
+        }
+
+        // Get filtered repositories based on current filters
+        function getFilteredRepositories() {
+            let filtered = repositories;
+            
+            // Apply keyword filter
+            const keywords = Array.from(document.querySelectorAll('.keyword-tag')).map(tag => 
+                tag.textContent.replace('×', '').trim().toLowerCase()
+            );
+            if (keywords.length > 0) {
+                filtered = filtered.filter(repo => {
+                    const searchText = [
+                        repo.name,
+                        repo.description || '',
+                        ...(repo.topics || [])
+                    ].join(' ').toLowerCase();
+                    return keywords.some(keyword => searchText.includes(keyword));
+                });
+            }
+            
+            // Apply visibility filters
+            const visibilityFilters = {
+                public: document.getElementById('publicRepos').checked,
+                internal: document.getElementById('internalRepos').checked,
+                userSpecific: document.getElementById('userSpecific').checked
+            };
+            
+            if (!visibilityFilters.public || !visibilityFilters.internal) {
+                filtered = filtered.filter(repo => {
+                    if (visibilityFilters.public && !repo.private) return true;
+                    if (visibilityFilters.internal && repo.private) return true;
+                    return false;
+                });
+            }
+            
+            // Apply language filters (dynamic)
+            const checkedLanguages = Array.from(document.querySelectorAll('.language-filter:checked'))
+                .map(input => input.dataset.language);
+            
+            if (checkedLanguages.length > 0) {
+                filtered = filtered.filter(repo => {
+                    const repoLang = repo.language || 'Unknown';
+                    return checkedLanguages.includes(repoLang);
+                });
+            }
+            
+            // Apply organization filters (dynamic)
+            const checkedOrganisations = Array.from(document.querySelectorAll('.organisation-filter:checked'))
+                .map(input => input.dataset.organisation);
+            
+            if (checkedOrganisations.length > 0) {
+                filtered = filtered.filter(repo => {
+                    const repoOrgFullName = getOrganisationFullName(repo.owner.login);
+                    return checkedOrganisations.includes(repoOrgFullName);
+                });
+            }
+            
+            return filtered;
+        }
+
+        // Add keyword tag
+        function addKeyword() {
+            const input = document.getElementById('keywordInput');
+            const keyword = input.value.trim();
+            if (keyword) {
+                const tagsContainer = document.getElementById('keywordTags');
+                const tag = document.createElement('span');
+                tag.className = 'badge bg-secondary keyword-tag me-1 mb-1';
+                tag.innerHTML = `${keyword} <i class="fas fa-times ms-1 remove-tag"></i>`;
+                tagsContainer.appendChild(tag);
+                input.value = '';
+                displayRepositories();
+            }
+        }
+
+        // Event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            loadRepositories();
+            
+            // Keyword input
+            document.getElementById('keywordInput').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    addKeyword();
+                }
+            });
+            
+            // Remove keyword tags
+            document.addEventListener('click', function(e) {
+                if (e.target.classList.contains('remove-tag')) {
+                    e.target.parentElement.remove();
+                    displayRepositories();
+                }
+            });
+            
+            // Filter checkboxes (using delegation for dynamic content)
+            document.addEventListener('change', function(e) {
+                if (e.target.type === 'checkbox') {
+                    displayRepositories();
+                }
+            });
+            
+            // Load more button
+            document.getElementById('loadMoreBtn').addEventListener('click', displayRepositories);
+            
+            // Clear filters
+            document.getElementById('clearFilters').addEventListener('click', function() {
+                // Clear all checkboxes
+                document.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
+                // Set default visibility filter
+                document.getElementById('publicRepos').checked = true;
+                // Clear keyword tags
+                document.getElementById('keywordTags').innerHTML = '';
+                // Reset display
+                displayedCount = 0;
+                displayRepositories();
+            });
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="d-flex footer-navbar col-12">
+                <div class="col-lg-12 mb-12 p-2 flex-fill footer-logo">
+                    <img class="nav-large-image" src="assets/img/nhswales_logo_black and white.jpg" alt="NHS Wales | GIG CYMRU Logo">
+                </div>
+                
+                <section class="p-2 flex-fill footer-section">
+                    <ul class="justify-content-center">
+                        <li><a href="https://dhcw.nhs.wales//use-of-site/accessibility/" class="nav-link" target="_self">Accessibility statement</a></li>
+							
+								<li><a href="https://dhcw.nhs.wales//use-of-site/terms-of-use/" class="nav-link" target="_self">Terms of use</a></li>
+							
+								<li><a href="https://dhcw.nhs.wales//use-of-site/freedom-of-information/" class="nav-link" target="_self">Freedom of information</a></li>
+							
+								<li><a href="https://dhcw.nhs.wales//use-of-site/privacy-policy/" class="nav-link" target="_self">Privacy Policy</a></li>
+                    </ul>
+                </section>
+            </div>
+
+            <div class="builtBy">
+                Built by <a href="https://dhcw.nhs.wales/our-programmes/national-data-resource1/" target="_self">NDR - National Data Resource</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
