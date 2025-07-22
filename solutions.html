@@ -388,6 +388,220 @@
             }
         }
 
+        // Update all filter counts dynamically based on current filters
+        function updateAllFilterCounts() {
+            updateVisibilityFilterCounts();
+            updateLanguageFilterCounts();
+            updateTagFilterCounts();
+            updateOrganisationFilterCounts();
+        }
+
+        // Update visibility filter counts based on current filters (excluding visibility filters)
+        function updateVisibilityFilterCounts() {
+            const filteredRepos = getFilteredRepositoriesExcluding(['visibility']);
+            const publicCount = filteredRepos.filter(repo => !repo.private).length;
+            const internalCount = filteredRepos.filter(repo => repo.private).length;
+            
+            // Update the labels
+            const publicLabel = document.querySelector('label[for="publicRepos"]');
+            const internalLabel = document.querySelector('label[for="internalRepos"]');
+            
+            if (publicLabel) {
+                publicLabel.innerHTML = `Public <span class="text-muted">(${publicCount})</span>`;
+            }
+            if (internalLabel) {
+                internalLabel.innerHTML = `Internal <span class="text-muted">(${internalCount})</span>`;
+            }
+        }
+
+        // Update language filter counts based on current filters (excluding language filters)
+        function updateLanguageFilterCounts() {
+            const filteredRepos = getFilteredRepositoriesExcluding(['language']);
+            const languageCounts = new Map();
+            
+            filteredRepos.forEach(repo => {
+                const lang = repo.language || 'Unknown';
+                languageCounts.set(lang, (languageCounts.get(lang) || 0) + 1);
+            });
+            
+            // Update existing language filter labels
+            document.querySelectorAll('.language-filter').forEach(checkbox => {
+                const language = checkbox.dataset.language;
+                const count = languageCounts.get(language) || 0;
+                const label = document.querySelector(`label[for="${checkbox.id}"]`);
+                if (label) {
+                    label.innerHTML = `${language} <span class="text-muted">(${count})</span>`;
+                    // Add visual feedback for zero count
+                    if (count === 0) {
+                        label.classList.add('text-muted');
+                        checkbox.disabled = false; // Keep enabled but visually indicate
+                    } else {
+                        label.classList.remove('text-muted');
+                        checkbox.disabled = false;
+                    }
+                }
+            });
+        }
+
+        // Update tag filter counts based on current filters (excluding tag filters)
+        function updateTagFilterCounts() {
+            const filteredRepos = getFilteredRepositoriesExcluding(['tags']);
+            const tagCounts = new Map();
+            
+            filteredRepos.forEach(repo => {
+                const allTags = repo.all_tags || [...(repo.topics || []), ...(repo.generated_tags || [])];
+                allTags.forEach(tag => {
+                    if (tag && tag.trim()) {
+                        tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1);
+                    }
+                });
+            });
+            
+            // Update existing tag filter labels
+            document.querySelectorAll('.tag-filter').forEach(checkbox => {
+                const tag = checkbox.dataset.tag;
+                const count = tagCounts.get(tag) || 0;
+                const label = document.querySelector(`label[for="${checkbox.id}"]`);
+                if (label) {
+                    label.innerHTML = `${tag} <span class="text-muted">(${count})</span>`;
+                    // Add visual feedback for zero count
+                    if (count === 0) {
+                        label.classList.add('text-muted');
+                        checkbox.disabled = false; // Keep enabled but visually indicate
+                    } else {
+                        label.classList.remove('text-muted');
+                        checkbox.disabled = false;
+                    }
+                }
+            });
+
+            // Update visible tag count
+            const visibleTags = document.querySelectorAll('.tag-item[style="display: block;"], .tag-item:not([style])').length;
+            const totalTags = tagCounts.size;
+            const tagCountElement = document.getElementById('tagCount');
+            if (tagCountElement) {
+                const searchValue = document.getElementById('tagSearch').value;
+                if (searchValue) {
+                    tagCountElement.textContent = `${visibleTags} of ${totalTags} tags shown (filtered)`;
+                } else {
+                    tagCountElement.textContent = `${totalTags} unique tags found`;
+                }
+            }
+        }
+
+        // Update organisation filter counts based on current filters (excluding organisation filters)
+        function updateOrganisationFilterCounts() {
+            const filteredRepos = getFilteredRepositoriesExcluding(['organisation']);
+            const orgCounts = new Map();
+            
+            filteredRepos.forEach(repo => {
+                const fullName = getOrganisationFullName(repo.owner.login);
+                orgCounts.set(fullName, (orgCounts.get(fullName) || 0) + 1);
+            });
+            
+            // Update existing organisation filter labels
+            document.querySelectorAll('.organisation-filter').forEach(checkbox => {
+                const org = checkbox.dataset.organisation;
+                const count = orgCounts.get(org) || 0;
+                const label = document.querySelector(`label[for="${checkbox.id}"]`);
+                if (label) {
+                    label.innerHTML = `${org} <span class="text-muted">(${count})</span>`;
+                    // Add visual feedback for zero count
+                    if (count === 0) {
+                        label.classList.add('text-muted');
+                        checkbox.disabled = false; // Keep enabled but visually indicate
+                    } else {
+                        label.classList.remove('text-muted');
+                        checkbox.disabled = false;
+                    }
+                }
+            });
+        }
+
+        // Get filtered repositories excluding specific filter types
+        function getFilteredRepositoriesExcluding(excludeTypes) {
+            let filtered = repositories;
+            
+            // Apply keyword filter (unless excluded)
+            if (!excludeTypes.includes('keywords')) {
+                const keywords = Array.from(document.querySelectorAll('.keyword-tag')).map(tag => 
+                    tag.textContent.replace('×', '').trim().toLowerCase()
+                );
+                if (keywords.length > 0) {
+                    filtered = filtered.filter(repo => {
+                        const allTags = repo.all_tags || [...(repo.topics || []), ...(repo.generated_tags || [])];
+                        const searchText = [
+                            repo.name,
+                            repo.description || '',
+                            ...(repo.topics || []),
+                            ...(repo.generated_tags || []),
+                            ...allTags,
+                            repo.language || '',
+                            getOrganisationFullName(repo.owner.login)
+                        ].join(' ').toLowerCase();
+                        return keywords.some(keyword => searchText.includes(keyword));
+                    });
+                }
+            }
+            
+            // Apply visibility filters (unless excluded)
+            if (!excludeTypes.includes('visibility')) {
+                const visibilityFilters = {
+                    public: document.getElementById('publicRepos').checked,
+                    internal: document.getElementById('internalRepos').checked
+                };
+                
+                if (!visibilityFilters.public || !visibilityFilters.internal) {
+                    filtered = filtered.filter(repo => {
+                        if (visibilityFilters.public && !repo.private) return true;
+                        if (visibilityFilters.internal && repo.private) return true;
+                        return false;
+                    });
+                }
+            }
+
+            // Apply language filters (unless excluded)
+            if (!excludeTypes.includes('language')) {
+                const checkedLanguages = Array.from(document.querySelectorAll('.language-filter:checked'))
+                    .map(input => input.dataset.language);
+                
+                if (checkedLanguages.length > 0) {
+                    filtered = filtered.filter(repo => {
+                        const repoLang = repo.language || 'Unknown';
+                        return checkedLanguages.includes(repoLang);
+                    });
+                }
+            }
+
+            // Apply tag filters (unless excluded)
+            if (!excludeTypes.includes('tags')) {
+                const checkedTags = Array.from(document.querySelectorAll('.tag-filter:checked'))
+                    .map(input => input.dataset.tag);
+                
+                if (checkedTags.length > 0) {
+                    filtered = filtered.filter(repo => {
+                        const allTags = repo.all_tags || [...(repo.topics || []), ...(repo.generated_tags || [])];
+                        return checkedTags.some(tag => allTags.includes(tag));
+                    });
+                }
+            }
+            
+            // Apply organization filters (unless excluded)
+            if (!excludeTypes.includes('organisation')) {
+                const checkedOrganisations = Array.from(document.querySelectorAll('.organisation-filter:checked'))
+                    .map(input => input.dataset.organisation);
+                
+                if (checkedOrganisations.length > 0) {
+                    filtered = filtered.filter(repo => {
+                        const repoOrgFullName = getOrganisationFullName(repo.owner.login);
+                        return checkedOrganisations.includes(repoOrgFullName);
+                    });
+                }
+            }
+            
+            return filtered;
+        }
+
         // Populate visibility filters with counts
         function populateVisibilityFilters() {
             const publicCount = repositories.filter(repo => !repo.private).length;
@@ -508,6 +722,9 @@
             
             // Update pagination info
             updatePaginationInfo(filteredRepos);
+            
+            // Update all filter counts dynamically
+            updateAllFilterCounts();
             
             // Show/hide load more button
             const loadMoreBtn = document.getElementById('loadMoreBtn');
@@ -895,14 +1112,8 @@
                     }
                 });
                 
-                // Update count display
-                const totalCount = window.allTagsData ? window.allTagsData.length : 0;
-                const countDisplay = document.getElementById('tagCount');
-                if (searchTerm) {
-                    countDisplay.textContent = `${visibleCount} of ${totalCount} tags shown (filtered)`;
-                } else {
-                    countDisplay.textContent = `${totalCount} unique tags found`;
-                }
+                // Update count display with dynamic counts
+                updateTagFilterCounts();
             });
             
             // Clear filters
