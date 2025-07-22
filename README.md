@@ -189,3 +189,35 @@ This project is part of NHS Wales digital initiatives. Please ensure compliance 
 - NHS Wales organizations for their innovative solutions
 - GitHub GIG Cymru for platform support
 - Contributors and maintainers
+
+## 🏆 Success Stories System
+
+Success stories are now managed via a dedicated JSON file:
+
+- **File:** `data/success_stories.json`
+- **Fields:**
+  - `header`: Story title
+  - `description`: Story details
+  - `image`: Path to image
+  - `link`: URL to related resource or repository
+  - `organization`: NHS Wales organization name
+  - `tags`: Array of relevant tags
+
+### How it works
+- The homepage dynamically loads and displays the first three success stories from this file.
+- Stories are shown in the same visual style as before, with images, organization, and tags.
+- To add or update stories, simply edit `data/success_stories.json`—no HTML changes required.
+
+### Example
+```json
+[
+  {
+    "header": "PHW Cookie Cutter Cutting the Cookies",
+    "description": "Our innovative approach to standardizing data processing workflows has revolutionized how Public Health Wales manages and analyzes health data across multiple departments.",
+    "image": "assets/img/ndrlogo.png",
+    "link": "https://github.com/GIGCymru",
+    "organization": "Public Health Wales",
+    "tags": ["data-processing", "workflows", "standardization"]
+  }
+]
+```

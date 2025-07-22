@@ -27,6 +27,19 @@
             font-weight: bold;
             z-index: 10;
         }
+
+        #recently-updated .card {
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        
+        #recently-updated .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        #recently-updated .border-start.border-primary {
+            border-width: 4px !important;
+        }
     </style>
 </head>
 <body>
@@ -77,41 +90,11 @@
             <h2 class="text-center mb-5">Success Stories</h2>
             <div class="row">
                 <div class="col-lg-8 mx-auto">
-                    <div class="success-story mb-4">
-                        <div class="row align-items-center">
-                            <div class="col-md-3">
-                                <img src="assets/img/ndrlogo.png" alt="PHW Success Story" class="img-fluid rounded">
-                            </div>
-                            <div class="col-md-9">
-                                <h4>PHW Cookie Cutter Cutting the Cookies</h4>
-                                <p class="text-muted">Our innovative approach to standardizing data processing workflows has revolutionized how Public Health Wales manages and analyzes health data across multiple departments.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="success-story mb-4">
-                        <div class="row align-items-center">
-                            <div class="col-md-3">
-                                <img src="assets/img/information.jpg" alt="Emergency Department Success" class="img-fluid rounded">
-                            </div>
-                            <div class="col-md-9">
-                                <h4>Emergency Department Forecasting Excellence</h4>
-                                <p class="text-muted">Advanced predictive analytics helping emergency departments across Wales optimize staffing and resource allocation, leading to improved patient outcomes and reduced waiting times.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="success-story mb-4">
-                        <div class="row align-items-center">
-                            <div class="col-md-3">
-                                <img src="assets/img/network image.jpg" alt="Collaboration Success" class="img-fluid rounded">
-                            </div>
-                            <div class="col-md-9">
-                                <h4>Cross-Organisation Data Collaboration</h4>
-                                <p class="text-muted">Breaking down silos between health boards through shared GitHub repositories, enabling unprecedented collaboration on analytics projects and shared learning initiatives.</p>
-                            </div>
-                        </div>
+                    <div id="successStoriesContainer">
+                        <!-- Success stories will be loaded here dynamically -->
                     </div>
                     <div class="text-center mt-4">
-                        <a href="guides.html" class="btn btn-outline-primary">Read More Success Stories</a>
+                        <a href="https://dhcw.nhs.wales/news/latest-news/category/dhcw-news/ndr/" class="btn btn-outline-primary">Read More Success Stories</a>
                     </div>
                 </div>
             </div>
@@ -119,37 +102,46 @@
     </section>
 
     <!-- Featured Solutions Section -->
-    <section id="featured" class="py-5 bg-light">
+    <section class="featured-solutions py-5 bg-light mt-5">
         <div class="container">
-            <h2 class="text-center mb-5">Featured Solutions</h2>
-            <div class="row">
-                <!-- Featured item 1 -->
+            <div class="d-flex justify-content-between align-items-center mb-5">
+                <h2>Featured Solutions</h2>
+                <small class="text-muted">
+                    <i class="fas fa-star me-1"></i>
+                    Automatically selected based on quality criteria
+                </small>
+            </div>
+            
+            <div id="featuredSolutionsList" class="row">
+                <!-- Featured solutions will be loaded here dynamically -->
+            </div>
+            
+            <!-- Fallback content if no featured solutions qualify -->
+            <div id="featuredFallback" class="row" style="display: none;">
                 <div class="col-md-4 mb-4">
                     <div class="card h-100 featured-card">
-                        <img src="assets/img/information.jpg" class="card-img-top" alt="ED Analysis Forecast" style="height: 200px; object-fit: cover;">
+                        <img src="assets/img/information.jpg" class="card-img-top" alt="ED Analysis Forecast">
                         <div class="card-body">
                             <h5 class="card-title">ED Analysis Forecast</h5>
-                            <p class="card-text">Advanced emergency department forecasting tools to predict patient flow and optimize resource allocation across Welsh health boards.</p>
+                            <p class="card-text">Advanced emergency department forecasting tools to predict patient flow and optimize resource allocation.</p>
                         </div>
                     </div>
                 </div>
-                <!-- Featured item 2 -->
                 <div class="col-md-4 mb-4">
                     <div class="card h-100 featured-card">
-                        <img src="assets/img/network image.jpg" class="card-img-top" alt="Data Analytics Platform" style="height: 200px; object-fit: cover;">
+                        <img src="assets/img/network image.jpg" class="card-img-top" alt="Data Analytics Platform">
                         <div class="card-body">
                             <h5 class="card-title">Data Analytics Platform</h5>
-                            <p class="card-text">Comprehensive analytics solution for healthcare data processing, visualization, and insights generation for evidence-based decision making.</p>
+                            <p class="card-text">Comprehensive analytics solution for healthcare data processing and visualization.</p>
                         </div>
                     </div>
                 </div>
-                <!-- Featured item 3 -->
                 <div class="col-md-4 mb-4">
                     <div class="card h-100 featured-card">
-                        <img src="assets/img/ndrlogo.png" class="card-img-top" alt="Clinical Decision Support" style="height: 200px; object-fit: cover; padding: 2rem; background: #f8f9fa;">
+                        <img src="assets/img/information.jpg" class="card-img-top" alt="Clinical Decision Support">
                         <div class="card-body">
                             <h5 class="card-title">Clinical Decision Support</h5>
-                            <p class="card-text">AI-powered tools to assist healthcare professionals in making informed clinical decisions with real-time data insights and evidence-based recommendations.</p>
+                            <p class="card-text">AI-powered tools to assist healthcare professionals in making informed clinical decisions.</p>
                         </div>
                     </div>
                 </div>
@@ -210,6 +202,29 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recently Updated Section -->
+    <section id="recently-updated" class="py-5">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-5">
+                <h2>Recently Updated</h2>
+                <small class="text-muted">
+                    <i class="fas fa-clock me-1"></i>
+                    Latest activity across NHS Wales repositories
+                </small>
+            </div>
+            
+            <div id="recentlyUpdatedList" class="row">
+                <!-- Recently updated solutions will be loaded here dynamically -->
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="solutions.html?sort=updated" class="btn btn-outline-primary">
+                    <i class="fas fa-history me-2"></i>View All Recent Updates
+                </a>
             </div>
         </div>
     </section>
@@ -403,53 +418,7 @@
         </div>
     </section>
 
-    <!-- Featured Solutions Section -->
-    <section class="featured-solutions py-5 bg-light mt-5">
-        <div class="container">
-            <div class="d-flex justify-content-between align-items-center mb-5">
-                <h2>Featured Solutions</h2>
-                <small class="text-muted">
-                    <i class="fas fa-star me-1"></i>
-                    Automatically selected based on quality criteria
-                </small>
-            </div>
-            
-            <div id="featuredSolutionsList" class="row">
-                <!-- Featured solutions will be loaded here dynamically -->
-            </div>
-            
-            <!-- Fallback content if no featured solutions qualify -->
-            <div id="featuredFallback" class="row" style="display: none;">
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 featured-card">
-                        <img src="assets/img/information.jpg" class="card-img-top" alt="ED Analysis Forecast">
-                        <div class="card-body">
-                            <h5 class="card-title">ED Analysis Forecast</h5>
-                            <p class="card-text">Advanced emergency department forecasting tools to predict patient flow and optimize resource allocation.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 featured-card">
-                        <img src="assets/img/network image.jpg" class="card-img-top" alt="Data Analytics Platform">
-                        <div class="card-body">
-                            <h5 class="card-title">Data Analytics Platform</h5>
-                            <p class="card-text">Comprehensive analytics solution for healthcare data processing and visualization.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 featured-card">
-                        <img src="assets/img/information.jpg" class="card-img-top" alt="Clinical Decision Support">
-                        <div class="card-body">
-                            <h5 class="card-title">Clinical Decision Support</h5>
-                            <p class="card-text">AI-powered tools to assist healthcare professionals in making informed clinical decisions.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
     <!-- Footer -->
     <footer>
@@ -512,19 +481,82 @@
                 const collaborativeRepos = repositories.filter(repo => repo.forks_count > 0 || repo.stargazers_count > 0).length;
 
                 const metricsHtml = `
-                    <div class="col-md-3"><div class="metric-card"><h3>${totalSolutions}</h3><p>Open Solutions</p></div></div>
-                    <div class="col-md-3"><div class="metric-card"><h3>${totalOrganisations}</h3><p>NHS Wales Boards</p></div></div>
-                    <div class="col-md-3"><div class="metric-card"><h3>${activeRepos}</h3><p>Active Projects</p></div></div>
-                    <div class="col-md-3"><div class="metric-card"><h3>${collaborativeRepos}</h3><p>Collaborative Tools</p></div></div>
+                    <div class="col-md-3">
+                        <a href="solutions.html" class="text-decoration-none">
+                            <div class="metric-card"><h3>${totalSolutions}</h3><p>Open Solutions</p></div>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="solutions.html" class="text-decoration-none">
+                            <div class="metric-card"><h3>${totalOrganisations}</h3><p>NHS Wales Organisations</p></div>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="solutions.html" class="text-decoration-none">
+                            <div class="metric-card"><h3>${activeRepos}</h3><p>Active Projects</p></div>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="solutions.html" class="text-decoration-none">
+                            <div class="metric-card"><h3>${collaborativeRepos}</h3><p>Collaborations</p></div>
+                        </a>
+                    </div>
                 `;
                 document.getElementById('metrics').innerHTML = metricsHtml;
 
                 // Load featured solutions
                 displayFeaturedSolutions(repositories);
 
+                // Load recently updated solutions
+                displayRecentlyUpdated(repositories);
+
             } catch (error) {
                 console.error('Error fetching metrics:', error);
                 document.getElementById('metrics').innerHTML = '<p class="text-danger">Could not load statistics.</p>';
+            }
+        }
+
+        // Fetch and display success stories
+        async function fetchSuccessStories() {
+            try {
+                const response = await fetch('data/success_stories.json');
+                const successStories = await response.json();
+                
+                // Display first 3 stories (or all if less than 3)
+                const displayStories = successStories.slice(0, 3);
+                const container = document.getElementById('successStoriesContainer');
+                
+                container.innerHTML = displayStories.map(story => `
+                    <div class="success-story mb-4">
+                        <div class="row align-items-center">
+                            <div class="col-md-3">
+                                <img src="${story.image}" alt="${story.header}" class="img-fluid rounded">
+                            </div>
+                            <div class="col-md-9">
+                                <h4>
+                                    <a href="${story.link}" target="_blank" class="text-decoration-none">
+                                        ${story.header}
+                                    </a>
+                                </h4>
+                                <p class="text-muted">${story.description}</p>
+                                <div class="mt-2">
+                                    <small class="text-primary">
+                                        <i class="fas fa-building me-1"></i>
+                                        ${story.organization}
+                                    </small>
+                                    ${story.tags ? story.tags.map(tag => 
+                                        `<span class="badge bg-light text-dark ms-1">${tag}</span>`
+                                    ).join('') : ''}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+
+            } catch (error) {
+                console.error('Error fetching success stories:', error);
+                document.getElementById('successStoriesContainer').innerHTML = 
+                    '<p class="text-danger">Could not load success stories.</p>';
             }
         }
 
@@ -629,6 +661,111 @@
             `;
         }
 
+        // Display recently updated solutions
+        function displayRecentlyUpdated(repositories) {
+            const recentlyUpdatedContainer = document.getElementById('recentlyUpdatedList');
+            
+            // Sort repositories by updated_at date (most recent first) and take first 6
+            const recentRepos = repositories
+                .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at))
+                .slice(0, 6);
+            
+            recentlyUpdatedContainer.innerHTML = recentRepos.map(repo => createRecentlyUpdatedCard(repo)).join('');
+        }
+
+        // Create recently updated solution card
+        function createRecentlyUpdatedCard(repo) {
+            const isPublic = repo.private === false;
+            const lastUpdated = new Date(repo.updated_at);
+            const timeSinceUpdate = getTimeSinceUpdate(lastUpdated);
+            const allTags = repo.all_tags || [...(repo.topics || []), ...(repo.generated_tags || [])];
+            const displayTags = allTags.slice(0, 2); // Show first 2 tags for compact display
+            
+            return `
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-start border-primary border-3">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h6 class="card-title mb-1">
+                                    <a href="${repo.html_url}" target="_blank" class="text-decoration-none">
+                                        ${repo.name}
+                                    </a>
+                                </h6>
+                                <span class="badge ${isPublic ? 'bg-success' : 'bg-primary'} ms-2">
+                                    <i class="fas ${isPublic ? 'fa-globe' : 'fa-lock'} me-1"></i>
+                                    ${isPublic ? 'PUBLIC' : 'INTERNAL'}
+                                </span>
+                            </div>
+                            
+                            <p class="card-text text-muted small">
+                                ${(repo.description || 'NHS Wales healthcare solution providing essential functionality.').substring(0, 120)}${(repo.description || '').length > 120 ? '...' : ''}
+                            </p>
+                            
+                            <!-- Update Info -->
+                            <div class="mb-2">
+                                <span class="badge bg-info text-white">
+                                    <i class="fas fa-clock me-1"></i>
+                                    ${timeSinceUpdate}
+                                </span>
+                                ${repo.featured ? '<i class="fas fa-crown text-warning ms-1" title="Featured Solution"></i>' : ''}
+                            </div>
+                            
+                            <!-- Tags (compact) -->
+                            ${displayTags.length > 0 ? `
+                            <div class="mb-2">
+                                ${displayTags.map(tag => {
+                                    const isGenerated = repo.generated_tags && repo.generated_tags.includes(tag);
+                                    return `<span class="badge ${isGenerated ? 'bg-light text-dark' : 'bg-secondary'} me-1" style="font-size: 0.7rem">${tag}</span>`;
+                                }).join('')}
+                                ${allTags.length > 2 ? `<span class="badge bg-light text-dark" style="font-size: 0.7rem">+${allTags.length - 2}</span>` : ''}
+                            </div>
+                            ` : ''}
+                            
+                            <!-- Organization -->
+                            <small class="text-muted d-block mb-2">
+                                <i class="fas fa-building me-1"></i>
+                                ${getOrganisationFullName(repo.owner.login)}
+                            </small>
+                            
+                            <!-- Stats -->
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    ${repo.stargazers_count > 0 ? `<small class="text-muted me-2"><i class="fas fa-star me-1"></i>${repo.stargazers_count}</small>` : ''}
+                                    ${repo.forks_count > 0 ? `<small class="text-muted"><i class="fas fa-code-branch me-1"></i>${repo.forks_count}</small>` : ''}
+                                </div>
+                                <a href="${repo.html_url}" target="_blank" class="btn btn-sm btn-outline-primary">
+                                    <i class="fab fa-github me-1"></i>
+                                    View
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Helper function to calculate time since update
+        function getTimeSinceUpdate(updateDate) {
+            const now = new Date();
+            const diffTime = Math.abs(now - updateDate);
+            const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+            const diffHours = Math.floor(diffTime / (1000 * 60 * 60));
+            const diffMinutes = Math.floor(diffTime / (1000 * 60));
+            
+            if (diffDays > 30) {
+                const months = Math.floor(diffDays / 30);
+                return `${months} month${months !== 1 ? 's' : ''} ago`;
+            } else if (diffDays > 0) {
+                return `${diffDays} day${diffDays !== 1 ? 's' : ''} ago`;
+            } else if (diffHours > 0) {
+                return `${diffHours} hour${diffHours !== 1 ? 's' : ''} ago`;
+            } else if (diffMinutes > 0) {
+                return `${diffMinutes} minute${diffMinutes !== 1 ? 's' : ''} ago`;
+            } else {
+                return 'Just now';
+            }
+        }
+
         // Helper function to map organization names
         function getOrganisationFullName(login) {
             const orgMapping = {
@@ -647,7 +784,10 @@
             return orgMapping[login] || login.replace(/-/g, ' ');
         }
 
-        document.addEventListener('DOMContentLoaded', fetchMetrics);
+        document.addEventListener('DOMContentLoaded', function() {
+            fetchMetrics();
+            fetchSuccessStories();
+        });
     </script>
 
 </body>
