@@ -67,7 +67,8 @@ class NHSWalesRepositoryFetcher:
             "Genomics-Partnership-Wales",
             "National-Data-Resource",
             "Velindre-University-NHS-Trust",
-            "Welsh-Ambulance-Services-NHS-Trust"
+            "Welsh-Ambulance-Services-NHS-Trust",
+            "GIG-Cymru-NHS-Wales"
         ]
         
         self.output_file = 'data/repositories.json'
