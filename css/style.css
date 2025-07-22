@@ -1117,3 +1117,17 @@ footer {
     color: var(--text-muted);
     font-style: italic;
 }
+
+/* Zero count filter styling */
+.form-check-label.text-muted {
+    opacity: 0.6;
+}
+
+.form-check-label.text-muted:hover {
+    opacity: 0.8;
+}
+
+/* Dynamic filter animations */
+.form-check-label {
+    transition: opacity 0.2s ease;
+}
