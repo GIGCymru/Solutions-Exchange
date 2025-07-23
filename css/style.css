@@ -905,7 +905,7 @@ footer {
     font-weight: 600;
     font-size: 0.95rem;
     margin-bottom: 0.75rem;
-    border-bottom: 2px solid var(--accent-color);
+    border-bottom: 2px solid black;
     padding-bottom: 0.5rem;
 }
 
@@ -1046,4 +1046,88 @@ footer {
     .carousel-control-next {
         width: 8%;
     }
+}
+
+/* Enhanced Tag Filter Styling */
+.tag-filter-container {
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: var(--bg-color);
+}
+
+.tag-filter-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.tag-filter-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.tag-filter-container::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+    border-radius: 3px;
+}
+
+.tag-filter-container::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+}
+
+.tag-item {
+    padding: 0.25rem 0.75rem;
+    border-bottom: 1px solid #f8f9fa;
+    transition: background-color 0.2s ease;
+}
+
+.tag-item:last-child {
+    border-bottom: none;
+}
+
+.tag-item:hover {
+    background-color: #f8f9fa;
+}
+
+.tag-item .form-check-label {
+    width: 100%;
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 0.1rem 0;
+}
+
+.tag-item .form-check-label .text-muted {
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+#tagSearch {
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+#tagSearch:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(0, 102, 204, 0.15);
+    outline: none;
+}
+
+#tagSearch::placeholder {
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+/* Zero count filter styling */
+.form-check-label.text-muted {
+    opacity: 0.6;
+}
+
+.form-check-label.text-muted:hover {
+    opacity: 0.8;
+}
+
+/* Dynamic filter animations */
+.form-check-label {
+    transition: opacity 0.2s ease;
 }

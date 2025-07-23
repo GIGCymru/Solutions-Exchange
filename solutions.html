@@ -96,17 +96,8 @@
                         <!-- Visibility Filters -->
                         <div class="filter-section mb-4">
                             <h6 class="filter-title">Visibility</h6>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="publicRepos" checked>
-                                <label class="form-check-label" for="publicRepos">Public</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="internalRepos">
-                                <label class="form-check-label" for="internalRepos">Internal</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="userSpecific">
-                                <label class="form-check-label" for="userSpecific">User-specific</label>
+                            <div id="visibilityFilters">
+                                <!-- Visibility filters will be populated dynamically with counts -->
                             </div>
                         </div>
 
@@ -115,6 +106,22 @@
                             <h6 class="filter-title">Languages</h6>
                             <div id="languageFilters">
                                 <!-- Language filters will be populated dynamically -->
+                            </div>
+                        </div>
+
+                        <!-- Tags (Dynamic) -->
+                        <div class="filter-section mb-4">
+                            <h6 class="filter-title">All Tags</h6>
+                            <div class="mb-2">
+                                <input type="text" class="form-control form-control-sm" id="tagSearch" placeholder="Search tags...">
+                            </div>
+                            <div class="tag-filter-container" style="max-height: 300px; overflow-y: auto;">
+                                <div id="tagFilters">
+                                    <!-- Tag filters will be populated dynamically -->
+                                </div>
+                            </div>
+                            <div class="mt-2">
+                                <small class="text-muted" id="tagCount"><!-- Tag count will be shown here --></small>
                             </div>
                         </div>
 
@@ -226,7 +233,9 @@
                 repositories = await response.json();
                 
                 // Populate dynamic filters
+                populateVisibilityFilters();
                 populateLanguageFilters();
+                populateTagFilters();
                 populateOrganisationFilters();
                 
                 // Handle URL parameters for pre-filtering
@@ -379,48 +388,321 @@
             }
         }
 
-        // Populate language filters dynamically from data
-        function populateLanguageFilters() {
-            const languages = new Set();
-            repositories.forEach(repo => {
-                if (repo.language) {
-                    languages.add(repo.language);
-                } else {
-                    languages.add('Unknown');
-                }
+        // Update all filter counts dynamically based on current filters
+        function updateAllFilterCounts() {
+            updateVisibilityFilterCounts();
+            updateLanguageFilterCounts();
+            updateTagFilterCounts();
+            updateOrganisationFilterCounts();
+        }
+
+        // Update visibility filter counts based on current filters (excluding visibility filters)
+        function updateVisibilityFilterCounts() {
+            const filteredRepos = getFilteredRepositoriesExcluding(['visibility']);
+            const publicCount = filteredRepos.filter(repo => !repo.private).length;
+            const internalCount = filteredRepos.filter(repo => repo.private).length;
+            
+            // Update the labels
+            const publicLabel = document.querySelector('label[for="publicRepos"]');
+            const internalLabel = document.querySelector('label[for="internalRepos"]');
+            
+            if (publicLabel) {
+                publicLabel.innerHTML = `Public <span class="text-muted">(${publicCount})</span>`;
+            }
+            if (internalLabel) {
+                internalLabel.innerHTML = `Internal <span class="text-muted">(${internalCount})</span>`;
+            }
+        }
+
+        // Update language filter counts based on current filters (excluding language filters)
+        function updateLanguageFilterCounts() {
+            const filteredRepos = getFilteredRepositoriesExcluding(['language']);
+            const languageCounts = new Map();
+            
+            filteredRepos.forEach(repo => {
+                const lang = repo.language || 'Unknown';
+                languageCounts.set(lang, (languageCounts.get(lang) || 0) + 1);
             });
             
-            const languageFiltersContainer = document.getElementById('languageFilters');
-            const sortedLanguages = Array.from(languages).sort();
+            // Update existing language filter labels
+            document.querySelectorAll('.language-filter').forEach(checkbox => {
+                const language = checkbox.dataset.language;
+                const count = languageCounts.get(language) || 0;
+                const label = document.querySelector(`label[for="${checkbox.id}"]`);
+                if (label) {
+                    label.innerHTML = `${language} <span class="text-muted">(${count})</span>`;
+                    // Add visual feedback for zero count
+                    if (count === 0) {
+                        label.classList.add('text-muted');
+                        checkbox.disabled = false; // Keep enabled but visually indicate
+                    } else {
+                        label.classList.remove('text-muted');
+                        checkbox.disabled = false;
+                    }
+                }
+            });
+        }
+
+        // Update tag filter counts based on current filters (excluding tag filters)
+        function updateTagFilterCounts() {
+            const filteredRepos = getFilteredRepositoriesExcluding(['tags']);
+            const tagCounts = new Map();
             
-            languageFiltersContainer.innerHTML = sortedLanguages.map(lang => {
-                const id = `lang${lang.replace(/\s+/g, '').replace(/[^a-zA-Z0-9]/g, '')}`;
+            filteredRepos.forEach(repo => {
+                const allTags = repo.all_tags || [...(repo.topics || []), ...(repo.generated_tags || [])];
+                allTags.forEach(tag => {
+                    if (tag && tag.trim()) {
+                        tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1);
+                    }
+                });
+            });
+            
+            // Update existing tag filter labels
+            document.querySelectorAll('.tag-filter').forEach(checkbox => {
+                const tag = checkbox.dataset.tag;
+                const count = tagCounts.get(tag) || 0;
+                const label = document.querySelector(`label[for="${checkbox.id}"]`);
+                if (label) {
+                    label.innerHTML = `${tag} <span class="text-muted">(${count})</span>`;
+                    // Add visual feedback for zero count
+                    if (count === 0) {
+                        label.classList.add('text-muted');
+                        checkbox.disabled = false; // Keep enabled but visually indicate
+                    } else {
+                        label.classList.remove('text-muted');
+                        checkbox.disabled = false;
+                    }
+                }
+            });
+
+            // Update visible tag count
+            const visibleTags = document.querySelectorAll('.tag-item[style="display: block;"], .tag-item:not([style])').length;
+            const totalTags = tagCounts.size;
+            const tagCountElement = document.getElementById('tagCount');
+            if (tagCountElement) {
+                const searchValue = document.getElementById('tagSearch').value;
+                if (searchValue) {
+                    tagCountElement.textContent = `${visibleTags} of ${totalTags} tags shown (filtered)`;
+                } else {
+                    tagCountElement.textContent = `${totalTags} unique tags found`;
+                }
+            }
+        }
+
+        // Update organisation filter counts based on current filters (excluding organisation filters)
+        function updateOrganisationFilterCounts() {
+            const filteredRepos = getFilteredRepositoriesExcluding(['organisation']);
+            const orgCounts = new Map();
+            
+            filteredRepos.forEach(repo => {
+                const fullName = getOrganisationFullName(repo.owner.login);
+                orgCounts.set(fullName, (orgCounts.get(fullName) || 0) + 1);
+            });
+            
+            // Update existing organisation filter labels
+            document.querySelectorAll('.organisation-filter').forEach(checkbox => {
+                const org = checkbox.dataset.organisation;
+                const count = orgCounts.get(org) || 0;
+                const label = document.querySelector(`label[for="${checkbox.id}"]`);
+                if (label) {
+                    label.innerHTML = `${org} <span class="text-muted">(${count})</span>`;
+                    // Add visual feedback for zero count
+                    if (count === 0) {
+                        label.classList.add('text-muted');
+                        checkbox.disabled = false; // Keep enabled but visually indicate
+                    } else {
+                        label.classList.remove('text-muted');
+                        checkbox.disabled = false;
+                    }
+                }
+            });
+        }
+
+        // Get filtered repositories excluding specific filter types
+        function getFilteredRepositoriesExcluding(excludeTypes) {
+            let filtered = repositories;
+            
+            // Apply keyword filter (unless excluded)
+            if (!excludeTypes.includes('keywords')) {
+                const keywords = Array.from(document.querySelectorAll('.keyword-tag')).map(tag => 
+                    tag.textContent.replace('×', '').trim().toLowerCase()
+                );
+                if (keywords.length > 0) {
+                    filtered = filtered.filter(repo => {
+                        const allTags = repo.all_tags || [...(repo.topics || []), ...(repo.generated_tags || [])];
+                        const searchText = [
+                            repo.name,
+                            repo.description || '',
+                            ...(repo.topics || []),
+                            ...(repo.generated_tags || []),
+                            ...allTags,
+                            repo.language || '',
+                            getOrganisationFullName(repo.owner.login)
+                        ].join(' ').toLowerCase();
+                        return keywords.some(keyword => searchText.includes(keyword));
+                    });
+                }
+            }
+            
+            // Apply visibility filters (unless excluded)
+            if (!excludeTypes.includes('visibility')) {
+                const visibilityFilters = {
+                    public: document.getElementById('publicRepos').checked,
+                    internal: document.getElementById('internalRepos').checked
+                };
+                
+                if (!visibilityFilters.public || !visibilityFilters.internal) {
+                    filtered = filtered.filter(repo => {
+                        if (visibilityFilters.public && !repo.private) return true;
+                        if (visibilityFilters.internal && repo.private) return true;
+                        return false;
+                    });
+                }
+            }
+
+            // Apply language filters (unless excluded)
+            if (!excludeTypes.includes('language')) {
+                const checkedLanguages = Array.from(document.querySelectorAll('.language-filter:checked'))
+                    .map(input => input.dataset.language);
+                
+                if (checkedLanguages.length > 0) {
+                    filtered = filtered.filter(repo => {
+                        const repoLang = repo.language || 'Unknown';
+                        return checkedLanguages.includes(repoLang);
+                    });
+                }
+            }
+
+            // Apply tag filters (unless excluded)
+            if (!excludeTypes.includes('tags')) {
+                const checkedTags = Array.from(document.querySelectorAll('.tag-filter:checked'))
+                    .map(input => input.dataset.tag);
+                
+                if (checkedTags.length > 0) {
+                    filtered = filtered.filter(repo => {
+                        const allTags = repo.all_tags || [...(repo.topics || []), ...(repo.generated_tags || [])];
+                        return checkedTags.some(tag => allTags.includes(tag));
+                    });
+                }
+            }
+            
+            // Apply organization filters (unless excluded)
+            if (!excludeTypes.includes('organisation')) {
+                const checkedOrganisations = Array.from(document.querySelectorAll('.organisation-filter:checked'))
+                    .map(input => input.dataset.organisation);
+                
+                if (checkedOrganisations.length > 0) {
+                    filtered = filtered.filter(repo => {
+                        const repoOrgFullName = getOrganisationFullName(repo.owner.login);
+                        return checkedOrganisations.includes(repoOrgFullName);
+                    });
+                }
+            }
+            
+            return filtered;
+        }
+
+        // Populate visibility filters with counts
+        function populateVisibilityFilters() {
+            const publicCount = repositories.filter(repo => !repo.private).length;
+            const internalCount = repositories.filter(repo => repo.private).length;
+            
+            const visibilityFiltersContainer = document.getElementById('visibilityFilters');
+            visibilityFiltersContainer.innerHTML = `
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="publicRepos" checked>
+                    <label class="form-check-label" for="publicRepos">
+                        Public <span class="text-muted">(${publicCount})</span>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="internalRepos">
+                    <label class="form-check-label" for="internalRepos">
+                        Internal <span class="text-muted">(${internalCount})</span>
+                    </label>
+                </div>
+            `;
+        }
+
+        // Populate tag filters dynamically from data with counts - ALL TAGS
+        function populateTagFilters() {
+            const tagCounts = new Map();
+            repositories.forEach(repo => {
+                const allTags = repo.all_tags || [...(repo.topics || []), ...(repo.generated_tags || [])];
+                allTags.forEach(tag => {
+                    if (tag && tag.trim()) {
+                        tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1);
+                    }
+                });
+            });
+            
+            const tagFiltersContainer = document.getElementById('tagFilters');
+            // Show ALL tags, sorted by count descending
+            const sortedTags = Array.from(tagCounts.entries())
+                .sort((a, b) => b[1] - a[1]);
+            
+            // Store all tags for search functionality
+            window.allTagsData = sortedTags;
+            
+            // Update tag count display
+            document.getElementById('tagCount').textContent = `${sortedTags.length} unique tags found`;
+            
+            tagFiltersContainer.innerHTML = sortedTags.map(([tag, count]) => {
+                const id = `tag${tag.replace(/\s+/g, '').replace(/[^a-zA-Z0-9]/g, '')}`;
                 return `
-                    <div class="form-check">
-                        <input class="form-check-input language-filter" type="checkbox" id="${id}" data-language="${lang}">
-                        <label class="form-check-label" for="${id}">${lang}</label>
+                    <div class="form-check tag-item" data-tag-name="${tag.toLowerCase()}">
+                        <input class="form-check-input tag-filter" type="checkbox" id="${id}" data-tag="${tag}">
+                        <label class="form-check-label" for="${id}">
+                            ${tag} <span class="text-muted">(${count})</span>
+                        </label>
                     </div>
                 `;
             }).join('');
         }
 
-        // Populate organisation filters dynamically from data
+        // Populate language filters dynamically from data with counts
+        function populateLanguageFilters() {
+            const languageCounts = new Map();
+            repositories.forEach(repo => {
+                const lang = repo.language || 'Unknown';
+                languageCounts.set(lang, (languageCounts.get(lang) || 0) + 1);
+            });
+            
+            const languageFiltersContainer = document.getElementById('languageFilters');
+            const sortedLanguages = Array.from(languageCounts.entries()).sort((a, b) => b[1] - a[1]); // Sort by count descending
+            
+            languageFiltersContainer.innerHTML = sortedLanguages.map(([lang, count]) => {
+                const id = `lang${lang.replace(/\s+/g, '').replace(/[^a-zA-Z0-9]/g, '')}`;
+                return `
+                    <div class="form-check">
+                        <input class="form-check-input language-filter" type="checkbox" id="${id}" data-language="${lang}">
+                        <label class="form-check-label" for="${id}">
+                            ${lang} <span class="text-muted">(${count})</span>
+                        </label>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Populate organisation filters dynamically from data with counts
         function populateOrganisationFilters() {
-            const organisations = new Set();
+            const orgCounts = new Map();
             repositories.forEach(repo => {
                 const fullName = getOrganisationFullName(repo.owner.login);
-                organisations.add(fullName);
+                orgCounts.set(fullName, (orgCounts.get(fullName) || 0) + 1);
             });
             
             const orgFiltersContainer = document.getElementById('organisationFilters');
-            const sortedOrgs = Array.from(organisations).sort();
+            const sortedOrgs = Array.from(orgCounts.entries()).sort((a, b) => b[1] - a[1]); // Sort by count descending
             
-            orgFiltersContainer.innerHTML = sortedOrgs.map(org => {
+            orgFiltersContainer.innerHTML = sortedOrgs.map(([org, count]) => {
                 const id = `org${org.replace(/\s+/g, '').replace(/[^a-zA-Z0-9]/g, '')}`;
                 return `
                     <div class="form-check">
                         <input class="form-check-input organisation-filter" type="checkbox" id="${id}" data-organisation="${org}">
-                        <label class="form-check-label" for="${id}">${org}</label>
+                        <label class="form-check-label" for="${id}">
+                            ${org} <span class="text-muted">(${count})</span>
+                        </label>
                     </div>
                 `;
             }).join('');
@@ -440,6 +722,9 @@
             
             // Update pagination info
             updatePaginationInfo(filteredRepos);
+            
+            // Update all filter counts dynamically
+            updateAllFilterCounts();
             
             // Show/hide load more button
             const loadMoreBtn = document.getElementById('loadMoreBtn');
@@ -696,16 +981,22 @@
         function getFilteredRepositories() {
             let filtered = repositories;
             
-            // Apply keyword filter
+            // Apply keyword filter (enhanced to include tags and language)
             const keywords = Array.from(document.querySelectorAll('.keyword-tag')).map(tag => 
                 tag.textContent.replace('×', '').trim().toLowerCase()
             );
             if (keywords.length > 0) {
                 filtered = filtered.filter(repo => {
+                    // Build comprehensive search text including all tags and language
+                    const allTags = repo.all_tags || [...(repo.topics || []), ...(repo.generated_tags || [])];
                     const searchText = [
                         repo.name,
                         repo.description || '',
-                        ...(repo.topics || [])
+                        ...(repo.topics || []),
+                        ...(repo.generated_tags || []),
+                        ...allTags,
+                        repo.language || '',
+                        getOrganisationFullName(repo.owner.login)
                     ].join(' ').toLowerCase();
                     return keywords.some(keyword => searchText.includes(keyword));
                 });
@@ -714,8 +1005,7 @@
             // Apply visibility filters
             const visibilityFilters = {
                 public: document.getElementById('publicRepos').checked,
-                internal: document.getElementById('internalRepos').checked,
-                userSpecific: document.getElementById('userSpecific').checked
+                internal: document.getElementById('internalRepos').checked
             };
             
             if (!visibilityFilters.public || !visibilityFilters.internal) {
@@ -734,6 +1024,17 @@
                 filtered = filtered.filter(repo => {
                     const repoLang = repo.language || 'Unknown';
                     return checkedLanguages.includes(repoLang);
+                });
+            }
+
+            // Apply tag filters (dynamic)
+            const checkedTags = Array.from(document.querySelectorAll('.tag-filter:checked'))
+                .map(input => input.dataset.tag);
+            
+            if (checkedTags.length > 0) {
+                filtered = filtered.filter(repo => {
+                    const allTags = repo.all_tags || [...(repo.topics || []), ...(repo.generated_tags || [])];
+                    return checkedTags.some(tag => allTags.includes(tag));
                 });
             }
             
@@ -795,14 +1096,41 @@
             // Load more button
             document.getElementById('loadMoreBtn').addEventListener('click', displayRepositories);
             
+            // Tag search functionality
+            document.getElementById('tagSearch').addEventListener('input', function(e) {
+                const searchTerm = e.target.value.toLowerCase();
+                const tagItems = document.querySelectorAll('.tag-item');
+                let visibleCount = 0;
+                
+                tagItems.forEach(item => {
+                    const tagName = item.dataset.tagName;
+                    if (tagName.includes(searchTerm)) {
+                        item.style.display = 'block';
+                        visibleCount++;
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+                
+                // Update count display with dynamic counts
+                updateTagFilterCounts();
+            });
+            
             // Clear filters
             document.getElementById('clearFilters').addEventListener('click', function() {
                 // Clear all checkboxes
                 document.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
-                // Set default visibility filter
+                // Set default visibility filter (only public repos checked)
                 document.getElementById('publicRepos').checked = true;
                 // Clear keyword tags
                 document.getElementById('keywordTags').innerHTML = '';
+                // Clear tag search
+                document.getElementById('tagSearch').value = '';
+                // Show all tag items
+                document.querySelectorAll('.tag-item').forEach(item => item.style.display = 'block');
+                // Reset tag count display
+                const totalCount = window.allTagsData ? window.allTagsData.length : 0;
+                document.getElementById('tagCount').textContent = `${totalCount} unique tags found`;
                 // Reset display
                 displayedCount = 0;
                 displayRepositories();
