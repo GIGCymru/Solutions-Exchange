@@ -60,6 +60,15 @@
                     <li class="nav-item"><a class="nav-link" href="solutions.html">Solutions Exchange</a></li>
                     <li class="nav-item"><a class="nav-link" href="guides.html">Guides</a></li>
                     <li class="nav-item"><a class="nav-link btn btn-primary text-white ms-2 px-3" href="signup.html">Sign Up</a></li>
+                    <li class="nav-item dropdown ms-2">
+                        <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-globe"></i> EN
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                            <li><a class="dropdown-item" href="#" onclick="setLanguage('en')">English</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="setLanguage('cy')">Cymraeg</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -69,8 +78,8 @@
     <header class="hero-section text-white text-center">
         <div class="container">
             <h1 class="display-4">Explore NHS Wales Repositories</h1>
-            <p class="lead">Access our comprehensive collection of NHS Wales data repositories, complete with user guides and training resources to support your work.</p>
-            <a href="solutions.html" class="btn btn-primary btn-lg">View Solutions Exchange</a>
+            <p class="lead">Access our comprehensive collection of NHS Wales projects and code, complete with user guides and training resources to support your work.</p>
+            <a href="solutions.html" class="btn btn-primary btn-lg">View Projects & Code</a>
         </div>
     </header>
 
@@ -232,14 +241,14 @@
     <!-- How to Contribute -->
     <section id="contribute" class="py-5 bg-light">
         <div class="container text-center">
-            <h2>Join the Community</h2>
-            <p class="lead">Help us build the future of digital health in Wales.</p>
+            <h2>Join the Collaboration Movement</h2>
+            <p class="lead">Help us build the future of digital health in Wales by collaborating across organizations.</p>
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <a href="signup.html" class="btn btn-success btn-lg w-100">
-                                <i class="fas fa-user-plus me-2"></i>Join GitHub GIG Cymru
+                                <i class="fas fa-user-plus me-2"></i>Join the Collaboration Movement
                             </a>
                         </div>
                         <div class="col-md-6 mb-3">
@@ -431,12 +440,12 @@
                 <section class="p-2 flex-fill footer-section">
                     <ul class="justify-content-center">
                         <li><a href="https://dhcw.nhs.wales//use-of-site/accessibility/" class="nav-link" target="_self">Accessibility statement</a></li>
-							
-								<li><a href="https://dhcw.nhs.wales//use-of-site/terms-of-use/" class="nav-link" target="_self">Terms of use</a></li>
-							
-								<li><a href="https://dhcw.nhs.wales//use-of-site/freedom-of-information/" class="nav-link" target="_self">Freedom of information</a></li>
-							
-								<li><a href="https://dhcw.nhs.wales//use-of-site/privacy-policy/" class="nav-link" target="_self">Privacy Policy</a></li>
+                            
+                                <li><a href="https://dhcw.nhs.wales//use-of-site/terms-of-use/" class="nav-link" target="_self">Terms of use</a></li>
+                            
+                                <li><a href="https://dhcw.nhs.wales//use-of-site/freedom-of-information/" class="nav-link" target="_self">Freedom of information</a></li>
+                            
+                                <li><a href="https://dhcw.nhs.wales//use-of-site/privacy-policy/" class="nav-link" target="_self">Privacy Policy</a></li>
                     </ul>
                 </section>
             </div>
@@ -448,6 +457,16 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    // Simple language toggle (placeholder, real implementation would load translations)
+    function setLanguage(lang) {
+        if (lang === 'cy') {
+            alert('Welsh language support coming soon!');
+        } else {
+            alert('English selected.');
+        }
+    }
+    </script>
     <script>
         // Fetch and display metrics
         async function fetchMetrics() {
@@ -483,22 +502,22 @@
                 const metricsHtml = `
                     <div class="col-md-3">
                         <a href="solutions.html" class="text-decoration-none">
-                            <div class="metric-card"><h3>${totalSolutions}</h3><p>Open Solutions</p></div>
+                            <div class="metric-card" title="Total number of open-source solutions shared on the platform."><h3>${totalSolutions}</h3><p>Open Solutions</p></div>
                         </a>
                     </div>
                     <div class="col-md-3">
                         <a href="solutions.html" class="text-decoration-none">
-                            <div class="metric-card"><h3>${totalOrganisations}</h3><p>NHS Wales Organisations</p></div>
+                            <div class="metric-card" title="Number of NHS Wales organisations contributing projects."><h3>${totalOrganisations}</h3><p>NHS Wales Organisations</p></div>
                         </a>
                     </div>
                     <div class="col-md-3">
                         <a href="solutions.html" class="text-decoration-none">
-                            <div class="metric-card"><h3>${activeRepos}</h3><p>Active Projects</p></div>
+                            <div class="metric-card" title="Projects with recent activity in the last 6 months."><h3>${activeRepos}</h3><p>Active Projects</p></div>
                         </a>
                     </div>
                     <div class="col-md-3">
                         <a href="solutions.html" class="text-decoration-none">
-                            <div class="metric-card"><h3>${collaborativeRepos}</h3><p>Collaborations</p></div>
+                            <div class="metric-card" title="Projects with collaboration (forks or stars) across organisations."><h3>${collaborativeRepos}</h3><p>Collaborations</p></div>
                         </a>
                     </div>
                 `;
@@ -564,9 +583,8 @@
         function displayFeaturedSolutions(repositories) {
             const featuredContainer = document.getElementById('featuredSolutionsList');
             const fallbackContainer = document.getElementById('featuredFallback');
-            
-            // Get repositories marked as featured and select 3 at random
-            const allFeaturedRepos = repositories.filter(repo => repo.featured === true);
+            // Only feature repos with a meaningful description (at least 30 chars)
+            const allFeaturedRepos = repositories.filter(repo => repo.featured === true && repo.description && repo.description.length > 30);
             
             // Shuffle and select 3 random featured solutions
             const shuffledFeatured = allFeaturedRepos.sort(() => 0.5 - Math.random());

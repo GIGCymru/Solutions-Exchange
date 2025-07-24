@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Metrics - NHS Wales Solutions Exchange</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+    <style>
+        .metrics-section { margin-top: 2rem; }
+        .chart-container { position: relative; height: 400px; margin-bottom: 3rem; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/img/nhswales_logo_black and white.jpg" alt="NHS Wales Logo" style="height: 40px;">
+                <span class="ms-2">GitHub GIG Cymru: Solutions Exchange</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="solutions.html">Solutions Exchange</a></li>
+                    <li class="nav-item"><a class="nav-link" href="guides.html">Guides</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-primary text-white ms-2 px-3" href="signup.html">Sign Up</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container metrics-section">
+        <h1 class="mb-4">Service Metrics & Analytics</h1>
+        <p class="lead">Explore interactive metrics and trends about the Solutions Exchange platform.</p>
+
+        <div class="chart-container">
+            <h4>Repository Growth Over Time</h4>
+            <canvas id="repoGrowthChart"></canvas>
+        </div>
+
+        <div class="chart-container">
+            <h4>Public vs Internal Repositories by Organisation</h4>
+            <canvas id="orgReposChart"></canvas>
+        </div>
+
+        <!-- Add more charts as needed -->
+    </div>
+
+    <footer class="mt-5">
+        <div class="container text-center">
+            <hr>
+            <small>Built by NDR - National Data Resource | NHS Wales</small>
+        </div>
+    </footer>
+
+    <script>
+    // Fetch data and render charts
+    document.addEventListener('DOMContentLoaded', async function() {
+        const repoData = await fetch('data/repositories.json').then(r => r.json());
+        renderRepoGrowthChart(repoData);
+        renderOrgReposChart(repoData);
+    });
+
+    // Chart 1: Repository Growth Over Time
+    function renderRepoGrowthChart(repos) {
+        // Simulate growth by using created_at dates
+        const growth = {};
+        repos.forEach(repo => {
+            const date = repo.created_at ? repo.created_at.slice(0, 10) : null;
+            if (date) {
+                growth[date] = (growth[date] || 0) + 1;
+            }
+        });
+        // Accumulate totals
+        const dates = Object.keys(growth).sort();
+        let total = 0;
+        const data = dates.map(date => {
+            total += growth[date];
+            return { x: date, y: total };
+        });
+        new Chart(document.getElementById('repoGrowthChart').getContext('2d'), {
+            type: 'line',
+            data: {
+                datasets: [{
+                    label: 'Total Repositories',
+                    data: data,
+                    borderColor: '#007bff',
+                    backgroundColor: 'rgba(0,123,255,0.1)',
+                    fill: true,
+                    tension: 0.2,
+                    pointRadius: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { display: true },
+                    tooltip: { mode: 'index', intersect: false }
+                },
+                scales: {
+                    x: { type: 'time', time: { unit: 'month' }, title: { display: true, text: 'Date' } },
+                    y: { beginAtZero: true, title: { display: true, text: 'Repositories' } }
+                }
+            }
+        });
+    }
+
+    // Chart 2: Public vs Internal by Organisation
+    function renderOrgReposChart(repos) {
+        const orgs = {};
+        repos.forEach(repo => {
+            const org = repo.owner && repo.owner.login ? repo.owner.login : 'Unknown';
+            if (!orgs[org]) orgs[org] = { public: 0, internal: 0 };
+            if (repo.private) {
+                orgs[org].internal++;
+            } else {
+                orgs[org].public++;
+            }
+        });
+        const labels = Object.keys(orgs);
+        const publicData = labels.map(org => orgs[org].public);
+        const internalData = labels.map(org => orgs[org].internal);
+        new Chart(document.getElementById('orgReposChart').getContext('2d'), {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [
+                    { label: 'Public', data: publicData, backgroundColor: '#28a745' },
+                    { label: 'Internal', data: internalData, backgroundColor: '#ffc107' }
+                ]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { display: true },
+                    tooltip: { mode: 'index', intersect: false }
+                },
+                scales: {
+                    x: { stacked: true, title: { display: true, text: 'Organisation' } },
+                    y: { stacked: true, beginAtZero: true, title: { display: true, text: 'Repositories' } }
+                }
+            }
+        });
+    }
+    </script>
+</body>
+</html>
