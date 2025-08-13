@@ -67,7 +67,10 @@ class NHSWalesRepositoryFetcher:
             "Genomics-Partnership-Wales",
             "National-Data-Resource",
             "Velindre-University-NHS-Trust",
-            "Welsh-Ambulance-Services-NHS-Trust"
+            "Welsh-Ambulance-Services-NHS-Trust",
+            "NDR-National-Data-Analytics-Platform",
+            "CI-ARM",
+            "NHS-Wales-Shared-Services-Partnership"
             
         ]
         
