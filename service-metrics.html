@@ -48,7 +48,20 @@
             <canvas id="orgReposChart"></canvas>
         </div>
 
-        <!-- Add more charts as needed -->
+        <div class="chart-container">
+            <h4>Repositories by Programming Language</h4>
+            <canvas id="langDistChart"></canvas>
+        </div>
+
+        <div class="chart-container">
+            <h4>Repository Stars Distribution</h4>
+            <canvas id="starsDistChart"></canvas>
+        </div>
+
+        <div class="chart-container">
+            <h4>Recent Activity Trend (Commits)</h4>
+            <canvas id="activityTrendChart"></canvas>
+        </div>
     </div>
 
     <footer class="mt-5">
@@ -61,9 +74,12 @@
     <script>
     // Fetch data and render charts
     document.addEventListener('DOMContentLoaded', async function() {
-        const repoData = await fetch('data/repositories.json').then(r => r.json());
-        renderRepoGrowthChart(repoData);
-        renderOrgReposChart(repoData);
+    const repoData = await fetch('data/repositories.json').then(r => r.json());
+    renderRepoGrowthChart(repoData);
+    renderOrgReposChart(repoData);
+    renderLangDistChart(repoData);
+    renderStarsDistChart(repoData);
+    renderActivityTrendChart(repoData);
     });
 
     // Chart 1: Repository Growth Over Time
@@ -143,6 +159,105 @@
                 scales: {
                     x: { stacked: true, title: { display: true, text: 'Organisation' } },
                     y: { stacked: true, beginAtZero: true, title: { display: true, text: 'Repositories' } }
+                }
+            }
+        });
+    }
+
+    // Chart 3: Language Distribution
+    function renderLangDistChart(repos) {
+        const langCounts = {};
+        repos.forEach(repo => {
+            const lang = repo.language || 'Unknown';
+            langCounts[lang] = (langCounts[lang] || 0) + 1;
+        });
+        const labels = Object.keys(langCounts);
+        const data = labels.map(l => langCounts[l]);
+        new Chart(document.getElementById('langDistChart').getContext('2d'), {
+            type: 'doughnut',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Repositories',
+                    data: data,
+                    backgroundColor: [
+                        '#007bff', '#28a745', '#ffc107', '#dc3545', '#6f42c1', '#20c997', '#fd7e14', '#343a40', '#17a2b8', '#6610f2'
+                    ]
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: { legend: { position: 'bottom' } }
+            }
+        });
+    }
+
+    // Chart 4: Stars Distribution
+    function renderStarsDistChart(repos) {
+        // Group by star buckets
+        const buckets = { '0': 0, '1-4': 0, '5-9': 0, '10-24': 0, '25+': 0 };
+        repos.forEach(repo => {
+            const stars = repo.stargazers_count || 0;
+            if (stars === 0) buckets['0']++;
+            else if (stars < 5) buckets['1-4']++;
+            else if (stars < 10) buckets['5-9']++;
+            else if (stars < 25) buckets['10-24']++;
+            else buckets['25+']++;
+        });
+        const labels = Object.keys(buckets);
+        const data = labels.map(l => buckets[l]);
+        new Chart(document.getElementById('starsDistChart').getContext('2d'), {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Repositories',
+                    data: data,
+                    backgroundColor: '#6f42c1'
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: { legend: { display: false } },
+                scales: {
+                    x: { title: { display: true, text: 'Stars' } },
+                    y: { beginAtZero: true, title: { display: true, text: 'Repositories' } }
+                }
+            }
+        });
+    }
+
+    // Chart 5: Recent Activity Trend (Commits)
+    function renderActivityTrendChart(repos) {
+        // Simulate with pushed_at dates (as commit data is not available)
+        const activity = {};
+        repos.forEach(repo => {
+            const date = repo.pushed_at ? repo.pushed_at.slice(0, 10) : null;
+            if (date) {
+                activity[date] = (activity[date] || 0) + 1;
+            }
+        });
+        const dates = Object.keys(activity).sort();
+        const data = dates.map(date => ({ x: date, y: activity[date] }));
+        new Chart(document.getElementById('activityTrendChart').getContext('2d'), {
+            type: 'line',
+            data: {
+                datasets: [{
+                    label: 'Active Repositories (by last push)',
+                    data: data,
+                    borderColor: '#fd7e14',
+                    backgroundColor: 'rgba(253,126,20,0.1)',
+                    fill: true,
+                    tension: 0.2,
+                    pointRadius: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: { legend: { display: true } },
+                scales: {
+                    x: { type: 'time', time: { unit: 'month' }, title: { display: true, text: 'Date' } },
+                    y: { beginAtZero: true, title: { display: true, text: 'Active Repositories' } }
                 }
             }
         });
