@@ -45,6 +45,7 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="solutions.html">Solutions Exchange</a></li>
+                    <li class="nav-item"><a class="nav-link" href="service-metrics.html">Service Metrics</a></li>
                     <li class="nav-item"><a class="nav-link active" href="guides.html">Guides</a></li>
                     <li class="nav-item"><a class="nav-link btn btn-primary text-white ms-2 px-3" href="signup.html">Sign Up</a></li>
                 </ul>
@@ -63,7 +64,7 @@
                     <p class="lead">Comprehensive guides to help you navigate, contribute to, and make the most of the NHS Wales Solutions Exchange.</p>
                 </div>
                 <div class="col-lg-4 text-end">
-                    <img src="assets/img/information.jpg" alt="Information and Guidance" class="img-fluid rounded shadow" style="max-height: 200px; object-fit: cover;">
+                    <i class="fas fa-handshake text-primary" style="font-size: 4rem; opacity: 0.3;"></i>
                 </div>
             </div>
         </div>
@@ -71,11 +72,51 @@
 
     <!-- Guides Section -->
     <section id="guides" class="py-5">
-        <div class="container">
+    <div class="container">
             <div class="row">
                 <div class="col-lg-10 mx-auto">
                     <div class="accordion" id="guidesAccordion">
                         
+                        <!-- GitHub GIG Cymru Service Overview & FAQ -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="gigCymruOverviewHeading">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#gigCymruOverview" aria-expanded="true" aria-controls="gigCymruOverview">
+                                    <i class="fas fa-info-circle me-2"></i>GitHub GIG Cymru: Service Overview & FAQ
+                                </button>
+                            </h2>
+                            <div id="gigCymruOverview" class="accordion-collapse collapse show" aria-labelledby="gigCymruOverviewHeading" data-bs-parent="#guidesAccordion">
+                                <div class="accordion-body">
+                                    <h5>About GitHub GIG Cymru</h5>
+                                    <p>GitHub GIG Cymru is a managed, version-controlled code collaboration platform for NHS Wales, supporting open-source and reusable code, and enabling cross-organizational collaboration for analytics and development projects.</p>
+                                    <div class="alert alert-warning mt-3 mb-3">
+                                        <strong>Access Notice:</strong> Only users who are part of NHS Wales can have access to internal repositories and be members of GitHub GIG Cymru. Access is not available to external users.
+                                    </div>
+                                    <h5>Frequently Asked Questions</h5>
+                                    <ul>
+                                        <li><strong>Who can use it?</strong> Only users who are part of NHS Wales organizations can access internal repositories and join GitHub GIG Cymru.</li>
+                                        <li><strong>How do I get access?</strong> Raise a ticket with your local IT help desk. Your request will be escalated to the national IT service desk for triage and access setup.</li>
+                                        <li><strong>How do I get Codespaces or Co-Pilot?</strong> These require additional funding. Contact the service for a cost estimate and access process.</li>
+                                        <li><strong>What training is available?</strong> Access <a href="https://github.com/GIGCymru/Guides" target="_blank">GitHub Help Documentation</a>, the <a href="https://github.com/GIGCymru/" target="_blank">GIG Cymru Documentation</a>, and community forums.</li>
+                                        <li><strong>How do I share code?</strong> Create a repository in your organization’s GitHub space, set it to Internal, or invite collaborators directly.</li>
+                                        <li><strong>How do I follow best practice?</strong> Use code reviews, pull requests, and follow your organization’s coding standards. Document shared standards in your repos.</li>
+                                        <li><strong>Where do I go for help?</strong> Use the <a href="https://docs.github.com/en/get-started" target="_blank">GitHub Help Docs</a>, contact the Advanced Analytics Team, or join community forums.</li>
+                                        <li><strong>How do I suggest improvements?</strong> Raise issues in relevant repos, join forums, or contact the NDR Advanced Analytics Team.</li>
+                                        <li><strong>What features are included?</strong> Private repos, team management, code review, project management, GitHub Actions, security, analytics, Co-Pilot, and Codespaces (some features may require extra cost).</li>
+                                        <li><strong>How is security managed?</strong> GitHub Enterprise provides encryption, access controls, and monitoring. All users are synced with NHS Wales Active Directory. Follow NHS Wales data protection policies.</li>
+                                        <li><strong>What are DHCW roles?</strong> The DHCW NDR Advanced Analytics Team manages the service, users, organizations, and provides support and guidance.</li>
+                                        <li><strong>Strategic goals supported:</strong> Digital transformation, high-quality digital services, cross-organizational collaboration, innovation, and trusted IT service management.</li>
+                                        <li><strong>What projects are supported?</strong> Cross-organization, open source, big data, research, proof of concept, hackathons, and infrastructure projects.</li>
+                                    </ul>
+                                    <h5>Resources & Support</h5>
+                                    <ul>
+                                        <li><a href="https://github.com/GIGCymru/GitHub-GIG-Cymru/wiki" target="_blank">GIG Cymru Wiki</a></li>
+                                        <li><a href="https://github.com/GIGCymru/Guides" target="_blank">Guides & Documentation</a></li>
+                                        <li><a href="https://github.com/GIGCymru/GitHub-GIG-Cymru-FAQ" target="_blank">FAQ Repository</a></li>
+                                    </ul>
+                                    <p class="mb-0"><strong>Contact:</strong> For support, contact your local IT desk or the NDR Advanced Analytics Team.</p>
+                                </div>
+                            </div>
+                        </div>
                         <!-- Getting Started Guide -->
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="gettingStartedHeading">
@@ -466,20 +507,15 @@
                 <div class="col-lg-12 mb-12 p-2 flex-fill footer-logo">
                     <img class="nav-large-image" src="assets/img/nhswales_logo_black and white.jpg" alt="NHS Wales | GIG CYMRU Logo">
                 </div>
-                
                 <section class="p-2 flex-fill footer-section">
                     <ul class="justify-content-center">
                         <li><a href="https://dhcw.nhs.wales//use-of-site/accessibility/" class="nav-link" target="_self">Accessibility statement</a></li>
-							
-								<li><a href="https://dhcw.nhs.wales//use-of-site/terms-of-use/" class="nav-link" target="_self">Terms of use</a></li>
-							
-								<li><a href="https://dhcw.nhs.wales//use-of-site/freedom-of-information/" class="nav-link" target="_self">Freedom of information</a></li>
-							
-								<li><a href="https://dhcw.nhs.wales//use-of-site/privacy-policy/" class="nav-link" target="_self">Privacy Policy</a></li>
+                        <li><a href="https://dhcw.nhs.wales//use-of-site/terms-of-use/" class="nav-link" target="_self">Terms of use</a></li>
+                        <li><a href="https://dhcw.nhs.wales//use-of-site/freedom-of-information/" class="nav-link" target="_self">Freedom of information</a></li>
+                        <li><a href="https://dhcw.nhs.wales//use-of-site/privacy-policy/" class="nav-link" target="_self">Privacy Policy</a></li>
                     </ul>
                 </section>
             </div>
-
             <div class="builtBy">
                 Built by <a href="https://dhcw.nhs.wales/our-programmes/national-data-resource1/" target="_self">NDR - National Data Resource</a>
             </div>
