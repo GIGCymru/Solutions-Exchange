@@ -8,6 +8,7 @@ on:
   push:
     paths:
       - 'scripts/update_repositories.py'
+      - 'scripts/private_repo_and_user_count.py'
       - '.github/workflows/update-data.yml'
 
 jobs:
@@ -37,16 +38,22 @@ jobs:
       run: |
         python scripts/update_repositories.py
         
+    - name: Fetch private metrics data
+      env:
+        solutions_exchange_secret: ${{ secrets.solutions_exchange_secret }}
+      run: |
+        python scripts/private_repo_and_user_count.py
+        
     - name: Check for changes
       id: check_changes
       run: |
-        if git diff --quiet data/repositories.json; then
+        if git diff --quiet data/repositories.json data/private_metrics.json; then
           echo "changes=false" >> $GITHUB_OUTPUT
           echo "No changes detected in repository data"
         else
           echo "changes=true" >> $GITHUB_OUTPUT
           echo "Changes detected in repository data"
-          git diff --stat data/repositories.json
+          git diff --stat data/repositories.json data/private_metrics.json
         fi
         
     - name: Commit and push changes
@@ -54,13 +61,14 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add data/repositories.json
+        git add data/repositories.json data/private_metrics.json
         git commit -m "🤖 Automated update of Solutions Exchange data
         
         - Updated repository information
         - Enhanced with AI-generated tags
         - Quality scores calculated
         - Featured solutions identified
+        - Updated private metrics data
         
         Triggered by: ${{ github.event_name }}
         Commit: ${{ github.sha }}"
@@ -78,6 +86,7 @@ jobs:
         echo "- Generated AI-powered tags for improved discoverability" >> $GITHUB_STEP_SUMMARY
         echo "- Calculated quality scores based on activity and documentation" >> $GITHUB_STEP_SUMMARY
         echo "- Identified featured solutions using quality criteria" >> $GITHUB_STEP_SUMMARY
+        echo "- Updated private repository and organization metrics" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
         echo "### Next Steps:" >> $GITHUB_STEP_SUMMARY
         echo "- Changes have been committed to the repository" >> $GITHUB_STEP_SUMMARY
@@ -98,6 +107,8 @@ jobs:
       run: |
         echo "Solutions Exchange data updated successfully at $(date)" > deployment-log.txt
         echo "Total repositories processed: $(jq length data/repositories.json)" >> deployment-log.txt
+        echo "Private repositories: $(jq .private_repos data/private_metrics.json)" >> deployment-log.txt
+        echo "Organizations: $(jq .organizations data/private_metrics.json)" >> deployment-log.txt
         
     - name: Deploy to GitHub Pages
       if: steps.check_changes.outputs.changes == 'true'
