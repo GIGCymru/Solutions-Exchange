@@ -70,8 +70,9 @@ class NHSWalesRepositoryFetcher:
             "Welsh-Ambulance-Services-NHS-Trust",
             "NDR-National-Data-Analytics-Platform",
             "CI-ARM",
-            "NHS-Wales-Shared-Services-Partnership"
-            
+            "NHS-Wales-Shared-Services-Partnership",
+            "Public-Health-Wales",
+            "Secure-Data-Environment-GIG-Cymru"
         ]
         
         self.output_file = 'data/repositories.json'
