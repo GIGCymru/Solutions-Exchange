@@ -50,6 +50,42 @@
             align-items: center;
             justify-content: flex-end;
         }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            background: #0d6efd;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 18px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .back-to-top:hover {
+            background: #0b5ed7;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+        }
+        
+        .back-to-top:active {
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body>
@@ -111,6 +147,26 @@
                             </div>
                         </div>
 
+                        <!-- Date Range Filter -->
+                        <div class="filter-section mb-4">
+                            <h6 class="filter-title">Last Updated</h6>
+                            <div class="row g-2">
+                                <div class="col-6">
+                                    <label for="dateFrom" class="form-label form-label-sm">From:</label>
+                                    <input type="date" class="form-control form-control-sm" id="dateFrom">
+                                </div>
+                                <div class="col-6">
+                                    <label for="dateTo" class="form-label form-label-sm">To:</label>
+                                    <input type="date" class="form-control form-control-sm" id="dateTo">
+                                </div>
+                            </div>
+                            <div class="mt-2">
+                                <button class="btn btn-outline-secondary btn-sm w-100" id="clearDates">
+                                    <i class="fas fa-calendar-times me-1"></i>Clear Dates
+                                </button>
+                            </div>
+                        </div>
+
                         <!-- Languages (Dynamic) -->
                         <div class="filter-section mb-4">
                             <h6 class="filter-title">Languages</h6>
@@ -143,6 +199,64 @@
                             </div>
                         </div>
 
+                        <!-- Repository Size & Activity Filters -->
+                        <div class="filter-section mb-4">
+                            <h6 class="filter-title">Repository Activity</h6>
+                            
+                            <!-- Star Count Range -->
+                            <div class="mb-3">
+                                <label class="form-label form-label-sm">Star Count:</label>
+                                <div class="row g-2">
+                                    <div class="col-6">
+                                        <input type="number" class="form-control form-control-sm" id="starsMin" placeholder="Min" min="0">
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="number" class="form-control form-control-sm" id="starsMax" placeholder="Max" min="0">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Activity Level Checkboxes -->
+                            <div class="mb-3">
+                                <label class="form-label form-label-sm">Activity Level:</label>
+                                <div class="form-check">
+                                    <input class="form-check-input activity-filter" type="checkbox" id="activityHigh" value="high">
+                                    <label class="form-check-label" for="activityHigh">
+                                        <i class="fas fa-fire text-danger me-1"></i>High Activity <small class="text-muted">(Updated within 30 days)</small>
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input activity-filter" type="checkbox" id="activityMedium" value="medium">
+                                    <label class="form-check-label" for="activityMedium">
+                                        <i class="fas fa-chart-line text-warning me-1"></i>Medium Activity <small class="text-muted">(Updated within 6 months)</small>
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input activity-filter" type="checkbox" id="activityLow" value="low">
+                                    <label class="form-check-label" for="activityLow">
+                                        <i class="fas fa-clock text-secondary me-1"></i>Low Activity <small class="text-muted">(Updated over 6 months ago)</small>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Quality Score Range -->
+                            <div class="mb-3">
+                                <label class="form-label form-label-sm">Quality Score:</label>
+                                <div class="row g-2">
+                                    <div class="col-6">
+                                        <input type="number" class="form-control form-control-sm" id="qualityMin" placeholder="Min" min="0" max="100">
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="number" class="form-control form-control-sm" id="qualityMax" placeholder="Max" min="0" max="100">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-outline-secondary btn-sm w-100" id="clearActivity">
+                                <i class="fas fa-chart-bar me-1"></i>Clear Activity Filters
+                            </button>
+                        </div>
+
                         <button class="btn btn-outline-secondary btn-sm w-100" id="clearFilters">
                             <i class="fas fa-refresh me-1"></i>Clear All Filters
                         </button>
@@ -153,8 +267,25 @@
             <!-- Right Column - Solutions -->
             <div class="col-lg-9 col-md-8">
                 <div class="solutions-header mb-4">
-                    <h2>Solutions Exchange</h2>
-                    <p class="text-muted">Access NHS Wales GitHub repositories. Some repositories are only available via sign-in for internal users.</p>
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div>
+                            <h2>Solutions Exchange</h2>
+                            <p class="text-muted mb-0">Access NHS Wales GitHub repositories. Some repositories are only available via sign-in for internal users.</p>
+                        </div>
+                        <div class="sort-controls">
+                            <label for="sortSelect" class="form-label mb-1"><small>Sort by:</small></label>
+                            <select class="form-select form-select-sm" id="sortSelect" style="width: auto;">
+                                <option value="name-asc">Name (A-Z)</option>
+                                <option value="name-desc">Name (Z-A)</option>
+                                <option value="updated-desc" selected>Last Updated (Newest)</option>
+                                <option value="updated-asc">Last Updated (Oldest)</option>
+                                <option value="stars-desc">Stars (Most)</option>
+                                <option value="stars-asc">Stars (Least)</option>
+                                <option value="quality-desc">Quality Score (Highest)</option>
+                                <option value="quality-asc">Quality Score (Lowest)</option>
+                            </select>
+                        </div>
+                    </div>
                     
                     <!-- Dynamic Summary Stats -->
                     <div class="row mt-4" id="summaryStats">
@@ -230,6 +361,11 @@
         </div>
     </section>
 
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTopBtn" title="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
     // Simple language toggle (placeholder, real implementation would load translations)
@@ -240,11 +376,41 @@
             alert('English selected.');
         }
     }
+
+    // Back to top functionality
+    (function() {
+        const backToTopBtn = document.getElementById('backToTopBtn');
+        
+        // Show/hide button based on scroll position
+        function toggleBackToTopButton() {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        }
+        
+        // Smooth scroll to top
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+        
+        // Event listeners
+        window.addEventListener('scroll', toggleBackToTopButton);
+        backToTopBtn.addEventListener('click', scrollToTop);
+        
+        // Initial check
+        toggleBackToTopButton();
+    })();
     </script>
     <script>
         let repositories = [];
         let displayedCount = 0;
         const itemsPerPage = 6;
+        let currentSort = 'updated-desc';
 
         // Load repositories from JSON
         async function loadRepositories() {
@@ -580,6 +746,86 @@
                 }
             }
 
+            // Apply date range filter (unless excluded)
+            if (!excludeTypes.includes('dateRange')) {
+                const dateFrom = document.getElementById('dateFrom').value;
+                const dateTo = document.getElementById('dateTo').value;
+                
+                if (dateFrom || dateTo) {
+                    filtered = filtered.filter(repo => {
+                        const repoDate = new Date(repo.updated_at);
+                        let withinRange = true;
+                        
+                        if (dateFrom) {
+                            const fromDate = new Date(dateFrom);
+                            withinRange = withinRange && repoDate >= fromDate;
+                        }
+                        
+                        if (dateTo) {
+                            const toDate = new Date(dateTo);
+                            toDate.setHours(23, 59, 59, 999);
+                            withinRange = withinRange && repoDate <= toDate;
+                        }
+                        
+                        return withinRange;
+                    });
+                }
+            }
+
+            // Apply activity filters (unless excluded)
+            if (!excludeTypes.includes('activity')) {
+                const starsMin = parseInt(document.getElementById('starsMin').value) || null;
+                const starsMax = parseInt(document.getElementById('starsMax').value) || null;
+                const qualityMin = parseInt(document.getElementById('qualityMin').value) || null;
+                const qualityMax = parseInt(document.getElementById('qualityMax').value) || null;
+                
+                if (starsMin !== null || starsMax !== null) {
+                    filtered = filtered.filter(repo => {
+                        const stars = repo.stargazers_count || 0;
+                        let withinRange = true;
+                        
+                        if (starsMin !== null) withinRange = withinRange && stars >= starsMin;
+                        if (starsMax !== null) withinRange = withinRange && stars <= starsMax;
+                        
+                        return withinRange;
+                    });
+                }
+
+                if (qualityMin !== null || qualityMax !== null) {
+                    filtered = filtered.filter(repo => {
+                        const quality = repo.quality_score || 0;
+                        let withinRange = true;
+                        
+                        if (qualityMin !== null) withinRange = withinRange && quality >= qualityMin;
+                        if (qualityMax !== null) withinRange = withinRange && quality <= qualityMax;
+                        
+                        return withinRange;
+                    });
+                }
+
+                const checkedActivityLevels = Array.from(document.querySelectorAll('.activity-filter:checked'))
+                    .map(input => input.value);
+                
+                if (checkedActivityLevels.length > 0) {
+                    filtered = filtered.filter(repo => {
+                        const updatedDate = new Date(repo.updated_at);
+                        const now = new Date();
+                        const daysDiff = Math.floor((now - updatedDate) / (1000 * 60 * 60 * 24));
+                        
+                        let activityLevel;
+                        if (daysDiff <= 30) {
+                            activityLevel = 'high';
+                        } else if (daysDiff <= 180) {
+                            activityLevel = 'medium';
+                        } else {
+                            activityLevel = 'low';
+                        }
+                        
+                        return checkedActivityLevels.includes(activityLevel);
+                    });
+                }
+            }
+
             // Apply language filters (unless excluded)
             if (!excludeTypes.includes('language')) {
                 const checkedLanguages = Array.from(document.querySelectorAll('.language-filter:checked'))
@@ -728,11 +974,38 @@
             }).join('');
         }
 
+        // Sort repositories based on selected criteria
+        function sortRepositories(repos, sortOption) {
+            const sorted = [...repos]; // Create a copy to avoid mutating original
+            
+            switch (sortOption) {
+                case 'name-asc':
+                    return sorted.sort((a, b) => a.name.localeCompare(b.name));
+                case 'name-desc':
+                    return sorted.sort((a, b) => b.name.localeCompare(a.name));
+                case 'updated-desc':
+                    return sorted.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
+                case 'updated-asc':
+                    return sorted.sort((a, b) => new Date(a.updated_at) - new Date(b.updated_at));
+                case 'stars-desc':
+                    return sorted.sort((a, b) => (b.stargazers_count || 0) - (a.stargazers_count || 0));
+                case 'stars-asc':
+                    return sorted.sort((a, b) => (a.stargazers_count || 0) - (b.stargazers_count || 0));
+                case 'quality-desc':
+                    return sorted.sort((a, b) => (b.quality_score || 0) - (a.quality_score || 0));
+                case 'quality-asc':
+                    return sorted.sort((a, b) => (a.quality_score || 0) - (b.quality_score || 0));
+                default:
+                    return sorted;
+            }
+        }
+
         // Display repositories with wireframe design
         function displayRepositories() {
             const container = document.getElementById('repositoriesList');
             const filteredRepos = getFilteredRepositories();
-            const reposToShow = filteredRepos.slice(0, displayedCount + itemsPerPage);
+            const sortedRepos = sortRepositories(filteredRepos, currentSort);
+            const reposToShow = sortedRepos.slice(0, displayedCount + itemsPerPage);
             
             container.innerHTML = reposToShow.map(repo => createRepositoryCard(repo)).join('');
             displayedCount = reposToShow.length;
@@ -1035,6 +1308,30 @@
                     return false;
                 });
             }
+
+            // Apply date range filter
+            const dateFrom = document.getElementById('dateFrom').value;
+            const dateTo = document.getElementById('dateTo').value;
+            
+            if (dateFrom || dateTo) {
+                filtered = filtered.filter(repo => {
+                    const repoDate = new Date(repo.updated_at);
+                    let withinRange = true;
+                    
+                    if (dateFrom) {
+                        const fromDate = new Date(dateFrom);
+                        withinRange = withinRange && repoDate >= fromDate;
+                    }
+                    
+                    if (dateTo) {
+                        const toDate = new Date(dateTo);
+                        toDate.setHours(23, 59, 59, 999); // Include the entire end date
+                        withinRange = withinRange && repoDate <= toDate;
+                    }
+                    
+                    return withinRange;
+                });
+            }
             
             // Apply language filters (dynamic)
             const checkedLanguages = Array.from(document.querySelectorAll('.language-filter:checked'))
@@ -1066,6 +1363,71 @@
                 filtered = filtered.filter(repo => {
                     const repoOrgFullName = getOrganisationFullName(repo.owner.login);
                     return checkedOrganisations.includes(repoOrgFullName);
+                });
+            }
+
+            // Apply star count range filter
+            const starsMin = parseInt(document.getElementById('starsMin').value) || null;
+            const starsMax = parseInt(document.getElementById('starsMax').value) || null;
+            
+            if (starsMin !== null || starsMax !== null) {
+                filtered = filtered.filter(repo => {
+                    const stars = repo.stargazers_count || 0;
+                    let withinRange = true;
+                    
+                    if (starsMin !== null) {
+                        withinRange = withinRange && stars >= starsMin;
+                    }
+                    
+                    if (starsMax !== null) {
+                        withinRange = withinRange && stars <= starsMax;
+                    }
+                    
+                    return withinRange;
+                });
+            }
+
+            // Apply activity level filters
+            const checkedActivityLevels = Array.from(document.querySelectorAll('.activity-filter:checked'))
+                .map(input => input.value);
+            
+            if (checkedActivityLevels.length > 0) {
+                filtered = filtered.filter(repo => {
+                    const updatedDate = new Date(repo.updated_at);
+                    const now = new Date();
+                    const daysDiff = Math.floor((now - updatedDate) / (1000 * 60 * 60 * 24));
+                    
+                    let activityLevel;
+                    if (daysDiff <= 30) {
+                        activityLevel = 'high';
+                    } else if (daysDiff <= 180) {
+                        activityLevel = 'medium';
+                    } else {
+                        activityLevel = 'low';
+                    }
+                    
+                    return checkedActivityLevels.includes(activityLevel);
+                });
+            }
+
+            // Apply quality score range filter
+            const qualityMin = parseInt(document.getElementById('qualityMin').value) || null;
+            const qualityMax = parseInt(document.getElementById('qualityMax').value) || null;
+            
+            if (qualityMin !== null || qualityMax !== null) {
+                filtered = filtered.filter(repo => {
+                    const quality = repo.quality_score || 0;
+                    let withinRange = true;
+                    
+                    if (qualityMin !== null) {
+                        withinRange = withinRange && quality >= qualityMin;
+                    }
+                    
+                    if (qualityMax !== null) {
+                        withinRange = withinRange && quality <= qualityMax;
+                    }
+                    
+                    return withinRange;
                 });
             }
             
@@ -1140,8 +1502,9 @@
             document.getElementById('clearFilters').addEventListener('click', function() {
                 // Clear all checkboxes
                 document.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
-                // Set default visibility filter (only public repos checked)
+                // Set default visibility filters (both public and internal checked)
                 document.getElementById('publicRepos').checked = true;
+                document.getElementById('internalRepos').checked = true;
                 // Clear keyword tags
                 document.getElementById('keywordTags').innerHTML = '';
                 // Clear tag search
@@ -1151,7 +1514,76 @@
                 // Reset tag count display
                 const totalCount = window.allTagsData ? window.allTagsData.length : 0;
                 document.getElementById('tagCount').textContent = `${totalCount} unique tags found`;
+                // Clear date filters
+                document.getElementById('dateFrom').value = '';
+                document.getElementById('dateTo').value = '';
+                // Clear activity filters
+                document.getElementById('starsMin').value = '';
+                document.getElementById('starsMax').value = '';
+                document.getElementById('qualityMin').value = '';
+                document.getElementById('qualityMax').value = '';
+                // Reset sorting
+                document.getElementById('sortSelect').value = 'updated-desc';
+                currentSort = 'updated-desc';
                 // Reset display
+                displayedCount = 0;
+                displayRepositories();
+            });
+
+            // Sort dropdown change
+            document.getElementById('sortSelect').addEventListener('change', function(e) {
+                currentSort = e.target.value;
+                displayedCount = 0; // Reset pagination when sorting changes
+                displayRepositories();
+            });
+
+            // Date filter changes
+            document.getElementById('dateFrom').addEventListener('change', function() {
+                displayedCount = 0;
+                displayRepositories();
+            });
+
+            document.getElementById('dateTo').addEventListener('change', function() {
+                displayedCount = 0;
+                displayRepositories();
+            });
+
+            // Clear dates button
+            document.getElementById('clearDates').addEventListener('click', function() {
+                document.getElementById('dateFrom').value = '';
+                document.getElementById('dateTo').value = '';
+                displayedCount = 0;
+                displayRepositories();
+            });
+
+            // Activity filter inputs
+            document.getElementById('starsMin').addEventListener('input', function() {
+                displayedCount = 0;
+                displayRepositories();
+            });
+
+            document.getElementById('starsMax').addEventListener('input', function() {
+                displayedCount = 0;
+                displayRepositories();
+            });
+
+            document.getElementById('qualityMin').addEventListener('input', function() {
+                displayedCount = 0;
+                displayRepositories();
+            });
+
+            document.getElementById('qualityMax').addEventListener('input', function() {
+                displayedCount = 0;
+                displayRepositories();
+            });
+
+            // Clear activity filters button
+            document.getElementById('clearActivity').addEventListener('click', function() {
+                document.getElementById('starsMin').value = '';
+                document.getElementById('starsMax').value = '';
+                document.getElementById('qualityMin').value = '';
+                document.getElementById('qualityMax').value = '';
+                document.querySelectorAll('.activity-filter').forEach(cb => cb.checked = false);
                 displayedCount = 0;
                 displayRepositories();
             });
