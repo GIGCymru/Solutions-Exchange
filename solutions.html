@@ -412,11 +412,25 @@
         const itemsPerPage = 6;
         let currentSort = 'updated-desc';
 
+        // Load private metrics from JSON
+        async function loadPrivateMetrics() {
+            try {
+                const response = await fetch('data/private_metrics.json');
+                window.privateMetrics = await response.json();
+            } catch (error) {
+                console.error('Error loading private metrics:', error);
+                window.privateMetrics = null;
+            }
+        }
+
         // Load repositories from JSON
         async function loadRepositories() {
             try {
                 const response = await fetch('data/repositories.json');
                 repositories = await response.json();
+                
+                // Load private metrics
+                await loadPrivateMetrics();
                 
                 // Populate dynamic filters
                 populateVisibilityFilters();
@@ -1050,6 +1064,19 @@
             const totalStars = filteredRepos.reduce((sum, repo) => sum + repo.stargazers_count, 0);
             const orgsCount = new Set(filteredRepos.map(repo => repo.owner.login)).size;
             
+            // Add private metrics if available
+            let privateMetricsHtml = '';
+            if (window.privateMetrics) {
+                privateMetricsHtml = `
+                    <div class="col-md-2 col-sm-6 mb-2">
+                        <div class="stat-card text-center p-2 bg-light rounded" title="Total private repositories accessible through NHS Wales GitHub">
+                            <h5 class="mb-1 text-danger">${window.privateMetrics.private_repos}</h5>
+                            <small class="text-muted">Private Repos</small>
+                        </div>
+                    </div>
+                `;
+            }
+            
             const summaryStatsHtml = `
                 <div class="col-md-2 col-sm-6 mb-2">
                     <div class="stat-card text-center p-2 bg-light rounded">
@@ -1069,6 +1096,7 @@
                         <small class="text-muted">Internal</small>
                     </div>
                 </div>
+                ${privateMetricsHtml}
                 <div class="col-md-2 col-sm-6 mb-2">
                     <div class="stat-card text-center p-2 bg-light rounded">
                         <h5 class="mb-1 text-warning">${orgsCount}</h5>
@@ -1079,12 +1107,6 @@
                     <div class="stat-card text-center p-2 bg-light rounded">
                         <h5 class="mb-1 text-dark">${totalStars}</h5>
                         <small class="text-muted">Total Stars</small>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-6 mb-2">
-                    <div class="stat-card text-center p-2 bg-light rounded">
-                        <h5 class="mb-1 text-secondary">${Math.round((filteredCount/totalRepos)*100)}%</h5>
-                        <small class="text-muted">Filtered</small>
                     </div>
                 </div>
             `;
