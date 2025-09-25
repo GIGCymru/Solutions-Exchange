@@ -14,6 +14,28 @@
             position: relative;
         }
         
+        .featured-card .card-img-top {
+            width: 100%;
+            height: 180px;
+            object-fit: contain;
+            object-position: center;
+            background: #f8f9fa;
+            border-radius: 0.5rem 0.5rem 0 0;
+            aspect-ratio: 16/9;
+            display: block;
+        }
+        
+        .success-story img {
+            width: 100%;
+            height: 120px;
+            object-fit: contain;
+            object-position: center;
+            background: #f8f9fa;
+            border-radius: 0.5rem;
+            aspect-ratio: 16/9;
+            display: block;
+        }
+        
         .featured-card::before {
             content: '★ FEATURED';
             position: absolute;
@@ -473,6 +495,15 @@ This is the future of collaborative working and code management.”</p>
                 const response = await fetch('data/repositories.json');
                 const repositories = await response.json();
                 
+                // Load private metrics
+                let privateMetrics = null;
+                try {
+                    const privateResponse = await fetch('data/private_metrics.json');
+                    privateMetrics = await privateResponse.json();
+                } catch (error) {
+                    console.error('Error loading private metrics:', error);
+                }
+                
                 // Calculate real metrics from the data
                 const totalSolutions = repositories.length;
                 const totalStars = repositories.reduce((sum, repo) => sum + repo.stargazers_count, 0);
@@ -498,12 +529,27 @@ This is the future of collaborative working and code management.”</p>
                 const totalIssues = repositories.reduce((sum, repo) => sum + (repo.open_issues_count || 0), 0);
                 const collaborativeRepos = repositories.filter(repo => repo.forks_count > 0 || repo.stargazers_count > 0).length;
 
-                const metricsHtml = `
+                // Build metrics HTML with conditional private metrics
+                let metricsHtml = `
                     <div class="col-md-3">
                         <a href="solutions.html" class="text-decoration-none">
                             <div class="metric-card" title="Total number of open-source solutions shared on the platform."><h3>${totalSolutions}</h3><p>Open Solutions</p></div>
                         </a>
                     </div>
+                `;
+                
+                // Add private metrics if available
+                if (privateMetrics) {
+                    metricsHtml += `
+                        <div class="col-md-3">
+                            <a href="service-metrics.html" class="text-decoration-none">
+                                <div class="metric-card" title="Total private repositories accessible through NHS Wales GitHub organizations."><h3>${privateMetrics.private_repos}</h3><p>Private Repositories</p></div>
+                            </a>
+                        </div>
+                    `;
+                }
+                
+                metricsHtml += `
                     <div class="col-md-3">
                         <a href="solutions.html" class="text-decoration-none">
                             <div class="metric-card" title="Number of NHS Wales organisations contributing projects."><h3>${totalOrganisations}</h3><p>NHS Wales Organisations</p></div>
@@ -514,12 +560,19 @@ This is the future of collaborative working and code management.”</p>
                             <div class="metric-card" title="Projects with recent activity in the last 6 months."><h3>${activeRepos}</h3><p>Active Projects</p></div>
                         </a>
                     </div>
-                    <div class="col-md-3">
-                        <a href="solutions.html" class="text-decoration-none">
-                            <div class="metric-card" title="Projects with collaboration (forks or stars) across organisations."><h3>${collaborativeRepos}</h3><p>Collaborations</p></div>
-                        </a>
-                    </div>
                 `;
+                
+                // Add collaborations only if no private metrics to keep it at 4 cards max
+                if (!privateMetrics) {
+                    metricsHtml += `
+                        <div class="col-md-3">
+                            <a href="solutions.html" class="text-decoration-none">
+                                <div class="metric-card" title="Projects with collaboration (forks or stars) across organisations."><h3>${collaborativeRepos}</h3><p>Collaborations</p></div>
+                            </a>
+                        </div>
+                    `;
+                }
+                
                 document.getElementById('metrics').innerHTML = metricsHtml;
 
                 // Load featured solutions
