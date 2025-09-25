@@ -54,7 +54,9 @@ class NHSWalesPrivateMetricsFetcher:
             "Welsh-Ambulance-Services-NHS-Trust",
             "NDR-National-Data-Analytics-Platform",
             "CI-ARM",
-            "NHS-Wales-Shared-Services-Partnership"
+            "NHS-Wales-Shared-Services-Partnership",
+            "Public-Health-Wales",
+            "Secure-Data-Environment-GIG-Cymru"
         ]
     
     def get_organization_repo_count(self, organization: str) -> Dict[str, int]:
