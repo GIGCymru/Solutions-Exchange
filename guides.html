@@ -118,6 +118,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <!-- Getting Started Guide -->
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="gettingStartedHeading">
@@ -155,7 +156,45 @@
                                 </div>
                             </div>
                         </div>
-
+                        <!-- GitHub GIG Cymru Service Overview & FAQ -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="gigCymruOverviewHeading">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#gigCymruOverview" aria-expanded="true" aria-controls="gigCymruOverview">
+                                    <i class="fas fa-info-circle me-2"></i>GitHub GIG Cymru: Service Overview & FAQ
+                                </button>
+                            </h2>
+                            <div id="gigCymruOverview" class="accordion-collapse collapse show" aria-labelledby="gigCymruOverviewHeading" data-bs-parent="#guidesAccordion">
+                                <div class="accordion-body">
+                                    <h5>About GitHub GIG Cymru</h5>
+                                    <p>GitHub GIG Cymru is a managed, version-controlled code collaboration platform for NHS Wales, supporting open-source and reusable code, and enabling cross-organizational collaboration for analytics and development projects.</p>
+                                    <div class="alert alert-warning mt-3 mb-3">
+                                        <strong>Access Notice:</strong> Only users who are part of NHS Wales can have access to internal repositories and be members of GitHub GIG Cymru. Access is not available to external users.
+                                    </div>
+                                    <h5>Frequently Asked Questions</h5>
+                                    <ul>
+                                        <li><strong>Who can use it?</strong> Only users who are part of NHS Wales organizations can access internal repositories and join GitHub GIG Cymru.</li>
+                                        <li><strong>How do I get access?</strong> Raise a ticket with your local IT help desk. Your request will be escalated to the national IT service desk for triage and access setup.</li>
+                                        <li><strong>How do I get Codespaces or Co-Pilot?</strong> These require additional funding. Contact the service for a cost estimate and access process.</li>
+                                        <li><strong>What training is available?</strong> Access <a href="https://github.com/GIGCymru/Guides" target="_blank">GitHub Help Documentation</a>, the <a href="https://github.com/GIGCymru/" target="_blank">GIG Cymru Documentation</a>, and community forums.</li>
+                                        <li><strong>How do I share code?</strong> Create a repository in your organization’s GitHub space, set it to Internal, or invite collaborators directly.</li>
+                                        <li><strong>How do I follow best practice?</strong> Use code reviews, pull requests, and follow your organization’s coding standards. Document shared standards in your repos.</li>
+                                        <li><strong>Where do I go for help?</strong> Use the <a href="https://docs.github.com/en/get-started" target="_blank">GitHub Help Docs</a>, contact the Advanced Analytics Team, or join community forums.</li>
+                                        <li><strong>How do I suggest improvements?</strong> Raise issues in relevant repos, join forums, or contact the NDR Advanced Analytics Team.</li>
+                                        <li><strong>What features are included?</strong> Private repos, team management, code review, project management, GitHub Actions, security, analytics, Co-Pilot, and Codespaces (some features may require extra cost).</li>
+                                        <li><strong>How is security managed?</strong> GitHub Enterprise provides encryption, access controls, and monitoring. All users are synced with NHS Wales Active Directory. Follow NHS Wales data protection policies.</li>
+                                        <li><strong>Strategic goals supported:</strong> Digital transformation, high-quality digital services, cross-organizational collaboration, innovation, and trusted IT service management.</li>
+                                        <li><strong>What projects are supported?</strong> Cross-organization, open source, big data, research, proof of concept, hackathons, and infrastructure projects.</li>
+                                    </ul>
+                                    <h5>Resources & Support</h5>
+                                    <ul>
+                                        <li><a href="https://github.com/GIGCymru/GitHub-GIG-Cymru/wiki" target="_blank">GIG Cymru Wiki</a></li>
+                                        <li><a href="https://github.com/GIGCymru/Guides" target="_blank">Guides & Documentation</a></li>
+                                        <li><a href="https://github.com/GIGCymru/GitHub-GIG-Cymru-FAQ" target="_blank">FAQ Repository</a></li>
+                                    </ul>
+                                    <p class="mb-0"><strong>Contact:</strong> For support, contact your local IT desk, who will pass your call to the national service team.</p>
+                                </div>
+                            </div>
+                        </div>
                         <!-- Contributing Guide -->
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="contributingHeading">
@@ -169,6 +208,7 @@
                                     
                                     <h5>Step 1: Prepare Your Repository</h5>
                                     <ul>
+                                        <li><strong>Create a Repository:</strong> Within your local Github organisation: <a href="https://github.com/GIGCymru" target="_blank">For a full list see here</a></li>
                                         <li><strong>Create a Clear README.md:</strong> Explain what your solution does, how to install it, and how to use it</li>
                                         <li><strong>Add Relevant Topic Tags:</strong> Help others discover your solution with appropriate healthcare and technology tags</li>
                                         <li><strong>Include Documentation:</strong> Provide installation instructions, API documentation, and user guides</li>
@@ -176,13 +216,17 @@
                                         <li><strong>Include Screenshots/Demos:</strong> Show your solution in action when possible</li>
                                     </ul>
                                     
-                                    <h5>Step 2: Submit Your Solution</h5>
+                                    <h5>Step 2: Get Your Solution Included</h5>
                                     <p>To get your solution included in the Solutions Exchange:</p>
                                     <ol>
                                         <li>Ensure your repository is hosted on GitHub under an NHS Wales organization</li>
+
                                         <li>Contact the DHCW NDR GitHub GIG Cymru Team to request inclusion</li>
                                         <li>Provide the repository URL and a brief description of your solution</li>
                                         <li>Our team will review your submission and add it to our automated collection system</li>
+                                        <li>Update your repository status to "Internal" or "Public" (note that your local organisation may have policies in place that require admin access to do so. In this instance please contact your local GitHub organisation owner.)</li>
+                                        <li>Your repository will be included in the Solutions Exchange.</li>
+
                                     </ol>
                                     
                                     <h5>Best Practices for Solutions</h5>
@@ -526,15 +570,17 @@
                                         <li>Access to NHS Wales GitHub organizations and repositories</li>
                                         <li>Collaboration opportunities with healthcare technology teams</li>
                                         <li>Training and development resources</li>
-                                        <li>Community support and mentorship</li>
+                                        <li>Community</li>
                                         <li>Early access to new tools and platforms</li>
                                         <li>Networking opportunities with like-minded professionals</li>
                                     </ul>
 
                                     <h5>Prerequisites</h5>
                                     <ul>
+
                                         <li>Valid NHS Wales email address </li>
                                         <li>GitHub account (free account is sufficient)</li>
+
                                         <li>Basic understanding of version control or willingness to learn</li>
                                         <li>Commitment to collaboration and knowledge sharing</li>
                                     </ul>
@@ -555,46 +601,16 @@
                                     <ul>
                                         <li>Your GitHub username</li>
                                         <li>Your NHS Wales email address</li>
-                                        <li>Your role and organization within NHS Wales</li>
-                                        <li>Brief description of your interest in the community</li>
-                                        <li>Any relevant technical skills or experience</li>
+                                        <li>Your organization within NHS Wales</li>
                                     </ul>
 
-                                    <h6>Step 3: Wait for Approval</h6>
+                                    <h6>Step 3: Wait for Action</h6>
                                     <p>Our team will review your application and:</p>
                                     <ul>
                                         <li>Verify your NHS Wales affiliation</li>
                                         <li>Send you an invitation to join relevant GitHub organizations</li>
                                         <li>Provide access to community resources and documentation</li>
-                                        <li>Connect you with relevant teams and projects</li>
                                     </ul>
-
-                                    <h6>Step 4: Get Oriented</h6>
-                                    <p>Once approved, you'll receive:</p>
-                                    <ul>
-                                        <li>Welcome email with getting started resources</li>
-                                        <li>Access to community Slack channels</li>
-                                        <li>Information about upcoming training sessions</li>
-                                        <li>List of active projects looking for contributors</li>
-                                    </ul>
-
-                                    <h5>Contact Information</h5>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="contact-card p-4 border rounded mb-3">
-                                                <h6><i class="fas fa-user-tie me-2 text-primary"></i>GitHub GIG Cymru Team</h6>
-                                                <p><strong>Email:</strong> <a href="mailto:github@dhcw.nhs.wales" class="text-primary">github@dhcw.nhs.wales</a></p>
-                                                <p><strong>Purpose:</strong> General inquiries, application submissions, technical support</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="contact-card p-4 border rounded mb-3">
-                                                <h6><i class="fas fa-building me-2 text-primary"></i>Digital Health and Care Wales</h6>
-                                                <p><strong>Website:</strong> <a href="https://dhcw.nhs.wales/" target="_blank" class="text-primary">dhcw.nhs.wales</a></p>
-                                                <p><strong>Purpose:</strong> Organizational information, strategic questions</p>
-                                            </div>
-                                        </div>
-                                    </div>
 
                                     <h5>What to Include in Your Email</h5>
                                     <p>When contacting us, please include:</p>
@@ -602,22 +618,10 @@
                                         <li><strong>Subject Line:</strong> "GitHub GIG Cymru Application - [Your Name]"</li>
                                         <li><strong>Full Name:</strong> Your professional name</li>
                                         <li><strong>GitHub Username:</strong> Your GitHub account username</li>
-                                        <li><strong>Organization:</strong> Your NHS Wales organization or health board</li>
-                                        <li><strong>Role:</strong> Your job title and department</li>
-                                        <li><strong>Email:</strong> Your NHS Wales or institutional email address</li>
-                                        <li><strong>Interest:</strong> Brief description of why you want to join</li>
-                                        <li><strong>Experience:</strong> Any relevant technical experience (optional)</li>
+                                        <li><strong>Organisation:</strong> Your NHS Wales organization or health board</li>
                                     </ul>
 
-                                    <h5>Response Times</h5>
-                                    <ul>
-                                        <li><strong>Initial Response:</strong> Within 2-3 business days</li>
-                                        <li><strong>Application Processing:</strong> 1-2 weeks for verification and approval</li>
-                                        <li><strong>Account Setup:</strong> 1-2 business days after approval</li>
-                                        <li><strong>Training Opportunities:</strong> Monthly sessions available</li>
-                                    </ul>
-
-                                    <h5>Resources for New Members</h5>
+                                      <h5>Resources for New Members</h5>
                                     <ul>
                                         <li><strong>GitHub Basics:</strong> <a href="https://docs.github.com/en/get-started" target="_blank" class="text-primary">GitHub's official getting started guide</a></li>
                                         <li><strong>Git Tutorial:</strong> <a href="https://git-scm.com/docs/gittutorial" target="_blank" class="text-primary">Official Git tutorial</a></li>
@@ -632,7 +636,7 @@
                                             <div class="col-md-8">
                                                 <div class="row">
                                                     <div class="col-md-6 mb-3">
-                                                        <a href="mailto:github@dhcw.nhs.wales?subject=GitHub%20GIG%20Cymru%20Application" class="btn btn-success btn-lg w-100">
+                                                        <a href="mailto:it.servicedesk@wales.nhs.uk?subject=GitHub%20GIG%20Cymru%20Application" class="btn btn-success btn-lg w-100">
                                                             <i class="fas fa-envelope me-2"></i>Send Application Email
                                                         </a>
                                                     </div>
@@ -648,58 +652,6 @@
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Technical Support -->
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="technicalSupportHeading">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#technicalSupport" aria-expanded="false" aria-controls="technicalSupport">
-                                    <i class="fas fa-life-ring me-2"></i>Technical Support & Resources
-                                </button>
-                            </h2>
-                            <div id="technicalSupport" class="accordion-collapse collapse" aria-labelledby="technicalSupportHeading" data-bs-parent="#guidesAccordion">
-                                <div class="accordion-body">
-                                    <p>Get help and access additional resources for your development projects within the NHS Wales ecosystem.</p>
-                                    
-                                    <h5>Getting Help</h5>
-                                    <ul>
-                                        <li><strong>GitHub GIG Cymru Wiki:</strong> Visit the <a href="https://github.com/GIGCymru/GitHub-GIG-Cymru/wiki" target="_blank" class="text-primary">official wiki</a> for detailed documentation</li>
-                                        <li><strong>FAQ Repository:</strong> Check the <a href="https://github.com/GIGCymru/GitHub-GIG-Cymru-FAQ" target="_blank" class="text-primary">FAQ repository</a> for common questions and answers</li>
-                                        <li><strong>Technical Support:</strong> Contact the DHCW NDR GitHub GIG Cymru Team for technical assistance</li>
-                                        <li><strong>Community Discussions:</strong> Join discussions in GitHub Issues and project repositories</li>
-                                        <li><strong>Slack Channels:</strong> Connect with other NHS Wales developers in relevant Slack channels</li>
-                                    </ul>
-                                    
-                                    <h5>Development Resources</h5>
-                                    <ul>
-                                        <li><strong>Coding Standards:</strong> NHS Wales coding standards and style guides</li>
-                                        <li><strong>Technology Stacks:</strong> Approved frameworks and libraries for NHS Wales projects</li>
-                                        <li><strong>Security Guidelines:</strong> Information security and compliance documentation</li>
-                                        <li><strong>Testing Frameworks:</strong> Recommended testing tools and best practices</li>
-                                        <li><strong>Deployment Guides:</strong> Instructions for deploying applications in NHS Wales environments</li>
-                                        <li><strong>API Standards:</strong> Guidelines for creating and documenting APIs</li>
-                                    </ul>
-                                    
-                                    <h5>Training Opportunities</h5>
-                                    <ul>
-                                        <li><strong>GitHub Training:</strong> Training sessions can be arranged on request for NHS Wales staff on GitHub best practice</li>
-                                        <li><strong>Development Workshops:</strong> Hands-on workshops covering modern development practices</li>
-                                        <li><strong>Healthcare Technology Seminars:</strong> Sessions on applying technology to healthcare challenges</li>
-                                        <li><strong>Collaborative Coding Events:</strong> Join Wales Modelling Collaborative Hackathons and coding events focused on healthcare solutions</li>
-                                        <li><strong>Open Source Workshops:</strong> Training on contributing to and managing open-source projects</li>
-                                    </ul>
-
-                                    <h5>Community Resources</h5>
-                                    <ul>
-                                        <li><strong>Solution Showcases:</strong> Regular presentations of innovative NHS Wales solutions</li>
-                                        <li><strong>Technical Meetups:</strong> Local and virtual meetups for NHS Wales developers</li>
-                                        <li><strong>Knowledge Sharing:</strong> Internal conferences and knowledge-sharing sessions</li>
-                                        <li><strong>Mentorship Programs:</strong> Connect with experienced developers for guidance</li>
-                                        <li><strong>Innovation Challenges:</strong> Participate in healthcare innovation competitions</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </div>
