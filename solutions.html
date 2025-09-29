@@ -120,6 +120,23 @@
         </div>
     </nav>
 
+    <!-- Page Header -->
+    <header class="page-header bg-light py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-5 fw-bold text-primary">
+                        <i class="fas fa-lightbulb me-3"></i>Solutions Exchange
+                    </h1>
+                    <p class="lead">Browse and contribute to a growing library of digital solutions for NHS Wales.</p>
+                </div>
+                <div class="col-lg-4 text-end">
+                    <i class="fas fa-share-alt text-primary" style="font-size: 4rem; opacity: 0.3;"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
     <!-- Main Content -->
     <div class="container-fluid mt-4">
         <div class="row">
@@ -561,13 +578,17 @@
             if (orgParam) {
                 // Map org codes to full organization names
                 const orgMapping = {
+                    'Cardiff': 'Cardiff and Vale UHB',
                     'CardiffAndValeUHB': 'Cardiff and Vale UHB',
                     'SwanseaBayUHB': 'Swansea Bay UHB',
                     'AneurinBevanUHB': 'Aneurin Bevan UHB',
+                    'BetsiCadwaladr': 'Betsi Cadwaladr UHB',
                     'BetsiCadwaladrUHB': 'Betsi Cadwaladr UHB',
                     'CwmTafUHB': 'Cwm Taf Morgannwg UHB',
                     'HywelDdaUHB': 'Hywel Dda UHB',
+                    'Powys': 'Powys Teaching Health Board',
                     'PowysUHB': 'Powys Teaching Health Board',
+                    'PublicHealthWales': 'Public Health Wales',
                     'DHCW': 'Digital Health and Care Wales'
                 };
                 const fullOrgName = orgMapping[orgParam];
