@@ -120,6 +120,8 @@
         </div>
     </nav>
 
+    <!-- Page Header -->
+    
     <!-- Main Content -->
     <div class="container-fluid mt-4">
         <div class="row">
@@ -561,13 +563,17 @@
             if (orgParam) {
                 // Map org codes to full organization names
                 const orgMapping = {
+                    'Cardiff': 'Cardiff and Vale UHB',
                     'CardiffAndValeUHB': 'Cardiff and Vale UHB',
                     'SwanseaBayUHB': 'Swansea Bay UHB',
                     'AneurinBevanUHB': 'Aneurin Bevan UHB',
+                    'BetsiCadwaladr': 'Betsi Cadwaladr UHB',
                     'BetsiCadwaladrUHB': 'Betsi Cadwaladr UHB',
                     'CwmTafUHB': 'Cwm Taf Morgannwg UHB',
                     'HywelDdaUHB': 'Hywel Dda UHB',
+                    'Powys': 'Powys Teaching Health Board',
                     'PowysUHB': 'Powys Teaching Health Board',
+                    'PublicHealthWales': 'Public Health Wales',
                     'DHCW': 'Digital Health and Care Wales'
                 };
                 const fullOrgName = orgMapping[orgParam];
