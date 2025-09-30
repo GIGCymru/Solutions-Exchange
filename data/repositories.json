@@ -67,14 +67,14 @@
     "releases_url": "https://api.github.com/repos/GIGCymru/Solutions-Exchange/releases{/id}",
     "deployments_url": "https://api.github.com/repos/GIGCymru/Solutions-Exchange/deployments",
     "created_at": "2025-07-15T14:58:04Z",
-    "updated_at": "2025-09-28T06:05:58Z",
-    "pushed_at": "2025-09-28T06:05:56Z",
+    "updated_at": "2025-09-29T13:23:13Z",
+    "pushed_at": "2025-09-29T13:23:10Z",
     "git_url": "git://github.com/GIGCymru/Solutions-Exchange.git",
     "ssh_url": "git@github.com:GIGCymru/Solutions-Exchange.git",
     "clone_url": "https://github.com/GIGCymru/Solutions-Exchange.git",
     "svn_url": "https://github.com/GIGCymru/Solutions-Exchange",
     "homepage": "https://gigcymru.github.io/Solutions-Exchange/",
-    "size": 6955,
+    "size": 7120,
     "stargazers_count": 2,
     "watchers_count": 2,
     "language": "HTML",
@@ -144,38 +144,38 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "data",
-      "responsive",
-      "web-interface",
-      "health",
-      "healthcare",
+      "wales",
+      "community-validated",
       "html",
-      "solutions",
-      "frontend"
+      "responsive",
+      "comprehensive",
+      "database",
+      "healthcare",
+      "health"
     ],
     "all_tags": [
-      "healthcare",
-      "community",
-      "showcase",
-      "html",
-      "solutions",
-      "database",
-      "data",
-      "responsive",
       "wales",
-      "frontend",
-      "developement",
-      "api",
-      "nhs",
-      "pages",
-      "web-interface",
-      "website",
+      "database",
+      "community",
+      "community-validated",
+      "html",
       "health",
-      "visability"
+      "healthcare",
+      "pages",
+      "nhs",
+      "showcase",
+      "solutions",
+      "visability",
+      "website",
+      "api",
+      "developement",
+      "responsive",
+      "data",
+      "comprehensive"
     ],
     "quality_score": 100,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:44.778829"
+    "last_updated": "2025-09-30T06:05:41.033858"
   },
   {
     "id": 1033696412,
@@ -245,14 +245,14 @@
     "releases_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_Reporting/releases{/id}",
     "deployments_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_Reporting/deployments",
     "created_at": "2025-08-07T07:57:42Z",
-    "updated_at": "2025-09-26T06:39:06Z",
-    "pushed_at": "2025-09-26T06:39:06Z",
+    "updated_at": "2025-09-29T12:20:09Z",
+    "pushed_at": "2025-09-29T07:07:34Z",
     "git_url": "git://github.com/Aneurin-Bevan-University-Health-Board/biu_Reporting.git",
     "ssh_url": "git@github.com:Aneurin-Bevan-University-Health-Board/biu_Reporting.git",
     "clone_url": "https://github.com/Aneurin-Bevan-University-Health-Board/biu_Reporting.git",
     "svn_url": "https://github.com/Aneurin-Bevan-University-Health-Board/biu_Reporting",
     "homepage": "",
-    "size": 1340,
+    "size": 1342,
     "stargazers_count": 2,
     "watchers_count": 2,
     "language": "Jupyter Notebook",
@@ -266,7 +266,7 @@
     "mirror_url": null,
     "archived": false,
     "disabled": false,
-    "open_issues_count": 2,
+    "open_issues_count": 6,
     "license": {
       "key": "mit",
       "name": "MIT License",
@@ -278,15 +278,16 @@
     "is_template": false,
     "web_commit_signoff_required": false,
     "topics": [
+      "biu",
       "gcp",
       "gcp-cloud-run",
       "ndap-platform",
-      "nhs-analytics",
+      "python3",
       "reporting"
     ],
     "visibility": "Internal",
     "forks": 0,
-    "open_issues": 2,
+    "open_issues": 6,
     "watchers": 2,
     "default_branch": "main",
     "permissions": {
@@ -318,28 +319,190 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "nhs-analytics",
-      "gcp",
-      "ndap-platform",
-      "nhs-wales",
+      "reporting",
       "gcp-cloud-run",
-      "comprehensive",
-      "reporting"
+      "community-validated",
+      "healthcare",
+      "python3",
+      "ndap-platform",
+      "biu",
+      "gcp"
     ],
     "all_tags": [
-      "healthcare",
-      "nhs-analytics",
-      "gcp",
-      "ndap-platform",
-      "nhs-wales",
+      "reporting",
       "gcp-cloud-run",
-      "comprehensive",
-      "reporting"
+      "community-validated",
+      "healthcare",
+      "python3",
+      "ndap-platform",
+      "biu",
+      "gcp"
     ],
     "quality_score": 100,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:41.548087"
+    "last_updated": "2025-09-30T06:05:37.163633"
+  },
+  {
+    "id": 1066429204,
+    "node_id": "R_kgDOP5BrFA",
+    "name": "NHSWales-fhir-profiles",
+    "full_name": "GIGCymru/NHSWales-fhir-profiles",
+    "private": false,
+    "owner": {
+      "login": "GIGCymru",
+      "id": 106316509,
+      "node_id": "O_kgDOBlZC3Q",
+      "avatar_url": "https://avatars.githubusercontent.com/u/106316509?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/GIGCymru",
+      "html_url": "https://github.com/GIGCymru",
+      "followers_url": "https://api.github.com/users/GIGCymru/followers",
+      "following_url": "https://api.github.com/users/GIGCymru/following{/other_user}",
+      "gists_url": "https://api.github.com/users/GIGCymru/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/GIGCymru/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/GIGCymru/subscriptions",
+      "organizations_url": "https://api.github.com/users/GIGCymru/orgs",
+      "repos_url": "https://api.github.com/users/GIGCymru/repos",
+      "events_url": "https://api.github.com/users/GIGCymru/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/GIGCymru/received_events",
+      "type": "Organization",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "html_url": "https://github.com/GIGCymru/NHSWales-fhir-profiles",
+    "description": "Forked Repository from National Data Resource FHIR Profiles. This repo is automatically updated when the orginal repo has changed.",
+    "fork": true,
+    "url": "https://api.github.com/repos/GIGCymru/NHSWales-fhir-profiles",
+    "forks_url": "https://api.github.com/repos/GIGCymru/NHSWales-fhir-profiles/forks",
+    "keys_url": "https://api.github.com/repos/GIGCymru/NHSWales-fhir-profiles/keys{/key_id}",
+    "collaborators_url": "https://api.github.com/repos/GIGCymru/NHSWales-fhir-profiles/collaborators{/collaborator}",
+    "teams_url": "https://api.github.com/repos/GIGCymru/NHSWales-fhir-profiles/teams",
+    "hooks_url": "https://api.github.com/repos/GIGCymru/NHSWales-fhir-profiles/hooks",
+    "issue_events_url": "https://api.github.com/repos/GIGCymru/NHSWales-fhir-profiles/issues/events{/number}",
+    "events_url": "https://api.github.com/repos/GIGCymru/NHSWales-fhir-profiles/events",
+    "assignees_url": "https://api.github.com/repos/GIGCymru/NHSWales-fhir-profiles/assignees{/user}",
+    "branches_url": "https://api.github.com/repos/GIGCymru/NHSWales-fhir-profiles/branches{/branch}",
+    "tags_url": "https://api.github.com/repos/GIGCymru/NHSWales-fhir-profiles/tags",
+    "blobs_url": "https://api.github.com/repos/GIGCymru/NHSWales-fhir-profiles/git/blobs{/sha}",
+    "git_tags_url": "https://api.github.com/repos/GIGCymru/NHSWales-fhir-profiles/git/tags{/sha}",
+    "git_refs_url": "https://api.github.com/repos/GIGCymru/NHSWales-fhir-profiles/git/refs{/sha}",
+    "trees_url": "https://api.github.com/repos/GIGCymru/NHSWales-fhir-profiles/git/trees{/sha}",
+    "statuses_url": "https://api.github.com/repos/GIGCymru/NHSWales-fhir-profiles/statuses/{sha}",
+    "languages_url": "https://api.github.com/repos/GIGCymru/NHSWales-fhir-profiles/languages",
+    "stargazers_url": "https://api.github.com/repos/GIGCymru/NHSWales-fhir-profiles/stargazers",
+    "contributors_url": "https://api.github.com/repos/GIGCymru/NHSWales-fhir-profiles/contributors",
+    "subscribers_url": "https://api.github.com/repos/GIGCymru/NHSWales-fhir-profiles/subscribers",
+    "subscription_url": "https://api.github.com/repos/GIGCymru/NHSWales-fhir-profiles/subscription",
+    "commits_url": "https://api.github.com/repos/GIGCymru/NHSWales-fhir-profiles/commits{/sha}",
+    "git_commits_url": "https://api.github.com/repos/GIGCymru/NHSWales-fhir-profiles/git/commits{/sha}",
+    "comments_url": "https://api.github.com/repos/GIGCymru/NHSWales-fhir-profiles/comments{/number}",
+    "issue_comment_url": "https://api.github.com/repos/GIGCymru/NHSWales-fhir-profiles/issues/comments{/number}",
+    "contents_url": "https://api.github.com/repos/GIGCymru/NHSWales-fhir-profiles/contents/{+path}",
+    "compare_url": "https://api.github.com/repos/GIGCymru/NHSWales-fhir-profiles/compare/{base}...{head}",
+    "merges_url": "https://api.github.com/repos/GIGCymru/NHSWales-fhir-profiles/merges",
+    "archive_url": "https://api.github.com/repos/GIGCymru/NHSWales-fhir-profiles/{archive_format}{/ref}",
+    "downloads_url": "https://api.github.com/repos/GIGCymru/NHSWales-fhir-profiles/downloads",
+    "issues_url": "https://api.github.com/repos/GIGCymru/NHSWales-fhir-profiles/issues{/number}",
+    "pulls_url": "https://api.github.com/repos/GIGCymru/NHSWales-fhir-profiles/pulls{/number}",
+    "milestones_url": "https://api.github.com/repos/GIGCymru/NHSWales-fhir-profiles/milestones{/number}",
+    "notifications_url": "https://api.github.com/repos/GIGCymru/NHSWales-fhir-profiles/notifications{?since,all,participating}",
+    "labels_url": "https://api.github.com/repos/GIGCymru/NHSWales-fhir-profiles/labels{/name}",
+    "releases_url": "https://api.github.com/repos/GIGCymru/NHSWales-fhir-profiles/releases{/id}",
+    "deployments_url": "https://api.github.com/repos/GIGCymru/NHSWales-fhir-profiles/deployments",
+    "created_at": "2025-09-29T13:24:39Z",
+    "updated_at": "2025-09-29T13:33:49Z",
+    "pushed_at": "2025-09-29T13:30:34Z",
+    "git_url": "git://github.com/GIGCymru/NHSWales-fhir-profiles.git",
+    "ssh_url": "git@github.com:GIGCymru/NHSWales-fhir-profiles.git",
+    "clone_url": "https://github.com/GIGCymru/NHSWales-fhir-profiles.git",
+    "svn_url": "https://github.com/GIGCymru/NHSWales-fhir-profiles",
+    "homepage": "https://github.com/National-Data-Resource/NHSWales-fhir-profiles",
+    "size": 4358,
+    "stargazers_count": 1,
+    "watchers_count": 1,
+    "language": "HTML",
+    "has_issues": false,
+    "has_projects": true,
+    "has_downloads": true,
+    "has_wiki": true,
+    "has_pages": false,
+    "has_discussions": false,
+    "forks_count": 0,
+    "mirror_url": null,
+    "archived": false,
+    "disabled": false,
+    "open_issues_count": 0,
+    "license": null,
+    "allow_forking": true,
+    "is_template": false,
+    "web_commit_signoff_required": true,
+    "topics": [
+      "automation",
+      "fhir",
+      "fhir-implementation-guide",
+      "forked-repo",
+      "nhs"
+    ],
+    "visibility": "Public",
+    "forks": 0,
+    "open_issues": 0,
+    "watchers": 1,
+    "default_branch": "main",
+    "permissions": {
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
+    },
+    "security_and_analysis": {
+      "secret_scanning": {
+        "status": "enabled"
+      },
+      "secret_scanning_push_protection": {
+        "status": "enabled"
+      },
+      "dependabot_security_updates": {
+        "status": "enabled"
+      },
+      "secret_scanning_non_provider_patterns": {
+        "status": "disabled"
+      },
+      "secret_scanning_ai_detection": {
+        "status": "disabled"
+      },
+      "secret_scanning_validity_checks": {
+        "status": "disabled"
+      }
+    },
+    "custom_properties": {},
+    "generated_tags": [
+      "data-analytics",
+      "frontend",
+      "community-validated",
+      "user-experience",
+      "automation",
+      "web-interface",
+      "healthcare",
+      "healthcare-insights"
+    ],
+    "all_tags": [
+      "data-analytics",
+      "frontend",
+      "community-validated",
+      "user-experience",
+      "automation",
+      "web-interface",
+      "healthcare",
+      "healthcare-insights",
+      "forked-repo",
+      "nhs",
+      "fhir",
+      "fhir-implementation-guide"
+    ],
+    "quality_score": 98,
+    "featured": true,
+    "last_updated": "2025-09-30T06:05:41.033945"
   },
   {
     "id": 968031231,
@@ -409,14 +572,14 @@
     "releases_url": "https://api.github.com/repos/DHCW-Digital-Health-and-Care-Wales/Integration-Hub-Beta/releases{/id}",
     "deployments_url": "https://api.github.com/repos/DHCW-Digital-Health-and-Care-Wales/Integration-Hub-Beta/deployments",
     "created_at": "2025-04-17T11:47:40Z",
-    "updated_at": "2025-09-26T14:36:57Z",
-    "pushed_at": "2025-09-26T18:08:02Z",
+    "updated_at": "2025-09-29T15:50:03Z",
+    "pushed_at": "2025-09-29T15:50:03Z",
     "git_url": "git://github.com/DHCW-Digital-Health-and-Care-Wales/Integration-Hub-Beta.git",
     "ssh_url": "git@github.com:DHCW-Digital-Health-and-Care-Wales/Integration-Hub-Beta.git",
     "clone_url": "https://github.com/DHCW-Digital-Health-and-Care-Wales/Integration-Hub-Beta.git",
     "svn_url": "https://github.com/DHCW-Digital-Health-and-Care-Wales/Integration-Hub-Beta",
     "homepage": null,
-    "size": 762,
+    "size": 723,
     "stargazers_count": 9,
     "watchers_count": 9,
     "language": "Python",
@@ -430,7 +593,7 @@
     "mirror_url": null,
     "archived": false,
     "disabled": false,
-    "open_issues_count": 4,
+    "open_issues_count": 3,
     "license": null,
     "allow_forking": true,
     "is_template": false,
@@ -438,7 +601,7 @@
     "topics": [],
     "visibility": "Public",
     "forks": 0,
-    "open_issues": 4,
+    "open_issues": 3,
     "watchers": 9,
     "default_branch": "main",
     "permissions": {
@@ -470,28 +633,183 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "interoperability",
-      "automation",
-      "healthcare",
-      "python",
-      "data-science",
+      "community-validated",
       "system-integration",
+      "automation",
+      "interoperability",
+      "healthcare",
       "nhs-wales",
-      "community-validated"
+      "python",
+      "data-science"
     ],
     "all_tags": [
-      "interoperability",
-      "automation",
-      "healthcare",
-      "python",
-      "data-science",
+      "community-validated",
       "system-integration",
+      "automation",
+      "interoperability",
+      "healthcare",
       "nhs-wales",
-      "community-validated"
+      "python",
+      "data-science"
     ],
     "quality_score": 95,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:43.833439"
+    "last_updated": "2025-09-30T06:05:39.936659"
+  },
+  {
+    "id": 1030329525,
+    "node_id": "R_kgDOPWmUtQ",
+    "name": "biu_DirectedAcyclicGraph",
+    "full_name": "Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph",
+    "private": true,
+    "owner": {
+      "login": "Aneurin-Bevan-University-Health-Board",
+      "id": 107406487,
+      "node_id": "O_kgDOBmbklw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/107406487?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Aneurin-Bevan-University-Health-Board",
+      "html_url": "https://github.com/Aneurin-Bevan-University-Health-Board",
+      "followers_url": "https://api.github.com/users/Aneurin-Bevan-University-Health-Board/followers",
+      "following_url": "https://api.github.com/users/Aneurin-Bevan-University-Health-Board/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Aneurin-Bevan-University-Health-Board/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Aneurin-Bevan-University-Health-Board/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Aneurin-Bevan-University-Health-Board/subscriptions",
+      "organizations_url": "https://api.github.com/users/Aneurin-Bevan-University-Health-Board/orgs",
+      "repos_url": "https://api.github.com/users/Aneurin-Bevan-University-Health-Board/repos",
+      "events_url": "https://api.github.com/users/Aneurin-Bevan-University-Health-Board/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Aneurin-Bevan-University-Health-Board/received_events",
+      "type": "Organization",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "html_url": "https://github.com/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph",
+    "description": "This repository is the central source for all Airflow DAGs (Directed Acyclic Graphs) and custom plugins used in the Aneurin Bevan UHB Business Intelligence Unit Cloud Composer environment. It is directly linked to a Cloud Build trigger, which automatically syncs this code into Google Cloud Composer whenever a change is pushed to the main branch.",
+    "fork": false,
+    "url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph",
+    "forks_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/forks",
+    "keys_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/keys{/key_id}",
+    "collaborators_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/collaborators{/collaborator}",
+    "teams_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/teams",
+    "hooks_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/hooks",
+    "issue_events_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/issues/events{/number}",
+    "events_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/events",
+    "assignees_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/assignees{/user}",
+    "branches_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/branches{/branch}",
+    "tags_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/tags",
+    "blobs_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/git/blobs{/sha}",
+    "git_tags_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/git/tags{/sha}",
+    "git_refs_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/git/refs{/sha}",
+    "trees_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/git/trees{/sha}",
+    "statuses_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/statuses/{sha}",
+    "languages_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/languages",
+    "stargazers_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/stargazers",
+    "contributors_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/contributors",
+    "subscribers_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/subscribers",
+    "subscription_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/subscription",
+    "commits_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/commits{/sha}",
+    "git_commits_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/git/commits{/sha}",
+    "comments_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/comments{/number}",
+    "issue_comment_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/issues/comments{/number}",
+    "contents_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/contents/{+path}",
+    "compare_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/compare/{base}...{head}",
+    "merges_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/merges",
+    "archive_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/{archive_format}{/ref}",
+    "downloads_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/downloads",
+    "issues_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/issues{/number}",
+    "pulls_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/pulls{/number}",
+    "milestones_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/milestones{/number}",
+    "notifications_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/notifications{?since,all,participating}",
+    "labels_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/labels{/name}",
+    "releases_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/releases{/id}",
+    "deployments_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/deployments",
+    "created_at": "2025-08-01T13:05:19Z",
+    "updated_at": "2025-09-29T14:51:36Z",
+    "pushed_at": "2025-09-29T14:51:32Z",
+    "git_url": "git://github.com/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph.git",
+    "ssh_url": "git@github.com:Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph.git",
+    "clone_url": "https://github.com/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph.git",
+    "svn_url": "https://github.com/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph",
+    "homepage": "",
+    "size": 506,
+    "stargazers_count": 1,
+    "watchers_count": 1,
+    "language": "Python",
+    "has_issues": false,
+    "has_projects": false,
+    "has_downloads": true,
+    "has_wiki": false,
+    "has_pages": false,
+    "has_discussions": false,
+    "forks_count": 0,
+    "mirror_url": null,
+    "archived": false,
+    "disabled": false,
+    "open_issues_count": 1,
+    "license": null,
+    "allow_forking": false,
+    "is_template": false,
+    "web_commit_signoff_required": false,
+    "topics": [
+      "datapipeline",
+      "elt"
+    ],
+    "visibility": "Internal",
+    "forks": 0,
+    "open_issues": 1,
+    "watchers": 1,
+    "default_branch": "main",
+    "permissions": {
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
+    },
+    "security_and_analysis": {
+      "advanced_security": {
+        "status": "disabled"
+      },
+      "secret_scanning": {
+        "status": "disabled"
+      },
+      "secret_scanning_push_protection": {
+        "status": "disabled"
+      },
+      "dependabot_security_updates": {
+        "status": "disabled"
+      },
+      "secret_scanning_non_provider_patterns": {
+        "status": "disabled"
+      },
+      "secret_scanning_validity_checks": {
+        "status": "disabled"
+      }
+    },
+    "custom_properties": {},
+    "generated_tags": [
+      "community-validated",
+      "automation",
+      "healthcare",
+      "nhs-wales",
+      "elt",
+      "python",
+      "datapipeline",
+      "data-science"
+    ],
+    "all_tags": [
+      "community-validated",
+      "automation",
+      "healthcare",
+      "nhs-wales",
+      "elt",
+      "python",
+      "datapipeline",
+      "data-science"
+    ],
+    "quality_score": 93,
+    "featured": true,
+    "last_updated": "2025-09-30T06:05:37.163590"
   },
   {
     "id": 1061831920,
@@ -627,28 +945,28 @@
     },
     "custom_properties": {},
     "generated_tags": [
+      "community-validated",
       "healthcare",
-      "governance",
-      "pmg",
-      "board",
-      "comprehensive",
       "nhs-wales",
       "product-management-group",
-      "community-validated"
+      "pmg",
+      "governance",
+      "board",
+      "comprehensive"
     ],
     "all_tags": [
+      "community-validated",
       "healthcare",
-      "governance",
-      "pmg",
-      "board",
-      "comprehensive",
       "nhs-wales",
       "product-management-group",
-      "community-validated"
+      "pmg",
+      "governance",
+      "board",
+      "comprehensive"
     ],
     "quality_score": 93,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:44.778853"
+    "last_updated": "2025-09-30T06:05:41.033882"
   },
   {
     "id": 1061926097,
@@ -793,30 +1111,30 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "backup",
-      "ssms-guide",
       "database",
-      "data",
-      "nhs-wales",
       "ssms",
-      "healthcare-insights"
+      "ssms-guide",
+      "community-validated",
+      "best-practices",
+      "healthcare",
+      "healthcare-insights",
+      "backup"
     ],
     "all_tags": [
-      "healthcare",
-      "backup",
-      "ssms-guide",
       "database",
-      "data",
-      "nhs-wales",
       "ssms",
+      "ssms-guide",
+      "community-validated",
+      "best-practices",
+      "healthcare",
       "healthcare-insights",
+      "backup",
       "nhs",
-      "best-practices"
+      "data"
     ],
     "quality_score": 93,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:44.778867"
+    "last_updated": "2025-09-30T06:05:41.033895"
   },
   {
     "id": 1019571062,
@@ -953,28 +1271,192 @@
     },
     "custom_properties": {},
     "generated_tags": [
+      "community-validated",
+      "system-integration",
       "interoperability",
       "automation",
       "healthcare",
-      "python",
       "healthcare-insights",
-      "data-science",
-      "data-analytics",
-      "system-integration"
+      "nhs-wales",
+      "python"
     ],
     "all_tags": [
-      "interoperability",
+      "community-validated",
+      "system-integration",
       "automation",
+      "interoperability",
       "healthcare",
       "healthcare-insights",
-      "python",
-      "data-science",
-      "data-analytics",
-      "system-integration"
+      "nhs-wales",
+      "python"
     ],
     "quality_score": 93,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:42.412780"
+    "last_updated": "2025-09-30T06:05:38.016101"
+  },
+  {
+    "id": 1057150705,
+    "node_id": "R_kgDOPwLW8Q",
+    "name": "biu_BigQuery_SQLX",
+    "full_name": "Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX",
+    "private": true,
+    "owner": {
+      "login": "Aneurin-Bevan-University-Health-Board",
+      "id": 107406487,
+      "node_id": "O_kgDOBmbklw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/107406487?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Aneurin-Bevan-University-Health-Board",
+      "html_url": "https://github.com/Aneurin-Bevan-University-Health-Board",
+      "followers_url": "https://api.github.com/users/Aneurin-Bevan-University-Health-Board/followers",
+      "following_url": "https://api.github.com/users/Aneurin-Bevan-University-Health-Board/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Aneurin-Bevan-University-Health-Board/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Aneurin-Bevan-University-Health-Board/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Aneurin-Bevan-University-Health-Board/subscriptions",
+      "organizations_url": "https://api.github.com/users/Aneurin-Bevan-University-Health-Board/orgs",
+      "repos_url": "https://api.github.com/users/Aneurin-Bevan-University-Health-Board/repos",
+      "events_url": "https://api.github.com/users/Aneurin-Bevan-University-Health-Board/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Aneurin-Bevan-University-Health-Board/received_events",
+      "type": "Organization",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "html_url": "https://github.com/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX",
+    "description": "GitHub Repo for managing and deploying Dataform products (SQLX and JS) for ABB BIU NDR delivery of added value, derived, production and SDE assets. This is in POC Phase currently.",
+    "fork": false,
+    "url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX",
+    "forks_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/forks",
+    "keys_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/keys{/key_id}",
+    "collaborators_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/collaborators{/collaborator}",
+    "teams_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/teams",
+    "hooks_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/hooks",
+    "issue_events_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/issues/events{/number}",
+    "events_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/events",
+    "assignees_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/assignees{/user}",
+    "branches_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/branches{/branch}",
+    "tags_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/tags",
+    "blobs_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/git/blobs{/sha}",
+    "git_tags_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/git/tags{/sha}",
+    "git_refs_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/git/refs{/sha}",
+    "trees_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/git/trees{/sha}",
+    "statuses_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/statuses/{sha}",
+    "languages_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/languages",
+    "stargazers_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/stargazers",
+    "contributors_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/contributors",
+    "subscribers_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/subscribers",
+    "subscription_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/subscription",
+    "commits_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/commits{/sha}",
+    "git_commits_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/git/commits{/sha}",
+    "comments_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/comments{/number}",
+    "issue_comment_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/issues/comments{/number}",
+    "contents_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/contents/{+path}",
+    "compare_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/compare/{base}...{head}",
+    "merges_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/merges",
+    "archive_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/{archive_format}{/ref}",
+    "downloads_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/downloads",
+    "issues_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/issues{/number}",
+    "pulls_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/pulls{/number}",
+    "milestones_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/milestones{/number}",
+    "notifications_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/notifications{?since,all,participating}",
+    "labels_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/labels{/name}",
+    "releases_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/releases{/id}",
+    "deployments_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/deployments",
+    "created_at": "2025-09-15T10:44:04Z",
+    "updated_at": "2025-09-29T12:20:28Z",
+    "pushed_at": "2025-09-26T10:28:19Z",
+    "git_url": "git://github.com/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX.git",
+    "ssh_url": "git@github.com:Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX.git",
+    "clone_url": "https://github.com/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX.git",
+    "svn_url": "https://github.com/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX",
+    "homepage": "",
+    "size": 207,
+    "stargazers_count": 0,
+    "watchers_count": 0,
+    "language": null,
+    "has_issues": true,
+    "has_projects": true,
+    "has_downloads": true,
+    "has_wiki": true,
+    "has_pages": false,
+    "has_discussions": false,
+    "forks_count": 0,
+    "mirror_url": null,
+    "archived": false,
+    "disabled": false,
+    "open_issues_count": 1,
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    },
+    "allow_forking": false,
+    "is_template": false,
+    "web_commit_signoff_required": false,
+    "topics": [
+      "bigquery",
+      "dataform",
+      "elt-pipeline",
+      "gcp",
+      "sqlx"
+    ],
+    "visibility": "Internal",
+    "forks": 0,
+    "open_issues": 1,
+    "watchers": 0,
+    "default_branch": "main",
+    "permissions": {
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
+    },
+    "security_and_analysis": {
+      "advanced_security": {
+        "status": "disabled"
+      },
+      "secret_scanning": {
+        "status": "disabled"
+      },
+      "secret_scanning_push_protection": {
+        "status": "disabled"
+      },
+      "dependabot_security_updates": {
+        "status": "disabled"
+      },
+      "secret_scanning_non_provider_patterns": {
+        "status": "disabled"
+      },
+      "secret_scanning_validity_checks": {
+        "status": "disabled"
+      }
+    },
+    "custom_properties": {},
+    "generated_tags": [
+      "dataform",
+      "elt-pipeline",
+      "bigquery",
+      "sqlx",
+      "healthcare",
+      "healthcare-insights",
+      "nhs-wales",
+      "gcp"
+    ],
+    "all_tags": [
+      "dataform",
+      "elt-pipeline",
+      "bigquery",
+      "sqlx",
+      "healthcare",
+      "healthcare-insights",
+      "nhs-wales",
+      "gcp"
+    ],
+    "quality_score": 90,
+    "featured": true,
+    "last_updated": "2025-09-30T06:05:37.163657"
   },
   {
     "id": 987476336,
@@ -1105,187 +1587,24 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
       "frontend",
-      "web-interface",
       "user-experience",
-      "comprehensive",
-      "nhs-wales"
+      "web-interface",
+      "healthcare",
+      "nhs-wales",
+      "comprehensive"
     ],
     "all_tags": [
-      "healthcare",
       "frontend",
-      "web-interface",
-      "comprehensive",
       "user-experience",
-      "nhs-wales"
+      "web-interface",
+      "healthcare",
+      "nhs-wales",
+      "comprehensive"
     ],
     "quality_score": 90,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:41.548008"
-  },
-  {
-    "id": 1057150705,
-    "node_id": "R_kgDOPwLW8Q",
-    "name": "biu_BigQuery_SQLX",
-    "full_name": "Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX",
-    "private": true,
-    "owner": {
-      "login": "Aneurin-Bevan-University-Health-Board",
-      "id": 107406487,
-      "node_id": "O_kgDOBmbklw",
-      "avatar_url": "https://avatars.githubusercontent.com/u/107406487?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Aneurin-Bevan-University-Health-Board",
-      "html_url": "https://github.com/Aneurin-Bevan-University-Health-Board",
-      "followers_url": "https://api.github.com/users/Aneurin-Bevan-University-Health-Board/followers",
-      "following_url": "https://api.github.com/users/Aneurin-Bevan-University-Health-Board/following{/other_user}",
-      "gists_url": "https://api.github.com/users/Aneurin-Bevan-University-Health-Board/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/Aneurin-Bevan-University-Health-Board/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/Aneurin-Bevan-University-Health-Board/subscriptions",
-      "organizations_url": "https://api.github.com/users/Aneurin-Bevan-University-Health-Board/orgs",
-      "repos_url": "https://api.github.com/users/Aneurin-Bevan-University-Health-Board/repos",
-      "events_url": "https://api.github.com/users/Aneurin-Bevan-University-Health-Board/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/Aneurin-Bevan-University-Health-Board/received_events",
-      "type": "Organization",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "html_url": "https://github.com/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX",
-    "description": "GitHub Repo for managing and deploying Dataform products (SQLX and JS) for ABB BIU NDR delivery of added value, derived, production and SDE assets. This is in POC Phase currently.",
-    "fork": false,
-    "url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX",
-    "forks_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/forks",
-    "keys_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/keys{/key_id}",
-    "collaborators_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/collaborators{/collaborator}",
-    "teams_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/teams",
-    "hooks_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/hooks",
-    "issue_events_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/issues/events{/number}",
-    "events_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/events",
-    "assignees_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/assignees{/user}",
-    "branches_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/branches{/branch}",
-    "tags_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/tags",
-    "blobs_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/git/blobs{/sha}",
-    "git_tags_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/git/tags{/sha}",
-    "git_refs_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/git/refs{/sha}",
-    "trees_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/git/trees{/sha}",
-    "statuses_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/statuses/{sha}",
-    "languages_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/languages",
-    "stargazers_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/stargazers",
-    "contributors_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/contributors",
-    "subscribers_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/subscribers",
-    "subscription_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/subscription",
-    "commits_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/commits{/sha}",
-    "git_commits_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/git/commits{/sha}",
-    "comments_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/comments{/number}",
-    "issue_comment_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/issues/comments{/number}",
-    "contents_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/contents/{+path}",
-    "compare_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/compare/{base}...{head}",
-    "merges_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/merges",
-    "archive_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/{archive_format}{/ref}",
-    "downloads_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/downloads",
-    "issues_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/issues{/number}",
-    "pulls_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/pulls{/number}",
-    "milestones_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/milestones{/number}",
-    "notifications_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/notifications{?since,all,participating}",
-    "labels_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/labels{/name}",
-    "releases_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/releases{/id}",
-    "deployments_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX/deployments",
-    "created_at": "2025-09-15T10:44:04Z",
-    "updated_at": "2025-09-22T09:58:19Z",
-    "pushed_at": "2025-09-26T10:28:19Z",
-    "git_url": "git://github.com/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX.git",
-    "ssh_url": "git@github.com:Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX.git",
-    "clone_url": "https://github.com/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX.git",
-    "svn_url": "https://github.com/Aneurin-Bevan-University-Health-Board/biu_BigQuery_SQLX",
-    "homepage": "",
-    "size": 207,
-    "stargazers_count": 0,
-    "watchers_count": 0,
-    "language": null,
-    "has_issues": true,
-    "has_projects": true,
-    "has_downloads": true,
-    "has_wiki": true,
-    "has_pages": false,
-    "has_discussions": false,
-    "forks_count": 0,
-    "mirror_url": null,
-    "archived": false,
-    "disabled": false,
-    "open_issues_count": 1,
-    "license": {
-      "key": "mit",
-      "name": "MIT License",
-      "spdx_id": "MIT",
-      "url": "https://api.github.com/licenses/mit",
-      "node_id": "MDc6TGljZW5zZTEz"
-    },
-    "allow_forking": false,
-    "is_template": false,
-    "web_commit_signoff_required": false,
-    "topics": [
-      "bigquery",
-      "dataform",
-      "gcp",
-      "sqlx"
-    ],
-    "visibility": "Internal",
-    "forks": 0,
-    "open_issues": 1,
-    "watchers": 0,
-    "default_branch": "main",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
-    "security_and_analysis": {
-      "advanced_security": {
-        "status": "disabled"
-      },
-      "secret_scanning": {
-        "status": "disabled"
-      },
-      "secret_scanning_push_protection": {
-        "status": "disabled"
-      },
-      "dependabot_security_updates": {
-        "status": "disabled"
-      },
-      "secret_scanning_non_provider_patterns": {
-        "status": "disabled"
-      },
-      "secret_scanning_validity_checks": {
-        "status": "disabled"
-      }
-    },
-    "custom_properties": {},
-    "generated_tags": [
-      "healthcare",
-      "gcp",
-      "nhs-wales",
-      "healthcare-insights",
-      "data-analytics",
-      "sqlx",
-      "bigquery",
-      "dataform"
-    ],
-    "all_tags": [
-      "healthcare",
-      "gcp",
-      "nhs-wales",
-      "healthcare-insights",
-      "data-analytics",
-      "sqlx",
-      "bigquery",
-      "dataform"
-    ],
-    "quality_score": 90,
-    "featured": true,
-    "last_updated": "2025-09-29T06:05:41.548115"
+    "last_updated": "2025-09-30T06:05:37.163573"
   },
   {
     "id": 783807845,
@@ -1416,18 +1735,18 @@
     },
     "custom_properties": {},
     "generated_tags": [
+      "nhs-wales",
       "healthcare",
-      "comprehensive",
-      "nhs-wales"
+      "comprehensive"
     ],
     "all_tags": [
+      "nhs-wales",
       "healthcare",
-      "comprehensive",
-      "nhs-wales"
+      "comprehensive"
     ],
     "quality_score": 90,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:41.547943"
+    "last_updated": "2025-09-30T06:05:37.163511"
   },
   {
     "id": 792375245,
@@ -1558,20 +1877,20 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "community-validated",
+      "nhs-wales",
       "comprehensive",
-      "nhs-wales"
+      "healthcare",
+      "community-validated"
     ],
     "all_tags": [
+      "nhs-wales",
       "healthcare",
       "comprehensive",
-      "nhs-wales",
       "community-validated"
     ],
     "quality_score": 89,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:48.057392"
+    "last_updated": "2025-09-30T06:05:44.237511"
   },
   {
     "id": 599988856,
@@ -1642,13 +1961,13 @@
     "deployments_url": "https://api.github.com/repos/NHS-Executive/VPW_Vaccine/deployments",
     "created_at": "2023-02-10T10:29:43Z",
     "updated_at": "2025-09-16T09:14:11Z",
-    "pushed_at": "2025-09-26T10:34:31Z",
+    "pushed_at": "2025-09-29T12:18:51Z",
     "git_url": "git://github.com/NHS-Executive/VPW_Vaccine.git",
     "ssh_url": "git@github.com:NHS-Executive/VPW_Vaccine.git",
     "clone_url": "https://github.com/NHS-Executive/VPW_Vaccine.git",
     "svn_url": "https://github.com/NHS-Executive/VPW_Vaccine",
     "homepage": null,
-    "size": 255,
+    "size": 265,
     "stargazers_count": 3,
     "watchers_count": 3,
     "language": "TSQL",
@@ -1702,24 +2021,24 @@
     },
     "custom_properties": {},
     "generated_tags": [
+      "nhs-wales",
       "healthcare",
-      "community-validated",
-      "nhs-wales"
+      "community-validated"
     ],
     "all_tags": [
-      "healthcare",
       "nhs-wales",
+      "healthcare",
       "community-validated"
     ],
     "quality_score": 89,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:48.057366"
+    "last_updated": "2025-09-30T06:05:44.237486"
   },
   {
     "id": 1048985624,
     "node_id": "R_kgDOPoZAGA",
-    "name": "biu_JSON_Coud_Function",
-    "full_name": "Aneurin-Bevan-University-Health-Board/biu_JSON_Coud_Function",
+    "name": "biu_JSON_Cloud_Function",
+    "full_name": "Aneurin-Bevan-University-Health-Board/biu_JSON_Cloud_Function",
     "private": true,
     "owner": {
       "login": "Aneurin-Bevan-University-Health-Board",
@@ -1742,53 +2061,53 @@
       "user_view_type": "public",
       "site_admin": false
     },
-    "html_url": "https://github.com/Aneurin-Bevan-University-Health-Board/biu_JSON_Coud_Function",
+    "html_url": "https://github.com/Aneurin-Bevan-University-Health-Board/biu_JSON_Cloud_Function",
     "description": "ABB BIU Cloud Run function for  JSON Wrapper",
     "fork": false,
-    "url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Coud_Function",
-    "forks_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Coud_Function/forks",
-    "keys_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Coud_Function/keys{/key_id}",
-    "collaborators_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Coud_Function/collaborators{/collaborator}",
-    "teams_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Coud_Function/teams",
-    "hooks_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Coud_Function/hooks",
-    "issue_events_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Coud_Function/issues/events{/number}",
-    "events_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Coud_Function/events",
-    "assignees_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Coud_Function/assignees{/user}",
-    "branches_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Coud_Function/branches{/branch}",
-    "tags_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Coud_Function/tags",
-    "blobs_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Coud_Function/git/blobs{/sha}",
-    "git_tags_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Coud_Function/git/tags{/sha}",
-    "git_refs_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Coud_Function/git/refs{/sha}",
-    "trees_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Coud_Function/git/trees{/sha}",
-    "statuses_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Coud_Function/statuses/{sha}",
-    "languages_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Coud_Function/languages",
-    "stargazers_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Coud_Function/stargazers",
-    "contributors_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Coud_Function/contributors",
-    "subscribers_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Coud_Function/subscribers",
-    "subscription_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Coud_Function/subscription",
-    "commits_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Coud_Function/commits{/sha}",
-    "git_commits_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Coud_Function/git/commits{/sha}",
-    "comments_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Coud_Function/comments{/number}",
-    "issue_comment_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Coud_Function/issues/comments{/number}",
-    "contents_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Coud_Function/contents/{+path}",
-    "compare_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Coud_Function/compare/{base}...{head}",
-    "merges_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Coud_Function/merges",
-    "archive_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Coud_Function/{archive_format}{/ref}",
-    "downloads_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Coud_Function/downloads",
-    "issues_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Coud_Function/issues{/number}",
-    "pulls_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Coud_Function/pulls{/number}",
-    "milestones_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Coud_Function/milestones{/number}",
-    "notifications_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Coud_Function/notifications{?since,all,participating}",
-    "labels_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Coud_Function/labels{/name}",
-    "releases_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Coud_Function/releases{/id}",
-    "deployments_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Coud_Function/deployments",
+    "url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Cloud_Function",
+    "forks_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Cloud_Function/forks",
+    "keys_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Cloud_Function/keys{/key_id}",
+    "collaborators_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Cloud_Function/collaborators{/collaborator}",
+    "teams_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Cloud_Function/teams",
+    "hooks_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Cloud_Function/hooks",
+    "issue_events_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Cloud_Function/issues/events{/number}",
+    "events_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Cloud_Function/events",
+    "assignees_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Cloud_Function/assignees{/user}",
+    "branches_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Cloud_Function/branches{/branch}",
+    "tags_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Cloud_Function/tags",
+    "blobs_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Cloud_Function/git/blobs{/sha}",
+    "git_tags_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Cloud_Function/git/tags{/sha}",
+    "git_refs_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Cloud_Function/git/refs{/sha}",
+    "trees_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Cloud_Function/git/trees{/sha}",
+    "statuses_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Cloud_Function/statuses/{sha}",
+    "languages_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Cloud_Function/languages",
+    "stargazers_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Cloud_Function/stargazers",
+    "contributors_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Cloud_Function/contributors",
+    "subscribers_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Cloud_Function/subscribers",
+    "subscription_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Cloud_Function/subscription",
+    "commits_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Cloud_Function/commits{/sha}",
+    "git_commits_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Cloud_Function/git/commits{/sha}",
+    "comments_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Cloud_Function/comments{/number}",
+    "issue_comment_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Cloud_Function/issues/comments{/number}",
+    "contents_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Cloud_Function/contents/{+path}",
+    "compare_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Cloud_Function/compare/{base}...{head}",
+    "merges_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Cloud_Function/merges",
+    "archive_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Cloud_Function/{archive_format}{/ref}",
+    "downloads_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Cloud_Function/downloads",
+    "issues_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Cloud_Function/issues{/number}",
+    "pulls_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Cloud_Function/pulls{/number}",
+    "milestones_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Cloud_Function/milestones{/number}",
+    "notifications_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Cloud_Function/notifications{?since,all,participating}",
+    "labels_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Cloud_Function/labels{/name}",
+    "releases_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Cloud_Function/releases{/id}",
+    "deployments_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_JSON_Cloud_Function/deployments",
     "created_at": "2025-09-02T10:14:02Z",
-    "updated_at": "2025-09-28T20:18:40Z",
+    "updated_at": "2025-09-29T13:37:53Z",
     "pushed_at": "2025-09-22T14:30:21Z",
-    "git_url": "git://github.com/Aneurin-Bevan-University-Health-Board/biu_JSON_Coud_Function.git",
-    "ssh_url": "git@github.com:Aneurin-Bevan-University-Health-Board/biu_JSON_Coud_Function.git",
-    "clone_url": "https://github.com/Aneurin-Bevan-University-Health-Board/biu_JSON_Coud_Function.git",
-    "svn_url": "https://github.com/Aneurin-Bevan-University-Health-Board/biu_JSON_Coud_Function",
+    "git_url": "git://github.com/Aneurin-Bevan-University-Health-Board/biu_JSON_Cloud_Function.git",
+    "ssh_url": "git@github.com:Aneurin-Bevan-University-Health-Board/biu_JSON_Cloud_Function.git",
+    "clone_url": "https://github.com/Aneurin-Bevan-University-Health-Board/biu_JSON_Cloud_Function.git",
+    "svn_url": "https://github.com/Aneurin-Bevan-University-Health-Board/biu_JSON_Cloud_Function",
     "homepage": "",
     "size": 154,
     "stargazers_count": 1,
@@ -1849,178 +2168,29 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "automation",
-      "gcp",
-      "python",
-      "ndr",
-      "data-science",
       "community-validated",
-      "nhs-wales"
-    ],
-    "all_tags": [
-      "healthcare",
       "automation",
-      "gcp",
-      "python",
-      "ndr",
-      "data-science",
-      "community-validated",
+      "healthcare",
       "nhs-wales",
       "cloudrun",
+      "gcp",
+      "python",
       "json"
     ],
-    "quality_score": 88,
-    "featured": true,
-    "last_updated": "2025-09-29T06:05:41.548101"
-  },
-  {
-    "id": 1030329525,
-    "node_id": "R_kgDOPWmUtQ",
-    "name": "biu_DirectedAcyclicGraph",
-    "full_name": "Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph",
-    "private": true,
-    "owner": {
-      "login": "Aneurin-Bevan-University-Health-Board",
-      "id": 107406487,
-      "node_id": "O_kgDOBmbklw",
-      "avatar_url": "https://avatars.githubusercontent.com/u/107406487?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Aneurin-Bevan-University-Health-Board",
-      "html_url": "https://github.com/Aneurin-Bevan-University-Health-Board",
-      "followers_url": "https://api.github.com/users/Aneurin-Bevan-University-Health-Board/followers",
-      "following_url": "https://api.github.com/users/Aneurin-Bevan-University-Health-Board/following{/other_user}",
-      "gists_url": "https://api.github.com/users/Aneurin-Bevan-University-Health-Board/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/Aneurin-Bevan-University-Health-Board/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/Aneurin-Bevan-University-Health-Board/subscriptions",
-      "organizations_url": "https://api.github.com/users/Aneurin-Bevan-University-Health-Board/orgs",
-      "repos_url": "https://api.github.com/users/Aneurin-Bevan-University-Health-Board/repos",
-      "events_url": "https://api.github.com/users/Aneurin-Bevan-University-Health-Board/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/Aneurin-Bevan-University-Health-Board/received_events",
-      "type": "Organization",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "html_url": "https://github.com/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph",
-    "description": "This repository is the central source for all Airflow DAGs (Directed Acyclic Graphs) and custom plugins used in the Aneurin Bevan UHB Business Intelligence Unit Cloud Composer environment. It is directly linked to a Cloud Build trigger, which automatically syncs this code into Google Cloud Composer whenever a change is pushed to the main branch.",
-    "fork": false,
-    "url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph",
-    "forks_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/forks",
-    "keys_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/keys{/key_id}",
-    "collaborators_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/collaborators{/collaborator}",
-    "teams_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/teams",
-    "hooks_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/hooks",
-    "issue_events_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/issues/events{/number}",
-    "events_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/events",
-    "assignees_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/assignees{/user}",
-    "branches_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/branches{/branch}",
-    "tags_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/tags",
-    "blobs_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/git/blobs{/sha}",
-    "git_tags_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/git/tags{/sha}",
-    "git_refs_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/git/refs{/sha}",
-    "trees_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/git/trees{/sha}",
-    "statuses_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/statuses/{sha}",
-    "languages_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/languages",
-    "stargazers_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/stargazers",
-    "contributors_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/contributors",
-    "subscribers_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/subscribers",
-    "subscription_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/subscription",
-    "commits_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/commits{/sha}",
-    "git_commits_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/git/commits{/sha}",
-    "comments_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/comments{/number}",
-    "issue_comment_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/issues/comments{/number}",
-    "contents_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/contents/{+path}",
-    "compare_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/compare/{base}...{head}",
-    "merges_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/merges",
-    "archive_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/{archive_format}{/ref}",
-    "downloads_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/downloads",
-    "issues_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/issues{/number}",
-    "pulls_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/pulls{/number}",
-    "milestones_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/milestones{/number}",
-    "notifications_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/notifications{?since,all,participating}",
-    "labels_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/labels{/name}",
-    "releases_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/releases{/id}",
-    "deployments_url": "https://api.github.com/repos/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph/deployments",
-    "created_at": "2025-08-01T13:05:19Z",
-    "updated_at": "2025-09-26T12:07:31Z",
-    "pushed_at": "2025-09-26T12:07:28Z",
-    "git_url": "git://github.com/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph.git",
-    "ssh_url": "git@github.com:Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph.git",
-    "clone_url": "https://github.com/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph.git",
-    "svn_url": "https://github.com/Aneurin-Bevan-University-Health-Board/biu_DirectedAcyclicGraph",
-    "homepage": "",
-    "size": 415,
-    "stargazers_count": 1,
-    "watchers_count": 1,
-    "language": "Python",
-    "has_issues": false,
-    "has_projects": false,
-    "has_downloads": true,
-    "has_wiki": false,
-    "has_pages": false,
-    "has_discussions": false,
-    "forks_count": 0,
-    "mirror_url": null,
-    "archived": false,
-    "disabled": false,
-    "open_issues_count": 1,
-    "license": null,
-    "allow_forking": false,
-    "is_template": false,
-    "web_commit_signoff_required": false,
-    "topics": [],
-    "visibility": "Internal",
-    "forks": 0,
-    "open_issues": 1,
-    "watchers": 1,
-    "default_branch": "main",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
-    "security_and_analysis": {
-      "advanced_security": {
-        "status": "disabled"
-      },
-      "secret_scanning": {
-        "status": "disabled"
-      },
-      "secret_scanning_push_protection": {
-        "status": "disabled"
-      },
-      "dependabot_security_updates": {
-        "status": "disabled"
-      },
-      "secret_scanning_non_provider_patterns": {
-        "status": "disabled"
-      },
-      "secret_scanning_validity_checks": {
-        "status": "disabled"
-      }
-    },
-    "custom_properties": {},
-    "generated_tags": [
-      "healthcare",
-      "automation",
-      "python",
-      "data-science",
-      "nhs-wales",
-      "community-validated"
-    ],
     "all_tags": [
-      "healthcare",
+      "community-validated",
       "automation",
-      "python",
-      "data-science",
+      "healthcare",
       "nhs-wales",
-      "community-validated"
+      "cloudrun",
+      "gcp",
+      "python",
+      "json",
+      "ndr"
     ],
     "quality_score": 88,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:41.548027"
+    "last_updated": "2025-09-30T06:05:37.163645"
   },
   {
     "id": 948479057,
@@ -2157,28 +2327,28 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "interoperability",
-      "automation",
-      "healthcare",
-      "python",
-      "data-science",
+      "community-validated",
       "system-integration",
+      "automation",
+      "interoperability",
+      "healthcare",
       "nhs-wales",
-      "community-validated"
+      "python",
+      "data-science"
     ],
     "all_tags": [
-      "interoperability",
-      "automation",
-      "healthcare",
-      "python",
-      "data-science",
+      "community-validated",
       "system-integration",
+      "automation",
+      "interoperability",
+      "healthcare",
       "nhs-wales",
-      "community-validated"
+      "python",
+      "data-science"
     ],
     "quality_score": 88,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:43.833384"
+    "last_updated": "2025-09-30T06:05:39.936606"
   },
   {
     "id": 961813221,
@@ -2309,20 +2479,20 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "community-validated",
+      "nhs-wales",
       "comprehensive",
-      "nhs-wales"
+      "healthcare",
+      "community-validated"
     ],
     "all_tags": [
+      "nhs-wales",
       "healthcare",
       "comprehensive",
-      "nhs-wales",
       "community-validated"
     ],
     "quality_score": 88,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:53.679485"
+    "last_updated": "2025-09-30T06:05:49.589362"
   },
   {
     "id": 926603178,
@@ -2393,7 +2563,7 @@
     "deployments_url": "https://api.github.com/repos/DHCW-Digital-Health-and-Care-Wales/wccg-pas-referrals-api/deployments",
     "created_at": "2025-02-03T14:51:29Z",
     "updated_at": "2025-03-25T11:02:44Z",
-    "pushed_at": "2025-09-22T11:33:16Z",
+    "pushed_at": "2025-09-29T16:10:37Z",
     "git_url": "git://github.com/DHCW-Digital-Health-and-Care-Wales/wccg-pas-referrals-api.git",
     "ssh_url": "git@github.com:DHCW-Digital-Health-and-Care-Wales/wccg-pas-referrals-api.git",
     "clone_url": "https://github.com/DHCW-Digital-Health-and-Care-Wales/wccg-pas-referrals-api.git",
@@ -2450,24 +2620,24 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "dotnet",
-      "community-validated",
-      "nhs-wales",
       "csharp",
-      "microsoft-stack"
+      "community-validated",
+      "healthcare",
+      "nhs-wales",
+      "microsoft-stack",
+      "dotnet"
     ],
     "all_tags": [
-      "healthcare",
-      "dotnet",
-      "microsoft-stack",
-      "nhs-wales",
       "csharp",
-      "community-validated"
+      "community-validated",
+      "healthcare",
+      "nhs-wales",
+      "microsoft-stack",
+      "dotnet"
     ],
     "quality_score": 88,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:43.833299"
+    "last_updated": "2025-09-30T06:05:39.936526"
   },
   {
     "id": 924629732,
@@ -2538,7 +2708,7 @@
     "deployments_url": "https://api.github.com/repos/DHCW-Digital-Health-and-Care-Wales/wccg-eReferrals-service-app/deployments",
     "created_at": "2025-01-30T11:16:33Z",
     "updated_at": "2025-03-20T11:58:09Z",
-    "pushed_at": "2025-09-22T18:33:28Z",
+    "pushed_at": "2025-09-29T22:22:40Z",
     "git_url": "git://github.com/DHCW-Digital-Health-and-Care-Wales/wccg-eReferrals-service-app.git",
     "ssh_url": "git@github.com:DHCW-Digital-Health-and-Care-Wales/wccg-eReferrals-service-app.git",
     "clone_url": "https://github.com/DHCW-Digital-Health-and-Care-Wales/wccg-eReferrals-service-app.git",
@@ -2595,28 +2765,178 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "dotnet",
       "oral-health",
-      "dental-services",
-      "community-validated",
-      "nhs-wales",
       "csharp",
-      "microsoft-stack"
+      "community-validated",
+      "healthcare",
+      "nhs-wales",
+      "dotnet",
+      "microsoft-stack",
+      "dental-services"
     ],
     "all_tags": [
-      "healthcare",
-      "dotnet",
       "oral-health",
-      "dental-services",
-      "microsoft-stack",
-      "nhs-wales",
       "csharp",
-      "community-validated"
+      "community-validated",
+      "healthcare",
+      "dental-services",
+      "nhs-wales",
+      "microsoft-stack",
+      "dotnet"
     ],
     "quality_score": 88,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:43.833287"
+    "last_updated": "2025-09-30T06:05:39.936514"
+  },
+  {
+    "id": 1066324372,
+    "node_id": "R_kgDOP47RlA",
+    "name": "NHSWales-fhir-profiles",
+    "full_name": "National-Data-Resource/NHSWales-fhir-profiles",
+    "private": false,
+    "owner": {
+      "login": "National-Data-Resource",
+      "id": 65670749,
+      "node_id": "MDEyOk9yZ2FuaXphdGlvbjY1NjcwNzQ5",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65670749?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/National-Data-Resource",
+      "html_url": "https://github.com/National-Data-Resource",
+      "followers_url": "https://api.github.com/users/National-Data-Resource/followers",
+      "following_url": "https://api.github.com/users/National-Data-Resource/following{/other_user}",
+      "gists_url": "https://api.github.com/users/National-Data-Resource/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/National-Data-Resource/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/National-Data-Resource/subscriptions",
+      "organizations_url": "https://api.github.com/users/National-Data-Resource/orgs",
+      "repos_url": "https://api.github.com/users/National-Data-Resource/repos",
+      "events_url": "https://api.github.com/users/National-Data-Resource/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/National-Data-Resource/received_events",
+      "type": "Organization",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "html_url": "https://github.com/National-Data-Resource/NHSWales-fhir-profiles",
+    "description": null,
+    "fork": false,
+    "url": "https://api.github.com/repos/National-Data-Resource/NHSWales-fhir-profiles",
+    "forks_url": "https://api.github.com/repos/National-Data-Resource/NHSWales-fhir-profiles/forks",
+    "keys_url": "https://api.github.com/repos/National-Data-Resource/NHSWales-fhir-profiles/keys{/key_id}",
+    "collaborators_url": "https://api.github.com/repos/National-Data-Resource/NHSWales-fhir-profiles/collaborators{/collaborator}",
+    "teams_url": "https://api.github.com/repos/National-Data-Resource/NHSWales-fhir-profiles/teams",
+    "hooks_url": "https://api.github.com/repos/National-Data-Resource/NHSWales-fhir-profiles/hooks",
+    "issue_events_url": "https://api.github.com/repos/National-Data-Resource/NHSWales-fhir-profiles/issues/events{/number}",
+    "events_url": "https://api.github.com/repos/National-Data-Resource/NHSWales-fhir-profiles/events",
+    "assignees_url": "https://api.github.com/repos/National-Data-Resource/NHSWales-fhir-profiles/assignees{/user}",
+    "branches_url": "https://api.github.com/repos/National-Data-Resource/NHSWales-fhir-profiles/branches{/branch}",
+    "tags_url": "https://api.github.com/repos/National-Data-Resource/NHSWales-fhir-profiles/tags",
+    "blobs_url": "https://api.github.com/repos/National-Data-Resource/NHSWales-fhir-profiles/git/blobs{/sha}",
+    "git_tags_url": "https://api.github.com/repos/National-Data-Resource/NHSWales-fhir-profiles/git/tags{/sha}",
+    "git_refs_url": "https://api.github.com/repos/National-Data-Resource/NHSWales-fhir-profiles/git/refs{/sha}",
+    "trees_url": "https://api.github.com/repos/National-Data-Resource/NHSWales-fhir-profiles/git/trees{/sha}",
+    "statuses_url": "https://api.github.com/repos/National-Data-Resource/NHSWales-fhir-profiles/statuses/{sha}",
+    "languages_url": "https://api.github.com/repos/National-Data-Resource/NHSWales-fhir-profiles/languages",
+    "stargazers_url": "https://api.github.com/repos/National-Data-Resource/NHSWales-fhir-profiles/stargazers",
+    "contributors_url": "https://api.github.com/repos/National-Data-Resource/NHSWales-fhir-profiles/contributors",
+    "subscribers_url": "https://api.github.com/repos/National-Data-Resource/NHSWales-fhir-profiles/subscribers",
+    "subscription_url": "https://api.github.com/repos/National-Data-Resource/NHSWales-fhir-profiles/subscription",
+    "commits_url": "https://api.github.com/repos/National-Data-Resource/NHSWales-fhir-profiles/commits{/sha}",
+    "git_commits_url": "https://api.github.com/repos/National-Data-Resource/NHSWales-fhir-profiles/git/commits{/sha}",
+    "comments_url": "https://api.github.com/repos/National-Data-Resource/NHSWales-fhir-profiles/comments{/number}",
+    "issue_comment_url": "https://api.github.com/repos/National-Data-Resource/NHSWales-fhir-profiles/issues/comments{/number}",
+    "contents_url": "https://api.github.com/repos/National-Data-Resource/NHSWales-fhir-profiles/contents/{+path}",
+    "compare_url": "https://api.github.com/repos/National-Data-Resource/NHSWales-fhir-profiles/compare/{base}...{head}",
+    "merges_url": "https://api.github.com/repos/National-Data-Resource/NHSWales-fhir-profiles/merges",
+    "archive_url": "https://api.github.com/repos/National-Data-Resource/NHSWales-fhir-profiles/{archive_format}{/ref}",
+    "downloads_url": "https://api.github.com/repos/National-Data-Resource/NHSWales-fhir-profiles/downloads",
+    "issues_url": "https://api.github.com/repos/National-Data-Resource/NHSWales-fhir-profiles/issues{/number}",
+    "pulls_url": "https://api.github.com/repos/National-Data-Resource/NHSWales-fhir-profiles/pulls{/number}",
+    "milestones_url": "https://api.github.com/repos/National-Data-Resource/NHSWales-fhir-profiles/milestones{/number}",
+    "notifications_url": "https://api.github.com/repos/National-Data-Resource/NHSWales-fhir-profiles/notifications{?since,all,participating}",
+    "labels_url": "https://api.github.com/repos/National-Data-Resource/NHSWales-fhir-profiles/labels{/name}",
+    "releases_url": "https://api.github.com/repos/National-Data-Resource/NHSWales-fhir-profiles/releases{/id}",
+    "deployments_url": "https://api.github.com/repos/National-Data-Resource/NHSWales-fhir-profiles/deployments",
+    "created_at": "2025-09-29T10:32:26Z",
+    "updated_at": "2025-09-29T13:24:17Z",
+    "pushed_at": "2025-09-29T10:48:43Z",
+    "git_url": "git://github.com/National-Data-Resource/NHSWales-fhir-profiles.git",
+    "ssh_url": "git@github.com:National-Data-Resource/NHSWales-fhir-profiles.git",
+    "clone_url": "https://github.com/National-Data-Resource/NHSWales-fhir-profiles.git",
+    "svn_url": "https://github.com/National-Data-Resource/NHSWales-fhir-profiles",
+    "homepage": null,
+    "size": 4358,
+    "stargazers_count": 2,
+    "watchers_count": 2,
+    "language": "HTML",
+    "has_issues": true,
+    "has_projects": true,
+    "has_downloads": true,
+    "has_wiki": true,
+    "has_pages": false,
+    "has_discussions": false,
+    "forks_count": 1,
+    "mirror_url": null,
+    "archived": false,
+    "disabled": false,
+    "open_issues_count": 0,
+    "license": null,
+    "allow_forking": true,
+    "is_template": false,
+    "web_commit_signoff_required": false,
+    "topics": [],
+    "visibility": "Public",
+    "forks": 1,
+    "open_issues": 0,
+    "watchers": 2,
+    "default_branch": "main",
+    "permissions": {
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
+    },
+    "security_and_analysis": {
+      "secret_scanning": {
+        "status": "enabled"
+      },
+      "secret_scanning_push_protection": {
+        "status": "enabled"
+      },
+      "dependabot_security_updates": {
+        "status": "disabled"
+      },
+      "secret_scanning_non_provider_patterns": {
+        "status": "disabled"
+      },
+      "secret_scanning_ai_detection": {
+        "status": "disabled"
+      },
+      "secret_scanning_validity_checks": {
+        "status": "disabled"
+      }
+    },
+    "custom_properties": {},
+    "generated_tags": [
+      "frontend",
+      "community-validated",
+      "user-experience",
+      "web-interface",
+      "healthcare",
+      "nhs-wales",
+      "comprehensive"
+    ],
+    "all_tags": [
+      "frontend",
+      "community-validated",
+      "user-experience",
+      "web-interface",
+      "healthcare",
+      "nhs-wales",
+      "comprehensive"
+    ],
+    "quality_score": 86,
+    "featured": true,
+    "last_updated": "2025-09-30T06:05:47.673198"
   },
   {
     "id": 1061708627,
@@ -2751,30 +3071,29 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
+      "ndap",
+      "reference-data",
       "automation",
-      "nhs-wales",
+      "healthcare",
       "healthcare-insights",
-      "ndr",
+      "nhs-wales",
       "python",
-      "data-analytics",
-      "data-science"
+      "data-analytics"
     ],
     "all_tags": [
-      "healthcare",
+      "ndap",
+      "reference-data",
       "automation",
-      "nhs-wales",
+      "healthcare",
       "healthcare-insights",
-      "ndr",
+      "nhs-wales",
       "python",
       "data-analytics",
-      "data-science",
-      "reference-data",
-      "ndap"
+      "ndr"
     ],
     "quality_score": 85,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:53.679512"
+    "last_updated": "2025-09-30T06:05:49.589390"
   },
   {
     "id": 787322115,
@@ -2907,20 +3226,20 @@
     "generated_tags": [
       "healthcare",
       "healthcare-insights",
+      "nhs-wales",
       "data-analytics",
-      "comprehensive",
-      "nhs-wales"
+      "comprehensive"
     ],
     "all_tags": [
       "healthcare",
       "healthcare-insights",
+      "nhs-wales",
       "data-analytics",
-      "comprehensive",
-      "nhs-wales"
+      "comprehensive"
     ],
     "quality_score": 85,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:48.057381"
+    "last_updated": "2025-09-30T06:05:44.237500"
   },
   {
     "id": 966222807,
@@ -3057,28 +3376,28 @@
     },
     "custom_properties": {},
     "generated_tags": [
+      "monitoring",
+      "visualization",
+      "system-integration",
       "interoperability",
       "automation",
       "healthcare",
-      "monitoring",
-      "visualization",
-      "python",
-      "data-science",
-      "system-integration"
+      "nhs-wales",
+      "python"
     ],
     "all_tags": [
-      "interoperability",
-      "automation",
-      "healthcare",
       "monitoring",
       "visualization",
-      "python",
-      "data-science",
-      "system-integration"
+      "system-integration",
+      "automation",
+      "interoperability",
+      "healthcare",
+      "nhs-wales",
+      "python"
     ],
     "quality_score": 85,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:42.412762"
+    "last_updated": "2025-09-30T06:05:38.016084"
   },
   {
     "id": 820424497,
@@ -3215,28 +3534,28 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "training-materials",
-      "healthcare",
-      "guide",
-      "training",
       "onboarding",
+      "training",
+      "training-materials",
       "starter-kit",
+      "community-validated",
+      "healthcare",
       "nhs-wales",
-      "community-validated"
+      "guide"
     ],
     "all_tags": [
-      "training-materials",
-      "healthcare",
-      "guide",
-      "training",
       "onboarding",
+      "training",
+      "training-materials",
       "starter-kit",
+      "community-validated",
+      "healthcare",
       "nhs-wales",
-      "community-validated"
+      "guide"
     ],
     "quality_score": 83,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:44.778778"
+    "last_updated": "2025-09-30T06:05:41.033807"
   },
   {
     "id": 563783709,
@@ -3379,32 +3698,34 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "data",
-      "guide",
-      "private",
-      "information",
       "training",
-      "ig",
-      "internal"
+      "document",
+      "community-validated",
+      "open-source",
+      "private",
+      "public",
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "healthcare",
-      "data",
-      "guide",
-      "private",
-      "information",
       "training",
-      "ig",
-      "internal",
-      "public",
-      "information-governance",
       "document",
-      "open-source"
+      "community-validated",
+      "open-source",
+      "private",
+      "public",
+      "healthcare",
+      "nhs-wales",
+      "information-governance",
+      "internal",
+      "information",
+      "guide",
+      "data",
+      "ig"
     ],
     "quality_score": 83,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:44.778724"
+    "last_updated": "2025-09-30T06:05:41.033733"
   },
   {
     "id": 1031229751,
@@ -3535,18 +3856,18 @@
     },
     "custom_properties": {},
     "generated_tags": [
+      "nhs-wales",
       "healthcare",
-      "community-validated",
-      "nhs-wales"
+      "community-validated"
     ],
     "all_tags": [
-      "healthcare",
       "nhs-wales",
+      "healthcare",
       "community-validated"
     ],
     "quality_score": 83,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:41.548055"
+    "last_updated": "2025-09-30T06:05:37.163619"
   },
   {
     "id": 926605754,
@@ -3677,20 +3998,20 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "community-validated",
+      "nhs-wales",
       "comprehensive",
-      "nhs-wales"
+      "healthcare",
+      "community-validated"
     ],
     "all_tags": [
+      "nhs-wales",
       "healthcare",
       "comprehensive",
-      "nhs-wales",
       "community-validated"
     ],
     "quality_score": 83,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:43.833311"
+    "last_updated": "2025-09-30T06:05:39.936538"
   },
   {
     "id": 932640571,
@@ -3818,28 +4139,28 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "dotnet",
-      "healthcare-insights",
-      "data-analytics",
+      "csharp",
       "community-validated",
-      "comprehensive",
+      "healthcare",
+      "healthcare-insights",
       "nhs-wales",
-      "csharp"
+      "dotnet",
+      "microsoft-stack",
+      "data-analytics"
     ],
     "all_tags": [
-      "healthcare",
-      "dotnet",
-      "healthcare-insights",
       "data-analytics",
-      "comprehensive",
-      "nhs-wales",
       "csharp",
-      "community-validated"
+      "community-validated",
+      "healthcare",
+      "healthcare-insights",
+      "nhs-wales",
+      "microsoft-stack",
+      "dotnet"
     ],
     "quality_score": 83,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:43.833346"
+    "last_updated": "2025-09-30T06:05:39.936571"
   },
   {
     "id": 927665127,
@@ -3910,7 +4231,7 @@
     "deployments_url": "https://api.github.com/repos/DHCW-Digital-Health-and-Care-Wales/wccg-dental-mock-ui/deployments",
     "created_at": "2025-02-05T10:38:10Z",
     "updated_at": "2025-03-20T11:58:46Z",
-    "pushed_at": "2025-09-22T20:57:43Z",
+    "pushed_at": "2025-09-29T23:54:33Z",
     "git_url": "git://github.com/DHCW-Digital-Health-and-Care-Wales/wccg-dental-mock-ui.git",
     "ssh_url": "git@github.com:DHCW-Digital-Health-and-Care-Wales/wccg-dental-mock-ui.git",
     "clone_url": "https://github.com/DHCW-Digital-Health-and-Care-Wales/wccg-dental-mock-ui.git",
@@ -3967,28 +4288,28 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "dotnet",
       "oral-health",
-      "dental-services",
-      "community-validated",
-      "nhs-wales",
       "csharp",
-      "microsoft-stack"
+      "community-validated",
+      "healthcare",
+      "nhs-wales",
+      "dotnet",
+      "microsoft-stack",
+      "dental-services"
     ],
     "all_tags": [
-      "healthcare",
-      "dotnet",
       "oral-health",
-      "dental-services",
-      "microsoft-stack",
-      "nhs-wales",
       "csharp",
-      "community-validated"
+      "community-validated",
+      "healthcare",
+      "dental-services",
+      "nhs-wales",
+      "microsoft-stack",
+      "dotnet"
     ],
     "quality_score": 83,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:43.833334"
+    "last_updated": "2025-09-30T06:05:39.936560"
   },
   {
     "id": 856254823,
@@ -4119,20 +4440,20 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "community-validated",
+      "nhs-wales",
       "comprehensive",
-      "nhs-wales"
+      "healthcare",
+      "community-validated"
     ],
     "all_tags": [
+      "nhs-wales",
       "healthcare",
       "comprehensive",
-      "nhs-wales",
       "community-validated"
     ],
     "quality_score": 83,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:49.736175"
+    "last_updated": "2025-09-30T06:05:45.871498"
   },
   {
     "id": 1034555443,
@@ -4263,20 +4584,20 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
       "data-analytics",
+      "healthcare",
       "healthcare-insights",
       "nhs-wales"
     ],
     "all_tags": [
-      "healthcare",
       "data-analytics",
+      "healthcare",
       "healthcare-insights",
       "nhs-wales"
     ],
     "quality_score": 80,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:48.057615"
+    "last_updated": "2025-09-30T06:05:44.237722"
   },
   {
     "id": 895529734,
@@ -4407,26 +4728,26 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
       "automation",
-      "python",
+      "healthcare",
       "healthcare-insights",
-      "data-science",
+      "nhs-wales",
+      "python",
       "data-analytics",
-      "nhs-wales"
+      "data-science"
     ],
     "all_tags": [
-      "healthcare",
       "automation",
+      "healthcare",
       "healthcare-insights",
+      "nhs-wales",
       "python",
-      "data-science",
       "data-analytics",
-      "nhs-wales"
+      "data-science"
     ],
     "quality_score": 80,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:43.833273"
+    "last_updated": "2025-09-30T06:05:39.936502"
   },
   {
     "id": 1062010005,
@@ -4564,28 +4885,28 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "guide",
-      "quickstart",
-      "instructions",
-      "training",
-      "power-bi",
       "powerbi",
-      "nhs-wales"
+      "training",
+      "instructions",
+      "power-bi",
+      "healthcare",
+      "nhs-wales",
+      "quickstart",
+      "guide"
     ],
     "all_tags": [
-      "healthcare",
-      "guide",
-      "quickstart",
-      "instructions",
-      "training",
-      "power-bi",
       "powerbi",
-      "nhs-wales"
+      "training",
+      "instructions",
+      "power-bi",
+      "healthcare",
+      "nhs-wales",
+      "quickstart",
+      "guide"
     ],
     "quality_score": 80,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:44.778891"
+    "last_updated": "2025-09-30T06:05:41.033918"
   },
   {
     "id": 1061985954,
@@ -4724,29 +5045,29 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "training-materials",
-      "healthcare",
-      "guide",
-      "introduction",
       "training",
-      "nhs-wales",
+      "training-materials",
+      "materials",
+      "healthcare",
+      "programming",
       "virtual-machine",
-      "materials"
+      "introduction",
+      "nhs-wales"
     ],
     "all_tags": [
-      "training-materials",
-      "healthcare",
-      "guide",
-      "introduction",
       "training",
-      "nhs-wales",
-      "virtual-machine",
+      "training-materials",
       "materials",
-      "programming"
+      "healthcare",
+      "programming",
+      "virtual-machine",
+      "introduction",
+      "nhs-wales",
+      "guide"
     ],
     "quality_score": 80,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:44.778879"
+    "last_updated": "2025-09-30T06:05:41.033907"
   },
   {
     "id": 995312214,
@@ -4877,24 +5198,24 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "comprehensive",
-      "research",
       "r",
+      "statistical-analysis",
+      "healthcare",
       "nhs-wales",
-      "statistical-analysis"
+      "comprehensive",
+      "research"
     ],
     "all_tags": [
-      "healthcare",
-      "comprehensive",
-      "research",
       "r",
+      "statistical-analysis",
+      "healthcare",
       "nhs-wales",
-      "statistical-analysis"
+      "comprehensive",
+      "research"
     ],
     "quality_score": 80,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:56.211054"
+    "last_updated": "2025-09-30T06:05:51.864147"
   },
   {
     "id": 982699730,
@@ -5025,28 +5346,28 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
+      "wellbeing",
       "automation",
       "mental-health",
+      "healthcare",
+      "nhs-wales",
       "python",
-      "data-science",
-      "wellbeing",
       "comprehensive",
-      "nhs-wales"
+      "data-science"
     ],
     "all_tags": [
-      "healthcare",
+      "wellbeing",
       "automation",
       "mental-health",
+      "healthcare",
+      "nhs-wales",
       "python",
-      "data-science",
-      "wellbeing",
       "comprehensive",
-      "nhs-wales"
+      "data-science"
     ],
     "quality_score": 80,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:48.057523"
+    "last_updated": "2025-09-30T06:05:44.237634"
   },
   {
     "id": 1047146485,
@@ -5177,18 +5498,18 @@
     },
     "custom_properties": {},
     "generated_tags": [
+      "nhs-wales",
       "healthcare",
-      "comprehensive",
-      "nhs-wales"
+      "comprehensive"
     ],
     "all_tags": [
+      "nhs-wales",
       "healthcare",
-      "comprehensive",
-      "nhs-wales"
+      "comprehensive"
     ],
     "quality_score": 80,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:50.442877"
+    "last_updated": "2025-09-30T06:05:46.672301"
   },
   {
     "id": 1026176383,
@@ -5326,29 +5647,30 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
       "google-cloud-platform",
-      "data-loader",
+      "terraform",
+      "healthcare",
+      "healthcare-insights",
+      "nhs-wales",
       "gcp",
       "python",
-      "healthcare-insights",
-      "data-analytics",
-      "terraform"
+      "data-analytics"
     ],
     "all_tags": [
-      "healthcare",
       "google-cloud-platform",
-      "data-loader",
+      "terraform",
+      "healthcare",
+      "healthcare-insights",
+      "nhs-wales",
       "gcp",
       "python",
-      "healthcare-insights",
       "data-analytics",
-      "terraform",
+      "data-loader",
       "etl"
     ],
     "quality_score": 80,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:48.057579"
+    "last_updated": "2025-09-30T06:05:44.237688"
   },
   {
     "id": 879827667,
@@ -5479,18 +5801,18 @@
     },
     "custom_properties": {},
     "generated_tags": [
+      "nhs-wales",
       "healthcare",
-      "comprehensive",
-      "nhs-wales"
+      "comprehensive"
     ],
     "all_tags": [
+      "nhs-wales",
       "healthcare",
-      "comprehensive",
-      "nhs-wales"
+      "comprehensive"
     ],
     "quality_score": 80,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:48.057435"
+    "last_updated": "2025-09-30T06:05:44.237552"
   },
   {
     "id": 952604707,
@@ -5560,14 +5882,14 @@
     "releases_url": "https://api.github.com/repos/DHCW-Digital-Health-and-Care-Wales/Integration-Hub-Terraform/releases{/id}",
     "deployments_url": "https://api.github.com/repos/DHCW-Digital-Health-and-Care-Wales/Integration-Hub-Terraform/deployments",
     "created_at": "2025-03-21T15:00:29Z",
-    "updated_at": "2025-09-24T15:13:24Z",
-    "pushed_at": "2025-09-26T12:53:46Z",
+    "updated_at": "2025-09-29T13:50:55Z",
+    "pushed_at": "2025-09-29T13:58:11Z",
     "git_url": "git://github.com/DHCW-Digital-Health-and-Care-Wales/Integration-Hub-Terraform.git",
     "ssh_url": "git@github.com:DHCW-Digital-Health-and-Care-Wales/Integration-Hub-Terraform.git",
     "clone_url": "https://github.com/DHCW-Digital-Health-and-Care-Wales/Integration-Hub-Terraform.git",
     "svn_url": "https://github.com/DHCW-Digital-Health-and-Care-Wales/Integration-Hub-Terraform",
     "homepage": null,
-    "size": 319,
+    "size": 327,
     "stargazers_count": 1,
     "watchers_count": 1,
     "language": "HCL",
@@ -5581,7 +5903,7 @@
     "mirror_url": null,
     "archived": false,
     "disabled": false,
-    "open_issues_count": 3,
+    "open_issues_count": 2,
     "license": null,
     "allow_forking": true,
     "is_template": false,
@@ -5589,7 +5911,7 @@
     "topics": [],
     "visibility": "Internal",
     "forks": 0,
-    "open_issues": 3,
+    "open_issues": 2,
     "watchers": 1,
     "default_branch": "main",
     "permissions": {
@@ -5621,22 +5943,22 @@
     },
     "custom_properties": {},
     "generated_tags": [
+      "community-validated",
+      "system-integration",
       "interoperability",
       "healthcare",
-      "system-integration",
-      "nhs-wales",
-      "community-validated"
+      "nhs-wales"
     ],
     "all_tags": [
+      "community-validated",
+      "system-integration",
       "interoperability",
       "healthcare",
-      "system-integration",
-      "nhs-wales",
-      "community-validated"
+      "nhs-wales"
     ],
     "quality_score": 78,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:43.833419"
+    "last_updated": "2025-09-30T06:05:39.936639"
   },
   {
     "id": 852710501,
@@ -5767,24 +6089,24 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
       "frontend",
-      "web-interface",
+      "community-validated",
       "user-experience",
-      "nhs-wales",
-      "community-validated"
+      "web-interface",
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "healthcare",
       "frontend",
-      "web-interface",
+      "community-validated",
       "user-experience",
-      "nhs-wales",
-      "community-validated"
+      "web-interface",
+      "healthcare",
+      "nhs-wales"
     ],
     "quality_score": 78,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:44.778790"
+    "last_updated": "2025-09-30T06:05:41.033819"
   },
   {
     "id": 1017943608,
@@ -5915,24 +6237,24 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "automation",
       "scripting",
-      "devops",
+      "community-validated",
+      "automation",
+      "healthcare",
       "nhs-wales",
-      "community-validated"
+      "devops"
     ],
     "all_tags": [
-      "healthcare",
-      "automation",
       "scripting",
-      "devops",
+      "community-validated",
+      "automation",
+      "healthcare",
       "nhs-wales",
-      "community-validated"
+      "devops"
     ],
     "quality_score": 78,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:44.778813"
+    "last_updated": "2025-09-30T06:05:41.033842"
   },
   {
     "id": 1031857415,
@@ -6063,24 +6385,24 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
+      "community-validated",
       "automation",
-      "python",
-      "data-science",
+      "healthcare",
       "nhs-wales",
-      "community-validated"
+      "python",
+      "data-science"
     ],
     "all_tags": [
-      "healthcare",
+      "community-validated",
       "automation",
-      "python",
-      "data-science",
+      "healthcare",
       "nhs-wales",
-      "community-validated"
+      "python",
+      "data-science"
     ],
     "quality_score": 78,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:44.778841"
+    "last_updated": "2025-09-30T06:05:41.033870"
   },
   {
     "id": 950581782,
@@ -6214,26 +6536,26 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
       "frontend",
-      "web-interface",
+      "community-validated",
       "user-experience",
-      "comprehensive",
+      "web-interface",
+      "healthcare",
       "nhs-wales",
-      "community-validated"
+      "comprehensive"
     ],
     "all_tags": [
-      "healthcare",
       "frontend",
-      "web-interface",
-      "comprehensive",
+      "community-validated",
       "user-experience",
+      "web-interface",
+      "healthcare",
       "nhs-wales",
-      "community-validated"
+      "comprehensive"
     ],
     "quality_score": 78,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:43.833408"
+    "last_updated": "2025-09-30T06:05:39.936629"
   },
   {
     "id": 948501884,
@@ -6361,24 +6683,174 @@
     },
     "custom_properties": {},
     "generated_tags": [
+      "community-validated",
       "healthcare",
-      "comprehensive",
       "nhs-wales",
       "clinical",
-      "patient-care",
-      "community-validated"
+      "comprehensive",
+      "patient-care"
     ],
     "all_tags": [
+      "community-validated",
       "healthcare",
-      "comprehensive",
       "nhs-wales",
       "clinical",
-      "patient-care",
-      "community-validated"
+      "comprehensive",
+      "patient-care"
     ],
     "quality_score": 78,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:43.833397"
+    "last_updated": "2025-09-30T06:05:39.936618"
+  },
+  {
+    "id": 854521769,
+    "node_id": "R_kgDOMu73qQ",
+    "name": "Respiratory-Baseline-Dashboard",
+    "full_name": "NHS-Executive/Respiratory-Baseline-Dashboard",
+    "private": true,
+    "owner": {
+      "login": "NHS-Executive",
+      "id": 110099197,
+      "node_id": "O_kgDOBo_6_Q",
+      "avatar_url": "https://avatars.githubusercontent.com/u/110099197?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/NHS-Executive",
+      "html_url": "https://github.com/NHS-Executive",
+      "followers_url": "https://api.github.com/users/NHS-Executive/followers",
+      "following_url": "https://api.github.com/users/NHS-Executive/following{/other_user}",
+      "gists_url": "https://api.github.com/users/NHS-Executive/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/NHS-Executive/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/NHS-Executive/subscriptions",
+      "organizations_url": "https://api.github.com/users/NHS-Executive/orgs",
+      "repos_url": "https://api.github.com/users/NHS-Executive/repos",
+      "events_url": "https://api.github.com/users/NHS-Executive/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/NHS-Executive/received_events",
+      "type": "Organization",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "html_url": "https://github.com/NHS-Executive/Respiratory-Baseline-Dashboard",
+    "description": null,
+    "fork": false,
+    "url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard",
+    "forks_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/forks",
+    "keys_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/keys{/key_id}",
+    "collaborators_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/collaborators{/collaborator}",
+    "teams_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/teams",
+    "hooks_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/hooks",
+    "issue_events_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/issues/events{/number}",
+    "events_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/events",
+    "assignees_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/assignees{/user}",
+    "branches_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/branches{/branch}",
+    "tags_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/tags",
+    "blobs_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/git/blobs{/sha}",
+    "git_tags_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/git/tags{/sha}",
+    "git_refs_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/git/refs{/sha}",
+    "trees_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/git/trees{/sha}",
+    "statuses_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/statuses/{sha}",
+    "languages_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/languages",
+    "stargazers_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/stargazers",
+    "contributors_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/contributors",
+    "subscribers_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/subscribers",
+    "subscription_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/subscription",
+    "commits_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/commits{/sha}",
+    "git_commits_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/git/commits{/sha}",
+    "comments_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/comments{/number}",
+    "issue_comment_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/issues/comments{/number}",
+    "contents_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/contents/{+path}",
+    "compare_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/compare/{base}...{head}",
+    "merges_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/merges",
+    "archive_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/{archive_format}{/ref}",
+    "downloads_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/downloads",
+    "issues_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/issues{/number}",
+    "pulls_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/pulls{/number}",
+    "milestones_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/milestones{/number}",
+    "notifications_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/notifications{?since,all,participating}",
+    "labels_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/labels{/name}",
+    "releases_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/releases{/id}",
+    "deployments_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/deployments",
+    "created_at": "2024-09-09T10:24:42Z",
+    "updated_at": "2025-09-29T14:43:01Z",
+    "pushed_at": "2025-09-29T14:42:58Z",
+    "git_url": "git://github.com/NHS-Executive/Respiratory-Baseline-Dashboard.git",
+    "ssh_url": "git@github.com:NHS-Executive/Respiratory-Baseline-Dashboard.git",
+    "clone_url": "https://github.com/NHS-Executive/Respiratory-Baseline-Dashboard.git",
+    "svn_url": "https://github.com/NHS-Executive/Respiratory-Baseline-Dashboard",
+    "homepage": null,
+    "size": 902,
+    "stargazers_count": 0,
+    "watchers_count": 0,
+    "language": "R",
+    "has_issues": true,
+    "has_projects": true,
+    "has_downloads": true,
+    "has_wiki": true,
+    "has_pages": false,
+    "has_discussions": false,
+    "forks_count": 0,
+    "mirror_url": null,
+    "archived": false,
+    "disabled": false,
+    "open_issues_count": 0,
+    "license": null,
+    "allow_forking": true,
+    "is_template": false,
+    "web_commit_signoff_required": true,
+    "topics": [],
+    "visibility": "Internal",
+    "forks": 0,
+    "open_issues": 0,
+    "watchers": 0,
+    "default_branch": "main",
+    "permissions": {
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
+    },
+    "security_and_analysis": {
+      "advanced_security": {
+        "status": "disabled"
+      },
+      "secret_scanning": {
+        "status": "disabled"
+      },
+      "secret_scanning_push_protection": {
+        "status": "disabled"
+      },
+      "dependabot_security_updates": {
+        "status": "disabled"
+      },
+      "secret_scanning_non_provider_patterns": {
+        "status": "disabled"
+      },
+      "secret_scanning_validity_checks": {
+        "status": "disabled"
+      }
+    },
+    "custom_properties": {},
+    "generated_tags": [
+      "monitoring",
+      "r",
+      "visualization",
+      "statistical-analysis",
+      "healthcare",
+      "nhs-wales",
+      "research"
+    ],
+    "all_tags": [
+      "monitoring",
+      "r",
+      "visualization",
+      "statistical-analysis",
+      "healthcare",
+      "nhs-wales",
+      "research"
+    ],
+    "quality_score": 75,
+    "featured": true,
+    "last_updated": "2025-09-30T06:05:44.237540"
   },
   {
     "id": 1065978185,
@@ -6509,166 +6981,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "all_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "quality_score": 75,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:41.548139"
-  },
-  {
-    "id": 854521769,
-    "node_id": "R_kgDOMu73qQ",
-    "name": "Respiratory-Baseline-Dashboard",
-    "full_name": "NHS-Executive/Respiratory-Baseline-Dashboard",
-    "private": true,
-    "owner": {
-      "login": "NHS-Executive",
-      "id": 110099197,
-      "node_id": "O_kgDOBo_6_Q",
-      "avatar_url": "https://avatars.githubusercontent.com/u/110099197?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/NHS-Executive",
-      "html_url": "https://github.com/NHS-Executive",
-      "followers_url": "https://api.github.com/users/NHS-Executive/followers",
-      "following_url": "https://api.github.com/users/NHS-Executive/following{/other_user}",
-      "gists_url": "https://api.github.com/users/NHS-Executive/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/NHS-Executive/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/NHS-Executive/subscriptions",
-      "organizations_url": "https://api.github.com/users/NHS-Executive/orgs",
-      "repos_url": "https://api.github.com/users/NHS-Executive/repos",
-      "events_url": "https://api.github.com/users/NHS-Executive/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/NHS-Executive/received_events",
-      "type": "Organization",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "html_url": "https://github.com/NHS-Executive/Respiratory-Baseline-Dashboard",
-    "description": null,
-    "fork": false,
-    "url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard",
-    "forks_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/forks",
-    "keys_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/keys{/key_id}",
-    "collaborators_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/collaborators{/collaborator}",
-    "teams_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/teams",
-    "hooks_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/hooks",
-    "issue_events_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/issues/events{/number}",
-    "events_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/events",
-    "assignees_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/assignees{/user}",
-    "branches_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/branches{/branch}",
-    "tags_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/tags",
-    "blobs_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/git/blobs{/sha}",
-    "git_tags_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/git/tags{/sha}",
-    "git_refs_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/git/refs{/sha}",
-    "trees_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/git/trees{/sha}",
-    "statuses_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/statuses/{sha}",
-    "languages_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/languages",
-    "stargazers_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/stargazers",
-    "contributors_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/contributors",
-    "subscribers_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/subscribers",
-    "subscription_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/subscription",
-    "commits_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/commits{/sha}",
-    "git_commits_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/git/commits{/sha}",
-    "comments_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/comments{/number}",
-    "issue_comment_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/issues/comments{/number}",
-    "contents_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/contents/{+path}",
-    "compare_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/compare/{base}...{head}",
-    "merges_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/merges",
-    "archive_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/{archive_format}{/ref}",
-    "downloads_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/downloads",
-    "issues_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/issues{/number}",
-    "pulls_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/pulls{/number}",
-    "milestones_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/milestones{/number}",
-    "notifications_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/notifications{?since,all,participating}",
-    "labels_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/labels{/name}",
-    "releases_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/releases{/id}",
-    "deployments_url": "https://api.github.com/repos/NHS-Executive/Respiratory-Baseline-Dashboard/deployments",
-    "created_at": "2024-09-09T10:24:42Z",
-    "updated_at": "2025-09-25T13:10:10Z",
-    "pushed_at": "2025-09-25T13:10:07Z",
-    "git_url": "git://github.com/NHS-Executive/Respiratory-Baseline-Dashboard.git",
-    "ssh_url": "git@github.com:NHS-Executive/Respiratory-Baseline-Dashboard.git",
-    "clone_url": "https://github.com/NHS-Executive/Respiratory-Baseline-Dashboard.git",
-    "svn_url": "https://github.com/NHS-Executive/Respiratory-Baseline-Dashboard",
-    "homepage": null,
-    "size": 897,
-    "stargazers_count": 0,
-    "watchers_count": 0,
-    "language": "R",
-    "has_issues": true,
-    "has_projects": true,
-    "has_downloads": true,
-    "has_wiki": true,
-    "has_pages": false,
-    "has_discussions": false,
-    "forks_count": 0,
-    "mirror_url": null,
-    "archived": false,
-    "disabled": false,
-    "open_issues_count": 0,
-    "license": null,
-    "allow_forking": true,
-    "is_template": false,
-    "web_commit_signoff_required": true,
-    "topics": [],
-    "visibility": "Internal",
-    "forks": 0,
-    "open_issues": 0,
-    "watchers": 0,
-    "default_branch": "main",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
-    "security_and_analysis": {
-      "advanced_security": {
-        "status": "disabled"
-      },
-      "secret_scanning": {
-        "status": "disabled"
-      },
-      "secret_scanning_push_protection": {
-        "status": "disabled"
-      },
-      "dependabot_security_updates": {
-        "status": "disabled"
-      },
-      "secret_scanning_non_provider_patterns": {
-        "status": "disabled"
-      },
-      "secret_scanning_validity_checks": {
-        "status": "disabled"
-      }
-    },
-    "custom_properties": {},
-    "generated_tags": [
-      "healthcare",
-      "monitoring",
-      "visualization",
-      "research",
-      "r",
-      "nhs-wales",
-      "statistical-analysis"
-    ],
-    "all_tags": [
-      "healthcare",
-      "monitoring",
-      "visualization",
-      "research",
-      "r",
-      "nhs-wales",
-      "statistical-analysis"
-    ],
-    "quality_score": 75,
-    "featured": true,
-    "last_updated": "2025-09-29T06:05:48.057422"
+    "last_updated": "2025-09-30T06:05:37.163682"
   },
   {
     "id": 1062071143,
@@ -6799,18 +7121,18 @@
     },
     "custom_properties": {},
     "generated_tags": [
+      "nhs-wales",
       "healthcare",
-      "comprehensive",
-      "nhs-wales"
+      "comprehensive"
     ],
     "all_tags": [
+      "nhs-wales",
       "healthcare",
-      "comprehensive",
-      "nhs-wales"
+      "comprehensive"
     ],
     "quality_score": 75,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:41.548127"
+    "last_updated": "2025-09-30T06:05:37.163669"
   },
   {
     "id": 1054985930,
@@ -6947,26 +7269,26 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
       "automation",
-      "python",
+      "healthcare",
       "healthcare-insights",
-      "data-science",
+      "nhs-wales",
+      "python",
       "data-analytics",
-      "nhs-wales"
+      "data-science"
     ],
     "all_tags": [
-      "healthcare",
       "automation",
+      "healthcare",
       "healthcare-insights",
+      "nhs-wales",
       "python",
-      "data-science",
       "data-analytics",
-      "nhs-wales"
+      "data-science"
     ],
     "quality_score": 75,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:56.211125"
+    "last_updated": "2025-09-30T06:05:51.864200"
   },
   {
     "id": 1048980665,
@@ -7097,20 +7419,20 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
+      "nhs-wales",
       "forecasting",
-      "predictive-analytics",
-      "nhs-wales"
+      "healthcare",
+      "predictive-analytics"
     ],
     "all_tags": [
-      "healthcare",
-      "forecasting",
+      "nhs-wales",
       "predictive-analytics",
-      "nhs-wales"
+      "healthcare",
+      "forecasting"
     ],
     "quality_score": 75,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:56.211114"
+    "last_updated": "2025-09-30T06:05:51.864186"
   },
   {
     "id": 1019572152,
@@ -7247,22 +7569,22 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
       "automation",
+      "healthcare",
+      "nhs-wales",
       "python",
-      "data-science",
-      "nhs-wales"
+      "data-science"
     ],
     "all_tags": [
-      "healthcare",
       "automation",
+      "healthcare",
+      "nhs-wales",
       "python",
-      "data-science",
-      "nhs-wales"
+      "data-science"
     ],
     "quality_score": 75,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:42.412793"
+    "last_updated": "2025-09-30T06:05:38.016114"
   },
   {
     "id": 963271669,
@@ -7393,24 +7715,24 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
       "automation",
+      "healthcare",
+      "nhs-wales",
       "python",
-      "data-science",
       "comprehensive",
-      "nhs-wales"
+      "data-science"
     ],
     "all_tags": [
-      "healthcare",
       "automation",
+      "healthcare",
+      "nhs-wales",
       "python",
-      "data-science",
       "comprehensive",
-      "nhs-wales"
+      "data-science"
     ],
     "quality_score": 75,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:48.057511"
+    "last_updated": "2025-09-30T06:05:44.237623"
   },
   {
     "id": 1024919065,
@@ -7547,22 +7869,22 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "dotnet",
-      "nhs-wales",
       "csharp",
-      "microsoft-stack"
+      "healthcare",
+      "nhs-wales",
+      "microsoft-stack",
+      "dotnet"
     ],
     "all_tags": [
-      "healthcare",
-      "dotnet",
-      "nhs-wales",
       "csharp",
-      "microsoft-stack"
+      "healthcare",
+      "nhs-wales",
+      "microsoft-stack",
+      "dotnet"
     ],
     "quality_score": 75,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:43.833463"
+    "last_updated": "2025-09-30T06:05:39.936683"
   },
   {
     "id": 1030542964,
@@ -7693,20 +8015,20 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "interoperability",
-      "healthcare",
+      "nhs-wales",
       "system-integration",
-      "nhs-wales"
+      "interoperability",
+      "healthcare"
     ],
     "all_tags": [
-      "interoperability",
-      "healthcare",
+      "nhs-wales",
       "system-integration",
-      "nhs-wales"
+      "interoperability",
+      "healthcare"
     ],
     "quality_score": 75,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:41.548042"
+    "last_updated": "2025-09-30T06:05:37.163607"
   },
   {
     "id": 955877979,
@@ -7837,22 +8159,22 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "research",
       "r",
+      "statistical-analysis",
+      "healthcare",
       "nhs-wales",
-      "statistical-analysis"
+      "research"
     ],
     "all_tags": [
-      "healthcare",
-      "research",
       "r",
+      "statistical-analysis",
+      "healthcare",
       "nhs-wales",
-      "statistical-analysis"
+      "research"
     ],
     "quality_score": 75,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:56.211018"
+    "last_updated": "2025-09-30T06:05:51.864112"
   },
   {
     "id": 840257435,
@@ -7983,22 +8305,22 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
       "automation",
+      "healthcare",
+      "nhs-wales",
       "python",
-      "data-science",
-      "nhs-wales"
+      "data-science"
     ],
     "all_tags": [
-      "healthcare",
       "automation",
+      "healthcare",
+      "nhs-wales",
       "python",
-      "data-science",
-      "nhs-wales"
+      "data-science"
     ],
     "quality_score": 75,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:43.833243"
+    "last_updated": "2025-09-30T06:05:39.936474"
   },
   {
     "id": 883791163,
@@ -8135,22 +8457,22 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "research",
       "r",
+      "statistical-analysis",
+      "healthcare",
       "nhs-wales",
-      "statistical-analysis"
+      "research"
     ],
     "all_tags": [
-      "healthcare",
-      "research",
       "r",
+      "statistical-analysis",
+      "healthcare",
       "nhs-wales",
-      "statistical-analysis"
+      "research"
     ],
     "quality_score": 75,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:56.210980"
+    "last_updated": "2025-09-30T06:05:51.864076"
   },
   {
     "id": 453968456,
@@ -8281,28 +8603,28 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
       "automation",
-      "python",
+      "healthcare",
       "healthcare-insights",
-      "data-science",
+      "nhs-wales",
+      "python",
       "data-analytics",
       "comprehensive",
-      "nhs-wales"
+      "data-science"
     ],
     "all_tags": [
-      "healthcare",
       "automation",
+      "healthcare",
       "healthcare-insights",
+      "nhs-wales",
       "python",
-      "data-science",
       "data-analytics",
       "comprehensive",
-      "nhs-wales"
+      "data-science"
     ],
     "quality_score": 75,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:48.057323"
+    "last_updated": "2025-09-30T06:05:44.237449"
   },
   {
     "id": 557937328,
@@ -8444,33 +8766,34 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "demonstration",
-      "web-development",
-      "data",
-      "frontend",
       "wales",
-      "api",
-      "analytics"
+      "frontend",
+      "reference",
+      "web-development",
+      "list",
+      "analytics",
+      "community-validated",
+      "healthcare"
     ],
     "all_tags": [
-      "healthcare",
-      "demonstration",
-      "web-development",
-      "data",
-      "frontend",
       "wales",
-      "api",
-      "analytics",
-      "nhs",
-      "pages",
-      "project",
+      "frontend",
       "reference",
-      "list"
+      "web-development",
+      "list",
+      "analytics",
+      "community-validated",
+      "healthcare",
+      "pages",
+      "nhs",
+      "api",
+      "project",
+      "data",
+      "demonstration"
     ],
     "quality_score": 73,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:44.778711"
+    "last_updated": "2025-09-30T06:05:41.033721"
   },
   {
     "id": 935347503,
@@ -8604,28 +8927,28 @@
     },
     "custom_properties": {},
     "generated_tags": [
+      "backend",
+      "java",
+      "enterprise",
+      "community-validated",
+      "system-integration",
       "interoperability",
       "healthcare",
-      "backend",
-      "system-integration",
-      "nhs-wales",
-      "enterprise",
-      "java",
-      "community-validated"
+      "nhs-wales"
     ],
     "all_tags": [
+      "backend",
+      "java",
+      "enterprise",
+      "community-validated",
+      "system-integration",
       "interoperability",
       "healthcare",
-      "backend",
-      "system-integration",
-      "nhs-wales",
-      "enterprise",
-      "java",
-      "community-validated"
+      "nhs-wales"
     ],
     "quality_score": 73,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:43.833372"
+    "last_updated": "2025-09-30T06:05:39.936594"
   },
   {
     "id": 546004180,
@@ -8760,24 +9083,24 @@
     },
     "custom_properties": {},
     "generated_tags": [
+      "jupyter-notebooks",
+      "community-validated",
       "healthcare",
       "nhs-wales",
-      "jupyter",
-      "jupyter-notebooks",
       "jupyter-notebook",
-      "community-validated"
+      "jupyter"
     ],
     "all_tags": [
+      "jupyter-notebooks",
+      "community-validated",
       "healthcare",
       "nhs-wales",
-      "jupyter",
-      "jupyter-notebooks",
       "jupyter-notebook",
-      "community-validated"
+      "jupyter"
     ],
     "quality_score": 73,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:44.778682"
+    "last_updated": "2025-09-30T06:05:41.033694"
   },
   {
     "id": 1065978764,
@@ -8908,16 +9231,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "all_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "quality_score": 70,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:41.548151"
+    "last_updated": "2025-09-30T06:05:37.163693"
   },
   {
     "id": 951185214,
@@ -9048,16 +9371,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "all_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "quality_score": 70,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:44.778802"
+    "last_updated": "2025-09-30T06:05:41.033830"
   },
   {
     "id": 1049706488,
@@ -9188,16 +9511,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "all_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "quality_score": 70,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:48.057626"
+    "last_updated": "2025-09-30T06:05:44.237733"
   },
   {
     "id": 1023611608,
@@ -9334,16 +9657,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "all_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "quality_score": 70,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:50.442853"
+    "last_updated": "2025-09-30T06:05:46.672276"
   },
   {
     "id": 1033676812,
@@ -9474,26 +9797,26 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "forecasting",
-      "research",
       "r",
-      "nhs-wales",
       "statistical-analysis",
-      "predictive-analytics"
+      "healthcare",
+      "nhs-wales",
+      "forecasting",
+      "predictive-analytics",
+      "research"
     ],
     "all_tags": [
-      "healthcare",
-      "forecasting",
-      "research",
       "r",
-      "nhs-wales",
       "statistical-analysis",
-      "predictive-analytics"
+      "healthcare",
+      "nhs-wales",
+      "forecasting",
+      "predictive-analytics",
+      "research"
     ],
     "quality_score": 70,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:48.057604"
+    "last_updated": "2025-09-30T06:05:44.237712"
   },
   {
     "id": 994177088,
@@ -9624,22 +9947,22 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
       "automation",
+      "healthcare",
+      "nhs-wales",
       "python",
-      "data-science",
-      "nhs-wales"
+      "data-science"
     ],
     "all_tags": [
-      "healthcare",
       "automation",
+      "healthcare",
+      "nhs-wales",
       "python",
-      "data-science",
-      "nhs-wales"
+      "data-science"
     ],
     "quality_score": 70,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:52.964664"
+    "last_updated": "2025-09-30T06:05:48.986133"
   },
   {
     "id": 963867867,
@@ -9770,16 +10093,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "all_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "quality_score": 70,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:52.964649"
+    "last_updated": "2025-09-30T06:05:48.986116"
   },
   {
     "id": 959800765,
@@ -9910,22 +10233,22 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "research",
       "r",
+      "statistical-analysis",
+      "healthcare",
       "nhs-wales",
-      "statistical-analysis"
+      "research"
     ],
     "all_tags": [
-      "healthcare",
-      "research",
       "r",
+      "statistical-analysis",
+      "healthcare",
       "nhs-wales",
-      "statistical-analysis"
+      "research"
     ],
     "quality_score": 70,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:56.211031"
+    "last_updated": "2025-09-30T06:05:51.864124"
   },
   {
     "id": 935344854,
@@ -10053,28 +10376,28 @@
     },
     "custom_properties": {},
     "generated_tags": [
+      "csharp",
+      "system-integration",
       "interoperability",
       "healthcare",
-      "dotnet",
-      "comprehensive",
-      "system-integration",
       "nhs-wales",
-      "csharp",
-      "microsoft-stack"
+      "microsoft-stack",
+      "dotnet",
+      "comprehensive"
     ],
     "all_tags": [
+      "csharp",
+      "system-integration",
       "interoperability",
       "healthcare",
-      "dotnet",
-      "comprehensive",
-      "system-integration",
       "nhs-wales",
-      "csharp",
-      "microsoft-stack"
+      "microsoft-stack",
+      "dotnet",
+      "comprehensive"
     ],
     "quality_score": 70,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:43.833359"
+    "last_updated": "2025-09-30T06:05:39.936582"
   },
   {
     "id": 948463370,
@@ -10205,18 +10528,18 @@
     },
     "custom_properties": {},
     "generated_tags": [
+      "nhs-wales",
       "healthcare",
-      "comprehensive",
-      "nhs-wales"
+      "comprehensive"
     ],
     "all_tags": [
+      "nhs-wales",
       "healthcare",
-      "comprehensive",
-      "nhs-wales"
+      "comprehensive"
     ],
     "quality_score": 70,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:52.964623"
+    "last_updated": "2025-09-30T06:05:48.986091"
   },
   {
     "id": 891552371,
@@ -10347,26 +10670,26 @@
     },
     "custom_properties": {},
     "generated_tags": [
+      "r",
+      "statistical-analysis",
       "healthcare",
       "healthcare-insights",
-      "data-analytics",
-      "research",
-      "r",
       "nhs-wales",
-      "statistical-analysis"
+      "data-analytics",
+      "research"
     ],
     "all_tags": [
+      "r",
+      "statistical-analysis",
       "healthcare",
       "healthcare-insights",
-      "data-analytics",
-      "research",
-      "r",
       "nhs-wales",
-      "statistical-analysis"
+      "data-analytics",
+      "research"
     ],
     "quality_score": 70,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:56.210995"
+    "last_updated": "2025-09-30T06:05:51.864089"
   },
   {
     "id": 918142466,
@@ -10497,20 +10820,20 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
       "data-analytics",
+      "healthcare",
       "healthcare-insights",
       "nhs-wales"
     ],
     "all_tags": [
-      "healthcare",
       "data-analytics",
+      "healthcare",
       "healthcare-insights",
       "nhs-wales"
     ],
     "quality_score": 70,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:48.057473"
+    "last_updated": "2025-09-30T06:05:44.237588"
   },
   {
     "id": 832114929,
@@ -10641,22 +10964,22 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "automation",
       "scripting",
-      "devops",
-      "nhs-wales"
+      "automation",
+      "healthcare",
+      "nhs-wales",
+      "devops"
     ],
     "all_tags": [
-      "healthcare",
-      "automation",
       "scripting",
-      "devops",
-      "nhs-wales"
+      "automation",
+      "healthcare",
+      "nhs-wales",
+      "devops"
     ],
     "quality_score": 70,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:48.057407"
+    "last_updated": "2025-09-30T06:05:44.237526"
   },
   {
     "id": 803284656,
@@ -10792,30 +11115,30 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "automation",
-      "stats-wales",
-      "data",
-      "healthcare-insights",
-      "python",
-      "data-science",
-      "data-analytics"
-    ],
-    "all_tags": [
-      "healthcare",
-      "automation",
-      "stats-wales",
-      "data",
-      "healthcare-insights",
-      "python",
-      "data-science",
       "data-analytics",
       "api-client",
+      "automation",
+      "healthcare",
+      "healthcare-insights",
+      "nhs-wales",
+      "python",
       "deprecated-repo"
+    ],
+    "all_tags": [
+      "data-analytics",
+      "api-client",
+      "automation",
+      "healthcare",
+      "healthcare-insights",
+      "nhs-wales",
+      "python",
+      "deprecated-repo",
+      "data",
+      "stats-wales"
     ],
     "quality_score": 70,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:40.593795"
+    "last_updated": "2025-09-30T06:05:36.317897"
   },
   {
     "id": 644321462,
@@ -10952,22 +11275,22 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
       "frontend",
-      "web-interface",
       "user-experience",
+      "web-interface",
+      "healthcare",
       "nhs-wales"
     ],
     "all_tags": [
-      "healthcare",
       "frontend",
-      "web-interface",
       "user-experience",
+      "web-interface",
+      "healthcare",
       "nhs-wales"
     ],
     "quality_score": 70,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:49.736124"
+    "last_updated": "2025-09-30T06:05:45.871452"
   },
   {
     "id": 739425344,
@@ -11095,24 +11418,24 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
+      "community-validated",
       "automation",
-      "python",
-      "data-science",
+      "healthcare",
       "nhs-wales",
-      "community-validated"
+      "python",
+      "data-science"
     ],
     "all_tags": [
-      "healthcare",
+      "community-validated",
       "automation",
-      "python",
-      "data-science",
+      "healthcare",
       "nhs-wales",
-      "community-validated"
+      "python",
+      "data-science"
     ],
     "quality_score": 69,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:56.210951"
+    "last_updated": "2025-09-30T06:05:51.864045"
   },
   {
     "id": 1062011463,
@@ -11243,18 +11566,18 @@
     },
     "custom_properties": {},
     "generated_tags": [
+      "nhs-wales",
       "healthcare",
-      "community-validated",
-      "nhs-wales"
+      "community-validated"
     ],
     "all_tags": [
-      "healthcare",
       "nhs-wales",
+      "healthcare",
       "community-validated"
     ],
     "quality_score": 68,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:44.778903"
+    "last_updated": "2025-09-30T06:05:41.033931"
   },
   {
     "id": 502914984,
@@ -11385,24 +11708,24 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
       "frontend",
-      "web-interface",
+      "community-validated",
       "user-experience",
-      "nhs-wales",
-      "community-validated"
+      "web-interface",
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "healthcare",
       "frontend",
-      "web-interface",
+      "community-validated",
       "user-experience",
-      "nhs-wales",
-      "community-validated"
+      "web-interface",
+      "healthcare",
+      "nhs-wales"
     ],
     "quality_score": 68,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:44.778657"
+    "last_updated": "2025-09-30T06:05:41.033669"
   },
   {
     "id": 557935466,
@@ -11538,26 +11861,26 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "guides",
-      "resources",
       "reference",
-      "nhs-wales",
+      "guides",
+      "community-validated",
+      "healthcare",
+      "resources",
       "guidance",
-      "community-validated"
+      "nhs-wales"
     ],
     "all_tags": [
-      "healthcare",
-      "guides",
-      "resources",
       "reference",
-      "nhs-wales",
+      "guides",
+      "community-validated",
+      "healthcare",
+      "resources",
       "guidance",
-      "community-validated"
+      "nhs-wales"
     ],
     "quality_score": 68,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:44.778697"
+    "last_updated": "2025-09-30T06:05:41.033708"
   },
   {
     "id": 1062505067,
@@ -11688,16 +12011,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "all_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "quality_score": 65,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:48.057650"
+    "last_updated": "2025-09-30T06:05:44.237756"
   },
   {
     "id": 784228794,
@@ -11828,18 +12151,18 @@
     },
     "custom_properties": {},
     "generated_tags": [
+      "nhs-wales",
       "healthcare",
-      "comprehensive",
-      "nhs-wales"
+      "comprehensive"
     ],
     "all_tags": [
+      "nhs-wales",
       "healthcare",
-      "comprehensive",
-      "nhs-wales"
+      "comprehensive"
     ],
     "quality_score": 65,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:41.547987"
+    "last_updated": "2025-09-30T06:05:37.163553"
   },
   {
     "id": 784146843,
@@ -11970,18 +12293,18 @@
     },
     "custom_properties": {},
     "generated_tags": [
+      "nhs-wales",
       "healthcare",
-      "comprehensive",
-      "nhs-wales"
+      "comprehensive"
     ],
     "all_tags": [
+      "nhs-wales",
       "healthcare",
-      "comprehensive",
-      "nhs-wales"
+      "comprehensive"
     ],
     "quality_score": 65,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:41.547959"
+    "last_updated": "2025-09-30T06:05:37.163528"
   },
   {
     "id": 1051066283,
@@ -12112,16 +12435,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "all_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "quality_score": 65,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:48.057639"
+    "last_updated": "2025-09-30T06:05:44.237745"
   },
   {
     "id": 1054281469,
@@ -12252,16 +12575,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "all_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "quality_score": 65,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:43.833474"
+    "last_updated": "2025-09-30T06:05:39.936694"
   },
   {
     "id": 1042161979,
@@ -12398,16 +12721,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "all_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "quality_score": 65,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:50.442866"
+    "last_updated": "2025-09-30T06:05:46.672290"
   },
   {
     "id": 1020801738,
@@ -12538,16 +12861,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "all_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "quality_score": 65,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:48.057555"
+    "last_updated": "2025-09-30T06:05:44.237666"
   },
   {
     "id": 1033179509,
@@ -12678,16 +13001,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "all_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "quality_score": 65,
     "featured": true,
-    "last_updated": "2025-09-29T06:05:48.057591"
+    "last_updated": "2025-09-30T06:05:44.237700"
   },
   {
     "id": 1016773223,
@@ -12818,16 +13141,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "all_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "quality_score": 65,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:56.763706"
+    "last_updated": "2025-09-30T06:05:52.447938"
   },
   {
     "id": 1015301714,
@@ -12958,16 +13281,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "all_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "quality_score": 65,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:48.057534"
+    "last_updated": "2025-09-30T06:05:44.237645"
   },
   {
     "id": 982696108,
@@ -13098,22 +13421,22 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "research",
       "r",
+      "statistical-analysis",
+      "healthcare",
       "nhs-wales",
-      "statistical-analysis"
+      "research"
     ],
     "all_tags": [
-      "healthcare",
-      "research",
       "r",
+      "statistical-analysis",
+      "healthcare",
       "nhs-wales",
-      "statistical-analysis"
+      "research"
     ],
     "quality_score": 65,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:43.833451"
+    "last_updated": "2025-09-30T06:05:39.936671"
   },
   {
     "id": 976001071,
@@ -13244,16 +13567,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "all_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "quality_score": 65,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:56.211043"
+    "last_updated": "2025-09-30T06:05:51.864136"
   },
   {
     "id": 916093645,
@@ -13384,22 +13707,22 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "web-development",
       "frontend",
-      "javascript",
-      "nhs-wales"
+      "web-development",
+      "healthcare",
+      "nhs-wales",
+      "javascript"
     ],
     "all_tags": [
-      "healthcare",
-      "web-development",
       "frontend",
-      "javascript",
-      "nhs-wales"
+      "web-development",
+      "healthcare",
+      "nhs-wales",
+      "javascript"
     ],
     "quality_score": 65,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:42.412732"
+    "last_updated": "2025-09-30T06:05:38.016056"
   },
   {
     "id": 921708979,
@@ -13530,22 +13853,22 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "research",
       "r",
+      "statistical-analysis",
+      "healthcare",
       "nhs-wales",
-      "statistical-analysis"
+      "research"
     ],
     "all_tags": [
-      "healthcare",
-      "research",
       "r",
+      "statistical-analysis",
+      "healthcare",
       "nhs-wales",
-      "statistical-analysis"
+      "research"
     ],
     "quality_score": 65,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:48.057486"
+    "last_updated": "2025-09-30T06:05:44.237602"
   },
   {
     "id": 895459728,
@@ -13673,16 +13996,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "all_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "quality_score": 65,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:48.057448"
+    "last_updated": "2025-09-30T06:05:44.237564"
   },
   {
     "id": 870543758,
@@ -13813,16 +14136,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "all_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "quality_score": 65,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:56.210966"
+    "last_updated": "2025-09-30T06:05:51.864061"
   },
   {
     "id": 844437628,
@@ -13953,24 +14276,24 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
       "automation",
+      "healthcare",
+      "nhs-wales",
       "python",
-      "data-science",
       "comprehensive",
-      "nhs-wales"
+      "data-science"
     ],
     "all_tags": [
-      "healthcare",
       "automation",
+      "healthcare",
+      "nhs-wales",
       "python",
-      "data-science",
       "comprehensive",
-      "nhs-wales"
+      "data-science"
     ],
     "quality_score": 65,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:49.152963"
+    "last_updated": "2025-09-30T06:05:45.338020"
   },
   {
     "id": 838781190,
@@ -14101,22 +14424,22 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
       "automation",
+      "healthcare",
+      "nhs-wales",
       "python",
-      "data-science",
-      "nhs-wales"
+      "data-science"
     ],
     "all_tags": [
-      "healthcare",
       "automation",
+      "healthcare",
+      "nhs-wales",
       "python",
-      "data-science",
-      "nhs-wales"
+      "data-science"
     ],
     "quality_score": 65,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:43.833217"
+    "last_updated": "2025-09-30T06:05:39.936450"
   },
   {
     "id": 840258520,
@@ -14247,16 +14570,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "all_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "quality_score": 65,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:43.833258"
+    "last_updated": "2025-09-30T06:05:39.936488"
   },
   {
     "id": 496602942,
@@ -14387,22 +14710,22 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
       "frontend",
-      "web-interface",
       "user-experience",
+      "web-interface",
+      "healthcare",
       "nhs-wales"
     ],
     "all_tags": [
-      "healthcare",
       "frontend",
-      "web-interface",
       "user-experience",
+      "web-interface",
+      "healthcare",
       "nhs-wales"
     ],
     "quality_score": 65,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:44.778631"
+    "last_updated": "2025-09-30T06:05:41.033645"
   },
   {
     "id": 788957266,
@@ -14533,18 +14856,18 @@
     },
     "custom_properties": {},
     "generated_tags": [
+      "nhs-wales",
       "healthcare",
-      "community-validated",
-      "nhs-wales"
+      "community-validated"
     ],
     "all_tags": [
-      "healthcare",
       "nhs-wales",
+      "healthcare",
       "community-validated"
     ],
     "quality_score": 63,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:44.778755"
+    "last_updated": "2025-09-30T06:05:41.033779"
   },
   {
     "id": 783744958,
@@ -14675,20 +14998,20 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "community-validated",
+      "nhs-wales",
       "comprehensive",
-      "nhs-wales"
+      "healthcare",
+      "community-validated"
     ],
     "all_tags": [
+      "nhs-wales",
       "healthcare",
       "comprehensive",
-      "nhs-wales",
       "community-validated"
     ],
     "quality_score": 63,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:41.547918"
+    "last_updated": "2025-09-30T06:05:37.163486"
   },
   {
     "id": 567253095,
@@ -14819,28 +15142,28 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
+      "community-validated",
       "automation",
-      "python",
-      "data-science",
-      "forecasting",
+      "healthcare",
       "nhs-wales",
+      "forecasting",
+      "python",
       "predictive-analytics",
-      "community-validated"
+      "data-science"
     ],
     "all_tags": [
-      "healthcare",
+      "community-validated",
       "automation",
-      "python",
-      "data-science",
-      "forecasting",
+      "healthcare",
       "nhs-wales",
+      "forecasting",
+      "python",
       "predictive-analytics",
-      "community-validated"
+      "data-science"
     ],
     "quality_score": 63,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:48.057352"
+    "last_updated": "2025-09-30T06:05:44.237473"
   },
   {
     "id": 1065979157,
@@ -14971,16 +15294,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "all_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "quality_score": 60,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:41.548161"
+    "last_updated": "2025-09-30T06:05:37.163703"
   },
   {
     "id": 784186879,
@@ -15111,18 +15434,18 @@
     },
     "custom_properties": {},
     "generated_tags": [
+      "nhs-wales",
       "healthcare",
-      "comprehensive",
-      "nhs-wales"
+      "comprehensive"
     ],
     "all_tags": [
+      "nhs-wales",
       "healthcare",
-      "comprehensive",
-      "nhs-wales"
+      "comprehensive"
     ],
     "quality_score": 60,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:41.547972"
+    "last_updated": "2025-09-30T06:05:37.163540"
   },
   {
     "id": 1029106883,
@@ -15253,16 +15576,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "all_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "quality_score": 60,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:56.211100"
+    "last_updated": "2025-09-30T06:05:51.864173"
   },
   {
     "id": 1026037756,
@@ -15393,16 +15716,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "all_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "quality_score": 60,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:56.763727"
+    "last_updated": "2025-09-30T06:05:52.447959"
   },
   {
     "id": 1021563703,
@@ -15533,16 +15856,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "all_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "quality_score": 60,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:50.442828"
+    "last_updated": "2025-09-30T06:05:46.672252"
   },
   {
     "id": 1021316191,
@@ -15673,16 +15996,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "all_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "quality_score": 60,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:48.057565"
+    "last_updated": "2025-09-30T06:05:44.237675"
   },
   {
     "id": 960379259,
@@ -15813,20 +16136,20 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
       "data-analytics",
+      "healthcare",
       "healthcare-insights",
       "nhs-wales"
     ],
     "all_tags": [
-      "healthcare",
       "data-analytics",
+      "healthcare",
       "healthcare-insights",
       "nhs-wales"
     ],
     "quality_score": 60,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:48.057498"
+    "last_updated": "2025-09-30T06:05:44.237612"
   },
   {
     "id": 1020024706,
@@ -15957,16 +16280,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "all_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "quality_score": 60,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:48.057543"
+    "last_updated": "2025-09-30T06:05:44.237655"
   },
   {
     "id": 1020056539,
@@ -16097,16 +16420,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "all_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "quality_score": 60,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:56.211091"
+    "last_updated": "2025-09-30T06:05:51.864164"
   },
   {
     "id": 1020042181,
@@ -16237,16 +16560,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "all_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "quality_score": 60,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:56.211064"
+    "last_updated": "2025-09-30T06:05:51.864156"
   },
   {
     "id": 1015624832,
@@ -16377,16 +16700,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "all_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "quality_score": 60,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:53.679497"
+    "last_updated": "2025-09-30T06:05:49.589375"
   },
   {
     "id": 974763501,
@@ -16517,22 +16840,22 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
       "automation",
+      "healthcare",
+      "nhs-wales",
       "python",
-      "data-science",
-      "nhs-wales"
+      "data-science"
     ],
     "all_tags": [
-      "healthcare",
       "automation",
+      "healthcare",
+      "nhs-wales",
       "python",
-      "data-science",
-      "nhs-wales"
+      "data-science"
     ],
     "quality_score": 60,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:49.152985"
+    "last_updated": "2025-09-30T06:05:45.338047"
   },
   {
     "id": 960389320,
@@ -16663,22 +16986,22 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "research",
       "r",
+      "statistical-analysis",
+      "healthcare",
       "nhs-wales",
-      "statistical-analysis"
+      "research"
     ],
     "all_tags": [
-      "healthcare",
-      "research",
       "r",
+      "statistical-analysis",
+      "healthcare",
       "nhs-wales",
-      "statistical-analysis"
+      "research"
     ],
     "quality_score": 60,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:53.679461"
+    "last_updated": "2025-09-30T06:05:49.589340"
   },
   {
     "id": 914745670,
@@ -16809,16 +17132,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "all_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "quality_score": 60,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:48.057459"
+    "last_updated": "2025-09-30T06:05:44.237575"
   },
   {
     "id": 866536936,
@@ -16949,26 +17272,26 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
       "automation",
-      "python",
-      "data-science",
-      "forecasting",
+      "healthcare",
       "nhs-wales",
-      "predictive-analytics"
+      "forecasting",
+      "python",
+      "predictive-analytics",
+      "data-science"
     ],
     "all_tags": [
-      "healthcare",
       "automation",
-      "python",
-      "data-science",
-      "forecasting",
+      "healthcare",
       "nhs-wales",
-      "predictive-analytics"
+      "python",
+      "forecasting",
+      "predictive-analytics",
+      "data-science"
     ],
     "quality_score": 60,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:40.593821"
+    "last_updated": "2025-09-30T06:05:36.317921"
   },
   {
     "id": 590384488,
@@ -17099,16 +17422,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "all_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "quality_score": 60,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:44.778735"
+    "last_updated": "2025-09-30T06:05:41.033744"
   },
   {
     "id": 808549663,
@@ -17239,18 +17562,18 @@
     },
     "custom_properties": {},
     "generated_tags": [
+      "nhs-wales",
       "healthcare",
-      "community-validated",
-      "nhs-wales"
+      "community-validated"
     ],
     "all_tags": [
-      "healthcare",
       "nhs-wales",
+      "healthcare",
       "community-validated"
     ],
     "quality_score": 58,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:44.778764"
+    "last_updated": "2025-09-30T06:05:41.033794"
   },
   {
     "id": 995905820,
@@ -17381,16 +17704,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "all_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "quality_score": 55,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:49.152997"
+    "last_updated": "2025-09-30T06:05:45.338059"
   },
   {
     "id": 955412900,
@@ -17521,16 +17844,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "all_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "quality_score": 55,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:43.833428"
+    "last_updated": "2025-09-30T06:05:39.936649"
   },
   {
     "id": 927172733,
@@ -17658,20 +17981,20 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "interoperability",
-      "healthcare",
+      "nhs-wales",
       "system-integration",
-      "nhs-wales"
+      "interoperability",
+      "healthcare"
     ],
     "all_tags": [
-      "interoperability",
-      "healthcare",
+      "nhs-wales",
       "system-integration",
-      "nhs-wales"
+      "interoperability",
+      "healthcare"
     ],
     "quality_score": 55,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:43.833322"
+    "last_updated": "2025-09-30T06:05:39.936548"
   },
   {
     "id": 899137935,
@@ -17802,20 +18125,20 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
       "data-analytics",
+      "healthcare",
       "healthcare-insights",
       "nhs-wales"
     ],
     "all_tags": [
-      "healthcare",
       "data-analytics",
+      "healthcare",
       "healthcare-insights",
       "nhs-wales"
     ],
     "quality_score": 55,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:56.211006"
+    "last_updated": "2025-09-30T06:05:51.864100"
   },
   {
     "id": 678316781,
@@ -17943,22 +18266,22 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
       "automation",
+      "healthcare",
+      "nhs-wales",
       "python",
-      "data-science",
-      "nhs-wales"
+      "data-science"
     ],
     "all_tags": [
-      "healthcare",
       "automation",
+      "healthcare",
+      "nhs-wales",
       "python",
-      "data-science",
-      "nhs-wales"
+      "data-science"
     ],
     "quality_score": 55,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:49.736162"
+    "last_updated": "2025-09-30T06:05:45.871485"
   },
   {
     "id": 665958581,
@@ -18089,18 +18412,18 @@
     },
     "custom_properties": {},
     "generated_tags": [
+      "nhs-wales",
       "healthcare",
-      "community-validated",
-      "nhs-wales"
+      "community-validated"
     ],
     "all_tags": [
-      "healthcare",
       "nhs-wales",
+      "healthcare",
       "community-validated"
     ],
     "quality_score": 53,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:44.778745"
+    "last_updated": "2025-09-30T06:05:41.033759"
   },
   {
     "id": 505493327,
@@ -18231,16 +18554,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "all_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "quality_score": 50,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:44.778669"
+    "last_updated": "2025-09-30T06:05:41.033681"
   },
   {
     "id": 644457158,
@@ -18368,16 +18691,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "all_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "quality_score": 50,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:49.736149"
+    "last_updated": "2025-09-30T06:05:45.871472"
   },
   {
     "id": 644454917,
@@ -18505,15 +18828,15 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "all_tags": [
-      "healthcare",
-      "nhs-wales"
+      "nhs-wales",
+      "healthcare"
     ],
     "quality_score": 50,
     "featured": false,
-    "last_updated": "2025-09-29T06:05:56.210922"
+    "last_updated": "2025-09-30T06:05:51.864019"
   }
 ]
