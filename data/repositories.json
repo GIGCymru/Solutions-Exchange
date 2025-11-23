@@ -67,7 +67,7 @@
     "releases_url": "https://api.github.com/repos/GIGCymru/architecture/releases{/id}",
     "deployments_url": "https://api.github.com/repos/GIGCymru/architecture/deployments",
     "created_at": "2025-03-07T16:28:24Z",
-    "updated_at": "2025-11-21T12:50:14Z",
+    "updated_at": "2025-11-22T06:12:10Z",
     "pushed_at": "2025-11-21T12:50:12Z",
     "git_url": "git://github.com/GIGCymru/architecture.git",
     "ssh_url": "git@github.com:GIGCymru/architecture.git",
@@ -75,8 +75,8 @@
     "svn_url": "https://github.com/GIGCymru/architecture",
     "homepage": "https://gigcymru.github.io/architecture/",
     "size": 1196,
-    "stargazers_count": 13,
-    "watchers_count": 13,
+    "stargazers_count": 14,
+    "watchers_count": 14,
     "language": "Just",
     "has_issues": true,
     "has_projects": true,
@@ -103,7 +103,7 @@
     "visibility": "Public",
     "forks": 6,
     "open_issues": 31,
-    "watchers": 13,
+    "watchers": 14,
     "default_branch": "main",
     "permissions": {
       "admin": true,
@@ -135,19 +135,19 @@
     "custom_properties": {},
     "generated_tags": [
       "comprehensive",
-      "nhs-wales",
+      "community-validated",
       "healthcare",
-      "community-validated"
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
-      "comprehensive",
       "healthcare",
-      "community-validated"
+      "community-validated",
+      "comprehensive",
+      "nhs-wales"
     ],
     "quality_score": 100,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:00.001794"
+    "last_updated": "2025-11-23T06:05:11.075422"
   },
   {
     "id": 1020240569,
@@ -217,16 +217,16 @@
     "releases_url": "https://api.github.com/repos/GIGCymru/Solutions-Exchange/releases{/id}",
     "deployments_url": "https://api.github.com/repos/GIGCymru/Solutions-Exchange/deployments",
     "created_at": "2025-07-15T14:58:04Z",
-    "updated_at": "2025-11-21T06:06:10Z",
-    "pushed_at": "2025-11-21T06:06:07Z",
+    "updated_at": "2025-11-22T06:11:54Z",
+    "pushed_at": "2025-11-22T06:05:41Z",
     "git_url": "git://github.com/GIGCymru/Solutions-Exchange.git",
     "ssh_url": "git@github.com:GIGCymru/Solutions-Exchange.git",
     "clone_url": "https://github.com/GIGCymru/Solutions-Exchange.git",
     "svn_url": "https://github.com/GIGCymru/Solutions-Exchange",
     "homepage": "https://gigcymru.github.io/Solutions-Exchange/",
-    "size": 7262,
-    "stargazers_count": 2,
-    "watchers_count": 2,
+    "size": 7270,
+    "stargazers_count": 3,
+    "watchers_count": 3,
     "language": "HTML",
     "has_issues": true,
     "has_projects": true,
@@ -263,7 +263,7 @@
     "visibility": "Public",
     "forks": 0,
     "open_issues": 3,
-    "watchers": 2,
+    "watchers": 3,
     "default_branch": "main",
     "permissions": {
       "admin": true,
@@ -294,39 +294,36 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "user-experience",
-      "comprehensive",
-      "developement",
+      "data",
+      "pages",
+      "solutions",
+      "website",
       "frontend",
-      "responsive",
-      "community-validated",
+      "html",
       "nhs",
-      "api"
+      "showcase"
     ],
     "all_tags": [
-      "user-experience",
-      "comprehensive",
-      "developement",
-      "frontend",
-      "responsive",
-      "community-validated",
-      "nhs",
-      "api",
-      "wales",
+      "data",
+      "pages",
+      "showcase",
       "health",
       "solutions",
       "visability",
-      "pages",
-      "database",
-      "showcase",
       "website",
+      "community",
       "html",
-      "data",
-      "community"
+      "responsive",
+      "frontend",
+      "database",
+      "wales",
+      "api",
+      "developement",
+      "nhs"
     ],
     "quality_score": 100,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:00.001869"
+    "last_updated": "2025-11-23T06:05:11.075493"
   },
   {
     "id": 1033696412,
@@ -471,29 +468,31 @@
     "custom_properties": {},
     "generated_tags": [
       "healthcare",
+      "community-validated",
       "ui",
       "comprehensive",
       "biu",
-      "reporting",
-      "community-validated",
-      "ndap-platform",
-      "python3"
+      "responsive-design",
+      "gcp",
+      "styling"
     ],
     "all_tags": [
       "healthcare",
+      "community-validated",
       "ui",
       "comprehensive",
       "biu",
-      "reporting",
-      "community-validated",
-      "ndap-platform",
-      "python3",
+      "responsive-design",
       "gcp",
-      "gcp-cloud-run"
+      "styling",
+      "python3",
+      "ndap-platform",
+      "gcp-cloud-run",
+      "reporting"
     ],
     "quality_score": 100,
     "featured": true,
-    "last_updated": "2025-11-22T06:04:55.734844"
+    "last_updated": "2025-11-23T06:05:07.449565"
   },
   {
     "id": 1031229751,
@@ -630,26 +629,26 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "data-science",
+      "automation",
       "healthcare",
+      "community-validated",
       "comprehensive",
       "python",
-      "community-validated",
-      "automation",
+      "data-science",
       "nhs-wales"
     ],
     "all_tags": [
-      "data-science",
-      "comprehensive",
-      "healthcare",
-      "python",
-      "community-validated",
       "automation",
+      "community-validated",
+      "healthcare",
+      "comprehensive",
+      "python",
+      "data-science",
       "nhs-wales"
     ],
     "quality_score": 98,
     "featured": true,
-    "last_updated": "2025-11-22T06:04:55.734830"
+    "last_updated": "2025-11-23T06:05:07.449551"
   },
   {
     "id": 1066956920,
@@ -791,23 +790,23 @@
     "custom_properties": {},
     "generated_tags": [
       "healthcare",
-      "proms",
-      "biu",
       "community-validated",
-      "nhs-wales",
-      "promptly"
+      "proms",
+      "promptly",
+      "biu",
+      "nhs-wales"
     ],
     "all_tags": [
+      "community-validated",
       "healthcare",
       "proms",
+      "promptly",
       "biu",
-      "community-validated",
-      "nhs-wales",
-      "promptly"
+      "nhs-wales"
     ],
     "quality_score": 98,
     "featured": true,
-    "last_updated": "2025-11-22T06:04:55.734905"
+    "last_updated": "2025-11-23T06:05:07.449626"
   },
   {
     "id": 964056502,
@@ -945,19 +944,19 @@
     "custom_properties": {},
     "generated_tags": [
       "comprehensive",
-      "nhs-wales",
+      "community-validated",
       "healthcare",
-      "community-validated"
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
-      "comprehensive",
       "healthcare",
-      "community-validated"
+      "community-validated",
+      "comprehensive",
+      "nhs-wales"
     ],
     "quality_score": 96,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:00.001817"
+    "last_updated": "2025-11-23T06:05:11.075443"
   },
   {
     "id": 1030329525,
@@ -1091,28 +1090,28 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "data-science",
+      "automation",
       "healthcare",
-      "python",
       "community-validated",
       "elt",
-      "automation",
-      "nhs-wales",
-      "datapipeline"
+      "datapipeline",
+      "python",
+      "data-science",
+      "nhs-wales"
     ],
     "all_tags": [
-      "data-science",
-      "healthcare",
-      "python",
-      "community-validated",
-      "elt",
       "automation",
-      "nhs-wales",
-      "datapipeline"
+      "community-validated",
+      "healthcare",
+      "elt",
+      "datapipeline",
+      "python",
+      "data-science",
+      "nhs-wales"
     ],
     "quality_score": 96,
     "featured": true,
-    "last_updated": "2025-11-22T06:04:55.734804"
+    "last_updated": "2025-11-23T06:05:07.449526"
   },
   {
     "id": 727813151,
@@ -1249,28 +1248,28 @@
     },
     "custom_properties": {},
     "generated_tags": [
+      "data-analytics",
       "healthcare",
       "ui",
-      "comprehensive",
       "healthcare-insights",
+      "comprehensive",
       "responsive-design",
-      "data-analytics",
-      "nhs-wales",
-      "styling"
+      "styling",
+      "nhs-wales"
     ],
     "all_tags": [
-      "comprehensive",
+      "data-analytics",
       "healthcare",
       "ui",
       "healthcare-insights",
+      "comprehensive",
       "responsive-design",
-      "data-analytics",
-      "nhs-wales",
-      "styling"
+      "styling",
+      "nhs-wales"
     ],
     "quality_score": 95,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:16.589090"
+    "last_updated": "2025-11-23T06:05:24.543783"
   },
   {
     "id": 968031231,
@@ -1401,28 +1400,28 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "data-science",
-      "healthcare",
-      "python",
-      "community-validated",
       "automation",
-      "nhs-wales",
+      "healthcare",
+      "community-validated",
       "system-integration",
-      "interoperability"
+      "interoperability",
+      "python",
+      "data-science",
+      "nhs-wales"
     ],
     "all_tags": [
-      "data-science",
-      "healthcare",
-      "python",
-      "community-validated",
       "automation",
-      "nhs-wales",
+      "community-validated",
+      "healthcare",
       "system-integration",
-      "interoperability"
+      "interoperability",
+      "python",
+      "data-science",
+      "nhs-wales"
     ],
     "quality_score": 95,
     "featured": true,
-    "last_updated": "2025-11-22T06:04:58.711242"
+    "last_updated": "2025-11-23T06:05:10.081871"
   },
   {
     "id": 961813221,
@@ -1562,31 +1561,31 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "comprehensive",
-      "big",
-      "big-query",
-      "community-validated",
-      "ndap",
       "finops",
-      "cloud"
+      "google",
+      "healthcare",
+      "community-validated",
+      "big-query",
+      "cloud",
+      "comprehensive",
+      "gcp"
     ],
     "all_tags": [
-      "healthcare",
-      "comprehensive",
-      "big",
-      "big-query",
-      "community-validated",
-      "ndap",
       "finops",
+      "google",
+      "healthcare",
+      "community-validated",
+      "big-query",
       "cloud",
-      "cloud-run",
+      "comprehensive",
       "gcp",
-      "google"
+      "ndap",
+      "big",
+      "cloud-run"
     ],
     "quality_score": 93,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:13.435503"
+    "last_updated": "2025-11-23T06:05:22.241949"
   },
   {
     "id": 1066429204,
@@ -1723,30 +1722,32 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "user-experience",
-      "fhir",
-      "fhir-implementation-guide",
-      "frontend",
+      "automation",
+      "data-analytics",
       "healthcare",
-      "comprehensive",
+      "community-validated",
       "healthcare-insights",
-      "forked-repo"
+      "comprehensive",
+      "frontend",
+      "nhs-wales"
     ],
     "all_tags": [
-      "user-experience",
+      "automation",
+      "data-analytics",
+      "healthcare",
+      "community-validated",
+      "healthcare-insights",
+      "comprehensive",
+      "frontend",
+      "nhs-wales",
+      "forked-repo",
       "fhir",
       "fhir-implementation-guide",
-      "frontend",
-      "healthcare",
-      "comprehensive",
-      "healthcare-insights",
-      "forked-repo",
-      "nhs",
-      "automation"
+      "nhs"
     ],
     "quality_score": 93,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:00.001965"
+    "last_updated": "2025-11-23T06:05:11.075591"
   },
   {
     "id": 1085795774,
@@ -1877,28 +1878,28 @@
     },
     "custom_properties": {},
     "generated_tags": [
+      "predictive-analytics",
       "healthcare",
       "comprehensive",
       "r",
-      "predictive-analytics",
       "forecasting",
       "statistical-analysis",
-      "nhs-wales",
-      "research"
+      "research",
+      "nhs-wales"
     ],
     "all_tags": [
-      "comprehensive",
       "healthcare",
-      "r",
       "predictive-analytics",
+      "comprehensive",
+      "r",
       "forecasting",
       "statistical-analysis",
-      "nhs-wales",
-      "research"
+      "research",
+      "nhs-wales"
     ],
     "quality_score": 90,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:16.589285"
+    "last_updated": "2025-11-23T06:05:24.544182"
   },
   {
     "id": 1076742401,
@@ -2029,24 +2030,24 @@
     },
     "custom_properties": {},
     "generated_tags": [
+      "automation",
       "healthcare",
       "comprehensive",
-      "devops",
       "scripting",
-      "automation",
+      "devops",
       "nhs-wales"
     ],
     "all_tags": [
-      "comprehensive",
-      "healthcare",
-      "devops",
-      "scripting",
       "automation",
+      "healthcare",
+      "comprehensive",
+      "scripting",
+      "devops",
       "nhs-wales"
     ],
     "quality_score": 90,
     "featured": true,
-    "last_updated": "2025-11-22T06:04:55.734941"
+    "last_updated": "2025-11-23T06:05:07.449663"
   },
   {
     "id": 966222807,
@@ -2183,28 +2184,28 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "data-science",
-      "healthcare",
       "monitoring",
-      "python",
-      "visualization",
       "automation",
-      "nhs-wales",
-      "system-integration"
+      "healthcare",
+      "system-integration",
+      "visualization",
+      "interoperability",
+      "python",
+      "data-science"
     ],
     "all_tags": [
-      "data-science",
-      "healthcare",
       "monitoring",
-      "python",
-      "visualization",
       "automation",
-      "nhs-wales",
-      "system-integration"
+      "healthcare",
+      "system-integration",
+      "visualization",
+      "interoperability",
+      "python",
+      "data-science"
     ],
     "quality_score": 90,
     "featured": true,
-    "last_updated": "2025-11-22T06:04:57.147960"
+    "last_updated": "2025-11-23T06:05:08.685976"
   },
   {
     "id": 1057150705,
@@ -2347,30 +2348,29 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "user-experience",
-      "healthcare",
-      "frontend",
-      "healthcare-insights",
-      "gcp",
+      "data-analytics",
       "elt-pipeline",
-      "web-interface",
-      "sqlx"
+      "healthcare",
+      "sqlx",
+      "bigquery",
+      "healthcare-insights",
+      "dataform",
+      "frontend"
     ],
     "all_tags": [
-      "user-experience",
-      "healthcare",
-      "frontend",
-      "healthcare-insights",
-      "gcp",
+      "data-analytics",
       "elt-pipeline",
-      "web-interface",
+      "healthcare",
       "sqlx",
+      "bigquery",
+      "healthcare-insights",
       "dataform",
-      "bigquery"
+      "frontend",
+      "gcp"
     ],
     "quality_score": 90,
     "featured": true,
-    "last_updated": "2025-11-22T06:04:55.734868"
+    "last_updated": "2025-11-23T06:05:07.449589"
   },
   {
     "id": 599988856,
@@ -2501,18 +2501,18 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
+      "community-validated",
       "healthcare",
-      "community-validated"
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
       "healthcare",
-      "community-validated"
+      "community-validated",
+      "nhs-wales"
     ],
     "quality_score": 89,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:06.889418"
+    "last_updated": "2025-11-23T06:05:17.166909"
   },
   {
     "id": 792375245,
@@ -2644,19 +2644,19 @@
     "custom_properties": {},
     "generated_tags": [
       "comprehensive",
-      "nhs-wales",
+      "community-validated",
       "healthcare",
-      "community-validated"
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
-      "comprehensive",
       "healthcare",
-      "community-validated"
+      "community-validated",
+      "comprehensive",
+      "nhs-wales"
     ],
     "quality_score": 89,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:06.889443"
+    "last_updated": "2025-11-23T06:05:17.166934"
   },
   {
     "id": 1048985624,
@@ -2792,29 +2792,28 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "data-science",
-      "json",
+      "automation",
       "healthcare",
-      "python",
       "community-validated",
       "cloudrun",
       "ndr",
-      "automation"
+      "gcp",
+      "python",
+      "json"
     ],
     "all_tags": [
-      "data-science",
-      "json",
+      "automation",
       "healthcare",
-      "python",
       "community-validated",
       "cloudrun",
       "ndr",
-      "automation",
-      "gcp"
+      "gcp",
+      "python",
+      "json"
     ],
     "quality_score": 88,
     "featured": true,
-    "last_updated": "2025-11-22T06:04:55.734855"
+    "last_updated": "2025-11-23T06:05:07.449575"
   },
   {
     "id": 948479057,
@@ -2885,13 +2884,13 @@
     "deployments_url": "https://api.github.com/repos/DHCW-Digital-Health-and-Care-Wales/Integration-Hub-tests/deployments",
     "created_at": "2025-03-14T12:10:45Z",
     "updated_at": "2025-11-10T12:24:28Z",
-    "pushed_at": "2025-11-21T14:37:06Z",
+    "pushed_at": "2025-11-22T23:23:26Z",
     "git_url": "git://github.com/DHCW-Digital-Health-and-Care-Wales/Integration-Hub-tests.git",
     "ssh_url": "git@github.com:DHCW-Digital-Health-and-Care-Wales/Integration-Hub-tests.git",
     "clone_url": "https://github.com/DHCW-Digital-Health-and-Care-Wales/Integration-Hub-tests.git",
     "svn_url": "https://github.com/DHCW-Digital-Health-and-Care-Wales/Integration-Hub-tests",
     "homepage": null,
-    "size": 381,
+    "size": 365,
     "stargazers_count": 1,
     "watchers_count": 1,
     "language": "Python",
@@ -2951,28 +2950,28 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "data-science",
-      "healthcare",
-      "python",
-      "community-validated",
       "automation",
-      "nhs-wales",
+      "healthcare",
+      "community-validated",
       "system-integration",
-      "interoperability"
+      "interoperability",
+      "python",
+      "data-science",
+      "nhs-wales"
     ],
     "all_tags": [
-      "data-science",
-      "healthcare",
-      "python",
-      "community-validated",
       "automation",
-      "nhs-wales",
+      "community-validated",
+      "healthcare",
       "system-integration",
-      "interoperability"
+      "interoperability",
+      "python",
+      "data-science",
+      "nhs-wales"
     ],
     "quality_score": 88,
     "featured": true,
-    "last_updated": "2025-11-22T06:04:58.711190"
+    "last_updated": "2025-11-23T06:05:10.081816"
   },
   {
     "id": 1076143769,
@@ -3103,28 +3102,28 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "data-science",
-      "healthcare",
-      "python",
-      "healthcare-insights",
-      "community-validated",
       "data-analytics",
       "automation",
+      "healthcare",
+      "community-validated",
+      "healthcare-insights",
+      "python",
+      "data-science",
       "nhs-wales"
     ],
     "all_tags": [
-      "data-science",
-      "healthcare",
-      "python",
-      "healthcare-insights",
-      "community-validated",
       "data-analytics",
       "automation",
+      "community-validated",
+      "healthcare",
+      "healthcare-insights",
+      "python",
+      "data-science",
       "nhs-wales"
     ],
     "quality_score": 88,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:06.889630"
+    "last_updated": "2025-11-23T06:05:17.167094"
   },
   {
     "id": 1001444687,
@@ -3261,24 +3260,24 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
       "docker",
+      "healthcare",
       "community-validated",
-      "containerization",
       "deployment",
+      "containerization",
       "nhs-wales"
     ],
     "all_tags": [
       "docker",
-      "healthcare",
       "community-validated",
-      "containerization",
+      "healthcare",
       "deployment",
+      "containerization",
       "nhs-wales"
     ],
     "quality_score": 88,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:00.001829"
+    "last_updated": "2025-11-23T06:05:11.075455"
   },
   {
     "id": 1061831920,
@@ -3414,28 +3413,28 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
+      "product-management-group",
       "governance",
-      "comprehensive",
+      "healthcare",
+      "community-validated",
       "pmg",
       "board",
-      "community-validated",
-      "product-management-group",
+      "comprehensive",
       "nhs-wales"
     ],
     "all_tags": [
-      "healthcare",
+      "product-management-group",
       "governance",
-      "comprehensive",
+      "healthcare",
+      "community-validated",
       "pmg",
       "board",
-      "community-validated",
-      "product-management-group",
+      "comprehensive",
       "nhs-wales"
     ],
     "quality_score": 88,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:00.001902"
+    "last_updated": "2025-11-23T06:05:11.075528"
   },
   {
     "id": 1061926097,
@@ -3580,30 +3579,32 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
-      "healthcare",
-      "database",
-      "healthcare-insights",
-      "ssms-guide",
+      "data-analytics",
       "data",
-      "nhs",
-      "ssms"
+      "ssms-guide",
+      "healthcare",
+      "community-validated",
+      "healthcare-insights",
+      "database",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
-      "healthcare",
-      "database",
-      "healthcare-insights",
-      "ssms-guide",
+      "data-analytics",
       "data",
-      "nhs",
-      "ssms",
+      "ssms-guide",
+      "healthcare",
+      "community-validated",
+      "healthcare-insights",
+      "database",
+      "nhs-wales",
       "backup",
-      "best-practices"
+      "best-practices",
+      "ssms",
+      "nhs"
     ],
     "quality_score": 88,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:00.001916"
+    "last_updated": "2025-11-23T06:05:11.075542"
   },
   {
     "id": 1019571062,
@@ -3740,28 +3741,28 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "data-science",
-      "healthcare",
-      "python",
-      "healthcare-insights",
-      "community-validated",
       "data-analytics",
       "automation",
-      "nhs-wales"
+      "healthcare",
+      "community-validated",
+      "system-integration",
+      "healthcare-insights",
+      "interoperability",
+      "python"
     ],
     "all_tags": [
-      "data-science",
-      "healthcare",
-      "python",
-      "healthcare-insights",
-      "community-validated",
       "data-analytics",
       "automation",
-      "nhs-wales"
+      "community-validated",
+      "healthcare",
+      "system-integration",
+      "healthcare-insights",
+      "interoperability",
+      "python"
     ],
     "quality_score": 88,
     "featured": true,
-    "last_updated": "2025-11-22T06:04:57.147976"
+    "last_updated": "2025-11-23T06:05:08.685995"
   },
   {
     "id": 926603178,
@@ -3890,23 +3891,23 @@
     "custom_properties": {},
     "generated_tags": [
       "healthcare",
-      "dotnet",
       "community-validated",
       "csharp",
+      "dotnet",
       "microsoft-stack",
       "nhs-wales"
     ],
     "all_tags": [
-      "healthcare",
       "community-validated",
-      "dotnet",
+      "healthcare",
       "csharp",
+      "dotnet",
       "microsoft-stack",
       "nhs-wales"
     ],
     "quality_score": 88,
     "featured": true,
-    "last_updated": "2025-11-22T06:04:58.711107"
+    "last_updated": "2025-11-23T06:05:10.081733"
   },
   {
     "id": 924629732,
@@ -4034,28 +4035,28 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "oral-health",
       "healthcare",
-      "dotnet",
-      "dental-services",
       "community-validated",
+      "dental-services",
+      "oral-health",
       "csharp",
+      "dotnet",
       "microsoft-stack",
       "nhs-wales"
     ],
     "all_tags": [
-      "oral-health",
-      "healthcare",
       "community-validated",
+      "healthcare",
       "dental-services",
-      "dotnet",
+      "oral-health",
       "csharp",
+      "dotnet",
       "microsoft-stack",
       "nhs-wales"
     ],
     "quality_score": 88,
     "featured": true,
-    "last_updated": "2025-11-22T06:04:58.711095"
+    "last_updated": "2025-11-23T06:05:10.081722"
   },
   {
     "id": 1099027172,
@@ -4189,19 +4190,19 @@
       "healthcare",
       "r",
       "statistical-analysis",
-      "nhs-wales",
-      "research"
+      "research",
+      "nhs-wales"
     ],
     "all_tags": [
       "healthcare",
       "r",
       "statistical-analysis",
-      "nhs-wales",
-      "research"
+      "research",
+      "nhs-wales"
     ],
     "quality_score": 85,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:01.943478"
+    "last_updated": "2025-11-23T06:05:12.614200"
   },
   {
     "id": 1085803691,
@@ -4332,20 +4333,20 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "nhs-wales",
       "system-integration",
-      "interoperability"
+      "interoperability",
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
       "system-integration",
+      "interoperability",
       "healthcare",
-      "interoperability"
+      "nhs-wales"
     ],
     "quality_score": 85,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:13.435554"
+    "last_updated": "2025-11-23T06:05:22.242002"
   },
   {
     "id": 1085108993,
@@ -4479,19 +4480,19 @@
       "healthcare",
       "r",
       "statistical-analysis",
-      "nhs-wales",
-      "research"
+      "research",
+      "nhs-wales"
     ],
     "all_tags": [
       "healthcare",
       "r",
       "statistical-analysis",
-      "nhs-wales",
-      "research"
+      "research",
+      "nhs-wales"
     ],
     "quality_score": 85,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:01.943446"
+    "last_updated": "2025-11-23T06:05:12.614176"
   },
   {
     "id": 1098173969,
@@ -4622,22 +4623,22 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "user-experience",
       "healthcare",
       "frontend",
+      "user-experience",
       "web-interface",
       "nhs-wales"
     ],
     "all_tags": [
-      "user-experience",
       "healthcare",
       "frontend",
       "web-interface",
+      "user-experience",
       "nhs-wales"
     ],
     "quality_score": 85,
     "featured": true,
-    "last_updated": "2025-11-22T06:04:58.711284"
+    "last_updated": "2025-11-23T06:05:10.081915"
   },
   {
     "id": 987476336,
@@ -4768,24 +4769,24 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "user-experience",
       "healthcare",
-      "frontend",
       "comprehensive",
+      "frontend",
+      "user-experience",
       "web-interface",
       "nhs-wales"
     ],
     "all_tags": [
-      "user-experience",
-      "comprehensive",
       "healthcare",
+      "comprehensive",
       "frontend",
       "web-interface",
+      "user-experience",
       "nhs-wales"
     ],
     "quality_score": 85,
     "featured": true,
-    "last_updated": "2025-11-22T06:04:55.734786"
+    "last_updated": "2025-11-23T06:05:07.449509"
   },
   {
     "id": 783807845,
@@ -4917,17 +4918,17 @@
     "custom_properties": {},
     "generated_tags": [
       "comprehensive",
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
+      "healthcare",
       "comprehensive",
-      "healthcare"
+      "nhs-wales"
     ],
     "quality_score": 85,
     "featured": true,
-    "last_updated": "2025-11-22T06:04:55.734719"
+    "last_updated": "2025-11-23T06:05:07.449447"
   },
   {
     "id": 1080390869,
@@ -5064,26 +5065,26 @@
     },
     "custom_properties": {},
     "generated_tags": [
+      "data-analytics",
       "docker",
       "healthcare",
+      "deployment",
       "healthcare-insights",
       "containerization",
-      "deployment",
-      "data-analytics",
       "nhs-wales"
     ],
     "all_tags": [
+      "data-analytics",
       "docker",
       "healthcare",
+      "deployment",
       "healthcare-insights",
       "containerization",
-      "deployment",
-      "data-analytics",
       "nhs-wales"
     ],
     "quality_score": 85,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:06.889643"
+    "last_updated": "2025-11-23T06:05:17.167119"
   },
   {
     "id": 1061708627,
@@ -5218,28 +5219,28 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "data-science",
+      "data-analytics",
+      "automation",
       "healthcare",
-      "reference-data",
-      "python",
       "healthcare-insights",
-      "ndap",
       "ndr",
-      "data-analytics"
+      "reference-data",
+      "ndap",
+      "python"
     ],
     "all_tags": [
-      "data-science",
+      "data-analytics",
+      "automation",
       "healthcare",
-      "reference-data",
-      "python",
       "healthcare-insights",
-      "ndap",
       "ndr",
-      "data-analytics"
+      "reference-data",
+      "ndap",
+      "python"
     ],
     "quality_score": 85,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:13.435529"
+    "last_updated": "2025-11-23T06:05:22.241976"
   },
   {
     "id": 1067946563,
@@ -5371,17 +5372,17 @@
     "custom_properties": {},
     "generated_tags": [
       "comprehensive",
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
+      "healthcare",
       "comprehensive",
-      "healthcare"
+      "nhs-wales"
     ],
     "quality_score": 85,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:16.589262"
+    "last_updated": "2025-11-23T06:05:24.544090"
   },
   {
     "id": 1078283587,
@@ -5513,19 +5514,19 @@
     "custom_properties": {},
     "generated_tags": [
       "comprehensive",
-      "nhs-wales",
+      "community-validated",
       "healthcare",
-      "community-validated"
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
-      "comprehensive",
       "healthcare",
-      "community-validated"
+      "community-validated",
+      "comprehensive",
+      "nhs-wales"
     ],
     "quality_score": 83,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:13.435541"
+    "last_updated": "2025-11-23T06:05:22.241988"
   },
   {
     "id": 926605754,
@@ -5657,19 +5658,19 @@
     "custom_properties": {},
     "generated_tags": [
       "comprehensive",
-      "nhs-wales",
+      "community-validated",
       "healthcare",
-      "community-validated"
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
-      "comprehensive",
       "healthcare",
-      "community-validated"
+      "community-validated",
+      "comprehensive",
+      "nhs-wales"
     ],
     "quality_score": 83,
     "featured": true,
-    "last_updated": "2025-11-22T06:04:58.711118"
+    "last_updated": "2025-11-23T06:05:10.081744"
   },
   {
     "id": 932640571,
@@ -5797,28 +5798,28 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "comprehensive",
-      "healthcare-insights",
-      "dotnet",
-      "community-validated",
       "data-analytics",
+      "healthcare",
+      "community-validated",
+      "healthcare-insights",
+      "comprehensive",
       "csharp",
+      "dotnet",
       "microsoft-stack"
     ],
     "all_tags": [
-      "comprehensive",
+      "data-analytics",
+      "community-validated",
       "healthcare",
       "healthcare-insights",
-      "community-validated",
-      "dotnet",
-      "data-analytics",
+      "comprehensive",
       "csharp",
+      "dotnet",
       "microsoft-stack"
     ],
     "quality_score": 83,
     "featured": true,
-    "last_updated": "2025-11-22T06:04:58.711154"
+    "last_updated": "2025-11-23T06:05:10.081781"
   },
   {
     "id": 927665127,
@@ -5946,28 +5947,28 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "oral-health",
       "healthcare",
-      "dotnet",
-      "dental-services",
       "community-validated",
+      "dental-services",
+      "oral-health",
       "csharp",
+      "dotnet",
       "microsoft-stack",
       "nhs-wales"
     ],
     "all_tags": [
-      "oral-health",
-      "healthcare",
       "community-validated",
+      "healthcare",
       "dental-services",
-      "dotnet",
+      "oral-health",
       "csharp",
+      "dotnet",
       "microsoft-stack",
       "nhs-wales"
     ],
     "quality_score": 83,
     "featured": true,
-    "last_updated": "2025-11-22T06:04:58.711142"
+    "last_updated": "2025-11-23T06:05:10.081769"
   },
   {
     "id": 1066324372,
@@ -6098,26 +6099,26 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "user-experience",
       "healthcare",
-      "frontend",
-      "comprehensive",
       "community-validated",
+      "comprehensive",
+      "frontend",
+      "user-experience",
       "web-interface",
       "nhs-wales"
     ],
     "all_tags": [
-      "user-experience",
-      "comprehensive",
-      "healthcare",
-      "frontend",
       "community-validated",
+      "healthcare",
+      "comprehensive",
+      "frontend",
+      "user-experience",
       "web-interface",
       "nhs-wales"
     ],
     "quality_score": 81,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:11.094573"
+    "last_updated": "2025-11-23T06:05:20.304007"
   },
   {
     "id": 895529734,
@@ -6248,26 +6249,26 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "data-science",
-      "healthcare",
-      "python",
-      "healthcare-insights",
       "data-analytics",
       "automation",
+      "healthcare",
+      "healthcare-insights",
+      "python",
+      "data-science",
       "nhs-wales"
     ],
     "all_tags": [
-      "data-science",
-      "healthcare",
-      "python",
-      "healthcare-insights",
       "data-analytics",
       "automation",
+      "healthcare",
+      "healthcare-insights",
+      "python",
+      "data-science",
       "nhs-wales"
     ],
     "quality_score": 80,
     "featured": true,
-    "last_updated": "2025-11-22T06:04:58.711081"
+    "last_updated": "2025-11-23T06:05:10.081709"
   },
   {
     "id": 1093386271,
@@ -6398,16 +6399,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "quality_score": 80,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:06.889688"
+    "last_updated": "2025-11-23T06:05:17.167163"
   },
   {
     "id": 1089541551,
@@ -6538,22 +6539,22 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "data-science",
+      "automation",
       "healthcare",
       "python",
-      "automation",
+      "data-science",
       "nhs-wales"
     ],
     "all_tags": [
-      "data-science",
+      "automation",
       "healthcare",
       "python",
-      "automation",
+      "data-science",
       "nhs-wales"
     ],
     "quality_score": 80,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:06.889678"
+    "last_updated": "2025-11-23T06:05:17.167153"
   },
   {
     "id": 1089624758,
@@ -6684,20 +6685,20 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
+      "data-analytics",
       "healthcare-insights",
       "healthcare",
-      "data-analytics"
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
+      "data-analytics",
       "healthcare-insights",
       "healthcare",
-      "data-analytics"
+      "nhs-wales"
     ],
     "quality_score": 80,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:13.435566"
+    "last_updated": "2025-11-23T06:05:22.242014"
   },
   {
     "id": 1090200920,
@@ -6828,22 +6829,22 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "comprehensive",
+      "data-analytics",
       "healthcare",
       "healthcare-insights",
-      "data-analytics",
+      "comprehensive",
       "nhs-wales"
     ],
     "all_tags": [
-      "comprehensive",
+      "data-analytics",
       "healthcare",
       "healthcare-insights",
-      "data-analytics",
+      "comprehensive",
       "nhs-wales"
     ],
     "quality_score": 80,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:13.435612"
+    "last_updated": "2025-11-23T06:05:22.242038"
   },
   {
     "id": 1040044412,
@@ -6980,22 +6981,22 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
       "docker",
-      "containerization",
+      "healthcare",
       "deployment",
+      "containerization",
       "nhs-wales"
     ],
     "all_tags": [
       "docker",
       "healthcare",
-      "containerization",
       "deployment",
+      "containerization",
       "nhs-wales"
     ],
     "quality_score": 80,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:00.001891"
+    "last_updated": "2025-11-23T06:05:11.075516"
   },
   {
     "id": 1008956852,
@@ -7132,16 +7133,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "quality_score": 80,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:00.001841"
+    "last_updated": "2025-11-23T06:05:11.075466"
   },
   {
     "id": 1086433483,
@@ -7272,16 +7273,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "quality_score": 80,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:11.094620"
+    "last_updated": "2025-11-23T06:05:20.304030"
   },
   {
     "id": 1019572152,
@@ -7418,22 +7419,22 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "data-science",
+      "automation",
       "healthcare",
       "python",
-      "automation",
+      "data-science",
       "nhs-wales"
     ],
     "all_tags": [
-      "data-science",
+      "automation",
       "healthcare",
       "python",
-      "automation",
+      "data-science",
       "nhs-wales"
     ],
     "quality_score": 80,
     "featured": true,
-    "last_updated": "2025-11-22T06:04:57.147987"
+    "last_updated": "2025-11-23T06:05:08.686007"
   },
   {
     "id": 1030542964,
@@ -7564,20 +7565,20 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "nhs-wales",
       "system-integration",
-      "interoperability"
+      "interoperability",
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
       "system-integration",
+      "interoperability",
       "healthcare",
-      "interoperability"
+      "nhs-wales"
     ],
     "quality_score": 80,
     "featured": true,
-    "last_updated": "2025-11-22T06:04:55.734818"
+    "last_updated": "2025-11-23T06:05:07.449539"
   },
   {
     "id": 1070625498,
@@ -7714,29 +7715,29 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "data-science",
-      "healthcare",
-      "python",
-      "healthcare-insights",
-      "ssnap",
       "gcp-cloud-functions",
+      "data-analytics",
+      "automation",
+      "healthcare",
+      "ssnap",
+      "healthcare-insights",
       "etl",
-      "webscraper"
+      "gcp"
     ],
     "all_tags": [
-      "data-science",
-      "healthcare",
-      "python",
-      "healthcare-insights",
-      "ssnap",
       "gcp-cloud-functions",
+      "data-analytics",
+      "automation",
+      "healthcare",
+      "ssnap",
+      "healthcare-insights",
       "etl",
-      "webscraper",
-      "gcp"
+      "gcp",
+      "webscraper"
     ],
     "quality_score": 80,
     "featured": true,
-    "last_updated": "2025-11-22T06:04:55.734919"
+    "last_updated": "2025-11-23T06:05:07.449640"
   },
   {
     "id": 787322115,
@@ -7867,22 +7868,22 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "comprehensive",
+      "data-analytics",
       "healthcare",
       "healthcare-insights",
-      "data-analytics",
+      "comprehensive",
       "nhs-wales"
     ],
     "all_tags": [
-      "comprehensive",
+      "data-analytics",
       "healthcare",
       "healthcare-insights",
-      "data-analytics",
+      "comprehensive",
       "nhs-wales"
     ],
     "quality_score": 80,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:06.889432"
+    "last_updated": "2025-11-23T06:05:17.166923"
   },
   {
     "id": 879827667,
@@ -8014,17 +8015,17 @@
     "custom_properties": {},
     "generated_tags": [
       "comprehensive",
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
+      "healthcare",
       "comprehensive",
-      "healthcare"
+      "nhs-wales"
     ],
     "quality_score": 80,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:06.889454"
+    "last_updated": "2025-11-23T06:05:17.166946"
   },
   {
     "id": 840257435,
@@ -8155,22 +8156,22 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "data-science",
+      "automation",
       "healthcare",
       "python",
-      "automation",
+      "data-science",
       "nhs-wales"
     ],
     "all_tags": [
-      "data-science",
+      "automation",
       "healthcare",
       "python",
-      "automation",
+      "data-science",
       "nhs-wales"
     ],
     "quality_score": 80,
     "featured": true,
-    "last_updated": "2025-11-22T06:04:58.711053"
+    "last_updated": "2025-11-23T06:05:10.081681"
   },
   {
     "id": 952604707,
@@ -8301,22 +8302,22 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
       "community-validated",
-      "nhs-wales",
+      "healthcare",
       "system-integration",
-      "interoperability"
+      "interoperability",
+      "nhs-wales"
     ],
     "all_tags": [
       "healthcare",
       "community-validated",
-      "nhs-wales",
       "system-integration",
-      "interoperability"
+      "interoperability",
+      "nhs-wales"
     ],
     "quality_score": 78,
     "featured": true,
-    "last_updated": "2025-11-22T06:04:58.711223"
+    "last_updated": "2025-11-23T06:05:10.081850"
   },
   {
     "id": 820424497,
@@ -8453,28 +8454,28 @@
     },
     "custom_properties": {},
     "generated_tags": [
+      "starter-kit",
+      "guide",
       "healthcare",
       "training-materials",
       "community-validated",
-      "training",
-      "guide",
       "onboarding",
-      "starter-kit",
+      "training",
       "nhs-wales"
     ],
     "all_tags": [
+      "starter-kit",
+      "guide",
       "healthcare",
       "training-materials",
       "community-validated",
-      "training",
-      "guide",
       "onboarding",
-      "starter-kit",
+      "training",
       "nhs-wales"
     ],
     "quality_score": 78,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:00.001771"
+    "last_updated": "2025-11-23T06:05:11.075398"
   },
   {
     "id": 563783709,
@@ -8617,33 +8618,33 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "internal",
-      "information-governance",
-      "open-source",
-      "healthcare",
-      "community-validated",
+      "training",
       "data",
-      "private",
-      "guide"
+      "guide",
+      "healthcare",
+      "information-governance",
+      "community-validated",
+      "internal",
+      "open-source"
     ],
     "all_tags": [
-      "internal",
-      "information-governance",
-      "open-source",
-      "healthcare",
-      "community-validated",
-      "data",
-      "private",
-      "guide",
-      "ig",
       "training",
+      "data",
+      "guide",
+      "healthcare",
+      "information-governance",
+      "community-validated",
+      "internal",
+      "open-source",
+      "ig",
+      "private",
+      "information",
       "public",
-      "document",
-      "information"
+      "document"
     ],
     "quality_score": 78,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:00.001719"
+    "last_updated": "2025-11-23T06:05:11.075347"
   },
   {
     "id": 852710501,
@@ -8774,24 +8775,24 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "user-experience",
       "healthcare",
-      "frontend",
       "community-validated",
+      "frontend",
+      "user-experience",
       "web-interface",
       "nhs-wales"
     ],
     "all_tags": [
-      "user-experience",
+      "community-validated",
       "healthcare",
       "frontend",
-      "community-validated",
+      "user-experience",
       "web-interface",
       "nhs-wales"
     ],
     "quality_score": 78,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:00.001783"
+    "last_updated": "2025-11-23T06:05:11.075411"
   },
   {
     "id": 950581782,
@@ -8925,26 +8926,26 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "user-experience",
       "healthcare",
-      "frontend",
-      "comprehensive",
       "community-validated",
+      "comprehensive",
+      "frontend",
+      "user-experience",
       "web-interface",
       "nhs-wales"
     ],
     "all_tags": [
-      "user-experience",
-      "comprehensive",
-      "healthcare",
-      "frontend",
       "community-validated",
+      "healthcare",
+      "comprehensive",
+      "frontend",
+      "user-experience",
       "web-interface",
       "nhs-wales"
     ],
     "quality_score": 78,
     "featured": true,
-    "last_updated": "2025-11-22T06:04:58.711213"
+    "last_updated": "2025-11-23T06:05:10.081839"
   },
   {
     "id": 948501884,
@@ -9072,24 +9073,24 @@
     },
     "custom_properties": {},
     "generated_tags": [
+      "community-validated",
       "healthcare",
       "comprehensive",
       "clinical",
-      "community-validated",
-      "nhs-wales",
-      "patient-care"
+      "patient-care",
+      "nhs-wales"
     ],
     "all_tags": [
-      "comprehensive",
       "healthcare",
-      "clinical",
       "community-validated",
-      "nhs-wales",
-      "patient-care"
+      "comprehensive",
+      "clinical",
+      "patient-care",
+      "nhs-wales"
     ],
     "quality_score": 78,
     "featured": true,
-    "last_updated": "2025-11-22T06:04:58.711202"
+    "last_updated": "2025-11-23T06:05:10.081829"
   },
   {
     "id": 856254823,
@@ -9221,19 +9222,19 @@
     "custom_properties": {},
     "generated_tags": [
       "comprehensive",
-      "nhs-wales",
+      "community-validated",
       "healthcare",
-      "community-validated"
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
-      "comprehensive",
       "healthcare",
-      "community-validated"
+      "community-validated",
+      "comprehensive",
+      "nhs-wales"
     ],
     "quality_score": 78,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:08.831475"
+    "last_updated": "2025-11-23T06:05:18.680638"
   },
   {
     "id": 1099883304,
@@ -9364,24 +9365,24 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
       "monitoring",
-      "emergency-department",
-      "visualization",
       "urgent-care",
+      "healthcare",
+      "visualization",
+      "emergency-department",
       "nhs-wales"
     ],
     "all_tags": [
-      "healthcare",
       "monitoring",
-      "emergency-department",
-      "visualization",
       "urgent-care",
+      "healthcare",
+      "visualization",
+      "emergency-department",
       "nhs-wales"
     ],
     "quality_score": 75,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:08.831489"
+    "last_updated": "2025-11-23T06:05:18.680665"
   },
   {
     "id": 955877979,
@@ -9515,19 +9516,19 @@
       "healthcare",
       "r",
       "statistical-analysis",
-      "nhs-wales",
-      "research"
+      "research",
+      "nhs-wales"
     ],
     "all_tags": [
       "healthcare",
       "r",
       "statistical-analysis",
-      "nhs-wales",
-      "research"
+      "research",
+      "nhs-wales"
     ],
     "quality_score": 75,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:16.589167"
+    "last_updated": "2025-11-23T06:05:24.543897"
   },
   {
     "id": 1076096902,
@@ -9664,16 +9665,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "quality_score": 75,
     "featured": true,
-    "last_updated": "2025-11-22T06:04:55.734930"
+    "last_updated": "2025-11-23T06:05:07.449652"
   },
   {
     "id": 1086579108,
@@ -9804,16 +9805,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "quality_score": 75,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:06.889655"
+    "last_updated": "2025-11-23T06:05:17.167131"
   },
   {
     "id": 1090186206,
@@ -9944,16 +9945,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "quality_score": 75,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:13.435579"
+    "last_updated": "2025-11-23T06:05:22.242027"
   },
   {
     "id": 784228794,
@@ -10085,17 +10086,17 @@
     "custom_properties": {},
     "generated_tags": [
       "comprehensive",
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
+      "healthcare",
       "comprehensive",
-      "healthcare"
+      "nhs-wales"
     ],
     "quality_score": 75,
     "featured": true,
-    "last_updated": "2025-11-22T06:04:55.734762"
+    "last_updated": "2025-11-23T06:05:07.449489"
   },
   {
     "id": 1034555443,
@@ -10226,20 +10227,20 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
+      "data-analytics",
       "healthcare-insights",
       "healthcare",
-      "data-analytics"
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
+      "data-analytics",
       "healthcare-insights",
       "healthcare",
-      "data-analytics"
+      "nhs-wales"
     ],
     "quality_score": 75,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:06.889559"
+    "last_updated": "2025-11-23T06:05:17.167053"
   },
   {
     "id": 1062010005,
@@ -10377,28 +10378,28 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "powerbi",
-      "instructions",
       "guide",
-      "training",
+      "powerbi",
       "quickstart",
-      "nhs-wales",
-      "power-bi"
+      "healthcare",
+      "instructions",
+      "power-bi",
+      "training",
+      "nhs-wales"
     ],
     "all_tags": [
-      "healthcare",
-      "powerbi",
-      "instructions",
       "guide",
-      "training",
+      "powerbi",
       "quickstart",
-      "nhs-wales",
-      "power-bi"
+      "healthcare",
+      "instructions",
+      "power-bi",
+      "training",
+      "nhs-wales"
     ],
     "quality_score": 75,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:00.001943"
+    "last_updated": "2025-11-23T06:05:11.075569"
   },
   {
     "id": 1061985954,
@@ -10537,29 +10538,28 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
+      "guide",
       "healthcare",
       "training-materials",
-      "programming",
-      "training",
-      "guide",
-      "introduction",
-      "virtual-machine"
-    ],
-    "all_tags": [
-      "nhs-wales",
-      "healthcare",
-      "training-materials",
-      "programming",
-      "training",
-      "guide",
       "introduction",
       "virtual-machine",
-      "materials"
+      "materials",
+      "programming",
+      "training"
+    ],
+    "all_tags": [
+      "guide",
+      "healthcare",
+      "training-materials",
+      "introduction",
+      "virtual-machine",
+      "materials",
+      "programming",
+      "training"
     ],
     "quality_score": 75,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:00.001929"
+    "last_updated": "2025-11-23T06:05:11.075555"
   },
   {
     "id": 995312214,
@@ -10694,20 +10694,20 @@
       "comprehensive",
       "r",
       "statistical-analysis",
-      "nhs-wales",
-      "research"
+      "research",
+      "nhs-wales"
     ],
     "all_tags": [
-      "comprehensive",
       "healthcare",
+      "comprehensive",
       "r",
       "statistical-analysis",
-      "nhs-wales",
-      "research"
+      "research",
+      "nhs-wales"
     ],
     "quality_score": 75,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:16.589200"
+    "last_updated": "2025-11-23T06:05:24.543951"
   },
   {
     "id": 1047146485,
@@ -10839,17 +10839,17 @@
     "custom_properties": {},
     "generated_tags": [
       "comprehensive",
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
+      "healthcare",
       "comprehensive",
-      "healthcare"
+      "nhs-wales"
     ],
     "quality_score": 75,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:09.741808"
+    "last_updated": "2025-11-23T06:05:19.373518"
   },
   {
     "id": 1026176383,
@@ -10987,30 +10987,29 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "data-loader",
-      "nhs-wales",
-      "healthcare",
-      "google-cloud-platform",
-      "python",
-      "healthcare-insights",
-      "etl",
-      "data-analytics"
-    ],
-    "all_tags": [
-      "data-loader",
-      "nhs-wales",
-      "healthcare",
-      "google-cloud-platform",
-      "python",
-      "healthcare-insights",
-      "etl",
       "data-analytics",
       "terraform",
-      "gcp"
+      "healthcare",
+      "healthcare-insights",
+      "etl",
+      "google-cloud-platform",
+      "gcp",
+      "python"
+    ],
+    "all_tags": [
+      "data-analytics",
+      "terraform",
+      "healthcare",
+      "healthcare-insights",
+      "etl",
+      "google-cloud-platform",
+      "gcp",
+      "python",
+      "data-loader"
     ],
     "quality_score": 75,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:06.889536"
+    "last_updated": "2025-11-23T06:05:17.167030"
   },
   {
     "id": 935344854,
@@ -11139,27 +11138,27 @@
     "custom_properties": {},
     "generated_tags": [
       "healthcare",
-      "comprehensive",
-      "dotnet",
-      "csharp",
-      "microsoft-stack",
-      "nhs-wales",
       "system-integration",
-      "interoperability"
+      "comprehensive",
+      "interoperability",
+      "csharp",
+      "dotnet",
+      "microsoft-stack",
+      "nhs-wales"
     ],
     "all_tags": [
-      "comprehensive",
       "healthcare",
-      "dotnet",
-      "csharp",
-      "microsoft-stack",
-      "nhs-wales",
       "system-integration",
-      "interoperability"
+      "comprehensive",
+      "interoperability",
+      "csharp",
+      "dotnet",
+      "microsoft-stack",
+      "nhs-wales"
     ],
     "quality_score": 75,
     "featured": true,
-    "last_updated": "2025-11-22T06:04:58.711167"
+    "last_updated": "2025-11-23T06:05:10.081795"
   },
   {
     "id": 838781190,
@@ -11290,22 +11289,22 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "data-science",
+      "automation",
       "healthcare",
       "python",
-      "automation",
+      "data-science",
       "nhs-wales"
     ],
     "all_tags": [
-      "data-science",
+      "automation",
       "healthcare",
       "python",
-      "automation",
+      "data-science",
       "nhs-wales"
     ],
     "quality_score": 75,
     "featured": true,
-    "last_updated": "2025-11-22T06:04:58.711030"
+    "last_updated": "2025-11-23T06:05:10.081658"
   },
   {
     "id": 453968456,
@@ -11436,28 +11435,28 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "data-science",
-      "healthcare",
-      "comprehensive",
-      "python",
-      "healthcare-insights",
       "data-analytics",
       "automation",
+      "healthcare",
+      "healthcare-insights",
+      "comprehensive",
+      "python",
+      "data-science",
       "nhs-wales"
     ],
     "all_tags": [
-      "data-science",
-      "comprehensive",
-      "healthcare",
-      "python",
-      "healthcare-insights",
       "data-analytics",
       "automation",
+      "healthcare",
+      "healthcare-insights",
+      "comprehensive",
+      "python",
+      "data-science",
       "nhs-wales"
     ],
     "quality_score": 75,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:06.889383"
+    "last_updated": "2025-11-23T06:05:17.166874"
   },
   {
     "id": 1067941096,
@@ -11592,24 +11591,24 @@
     },
     "custom_properties": {},
     "generated_tags": [
+      "guide",
       "healthcare",
       "community-validated",
       "git",
-      "guide",
-      "nhs-wales",
-      "on-premise"
+      "on-premise",
+      "nhs-wales"
     ],
     "all_tags": [
-      "healthcare",
-      "community-validated",
-      "git",
       "guide",
-      "nhs-wales",
-      "on-premise"
+      "community-validated",
+      "healthcare",
+      "git",
+      "on-premise",
+      "nhs-wales"
     ],
     "quality_score": 73,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:00.001977"
+    "last_updated": "2025-11-23T06:05:11.075602"
   },
   {
     "id": 557937328,
@@ -11751,35 +11750,33 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "analytics",
-      "reference",
-      "web-development",
+      "data",
+      "pages",
       "project",
-      "frontend",
-      "nhs-wales",
-      "healthcare",
-      "community-validated"
-    ],
-    "all_tags": [
-      "analytics",
-      "reference",
-      "web-development",
-      "project",
-      "frontend",
-      "nhs-wales",
       "healthcare",
       "community-validated",
-      "data",
-      "nhs",
-      "api",
-      "pages",
-      "list",
       "demonstration",
-      "wales"
+      "reference",
+      "javascript"
+    ],
+    "all_tags": [
+      "data",
+      "pages",
+      "project",
+      "healthcare",
+      "community-validated",
+      "demonstration",
+      "reference",
+      "javascript",
+      "list",
+      "wales",
+      "api",
+      "analytics",
+      "nhs"
     ],
     "quality_score": 73,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:00.001706"
+    "last_updated": "2025-11-23T06:05:11.075333"
   },
   {
     "id": 1017943608,
@@ -11910,24 +11907,24 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "devops",
-      "scripting",
-      "community-validated",
       "automation",
+      "healthcare",
+      "community-validated",
+      "scripting",
+      "devops",
       "nhs-wales"
     ],
     "all_tags": [
-      "healthcare",
-      "devops",
-      "scripting",
-      "community-validated",
       "automation",
+      "community-validated",
+      "healthcare",
+      "scripting",
+      "devops",
       "nhs-wales"
     ],
     "quality_score": 73,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:00.001852"
+    "last_updated": "2025-11-23T06:05:11.075478"
   },
   {
     "id": 1031857415,
@@ -12058,24 +12055,24 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "data-science",
-      "healthcare",
-      "python",
-      "community-validated",
       "automation",
+      "healthcare",
+      "community-validated",
+      "python",
+      "data-science",
       "nhs-wales"
     ],
     "all_tags": [
-      "data-science",
+      "automation",
+      "community-validated",
       "healthcare",
       "python",
-      "community-validated",
-      "automation",
+      "data-science",
       "nhs-wales"
     ],
     "quality_score": 73,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:00.001880"
+    "last_updated": "2025-11-23T06:05:11.075504"
   },
   {
     "id": 935347503,
@@ -12209,28 +12206,28 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "backend",
       "healthcare",
-      "enterprise",
       "community-validated",
-      "nhs-wales",
       "system-integration",
+      "backend",
       "interoperability",
-      "java"
+      "enterprise",
+      "java",
+      "nhs-wales"
     ],
     "all_tags": [
-      "backend",
-      "healthcare",
-      "enterprise",
       "community-validated",
-      "nhs-wales",
+      "healthcare",
       "system-integration",
+      "backend",
       "interoperability",
-      "java"
+      "enterprise",
+      "java",
+      "nhs-wales"
     ],
     "quality_score": 73,
     "featured": true,
-    "last_updated": "2025-11-22T06:04:58.711179"
+    "last_updated": "2025-11-23T06:05:10.081805"
   },
   {
     "id": 546004180,
@@ -12365,24 +12362,24 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
+      "jupyter-notebook",
       "healthcare",
       "community-validated",
       "jupyter",
       "jupyter-notebooks",
-      "jupyter-notebook"
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
-      "healthcare",
       "community-validated",
+      "jupyter-notebook",
+      "healthcare",
       "jupyter",
       "jupyter-notebooks",
-      "jupyter-notebook"
+      "nhs-wales"
     ],
     "quality_score": 73,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:00.001679"
+    "last_updated": "2025-11-23T06:05:11.075306"
   },
   {
     "id": 1100519343,
@@ -12513,22 +12510,22 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "user-experience",
       "healthcare",
       "frontend",
+      "user-experience",
       "web-interface",
       "nhs-wales"
     ],
     "all_tags": [
-      "user-experience",
       "healthcare",
       "frontend",
       "web-interface",
+      "user-experience",
       "nhs-wales"
     ],
     "quality_score": 70,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:08.831502"
+    "last_updated": "2025-11-23T06:05:18.680685"
   },
   {
     "id": 1094542937,
@@ -12659,22 +12656,22 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "data-science",
+      "automation",
       "healthcare",
       "python",
-      "automation",
+      "data-science",
       "nhs-wales"
     ],
     "all_tags": [
-      "data-science",
+      "automation",
       "healthcare",
       "python",
-      "automation",
+      "data-science",
       "nhs-wales"
     ],
     "quality_score": 70,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:13.435631"
+    "last_updated": "2025-11-23T06:05:22.242050"
   },
   {
     "id": 1087191359,
@@ -12808,19 +12805,19 @@
       "healthcare",
       "r",
       "statistical-analysis",
-      "nhs-wales",
-      "research"
+      "research",
+      "nhs-wales"
     ],
     "all_tags": [
       "healthcare",
       "r",
       "statistical-analysis",
-      "nhs-wales",
-      "research"
+      "research",
+      "nhs-wales"
     ],
     "quality_score": 70,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:06.889667"
+    "last_updated": "2025-11-23T06:05:17.167143"
   },
   {
     "id": 1062071143,
@@ -12952,17 +12949,17 @@
     "custom_properties": {},
     "generated_tags": [
       "comprehensive",
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
+      "healthcare",
       "comprehensive",
-      "healthcare"
+      "nhs-wales"
     ],
     "quality_score": 70,
     "featured": false,
-    "last_updated": "2025-11-22T06:04:55.734881"
+    "last_updated": "2025-11-23T06:05:07.449601"
   },
   {
     "id": 1073763199,
@@ -13093,16 +13090,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "quality_score": 70,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:16.589273"
+    "last_updated": "2025-11-23T06:05:24.544150"
   },
   {
     "id": 1054985930,
@@ -13239,26 +13236,26 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "data-science",
-      "healthcare",
-      "python",
-      "healthcare-insights",
       "data-analytics",
       "automation",
+      "healthcare",
+      "healthcare-insights",
+      "python",
+      "data-science",
       "nhs-wales"
     ],
     "all_tags": [
-      "data-science",
-      "healthcare",
-      "python",
-      "healthcare-insights",
       "data-analytics",
       "automation",
+      "healthcare",
+      "healthcare-insights",
+      "python",
+      "data-science",
       "nhs-wales"
     ],
     "quality_score": 70,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:16.589252"
+    "last_updated": "2025-11-23T06:05:24.544072"
   },
   {
     "id": 1048980665,
@@ -13389,20 +13386,20 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "predictive-analytics",
-      "forecasting",
+      "healthcare",
       "nhs-wales",
-      "healthcare"
+      "predictive-analytics",
+      "forecasting"
     ],
     "all_tags": [
       "predictive-analytics",
       "forecasting",
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "quality_score": 70,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:16.589240"
+    "last_updated": "2025-11-23T06:05:24.544044"
   },
   {
     "id": 1024919065,
@@ -13540,21 +13537,21 @@
     "custom_properties": {},
     "generated_tags": [
       "healthcare",
-      "dotnet",
       "csharp",
+      "dotnet",
       "microsoft-stack",
       "nhs-wales"
     ],
     "all_tags": [
       "healthcare",
-      "dotnet",
       "csharp",
+      "dotnet",
       "microsoft-stack",
       "nhs-wales"
     ],
     "quality_score": 70,
     "featured": false,
-    "last_updated": "2025-11-22T06:04:58.711265"
+    "last_updated": "2025-11-23T06:05:10.081895"
   },
   {
     "id": 994177088,
@@ -13685,22 +13682,22 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "data-science",
+      "automation",
       "healthcare",
       "python",
-      "automation",
+      "data-science",
       "nhs-wales"
     ],
     "all_tags": [
-      "data-science",
+      "automation",
       "healthcare",
       "python",
-      "automation",
+      "data-science",
       "nhs-wales"
     ],
     "quality_score": 70,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:12.681785"
+    "last_updated": "2025-11-23T06:05:21.620919"
   },
   {
     "id": 963867867,
@@ -13831,16 +13828,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "quality_score": 70,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:12.681769"
+    "last_updated": "2025-11-23T06:05:21.620903"
   },
   {
     "id": 959800765,
@@ -13974,19 +13971,19 @@
       "healthcare",
       "r",
       "statistical-analysis",
-      "nhs-wales",
-      "research"
+      "research",
+      "nhs-wales"
     ],
     "all_tags": [
       "healthcare",
       "r",
       "statistical-analysis",
-      "nhs-wales",
-      "research"
+      "research",
+      "nhs-wales"
     ],
     "quality_score": 70,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:16.589178"
+    "last_updated": "2025-11-23T06:05:24.543916"
   },
   {
     "id": 948463370,
@@ -14118,17 +14115,17 @@
     "custom_properties": {},
     "generated_tags": [
       "comprehensive",
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
+      "healthcare",
       "comprehensive",
-      "healthcare"
+      "nhs-wales"
     ],
     "quality_score": 70,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:12.681742"
+    "last_updated": "2025-11-23T06:05:21.620878"
   },
   {
     "id": 891552371,
@@ -14259,26 +14256,26 @@
     },
     "custom_properties": {},
     "generated_tags": [
+      "data-analytics",
       "healthcare",
+      "healthcare-insights",
       "r",
       "statistical-analysis",
-      "healthcare-insights",
-      "data-analytics",
-      "nhs-wales",
-      "research"
+      "research",
+      "nhs-wales"
     ],
     "all_tags": [
+      "data-analytics",
       "healthcare",
+      "healthcare-insights",
       "r",
       "statistical-analysis",
-      "healthcare-insights",
-      "data-analytics",
-      "nhs-wales",
-      "research"
+      "research",
+      "nhs-wales"
     ],
     "quality_score": 70,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:16.589143"
+    "last_updated": "2025-11-23T06:05:24.543863"
   },
   {
     "id": 916093645,
@@ -14409,22 +14406,22 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
       "healthcare",
+      "javascript",
       "frontend",
       "web-development",
-      "javascript"
+      "nhs-wales"
     ],
     "all_tags": [
       "healthcare",
-      "web-development",
+      "javascript",
       "frontend",
-      "nhs-wales",
-      "javascript"
+      "web-development",
+      "nhs-wales"
     ],
     "quality_score": 70,
     "featured": true,
-    "last_updated": "2025-11-22T06:04:57.147935"
+    "last_updated": "2025-11-23T06:05:08.685941"
   },
   {
     "id": 918142466,
@@ -14555,20 +14552,20 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
+      "data-analytics",
       "healthcare-insights",
       "healthcare",
-      "data-analytics"
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
+      "data-analytics",
       "healthcare-insights",
       "healthcare",
-      "data-analytics"
+      "nhs-wales"
     ],
     "quality_score": 70,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:06.889480"
+    "last_updated": "2025-11-23T06:05:17.166971"
   },
   {
     "id": 883791163,
@@ -14708,19 +14705,19 @@
       "healthcare",
       "r",
       "statistical-analysis",
-      "nhs-wales",
-      "research"
+      "research",
+      "nhs-wales"
     ],
     "all_tags": [
       "healthcare",
       "r",
       "statistical-analysis",
-      "nhs-wales",
-      "research"
+      "research",
+      "nhs-wales"
     ],
     "quality_score": 70,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:16.589129"
+    "last_updated": "2025-11-23T06:05:24.543842"
   },
   {
     "id": 803284656,
@@ -14856,28 +14853,29 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "data-science",
-      "healthcare",
-      "python",
-      "healthcare-insights",
+      "data-analytics",
+      "automation",
       "data",
+      "healthcare",
       "api-client",
+      "healthcare-insights",
       "deprecated-repo",
-      "stats-wales"
+      "nhs-wales"
     ],
     "all_tags": [
-      "data-science",
-      "healthcare",
-      "python",
-      "healthcare-insights",
+      "data-analytics",
+      "automation",
       "data",
+      "healthcare",
       "api-client",
+      "healthcare-insights",
       "deprecated-repo",
+      "nhs-wales",
       "stats-wales"
     ],
     "quality_score": 70,
     "featured": false,
-    "last_updated": "2025-11-22T06:04:54.586398"
+    "last_updated": "2025-11-23T06:05:06.551738"
   },
   {
     "id": 644321462,
@@ -15014,22 +15012,22 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "user-experience",
       "healthcare",
       "frontend",
+      "user-experience",
       "web-interface",
       "nhs-wales"
     ],
     "all_tags": [
-      "user-experience",
       "healthcare",
       "frontend",
       "web-interface",
+      "user-experience",
       "nhs-wales"
     ],
     "quality_score": 70,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:08.831429"
+    "last_updated": "2025-11-23T06:05:18.680559"
   },
   {
     "id": 739425344,
@@ -15157,24 +15155,24 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "data-science",
-      "healthcare",
-      "python",
-      "community-validated",
       "automation",
+      "healthcare",
+      "community-validated",
+      "python",
+      "data-science",
       "nhs-wales"
     ],
     "all_tags": [
-      "data-science",
+      "automation",
+      "community-validated",
       "healthcare",
       "python",
-      "community-validated",
-      "automation",
+      "data-science",
       "nhs-wales"
     ],
     "quality_score": 69,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:16.589104"
+    "last_updated": "2025-11-23T06:05:24.543805"
   },
   {
     "id": 1094175315,
@@ -15305,18 +15303,18 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
+      "community-validated",
       "healthcare",
-      "community-validated"
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
       "healthcare",
-      "community-validated"
+      "community-validated",
+      "nhs-wales"
     ],
     "quality_score": 68,
     "featured": true,
-    "last_updated": "2025-11-22T06:04:55.734954"
+    "last_updated": "2025-11-23T06:05:07.449674"
   },
   {
     "id": 951185214,
@@ -15447,18 +15445,18 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
+      "community-validated",
       "healthcare",
-      "community-validated"
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
       "healthcare",
-      "community-validated"
+      "community-validated",
+      "nhs-wales"
     ],
     "quality_score": 68,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:00.001805"
+    "last_updated": "2025-11-23T06:05:11.075433"
   },
   {
     "id": 502914984,
@@ -15589,24 +15587,24 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "user-experience",
       "healthcare",
-      "frontend",
       "community-validated",
+      "frontend",
+      "user-experience",
       "web-interface",
       "nhs-wales"
     ],
     "all_tags": [
-      "user-experience",
+      "community-validated",
       "healthcare",
       "frontend",
-      "community-validated",
+      "user-experience",
       "web-interface",
       "nhs-wales"
     ],
     "quality_score": 68,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:00.001653"
+    "last_updated": "2025-11-23T06:05:11.075279"
   },
   {
     "id": 557935466,
@@ -15742,26 +15740,26 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
-      "reference",
+      "resources",
+      "guidance",
       "healthcare",
       "community-validated",
-      "guidance",
+      "reference",
       "guides",
-      "resources"
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
-      "reference",
+      "resources",
       "healthcare",
-      "community-validated",
       "guidance",
+      "community-validated",
+      "reference",
       "guides",
-      "resources"
+      "nhs-wales"
     ],
     "quality_score": 68,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:00.001693"
+    "last_updated": "2025-11-23T06:05:11.075320"
   },
   {
     "id": 1100528573,
@@ -15898,20 +15896,20 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
+      "data-analytics",
       "healthcare-insights",
       "healthcare",
-      "data-analytics"
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
+      "data-analytics",
       "healthcare-insights",
       "healthcare",
-      "data-analytics"
+      "nhs-wales"
     ],
     "quality_score": 65,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:16.589307"
+    "last_updated": "2025-11-23T06:05:24.544222"
   },
   {
     "id": 1098168351,
@@ -16042,16 +16040,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "quality_score": 65,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:06.889698"
+    "last_updated": "2025-11-23T06:05:17.167173"
   },
   {
     "id": 1095819110,
@@ -16182,16 +16180,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "quality_score": 65,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:16.589295"
+    "last_updated": "2025-11-23T06:05:24.544201"
   },
   {
     "id": 1094236860,
@@ -16322,16 +16320,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "quality_score": 65,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:09.741820"
+    "last_updated": "2025-11-23T06:05:19.373539"
   },
   {
     "id": 784146843,
@@ -16463,17 +16461,17 @@
     "custom_properties": {},
     "generated_tags": [
       "comprehensive",
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
+      "healthcare",
       "comprehensive",
-      "healthcare"
+      "nhs-wales"
     ],
     "quality_score": 65,
     "featured": false,
-    "last_updated": "2025-11-22T06:04:55.734735"
+    "last_updated": "2025-11-23T06:05:07.449463"
   },
   {
     "id": 1065978764,
@@ -16604,16 +16602,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "quality_score": 65,
     "featured": false,
-    "last_updated": "2025-11-22T06:04:55.734894"
+    "last_updated": "2025-11-23T06:05:07.449614"
   },
   {
     "id": 1029106883,
@@ -16747,19 +16745,19 @@
       "healthcare",
       "r",
       "statistical-analysis",
-      "nhs-wales",
-      "research"
+      "research",
+      "nhs-wales"
     ],
     "all_tags": [
       "healthcare",
       "r",
       "statistical-analysis",
-      "nhs-wales",
-      "research"
+      "research",
+      "nhs-wales"
     ],
     "quality_score": 65,
     "featured": true,
-    "last_updated": "2025-11-22T06:05:16.589228"
+    "last_updated": "2025-11-23T06:05:24.544020"
   },
   {
     "id": 1049706488,
@@ -16890,16 +16888,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "quality_score": 65,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:06.889571"
+    "last_updated": "2025-11-23T06:05:17.167064"
   },
   {
     "id": 1023611608,
@@ -17036,16 +17034,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "quality_score": 65,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:09.741783"
+    "last_updated": "2025-11-23T06:05:19.373478"
   },
   {
     "id": 982696108,
@@ -17179,19 +17177,19 @@
       "healthcare",
       "r",
       "statistical-analysis",
-      "nhs-wales",
-      "research"
+      "research",
+      "nhs-wales"
     ],
     "all_tags": [
       "healthcare",
       "r",
       "statistical-analysis",
-      "nhs-wales",
-      "research"
+      "research",
+      "nhs-wales"
     ],
     "quality_score": 65,
     "featured": false,
-    "last_updated": "2025-11-22T06:04:58.711254"
+    "last_updated": "2025-11-23T06:05:10.081883"
   },
   {
     "id": 976001071,
@@ -17322,16 +17320,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "quality_score": 65,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:16.589189"
+    "last_updated": "2025-11-23T06:05:24.543934"
   },
   {
     "id": 921708979,
@@ -17465,19 +17463,19 @@
       "healthcare",
       "r",
       "statistical-analysis",
-      "nhs-wales",
-      "research"
+      "research",
+      "nhs-wales"
     ],
     "all_tags": [
       "healthcare",
       "r",
       "statistical-analysis",
-      "nhs-wales",
-      "research"
+      "research",
+      "nhs-wales"
     ],
     "quality_score": 65,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:06.889492"
+    "last_updated": "2025-11-23T06:05:17.166985"
   },
   {
     "id": 895459728,
@@ -17605,16 +17603,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "quality_score": 65,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:06.889466"
+    "last_updated": "2025-11-23T06:05:17.166958"
   },
   {
     "id": 844437628,
@@ -17745,24 +17743,24 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "data-science",
+      "automation",
       "healthcare",
       "comprehensive",
       "python",
-      "automation",
+      "data-science",
       "nhs-wales"
     ],
     "all_tags": [
-      "data-science",
-      "comprehensive",
-      "healthcare",
-      "python",
       "automation",
+      "healthcare",
+      "comprehensive",
+      "python",
+      "data-science",
       "nhs-wales"
     ],
     "quality_score": 65,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:08.117009"
+    "last_updated": "2025-11-23T06:05:18.074413"
   },
   {
     "id": 840258520,
@@ -17893,16 +17891,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "quality_score": 65,
     "featured": false,
-    "last_updated": "2025-11-22T06:04:58.711068"
+    "last_updated": "2025-11-23T06:05:10.081696"
   },
   {
     "id": 496602942,
@@ -18033,22 +18031,22 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "user-experience",
       "healthcare",
       "frontend",
+      "user-experience",
       "web-interface",
       "nhs-wales"
     ],
     "all_tags": [
-      "user-experience",
       "healthcare",
       "frontend",
       "web-interface",
+      "user-experience",
       "nhs-wales"
     ],
     "quality_score": 65,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:00.001626"
+    "last_updated": "2025-11-23T06:05:11.075249"
   },
   {
     "id": 783744958,
@@ -18180,19 +18178,19 @@
     "custom_properties": {},
     "generated_tags": [
       "comprehensive",
-      "nhs-wales",
+      "community-validated",
       "healthcare",
-      "community-validated"
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
-      "comprehensive",
       "healthcare",
-      "community-validated"
+      "community-validated",
+      "comprehensive",
+      "nhs-wales"
     ],
     "quality_score": 63,
     "featured": false,
-    "last_updated": "2025-11-22T06:04:55.734694"
+    "last_updated": "2025-11-23T06:05:07.449423"
   },
   {
     "id": 1062011463,
@@ -18323,18 +18321,18 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
+      "community-validated",
       "healthcare",
-      "community-validated"
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
       "healthcare",
-      "community-validated"
+      "community-validated",
+      "nhs-wales"
     ],
     "quality_score": 63,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:00.001953"
+    "last_updated": "2025-11-23T06:05:11.075579"
   },
   {
     "id": 788957266,
@@ -18465,18 +18463,18 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
+      "community-validated",
       "healthcare",
-      "community-validated"
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
       "healthcare",
-      "community-validated"
+      "community-validated",
+      "nhs-wales"
     ],
     "quality_score": 63,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:00.001749"
+    "last_updated": "2025-11-23T06:05:11.075376"
   },
   {
     "id": 567253095,
@@ -18607,28 +18605,28 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "data-science",
-      "healthcare",
-      "predictive-analytics",
-      "forecasting",
-      "python",
-      "community-validated",
       "automation",
+      "predictive-analytics",
+      "healthcare",
+      "community-validated",
+      "python",
+      "forecasting",
+      "data-science",
       "nhs-wales"
     ],
     "all_tags": [
-      "data-science",
-      "healthcare",
-      "predictive-analytics",
-      "forecasting",
-      "python",
-      "community-validated",
       "automation",
+      "community-validated",
+      "predictive-analytics",
+      "healthcare",
+      "python",
+      "forecasting",
+      "data-science",
       "nhs-wales"
     ],
     "quality_score": 63,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:06.889405"
+    "last_updated": "2025-11-23T06:05:17.166896"
   },
   {
     "id": 784186879,
@@ -18760,17 +18758,17 @@
     "custom_properties": {},
     "generated_tags": [
       "comprehensive",
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
+      "healthcare",
       "comprehensive",
-      "healthcare"
+      "nhs-wales"
     ],
     "quality_score": 60,
     "featured": false,
-    "last_updated": "2025-11-22T06:04:55.734747"
+    "last_updated": "2025-11-23T06:05:07.449475"
   },
   {
     "id": 1051066283,
@@ -18901,16 +18899,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "quality_score": 60,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:06.889580"
+    "last_updated": "2025-11-23T06:05:17.167073"
   },
   {
     "id": 1062505067,
@@ -19041,16 +19039,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "quality_score": 60,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:06.889610"
+    "last_updated": "2025-11-23T06:05:17.167082"
   },
   {
     "id": 1054281469,
@@ -19181,16 +19179,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "quality_score": 60,
     "featured": false,
-    "last_updated": "2025-11-22T06:04:58.711274"
+    "last_updated": "2025-11-23T06:05:10.081904"
   },
   {
     "id": 1042161979,
@@ -19327,16 +19325,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "quality_score": 60,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:09.741795"
+    "last_updated": "2025-11-23T06:05:19.373497"
   },
   {
     "id": 1020801738,
@@ -19467,16 +19465,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "quality_score": 60,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:06.889511"
+    "last_updated": "2025-11-23T06:05:17.167004"
   },
   {
     "id": 1033179509,
@@ -19607,16 +19605,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "quality_score": 60,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:06.889547"
+    "last_updated": "2025-11-23T06:05:17.167040"
   },
   {
     "id": 1016773223,
@@ -19747,16 +19745,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "quality_score": 60,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:17.322293"
+    "last_updated": "2025-11-23T06:05:25.112102"
   },
   {
     "id": 974763501,
@@ -19887,22 +19885,22 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "data-science",
+      "automation",
       "healthcare",
       "python",
-      "automation",
+      "data-science",
       "nhs-wales"
     ],
     "all_tags": [
-      "data-science",
+      "automation",
       "healthcare",
       "python",
-      "automation",
+      "data-science",
       "nhs-wales"
     ],
     "quality_score": 60,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:08.117032"
+    "last_updated": "2025-11-23T06:05:18.074435"
   },
   {
     "id": 960389320,
@@ -20036,19 +20034,19 @@
       "healthcare",
       "r",
       "statistical-analysis",
-      "nhs-wales",
-      "research"
+      "research",
+      "nhs-wales"
     ],
     "all_tags": [
       "healthcare",
       "r",
       "statistical-analysis",
-      "nhs-wales",
-      "research"
+      "research",
+      "nhs-wales"
     ],
     "quality_score": 60,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:13.435479"
+    "last_updated": "2025-11-23T06:05:22.241922"
   },
   {
     "id": 870543758,
@@ -20179,16 +20177,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "quality_score": 60,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:16.589116"
+    "last_updated": "2025-11-23T06:05:24.543822"
   },
   {
     "id": 590384488,
@@ -20319,16 +20317,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "quality_score": 60,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:00.001730"
+    "last_updated": "2025-11-23T06:05:11.075357"
   },
   {
     "id": 808549663,
@@ -20459,18 +20457,18 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
+      "community-validated",
       "healthcare",
-      "community-validated"
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
       "healthcare",
-      "community-validated"
+      "community-validated",
+      "nhs-wales"
     ],
     "quality_score": 58,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:00.001758"
+    "last_updated": "2025-11-23T06:05:11.075386"
   },
   {
     "id": 1026037756,
@@ -20601,16 +20599,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "quality_score": 55,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:17.322318"
+    "last_updated": "2025-11-23T06:05:25.112145"
   },
   {
     "id": 1021563703,
@@ -20741,16 +20739,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "quality_score": 55,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:09.741757"
+    "last_updated": "2025-11-23T06:05:19.373443"
   },
   {
     "id": 1021316191,
@@ -20881,16 +20879,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "quality_score": 55,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:06.889520"
+    "last_updated": "2025-11-23T06:05:17.167014"
   },
   {
     "id": 960379259,
@@ -21021,20 +21019,20 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
+      "data-analytics",
       "healthcare-insights",
       "healthcare",
-      "data-analytics"
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
+      "data-analytics",
       "healthcare-insights",
       "healthcare",
-      "data-analytics"
+      "nhs-wales"
     ],
     "quality_score": 55,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:06.889502"
+    "last_updated": "2025-11-23T06:05:17.166995"
   },
   {
     "id": 1020056539,
@@ -21165,16 +21163,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "quality_score": 55,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:16.589217"
+    "last_updated": "2025-11-23T06:05:24.543998"
   },
   {
     "id": 1020042181,
@@ -21305,16 +21303,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "quality_score": 55,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:16.589209"
+    "last_updated": "2025-11-23T06:05:24.543965"
   },
   {
     "id": 1015624832,
@@ -21445,16 +21443,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "quality_score": 55,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:13.435515"
+    "last_updated": "2025-11-23T06:05:22.241963"
   },
   {
     "id": 995905820,
@@ -21585,16 +21583,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "quality_score": 55,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:08.117043"
+    "last_updated": "2025-11-23T06:05:18.074446"
   },
   {
     "id": 955412900,
@@ -21725,16 +21723,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "quality_score": 55,
     "featured": false,
-    "last_updated": "2025-11-22T06:04:58.711232"
+    "last_updated": "2025-11-23T06:05:10.081860"
   },
   {
     "id": 927172733,
@@ -21862,20 +21860,20 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "healthcare",
-      "nhs-wales",
       "system-integration",
-      "interoperability"
+      "interoperability",
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
       "system-integration",
+      "interoperability",
       "healthcare",
-      "interoperability"
+      "nhs-wales"
     ],
     "quality_score": 55,
     "featured": false,
-    "last_updated": "2025-11-22T06:04:58.711129"
+    "last_updated": "2025-11-23T06:05:10.081755"
   },
   {
     "id": 899137935,
@@ -22006,20 +22004,20 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
+      "data-analytics",
       "healthcare-insights",
       "healthcare",
-      "data-analytics"
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
+      "data-analytics",
       "healthcare-insights",
       "healthcare",
-      "data-analytics"
+      "nhs-wales"
     ],
     "quality_score": 55,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:16.589154"
+    "last_updated": "2025-11-23T06:05:24.543878"
   },
   {
     "id": 866536936,
@@ -22150,26 +22148,26 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "data-science",
-      "healthcare",
-      "predictive-analytics",
-      "forecasting",
-      "python",
       "automation",
+      "predictive-analytics",
+      "healthcare",
+      "python",
+      "forecasting",
+      "data-science",
       "nhs-wales"
     ],
     "all_tags": [
-      "data-science",
-      "healthcare",
+      "automation",
       "predictive-analytics",
+      "healthcare",
       "forecasting",
       "python",
-      "automation",
+      "data-science",
       "nhs-wales"
     ],
     "quality_score": 55,
     "featured": false,
-    "last_updated": "2025-11-22T06:04:54.586423"
+    "last_updated": "2025-11-23T06:05:06.551763"
   },
   {
     "id": 678316781,
@@ -22297,22 +22295,22 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "data-science",
+      "automation",
       "healthcare",
       "python",
-      "automation",
+      "data-science",
       "nhs-wales"
     ],
     "all_tags": [
-      "data-science",
+      "automation",
       "healthcare",
       "python",
-      "automation",
+      "data-science",
       "nhs-wales"
     ],
     "quality_score": 55,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:08.831461"
+    "last_updated": "2025-11-23T06:05:18.680616"
   },
   {
     "id": 665958581,
@@ -22443,18 +22441,18 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
+      "community-validated",
       "healthcare",
-      "community-validated"
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
       "healthcare",
-      "community-validated"
+      "community-validated",
+      "nhs-wales"
     ],
     "quality_score": 53,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:00.001740"
+    "last_updated": "2025-11-23T06:05:11.075366"
   },
   {
     "id": 505493327,
@@ -22585,16 +22583,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "quality_score": 50,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:00.001666"
+    "last_updated": "2025-11-23T06:05:11.075292"
   },
   {
     "id": 644457158,
@@ -22722,16 +22720,16 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "quality_score": 50,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:08.831449"
+    "last_updated": "2025-11-23T06:05:18.680592"
   },
   {
     "id": 644454917,
@@ -22859,15 +22857,15 @@
     },
     "custom_properties": {},
     "generated_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "all_tags": [
-      "nhs-wales",
-      "healthcare"
+      "healthcare",
+      "nhs-wales"
     ],
     "quality_score": 50,
     "featured": false,
-    "last_updated": "2025-11-22T06:05:16.589066"
+    "last_updated": "2025-11-23T06:05:24.543749"
   }
 ]
