@@ -1,60 +1,233 @@
 {
-  "generated_at": "2025-07-18T10:42:05.488468",
+  "generated_at": "2026-06-03T09:35:23.423789",
   "statistics": {
-    "total_repositories": 14,
-    "featured_repositories": 0,
-    "featured_percentage": 0.0,
-    "average_quality_score": 0.0,
-    "recently_active": 5,
+    "total_repositories": 275,
+    "featured_repositories": 145,
+    "featured_percentage": 52.7,
+    "average_quality_score": 73.6,
+    "recently_active": 78,
     "languages": {
-      "C#": 5,
-      "HTML": 3,
-      "Java": 1,
-      "Jupyter Notebook": 1
+      "Python": 56,
+      "R": 35,
+      "HTML": 24,
+      "HCL": 24,
+      "Jupyter Notebook": 19,
+      "C#": 9,
+      "TSQL": 4,
+      "LookML": 3,
+      "PowerShell": 3,
+      "JavaScript": 3,
+      "Dockerfile": 2,
+      "Vue": 2,
+      "CSS": 1,
+      "C++": 1,
+      "PHP": 1,
+      "TypeScript": 1,
+      "Makefile": 1,
+      "Shell": 1,
+      "Java": 1
     },
     "organizations": {
-      "DHCW-Digital-Health-and-Care-Wales": 10,
-      "GIGCymru": 3,
-      "NHS-Executive": 1
+      "Public-Health-Wales": 60,
+      "NHS-Executive": 39,
+      "DHCW-Digital-Health-and-Care-Wales": 37,
+      "GIGCymru": 33,
+      "Aneurin-Bevan-University-Health-Board": 32,
+      "NDR-National-Data-Analytics-Platform": 18,
+      "Cwm-Taf-Morgannwg-UHB": 11,
+      "Analytics-Learning-Programme": 8,
+      "Advanced-Analytics-NHS-Wales": 7,
+      "Cardiff-Vale-University-Health-Board": 6,
+      "Genomics-Partnership-Wales": 6,
+      "Hywel-Dda-UHB-SoftDev": 5,
+      "National-Data-Resource": 4,
+      "Welsh-Ambulance-Services-NHS-Trust": 3,
+      "Swansea-Bay-University-Health-Board": 3,
+      "Secure-Data-Environment-GIG-Cymru": 2,
+      "Hywel-Dda-UHB": 1
     }
   },
   "validation": {
     "valid": true,
     "errors": [],
-    "warnings": [
-      "Solutions-Exchange: Missing enhanced field 'quality_score'",
-      ".github: Missing enhanced field 'quality_score'",
-      "Integration-Hub-POC: Missing enhanced field 'quality_score'",
-      "shared-medicines-guide: Missing enhanced field 'quality_score'",
-      "allergy-guide: Missing enhanced field 'quality_score'",
-      "Integration-Hub-MSMQ-Bridge: Missing enhanced field 'quality_score'",
-      "kainos: Missing enhanced field 'quality_score'",
-      "wccg-pas-referrals-api: Missing enhanced field 'quality_score'",
-      "wccg-pas-referrals-mock-ui: Missing enhanced field 'quality_score'",
-      "wccg-dental-mock-ui: Missing enhanced field 'quality_score'",
-      "wccg-eReferrals-service-app: Missing enhanced field 'quality_score'",
-      "Integration-Hub-SampleRepo: Missing enhanced field 'quality_score'",
-      "GoogleColab_NHFD_WebScraper: Missing enhanced field 'quality_score'",
-      "demo-repository: Missing enhanced field 'quality_score'"
-    ],
+    "warnings": [],
     "statistics": {
-      "total_repositories": 14,
-      "featured_repositories": 0,
-      "featured_percentage": 0.0,
-      "average_quality_score": 0.0,
-      "recently_active": 5,
+      "total_repositories": 275,
+      "featured_repositories": 145,
+      "featured_percentage": 52.7,
+      "average_quality_score": 73.6,
+      "recently_active": 78,
       "languages": {
-        "C#": 5,
-        "HTML": 3,
-        "Java": 1,
-        "Jupyter Notebook": 1
+        "Python": 56,
+        "R": 35,
+        "HTML": 24,
+        "HCL": 24,
+        "Jupyter Notebook": 19,
+        "C#": 9,
+        "TSQL": 4,
+        "LookML": 3,
+        "PowerShell": 3,
+        "JavaScript": 3,
+        "Dockerfile": 2,
+        "Vue": 2,
+        "CSS": 1,
+        "C++": 1,
+        "PHP": 1,
+        "TypeScript": 1,
+        "Makefile": 1,
+        "Shell": 1,
+        "Java": 1
       },
       "organizations": {
-        "DHCW-Digital-Health-and-Care-Wales": 10,
-        "GIGCymru": 3,
-        "NHS-Executive": 1
+        "Public-Health-Wales": 60,
+        "NHS-Executive": 39,
+        "DHCW-Digital-Health-and-Care-Wales": 37,
+        "GIGCymru": 33,
+        "Aneurin-Bevan-University-Health-Board": 32,
+        "NDR-National-Data-Analytics-Platform": 18,
+        "Cwm-Taf-Morgannwg-UHB": 11,
+        "Analytics-Learning-Programme": 8,
+        "Advanced-Analytics-NHS-Wales": 7,
+        "Cardiff-Vale-University-Health-Board": 6,
+        "Genomics-Partnership-Wales": 6,
+        "Hywel-Dda-UHB-SoftDev": 5,
+        "National-Data-Resource": 4,
+        "Welsh-Ambulance-Services-NHS-Trust": 3,
+        "Swansea-Bay-University-Health-Board": 3,
+        "Secure-Data-Environment-GIG-Cymru": 2,
+        "Hywel-Dda-UHB": 1
       }
     }
   },
-  "featured_repositories": []
+  "featured_repositories": [
+    {
+      "name": "NDAP-NHSPI-Architecture",
+      "organization": "NHS Executive",
+      "quality_score": 100,
+      "url": "https://github.com/NHS-Executive/NDAP-NHSPI-Architecture",
+      "tags": [
+        "nhs-wales",
+        "healthcare",
+        "healthcare-insights",
+        "python",
+        "community-validated"
+      ]
+    },
+    {
+      "name": "dhcw-software-engineering-handbook",
+      "organization": "GitHub GIG Cymru",
+      "quality_score": 100,
+      "url": "https://github.com/GIGCymru/dhcw-software-engineering-handbook",
+      "tags": [
+        "data-science",
+        "nhs-wales",
+        "healthcare",
+        "python",
+        "community-validated"
+      ]
+    },
+    {
+      "name": "Integration-Hub-Beta",
+      "organization": "Digital Health and Care Wales (DHCW)",
+      "quality_score": 100,
+      "url": "https://github.com/DHCW-Digital-Health-and-Care-Wales/Integration-Hub-Beta",
+      "tags": [
+        "data-science",
+        "nhs-wales",
+        "healthcare",
+        "python",
+        "community-validated"
+      ]
+    },
+    {
+      "name": "Solutions-Exchange",
+      "organization": "GitHub GIG Cymru",
+      "quality_score": 100,
+      "url": "https://github.com/GIGCymru/Solutions-Exchange",
+      "tags": [
+        "web-interface",
+        "api",
+        "html",
+        "website",
+        "pages"
+      ]
+    },
+    {
+      "name": "cdsc-harp-medusa",
+      "organization": "Public Health Wales",
+      "quality_score": 100,
+      "url": "https://github.com/Public-Health-Wales/cdsc-harp-medusa",
+      "tags": [
+        "nhs-wales",
+        "healthcare",
+        "python",
+        "community-validated",
+        "automation"
+      ]
+    },
+    {
+      "name": "biu_Reporting",
+      "organization": "Aneurin Bevan University Health Board",
+      "quality_score": 100,
+      "url": "https://github.com/Aneurin-Bevan-University-Health-Board/biu_Reporting",
+      "tags": [
+        "nhs-wales",
+        "healthcare",
+        "reporting",
+        "community-validated",
+        "ndap-platform"
+      ]
+    },
+    {
+      "name": "architecture",
+      "organization": "GitHub GIG Cymru",
+      "quality_score": 100,
+      "url": "https://github.com/GIGCymru/architecture",
+      "tags": [
+        "data-science",
+        "nhs-wales",
+        "healthcare",
+        "python",
+        "community-validated"
+      ]
+    },
+    {
+      "name": "NDAP-DISCOVERY-DEPLOYMENT-DEMO",
+      "organization": "NHS Executive",
+      "quality_score": 99,
+      "url": "https://github.com/NHS-Executive/NDAP-DISCOVERY-DEPLOYMENT-DEMO",
+      "tags": [
+        "nhs-wales",
+        "healthcare",
+        "healthcare-insights",
+        "community-validated",
+        "data-analytics"
+      ]
+    },
+    {
+      "name": "rdd-at-shrn-landing-page",
+      "organization": "Public Health Wales",
+      "quality_score": 96,
+      "url": "https://github.com/Public-Health-Wales/rdd-at-shrn-landing-page",
+      "tags": [
+        "monitoring",
+        "nhs-wales",
+        "healthcare",
+        "community-validated",
+        "statistical-analysis"
+      ]
+    },
+    {
+      "name": "cpt_Looker_Planning_Analytics",
+      "organization": "Aneurin Bevan University Health Board",
+      "quality_score": 96,
+      "url": "https://github.com/Aneurin-Bevan-University-Health-Board/cpt_Looker_Planning_Analytics",
+      "tags": [
+        "nhs-wales",
+        "healthcare",
+        "community-validated",
+        "comprehensive"
+      ]
+    }
+  ]
 }
