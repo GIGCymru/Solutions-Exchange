@@ -16,8 +16,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+
+    <!-- Output escaping helpers, loaded before any repository data is rendered -->
+    <script src="js/security.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0"></script>
     <style>
         .metrics-section { margin-top: 2rem; }
         .chart-container { position: relative; height: 400px; margin-bottom: 3rem; }
@@ -58,6 +61,7 @@
     </style>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="index.html">
@@ -87,6 +91,8 @@
             </div>
         </div>
     </nav>
+
+    <main id="main-content">
 
     <div class="container metrics-section">
         <h1 class="mb-4">Service Metrics & Analytics</h1>
@@ -125,6 +131,8 @@
             <canvas id="activityTrendChart"></canvas>
         </div>
     </div>
+
+    </main>
 
     <!-- Footer -->
     <footer>

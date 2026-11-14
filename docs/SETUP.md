@@ -5,7 +5,10 @@
 ### 1. Set up GitHub Token
 Create a GitHub Personal Access Token with `repo` permissions and set it as a secret:
 - Repository Settings → Secrets and variables → Actions
-- Create new secret: `GITHUB_TOKEN` (or use existing)
+- Create new secret: `solutions_exchange_secret`
+
+This is the secret name `.github/workflows/update-data.yml` passes to the data
+collection script.
 
 ### 2. Enable GitHub Pages
 - Repository Settings → Pages
@@ -15,14 +18,14 @@ Create a GitHub Personal Access Token with `repo` permissions and set it as a se
 ### 3. Manual Data Update (Optional)
 To run the data collection script manually:
 ```bash
-export GH_SECRET=your_token_here
-python fetch_repositories.py
+export solutions_exchange_secret=your_token_here
+python scripts/update_repositories.py
 ```
 
 ### 4. Customization
 
 #### Add/Remove Organizations
-Edit `fetch_repositories.py` and modify the `organizations` list.
+Edit `scripts/update_repositories.py` and modify the `self.organizations` list in `RepositoryUpdater.__init__`.
 
 #### Styling Changes
 Edit `css/style.css` to customize the appearance.
@@ -39,14 +42,22 @@ The data updates automatically daily at 6 AM UTC. To change:
 ## File Structure
 ```
 Solutions-Exchange/
-├── index.html              # Main website
-├── css/style.css           # Styling
-├── fetch_repositories.py   # Data collection script
-├── repositories.json       # Generated data file
-├── requirements.txt        # Python dependencies
-├── .github/workflows/      # GitHub Actions
-│   └── update-data.yml
-└── README.md              # Documentation
+├── index.html                   # Landing page
+├── solutions.html               # Solution discovery and filtering
+├── guides.html                  # How-to guides
+├── service-metrics.html         # Platform metrics
+├── css/style.css                # Styling
+├── js/security.js               # Output-escaping helpers used by every page
+├── scripts/
+│   ├── update_repositories.py   # Data collection script run by CI
+│   └── data_quality_report.py   # Metadata completeness reporting
+├── data/repositories.json       # Generated data file
+├── tests/                       # Python and JavaScript test suites
+├── requirements.txt             # Python dependencies
+├── .github/workflows/
+│   ├── update-data.yml          # Daily data refresh and Pages deploy
+│   └── ci.yml                   # Tests and data validation
+└── README.md                    # Documentation
 ```
 
 ## Troubleshooting

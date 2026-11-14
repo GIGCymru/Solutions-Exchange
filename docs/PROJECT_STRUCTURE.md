@@ -12,8 +12,9 @@ Solutions-Exchange/
 │   ├── repositories.json   # Current repository data (auto-generated)
 │   └── repositories.csv    # CSV export for analysis
 ├── scripts/                 # Python scripts and utilities
-│   ├── fetch_repositories.py  # Main data collection script
-│   ├── test_setup.py          # Setup validation script
+│   ├── update_repositories.py # Main data collection script
+│   ├── data_quality_report.py # Metadata completeness reporting
+│   ├── utils.py               # Shared helpers and validation
 │   └── main-legacy.py         # Legacy script (for reference)
 ├── docs/                    # Documentation and requirements
 │   ├── GitHub GIG Cymru - Solutions Exchange - Project Initiation Document - v0.1.docx
@@ -40,11 +41,13 @@ Solutions-Exchange/
 - **repositories.csv**: CSV export for data analysis
 
 ### Scripts (`scripts/`)
-- **fetch_repositories.py**: Main script for fetching GitHub repository data
-- **test_setup.py**: Validation script to test setup
+- **update_repositories.py**: Main script for fetching GitHub repository data, with retry, rate-limit handling and data-loss guards
+- **data_quality_report.py**: Reports how complete the published solution metadata is
+- **utils.py**: Shared helpers, organisation name mapping and record validation
 - **main-legacy.py**: Original script (kept for reference)
 
 ### Documentation (`docs/`)
+- **SOLUTION_METADATA.md**: The `solution.json` standard teams use to describe a solution
 - **Project Initiation Document**: Official project requirements and scope
 - **Functional Requirements**: Detailed feature specifications
 - **Wireframes**: Visual design mockups
@@ -58,10 +61,10 @@ Solutions-Exchange/
 
 ## 🔄 Data Flow
 
-1. **GitHub Actions** runs `scripts/fetch_repositories.py` daily at 6 AM UTC
+1. **GitHub Actions** runs `scripts/update_repositories.py` daily at 6 AM UTC
 2. Script fetches data from NHS Wales GitHub organizations
 3. Data is saved to `data/repositories.json`
-4. Website (`index.html`) loads data from `data/repositories.json`
+4. Website (`solutions.html`) loads data from `data/repositories.json`
 5. Users interact with the Solutions Exchange interface
 
 ## 🚀 Deployment

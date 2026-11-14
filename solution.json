@@ -1,0 +1,18 @@
+{
+  "contact": "digital.team@wales.nhs.uk",
+  "organisation": "Digital Health and Care Wales",
+  "lifecycle": "live",
+  "support": "best-effort",
+  "summary": "A catalogue of reusable digital solutions built across NHS Wales, so teams can find and reuse existing work instead of rebuilding it.",
+  "problem": "Health boards were independently building similar tools with no shared view of what already existed.",
+  "benefits": [
+    "Gives every health board a single place to look before starting new work",
+    "Surfaces the contact details needed to start a reuse conversation"
+  ],
+  "information_governance": "Publishes repository metadata only; no patient identifiable data",
+  "dependencies": [
+    "Python 3.11",
+    "GitHub Pages"
+  ],
+  "documentation_url": "https://github.com/GIGCymru/Solutions-Exchange/blob/main/docs/SOLUTION_METADATA.md"
+}
