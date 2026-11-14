@@ -13,7 +13,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 
 const ROOT = path.join(__dirname, '..');
-const PAGES = ['index.html', 'solutions.html', 'guides.html', 'service-metrics.html'];
+const PAGES = ['index.html', 'solutions.html', 'guides.html', 'service-metrics.html', 'solution.html'];
 
 // Expressions that render untrusted, API-sourced values. Bare identifiers use a
 // negative lookahead so `tags.map(`, `orgsCount` and `tag.replace(` are not matched.
@@ -40,6 +40,14 @@ function isEscaped(line, index) {
     return /(escapeHtml|escapeJsString|safeUrl)\s*\(\s*$/.test(prefix);
 }
 
+// `document.title` and `textContent` assign text, never markup, so the browser
+// cannot be tricked into parsing injected HTML from them. `innerHTML`,
+// `outerHTML`, `insertAdjacentHTML` and attribute values are deliberately not
+// treated as text sinks.
+function isTextSink(line, index) {
+    return /(document\.title|\.textContent)\s*=\s*[^=]*$/.test(line.slice(0, index));
+}
+
 for (const page of PAGES) {
     test(`${page} escapes all repository-sourced output`, () => {
         const contents = fs.readFileSync(path.join(ROOT, page), 'utf8');
@@ -54,6 +62,9 @@ for (const page of PAGES) {
                 }
                 // `${escapeHtml(repo.name)}` -> the inner match starts after the call.
                 if (isEscaped(line, match.index + 2)) {
+                    continue;
+                }
+                if (isTextSink(line, match.index)) {
                     continue;
                 }
                 offenders.push(`${page}:${lineNumber + 1}: ${line.trim()}`);
