@@ -12,10 +12,14 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; font-src 'self' https://cdnjs.cloudflare.com; img-src 'self' data: https://www.google-analytics.com; connect-src 'self' https://www.google-analytics.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'">
     <title>NHS Wales Solutions Exchange - Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Output escaping helpers, loaded before any repository data is rendered -->
+    <script src="js/security.js"></script>
     
     <style>
         .featured-card {
@@ -74,6 +78,7 @@
     </style>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -105,6 +110,8 @@
             </div>
         </div>
     </nav>
+
+    <main id="main-content">
 
     <!-- Page Header -->
     <header class="hero-section text-white text-center">
@@ -461,6 +468,8 @@ This is the future of collaborative working and code management.”</p>
 
     
 
+    </main>
+
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -612,22 +621,22 @@ This is the future of collaborative working and code management.”</p>
                     <div class="success-story mb-4">
                         <div class="row align-items-center">
                             <div class="col-md-3">
-                                <img src="${story.image}" alt="${story.header}" class="img-fluid rounded">
+                                <img src="${safeUrl(story.image)}" alt="" class="img-fluid rounded" loading="lazy">
                             </div>
                             <div class="col-md-9">
                                 <h4>
-                                    <a href="${story.link}" target="_blank" class="text-decoration-none">
-                                        ${story.header}
+                                    <a href="${safeUrl(story.link)}" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
+                                        ${escapeHtml(story.header)}
                                     </a>
                                 </h4>
-                                <p class="text-muted">${story.description}</p>
+                                <p class="text-muted">${escapeHtml(story.description)}</p>
                                 <div class="mt-2">
                                     <small class="text-primary">
                                         <i class="fas fa-building me-1"></i>
-                                        ${story.organization}
+                                        ${escapeHtml(story.organization)}
                                     </small>
                                     ${story.tags ? story.tags.map(tag => 
-                                        `<span class="badge bg-light text-dark ms-1">${tag}</span>`
+                                        `<span class="badge bg-light text-dark ms-1">${escapeHtml(tag)}</span>`
                                     ).join('') : ''}
                                 </div>
                             </div>
@@ -670,6 +679,8 @@ This is the future of collaborative working and code management.”</p>
             const allTags = repo.all_tags || [...(repo.topics || []), ...(repo.generated_tags || [])];
             const displayTags = allTags.slice(0, 3); // Show first 3 tags
             const qualityScore = repo.quality_score || 0;
+            const qualityBadgeClass = qualityScore >= 80 ? 'bg-success'
+                : qualityScore >= 60 ? 'bg-warning text-dark' : 'bg-secondary';
             
             // Choose appropriate image based on tags or default
             let cardImage = 'assets/img/information.jpg';
@@ -681,10 +692,10 @@ This is the future of collaborative working and code management.”</p>
             return `
                 <div class="col-md-4 mb-4">
                     <div class="card h-100 featured-card">
-                        <img src="${cardImage}" class="card-img-top" alt="${repo.name}">
+                        <img src="${escapeHtml(cardImage)}" class="card-img-top" alt="" loading="lazy">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-start mb-2">
-                                <h5 class="card-title">${repo.name}</h5>
+                                <h5 class="card-title">${escapeHtml(repo.name)}</h5>
                                 <span class="badge ${isPublic ? 'bg-success' : 'bg-primary'} ms-2">
                                     <i class="fas ${isPublic ? 'fa-globe' : 'fa-lock'} me-1"></i>
                                     ${isPublic ? 'PUBLIC' : 'INTERNAL'}
@@ -692,14 +703,14 @@ This is the future of collaborative working and code management.”</p>
                             </div>
                             
                             <p class="card-text text-muted">
-                                ${repo.description || 'NHS Wales healthcare solution providing essential functionality for clinical and administrative workflows.'}
+                                ${escapeHtml(repo.description) || 'NHS Wales healthcare solution providing essential functionality for clinical and administrative workflows.'}
                             </p>
                             
                             <!-- Quality Score -->
                             <div class="mb-2">
-                                <span class="badge ${qualityScore >= 80 ? 'bg-success' : qualityScore >= 60 ? 'bg-warning text-dark' : 'bg-secondary'} me-2">
+                                <span class="badge ${qualityBadgeClass} me-2">
                                     <i class="fas fa-star me-1"></i>
-                                    Quality: ${qualityScore}/100
+                                    Quality: ${escapeHtml(qualityScore)}/100
                                 </span>
                                 <i class="fas fa-crown text-warning" title="Featured Solution"></i>
                             </div>
@@ -708,7 +719,7 @@ This is the future of collaborative working and code management.”</p>
                             <div class="mb-3">
                                 ${displayTags.map(tag => {
                                     const isGenerated = repo.generated_tags && repo.generated_tags.includes(tag);
-                                    return `<span class="badge ${isGenerated ? 'bg-info' : 'bg-secondary'} me-1 mb-1" title="${isGenerated ? 'AI-generated tag' : 'User-defined tag'}">${tag}</span>`;
+                                    return `<span class="badge ${isGenerated ? 'bg-info' : 'bg-secondary'} me-1 mb-1" title="${isGenerated ? 'AI-generated tag' : 'User-defined tag'}">${escapeHtml(tag)}</span>`;
                                 }).join('')}
                                 ${allTags.length > 3 ? `<span class="badge bg-light text-dark">+${allTags.length - 3} more</span>` : ''}
                             </div>
@@ -717,7 +728,7 @@ This is the future of collaborative working and code management.”</p>
                             <div class="mb-3">
                                 <small class="text-muted d-block">
                                     <i class="fas fa-building me-1"></i>
-                                    ${getOrganisationFullName(repo.owner.login)}
+                                    ${escapeHtml(getOrganisationFullName(repo.owner.login))}
                                 </small>
                                 <small class="text-muted">
                                     <i class="fas fa-clock me-1"></i>
@@ -727,7 +738,7 @@ This is the future of collaborative working and code management.”</p>
                             
                             <!-- Action Buttons -->
                             <div class="mt-auto">
-                                <a href="${repo.html_url}" target="_blank" class="btn btn-outline-primary btn-sm">
+                                <a href="${safeUrl(repo.html_url)}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-sm">
                                     <i class="fab fa-github me-1"></i>
                                     View Repository
                                 </a>
@@ -761,6 +772,12 @@ This is the future of collaborative working and code management.”</p>
             const timeSinceUpdate = getTimeSinceUpdate(lastUpdated);
             const allTags = repo.all_tags || [...(repo.topics || []), ...(repo.generated_tags || [])];
             const displayTags = allTags.slice(0, 2); // Show first 2 tags for compact display
+            const starsHtml = repo.stargazers_count > 0
+                ? `<small class="text-muted me-2"><i class="fas fa-star me-1"></i>${escapeHtml(repo.stargazers_count)}</small>`
+                : '';
+            const forksHtml = repo.forks_count > 0
+                ? `<small class="text-muted"><i class="fas fa-code-branch me-1"></i>${escapeHtml(repo.forks_count)}</small>`
+                : '';
             
             return `
                 <div class="col-md-4 mb-4">
@@ -768,8 +785,8 @@ This is the future of collaborative working and code management.”</p>
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-start mb-2">
                                 <h6 class="card-title mb-1">
-                                    <a href="${repo.html_url}" target="_blank" class="text-decoration-none">
-                                        ${repo.name}
+                                    <a href="${safeUrl(repo.html_url)}" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
+                                        ${escapeHtml(repo.name)}
                                     </a>
                                 </h6>
                                 <span class="badge ${isPublic ? 'bg-success' : 'bg-primary'} ms-2">
@@ -779,14 +796,14 @@ This is the future of collaborative working and code management.”</p>
                             </div>
                             
                             <p class="card-text text-muted small">
-                                ${(repo.description || 'NHS Wales healthcare solution providing essential functionality.').substring(0, 120)}${(repo.description || '').length > 120 ? '...' : ''}
+                                ${escapeHtml((repo.description || 'NHS Wales healthcare solution providing essential functionality.').substring(0, 120))}${(repo.description || '').length > 120 ? '...' : ''}
                             </p>
                             
                             <!-- Update Info -->
                             <div class="mb-2">
                                 <span class="badge bg-info text-white">
                                     <i class="fas fa-clock me-1"></i>
-                                    ${timeSinceUpdate}
+                                    ${escapeHtml(timeSinceUpdate)}
                                 </span>
                                 ${repo.featured ? '<i class="fas fa-crown text-warning ms-1" title="Featured Solution"></i>' : ''}
                             </div>
@@ -796,7 +813,7 @@ This is the future of collaborative working and code management.”</p>
                             <div class="mb-2">
                                 ${displayTags.map(tag => {
                                     const isGenerated = repo.generated_tags && repo.generated_tags.includes(tag);
-                                    return `<span class="badge ${isGenerated ? 'bg-light text-dark' : 'bg-secondary'} me-1" style="font-size: 0.7rem">${tag}</span>`;
+                                    return `<span class="badge ${isGenerated ? 'bg-light text-dark' : 'bg-secondary'} me-1" style="font-size: 0.7rem">${escapeHtml(tag)}</span>`;
                                 }).join('')}
                                 ${allTags.length > 2 ? `<span class="badge bg-light text-dark" style="font-size: 0.7rem">+${allTags.length - 2}</span>` : ''}
                             </div>
@@ -805,16 +822,16 @@ This is the future of collaborative working and code management.”</p>
                             <!-- Organization -->
                             <small class="text-muted d-block mb-2">
                                 <i class="fas fa-building me-1"></i>
-                                ${getOrganisationFullName(repo.owner.login)}
+                                ${escapeHtml(getOrganisationFullName(repo.owner.login))}
                             </small>
                             
                             <!-- Stats -->
                             <div class="d-flex justify-content-between align-items-center">
                                 <div>
-                                    ${repo.stargazers_count > 0 ? `<small class="text-muted me-2"><i class="fas fa-star me-1"></i>${repo.stargazers_count}</small>` : ''}
-                                    ${repo.forks_count > 0 ? `<small class="text-muted"><i class="fas fa-code-branch me-1"></i>${repo.forks_count}</small>` : ''}
+                                    ${starsHtml}
+                                    ${forksHtml}
                                 </div>
-                                <a href="${repo.html_url}" target="_blank" class="btn btn-sm btn-outline-primary">
+                                <a href="${safeUrl(repo.html_url)}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">
                                     <i class="fab fa-github me-1"></i>
                                     View
                                 </a>

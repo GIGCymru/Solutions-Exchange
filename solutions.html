@@ -12,12 +12,16 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; font-src 'self' https://cdnjs.cloudflare.com; img-src 'self' data: https://www.google-analytics.com; connect-src 'self' https://www.google-analytics.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'">
     <title>NHS Wales Solutions Exchange - Browse Solutions</title>
     <meta name="description" content="Discover and share innovative healthcare solutions across NHS Wales organizations">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Output escaping helpers, loaded before any repository data is rendered -->
+    <script src="js/security.js"></script>
     
     <style>
         .quality-badge {
@@ -98,6 +102,7 @@
     </style>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
@@ -128,6 +133,8 @@
             </div>
         </div>
     </nav>
+
+    <main id="main-content">
 
     <!-- Page Header -->
     
@@ -312,7 +319,7 @@
                 <!-- Load More Section -->
                 <div class="text-center mt-4" id="loadMoreSection">
                     <div class="pagination-info mb-3">
-                        <small class="text-muted" id="paginationInfo">
+                        <small class="text-muted" id="paginationInfo" role="status" aria-live="polite" aria-atomic="true">
                             <!-- Pagination info will be updated here -->
                         </small>
                     </div>
@@ -450,7 +457,7 @@
                 populateOrganisationFilters();
                 
                 // Handle URL parameters for pre-filtering
-                handleUrlParameters();
+                applyFiltersFromUrl();
                 
                 // Display repositories
                 displayRepositories();
@@ -493,6 +500,8 @@
             const allTags = repo.all_tags || [...(repo.topics || []), ...(repo.generated_tags || [])];
             const displayTags = allTags.slice(0, 3); // Show first 3 tags
             const qualityScore = repo.quality_score || 0;
+            const qualityBadgeClass = qualityScore >= 80 ? 'bg-success'
+                : qualityScore >= 60 ? 'bg-warning text-dark' : 'bg-secondary';
             
             // Choose appropriate image based on tags or default
             let cardImage = 'assets/img/information.jpg';
@@ -504,10 +513,10 @@
             return `
                 <div class="col-md-4 mb-4">
                     <div class="card h-100 featured-card">
-                        <img src="${cardImage}" class="card-img-top" alt="${repo.name}">
+                        <img src="${escapeHtml(cardImage)}" class="card-img-top" alt="" loading="lazy">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-start mb-2">
-                                <h5 class="card-title">${repo.name}</h5>
+                                <h5 class="card-title">${escapeHtml(repo.name)}</h5>
                                 <span class="badge ${isPublic ? 'bg-success' : 'bg-primary'} ms-2">
                                     <i class="fas ${isPublic ? 'fa-globe' : 'fa-lock'} me-1"></i>
                                     ${isPublic ? 'PUBLIC' : 'INTERNAL'}
@@ -515,14 +524,14 @@
                             </div>
                             
                             <p class="card-text text-muted">
-                                ${repo.description || 'NHS Wales healthcare solution providing essential functionality for clinical and administrative workflows.'}
+                                ${escapeHtml(repo.description) || 'NHS Wales healthcare solution providing essential functionality for clinical and administrative workflows.'}
                             </p>
                             
                             <!-- Quality Score -->
                             <div class="mb-2">
-                                <span class="badge ${qualityScore >= 80 ? 'bg-success' : qualityScore >= 60 ? 'bg-warning text-dark' : 'bg-secondary'} me-2">
+                                <span class="badge ${qualityBadgeClass} me-2">
                                     <i class="fas fa-star me-1"></i>
-                                    Quality: ${qualityScore}/100
+                                    Quality: ${escapeHtml(qualityScore)}/100
                                 </span>
                                 <i class="fas fa-crown text-warning" title="Featured Solution"></i>
                             </div>
@@ -531,7 +540,7 @@
                             <div class="mb-3">
                                 ${displayTags.map(tag => {
                                     const isGenerated = repo.generated_tags && repo.generated_tags.includes(tag);
-                                    return `<span class="badge ${isGenerated ? 'bg-info' : 'bg-secondary'} me-1 mb-1" title="${isGenerated ? 'AI-generated tag' : 'User-defined tag'}">${tag}</span>`;
+                                    return `<span class="badge ${isGenerated ? 'bg-info' : 'bg-secondary'} me-1 mb-1" title="${isGenerated ? 'AI-generated tag' : 'User-defined tag'}">${escapeHtml(tag)}</span>`;
                                 }).join('')}
                                 ${allTags.length > 3 ? `<span class="badge bg-light text-dark">+${allTags.length - 3} more</span>` : ''}
                             </div>
@@ -540,7 +549,7 @@
                             <div class="mb-3">
                                 <small class="text-muted d-block">
                                     <i class="fas fa-building me-1"></i>
-                                    ${getOrganisationFullName(repo.owner.login)}
+                                    ${escapeHtml(getOrganisationFullName(repo.owner.login))}
                                 </small>
                                 <small class="text-muted">
                                     <i class="fas fa-clock me-1"></i>
@@ -550,7 +559,7 @@
                             
                             <!-- Action Buttons -->
                             <div class="mt-auto">
-                                <a href="${repo.html_url}" target="_blank" class="btn btn-outline-primary btn-sm">
+                                <a href="${safeUrl(repo.html_url)}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-sm">
                                     <i class="fab fa-github me-1"></i>
                                     View Repository
                                 </a>
@@ -565,40 +574,174 @@
             `;
         }
 
-        // Handle URL parameters for filtering
-        function handleUrlParameters() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const orgParam = urlParams.get('org');
-            if (orgParam) {
-                // Map org codes to full organization names
-                const orgMapping = {
-                    'Cardiff': 'Cardiff and Vale UHB',
-                    'CardiffAndValeUHB': 'Cardiff and Vale UHB',
-                    'SwanseaBayUHB': 'Swansea Bay UHB',
-                    'AneurinBevanUHB': 'Aneurin Bevan UHB',
-                    'BetsiCadwaladr': 'Betsi Cadwaladr UHB',
-                    'BetsiCadwaladrUHB': 'Betsi Cadwaladr UHB',
-                    'CwmTafUHB': 'Cwm Taf Morgannwg UHB',
-                    'HywelDdaUHB': 'Hywel Dda UHB',
-                    'Powys': 'Powys Teaching Health Board',
-                    'PowysUHB': 'Powys Teaching Health Board',
-                    'PublicHealthWales': 'Public Health Wales',
-                    'DHCW': 'Digital Health and Care Wales'
-                };
-                const fullOrgName = orgMapping[orgParam];
-                if (fullOrgName) {
-                    // Wait for filters to be populated, then select the organization
-                    setTimeout(() => {
-                        const orgCheckboxes = document.querySelectorAll('.organisation-filter');
-                        orgCheckboxes.forEach(checkbox => {
-                            if (checkbox.dataset.organisation === fullOrgName) {
-                                checkbox.checked = true;
-                            }
-                        });
-                        displayRepositories(); // Refresh display with filter applied
-                    }, 100);
+        // Legacy short organisation codes kept working for existing inbound links.
+        const LEGACY_ORG_MAPPING = {
+            'Cardiff': 'Cardiff and Vale UHB',
+            'CardiffAndValeUHB': 'Cardiff and Vale UHB',
+            'SwanseaBayUHB': 'Swansea Bay UHB',
+            'AneurinBevanUHB': 'Aneurin Bevan UHB',
+            'BetsiCadwaladr': 'Betsi Cadwaladr UHB',
+            'BetsiCadwaladrUHB': 'Betsi Cadwaladr UHB',
+            'CwmTafUHB': 'Cwm Taf Morgannwg UHB',
+            'HywelDdaUHB': 'Hywel Dda UHB',
+            'Powys': 'Powys Teaching Health Board',
+            'PowysUHB': 'Powys Teaching Health Board',
+            'PublicHealthWales': 'Public Health Wales',
+            'DHCW': 'Digital Health and Care Wales'
+        };
+
+        // Prevents the URL being rewritten while filters are being restored.
+        let isRestoringFilters = false;
+
+        function splitParam(value) {
+            if (!value) {
+                return [];
+            }
+            return value.split(',').map(item => item.trim()).filter(Boolean);
+        }
+
+        function checkMatchingBoxes(selector, datasetKey, wantedValues) {
+            if (wantedValues.length === 0) {
+                return;
+            }
+            const wanted = wantedValues.map(value => value.toLowerCase());
+            document.querySelectorAll(selector).forEach(checkbox => {
+                const value = (checkbox.dataset[datasetKey] || '').toLowerCase();
+                if (wanted.includes(value)) {
+                    checkbox.checked = true;
+                }
+            });
+        }
+
+        function setInputValue(id, value) {
+            if (value) {
+                document.getElementById(id).value = value;
+            }
+        }
+
+        // Restore the full filter state from the query string.
+        function applyFiltersFromUrl() {
+            const params = new URLSearchParams(window.location.search);
+            if ([...params.keys()].length === 0) {
+                return;
+            }
+
+            isRestoringFilters = true;
+
+            splitParam(params.get('q')).forEach(keyword => addKeywordTag(keyword));
+
+            const organisations = splitParam(params.get('org'))
+                .map(value => LEGACY_ORG_MAPPING[value] || value);
+            checkMatchingBoxes('.organisation-filter', 'organisation', organisations);
+
+            checkMatchingBoxes('.language-filter', 'language', splitParam(params.get('lang')));
+            checkMatchingBoxes('.tag-filter', 'tag', splitParam(params.get('tag')));
+
+            const visibility = splitParam(params.get('visibility'));
+            if (visibility.length > 0) {
+                document.getElementById('publicRepos').checked = visibility.includes('public');
+                document.getElementById('internalRepos').checked = visibility.includes('internal');
+            }
+
+            const activity = splitParam(params.get('activity'));
+            if (activity.length > 0) {
+                document.querySelectorAll('.activity-filter').forEach(checkbox => {
+                    checkbox.checked = activity.includes(checkbox.value);
+                });
+            }
+
+            const sort = params.get('sort');
+            if (sort) {
+                const sortSelect = document.getElementById('sortSelect');
+                if ([...sortSelect.options].some(option => option.value === sort)) {
+                    sortSelect.value = sort;
+                    currentSort = sort;
                 }
             }
+
+            setInputValue('dateFrom', params.get('from'));
+            setInputValue('dateTo', params.get('to'));
+            setInputValue('starsMin', params.get('starsMin'));
+            setInputValue('starsMax', params.get('starsMax'));
+            setInputValue('qualityMin', params.get('qualityMin'));
+            setInputValue('qualityMax', params.get('qualityMax'));
+
+            isRestoringFilters = false;
+        }
+
+        // Keep the address bar in step with the current filters so any view can
+        // be bookmarked or shared.
+        function syncUrlWithFilters() {
+            if (isRestoringFilters) {
+                return;
+            }
+
+            const params = new URLSearchParams();
+
+            const keywords = Array.from(document.querySelectorAll('.keyword-tag'))
+                .map(tag => tag.textContent.replace('×', '').trim())
+                .filter(Boolean);
+            if (keywords.length > 0) {
+                params.set('q', keywords.join(','));
+            }
+
+            const collect = (selector, datasetKey) =>
+                Array.from(document.querySelectorAll(selector)).map(input => input.dataset[datasetKey]);
+
+            const organisations = collect('.organisation-filter:checked', 'organisation');
+            if (organisations.length > 0) {
+                params.set('org', organisations.join(','));
+            }
+
+            const languages = collect('.language-filter:checked', 'language');
+            if (languages.length > 0) {
+                params.set('lang', languages.join(','));
+            }
+
+            const tags = collect('.tag-filter:checked', 'tag');
+            if (tags.length > 0) {
+                params.set('tag', tags.join(','));
+            }
+
+            const publicChecked = document.getElementById('publicRepos').checked;
+            const internalChecked = document.getElementById('internalRepos').checked;
+            if (!publicChecked || !internalChecked) {
+                const visibility = [];
+                if (publicChecked) visibility.push('public');
+                if (internalChecked) visibility.push('internal');
+                params.set('visibility', visibility.join(','));
+            }
+
+            const activity = Array.from(document.querySelectorAll('.activity-filter:checked'))
+                .map(input => input.value);
+            if (activity.length > 0) {
+                params.set('activity', activity.join(','));
+            }
+
+            if (currentSort && currentSort !== 'updated-desc') {
+                params.set('sort', currentSort);
+            }
+
+            const textInputs = {
+                from: 'dateFrom',
+                to: 'dateTo',
+                starsMin: 'starsMin',
+                starsMax: 'starsMax',
+                qualityMin: 'qualityMin',
+                qualityMax: 'qualityMax'
+            };
+            Object.entries(textInputs).forEach(([param, elementId]) => {
+                const value = document.getElementById(elementId).value;
+                if (value) {
+                    params.set(param, value);
+                }
+            });
+
+            const query = params.toString();
+            const newUrl = query
+                ? `${window.location.pathname}?${query}`
+                : window.location.pathname;
+            window.history.replaceState({}, '', newUrl);
         }
 
         // Update all filter counts dynamically based on current filters
@@ -643,7 +786,7 @@
                 const count = languageCounts.get(language) || 0;
                 const label = document.querySelector(`label[for="${checkbox.id}"]`);
                 if (label) {
-                    label.innerHTML = `${language} <span class="text-muted">(${count})</span>`;
+                    label.innerHTML = `${escapeHtml(language)} <span class="text-muted">(${count})</span>`;
                     // Add visual feedback for zero count
                     if (count === 0) {
                         label.classList.add('text-muted');
@@ -676,7 +819,7 @@
                 const count = tagCounts.get(tag) || 0;
                 const label = document.querySelector(`label[for="${checkbox.id}"]`);
                 if (label) {
-                    label.innerHTML = `${tag} <span class="text-muted">(${count})</span>`;
+                    label.innerHTML = `${escapeHtml(tag)} <span class="text-muted">(${count})</span>`;
                     // Add visual feedback for zero count
                     if (count === 0) {
                         label.classList.add('text-muted');
@@ -718,7 +861,7 @@
                 const count = orgCounts.get(org) || 0;
                 const label = document.querySelector(`label[for="${checkbox.id}"]`);
                 if (label) {
-                    label.innerHTML = `${org} <span class="text-muted">(${count})</span>`;
+                    label.innerHTML = `${escapeHtml(org)} <span class="text-muted">(${count})</span>`;
                     // Add visual feedback for zero count
                     if (count === 0) {
                         label.classList.add('text-muted');
@@ -942,11 +1085,12 @@
             
             tagFiltersContainer.innerHTML = sortedTags.map(([tag, count]) => {
                 const id = `tag${tag.replace(/\s+/g, '').replace(/[^a-zA-Z0-9]/g, '')}`;
+                const safeTag = escapeHtml(tag);
                 return `
-                    <div class="form-check tag-item" data-tag-name="${tag.toLowerCase()}">
-                        <input class="form-check-input tag-filter" type="checkbox" id="${id}" data-tag="${tag}">
-                        <label class="form-check-label" for="${id}">
-                            ${tag} <span class="text-muted">(${count})</span>
+                    <div class="form-check tag-item" data-tag-name="${escapeHtml(tag.toLowerCase())}">
+                        <input class="form-check-input tag-filter" type="checkbox" id="${escapeHtml(id)}" data-tag="${safeTag}">
+                        <label class="form-check-label" for="${escapeHtml(id)}">
+                            ${safeTag} <span class="text-muted">(${count})</span>
                         </label>
                     </div>
                 `;
@@ -966,11 +1110,12 @@
             
             languageFiltersContainer.innerHTML = sortedLanguages.map(([lang, count]) => {
                 const id = `lang${lang.replace(/\s+/g, '').replace(/[^a-zA-Z0-9]/g, '')}`;
+                const safeLang = escapeHtml(lang);
                 return `
                     <div class="form-check">
-                        <input class="form-check-input language-filter" type="checkbox" id="${id}" data-language="${lang}">
-                        <label class="form-check-label" for="${id}">
-                            ${lang} <span class="text-muted">(${count})</span>
+                        <input class="form-check-input language-filter" type="checkbox" id="${escapeHtml(id)}" data-language="${safeLang}">
+                        <label class="form-check-label" for="${escapeHtml(id)}">
+                            ${safeLang} <span class="text-muted">(${count})</span>
                         </label>
                     </div>
                 `;
@@ -990,11 +1135,12 @@
             
             orgFiltersContainer.innerHTML = sortedOrgs.map(([org, count]) => {
                 const id = `org${org.replace(/\s+/g, '').replace(/[^a-zA-Z0-9]/g, '')}`;
+                const safeOrg = escapeHtml(org);
                 return `
                     <div class="form-check">
-                        <input class="form-check-input organisation-filter" type="checkbox" id="${id}" data-organisation="${org}">
-                        <label class="form-check-label" for="${id}">
-                            ${org} <span class="text-muted">(${count})</span>
+                        <input class="form-check-input organisation-filter" type="checkbox" id="${escapeHtml(id)}" data-organisation="${safeOrg}">
+                        <label class="form-check-label" for="${escapeHtml(id)}">
+                            ${safeOrg} <span class="text-muted">(${count})</span>
                         </label>
                     </div>
                 `;
@@ -1045,6 +1191,9 @@
             
             // Update all filter counts dynamically
             updateAllFilterCounts();
+
+            // Keep the address bar shareable
+            syncUrlWithFilters();
             
             // Show/hide load more button
             const loadMoreBtn = document.getElementById('loadMoreBtn');
@@ -1138,6 +1287,8 @@
             const visibilityLabel = isPublic ? 'PUBLIC' : 'INTERNAL';
             const visibilityClass = isPublic ? 'bg-success' : 'bg-primary';
             const qualityScore = repo.quality_score || Math.floor(Math.random() * 30) + 60; // Use enhanced data or fallback
+            const qualityBadgeClass = qualityScore >= 80 ? 'bg-success'
+                : qualityScore >= 60 ? 'bg-warning text-dark' : 'bg-secondary';
             const license = repo.license ? repo.license.name : 'MIT';
             
             // Use enhanced AI-generated tags if available, otherwise fallback to original logic
@@ -1186,7 +1337,7 @@
                             <div class="d-flex justify-content-between align-items-start mb-3">
                                 <h5 class="repo-title mb-0">
                                     <i class="fab fa-github me-2 text-muted"></i>
-                                    ${repo.name}
+                                    ${escapeHtml(repo.name)}
                                 </h5>
                                 <span class="badge ${visibilityClass} visibility-badge">
                                     <i class="fas ${isPublic ? 'fa-globe' : 'fa-lock'} me-1"></i>
@@ -1196,7 +1347,7 @@
                             
                             <!-- Description -->
                             <p class="repo-description text-muted mb-3">
-                                ${repo.description || 'Body text for whatever you\'d like to say. Add here any additional information about this repository and its purpose for the NHS Wales community.'}
+                                ${escapeHtml(repo.description) || 'Body text for whatever you\'d like to say. Add here any additional information about this repository and its purpose for the NHS Wales community.'}
                             </p>
                             
                             <!-- Last Updated -->
@@ -1217,7 +1368,7 @@
                                     if (tag.type === 'ai-generated') badgeClass = 'bg-primary';
                                     if (tag.type === 'topic') badgeClass = 'bg-dark';
                                     
-                                    return `<span class="badge ${badgeClass} me-1 mb-1 tag-clickable" onclick="filterByTag('${tag.name}')" title="Type: ${tag.type}">${tag.name}</span>`;
+                                    return `<span class="badge ${badgeClass} me-1 mb-1 tag-clickable" data-filter-tag="${escapeHtml(tag.name)}" role="button" tabindex="0" title="Filter by ${escapeHtml(tag.name)} (${escapeHtml(tag.type)})">${escapeHtml(tag.name)}</span>`;
                                 }).join('')}
                             </div>
                             
@@ -1225,7 +1376,7 @@
                             <div class="repo-location mb-3">
                                 <small class="text-muted">
                                     <i class="fas fa-building me-1"></i>
-                                    ${getOrganisationFullName(repo.owner.login)}
+                                    ${escapeHtml(getOrganisationFullName(repo.owner.login))}
                                 </small>
                             </div>
                             
@@ -1233,7 +1384,10 @@
                             <div class="row align-items-center">
                                 <div class="col-md-6">
                                     <div class="repo-actions">
-                                        <a href="${repo.html_url}" target="_blank" class="btn btn-outline-primary btn-sm me-2">
+                                        <a href="solution.html?repo=${encodeURIComponent(repo.full_name)}" class="btn btn-primary btn-sm me-2">
+                                            <i class="fas fa-circle-info me-1"></i>View details
+                                        </a>
+                                        <a href="${safeUrl(repo.html_url)}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-sm me-2">
                                             <i class="fab fa-github me-1"></i>View on GitHub
                                         </a>
                                         ${!isPublic ? `<a href="guides.html#signup" class="btn btn-primary btn-sm">
@@ -1245,9 +1399,9 @@
                                     <div class="repo-stats">
                                         <!-- Quality Score -->
                                         <div class="quality-score mb-1">
-                                            <span class="badge ${qualityScore >= 80 ? 'bg-success' : qualityScore >= 60 ? 'bg-warning text-dark' : 'bg-secondary'} quality-badge">
+                                            <span class="badge ${qualityBadgeClass} quality-badge">
                                                 <i class="fas fa-star me-1"></i>
-                                                Quality: ${qualityScore}/100
+                                                Quality: ${escapeHtml(qualityScore)}/100
                                             </span>
                                             ${repo.featured ? '<i class="fas fa-crown text-warning ms-1" title="Featured Solution"></i>' : ''}
                                         </div>
@@ -1255,7 +1409,7 @@
                                         <div class="license-info">
                                             <small class="text-muted">
                                                 <i class="fas fa-balance-scale me-1"></i>
-                                                ${license}
+                                                ${escapeHtml(license)}
                                             </small>
                                         </div>
                                     </div>
@@ -1284,23 +1438,33 @@
             return orgMap[shortName] || shortName;
         }
 
+        // Add a keyword chip, ignoring duplicates. Shared by the search box,
+        // clickable solution tags and query-string restoration.
+        function addKeywordTag(keyword) {
+            const value = (keyword || '').trim();
+            if (!value) {
+                return false;
+            }
+
+            const tagsContainer = document.getElementById('keywordTags');
+            const existingTags = Array.from(tagsContainer.querySelectorAll('.keyword-tag'))
+                .map(tag => tag.textContent.replace('×', '').trim().toLowerCase());
+
+            if (existingTags.includes(value.toLowerCase())) {
+                return false;
+            }
+
+            const tag = document.createElement('span');
+            tag.className = 'badge bg-secondary keyword-tag me-1 mb-1';
+            tag.innerHTML = `${escapeHtml(value)} <i class="fas fa-times ms-1 remove-tag"></i>`;
+            tagsContainer.appendChild(tag);
+            return true;
+        }
+
         // Filter by tag functionality
         function filterByTag(tagName) {
-            // Add tag to keyword filters
-            const tagsContainer = document.getElementById('keywordTags');
-            
-            // Check if tag already exists
-            const existingTags = Array.from(tagsContainer.querySelectorAll('.keyword-tag')).map(tag => 
-                tag.textContent.replace('×', '').trim()
-            );
-            
-            if (!existingTags.includes(tagName)) {
-                const tag = document.createElement('span');
-                tag.className = 'badge bg-secondary keyword-tag me-1 mb-1';
-                tag.innerHTML = `${tagName} <i class="fas fa-times ms-1 remove-tag"></i>`;
-                tagsContainer.appendChild(tag);
-                
-                // Trigger filter update
+            if (addKeywordTag(tagName)) {
+                displayedCount = 0;
                 displayRepositories();
             }
         }
@@ -1472,15 +1636,12 @@
         // Add keyword tag
         function addKeyword() {
             const input = document.getElementById('keywordInput');
-            const keyword = input.value.trim();
-            if (keyword) {
-                const tagsContainer = document.getElementById('keywordTags');
-                const tag = document.createElement('span');
-                tag.className = 'badge bg-secondary keyword-tag me-1 mb-1';
-                tag.innerHTML = `${keyword} <i class="fas fa-times ms-1 remove-tag"></i>`;
-                tagsContainer.appendChild(tag);
+            if (addKeywordTag(input.value)) {
                 input.value = '';
+                displayedCount = 0;
                 displayRepositories();
+            } else {
+                input.value = '';
             }
         }
 
@@ -1500,6 +1661,25 @@
                 if (e.target.classList.contains('remove-tag')) {
                     e.target.parentElement.remove();
                     displayRepositories();
+                }
+            });
+
+            // Clickable solution tags (delegated, keyboard accessible)
+            document.addEventListener('click', function(e) {
+                const tagElement = e.target.closest('.tag-clickable');
+                if (tagElement && tagElement.dataset.filterTag) {
+                    filterByTag(tagElement.dataset.filterTag);
+                }
+            });
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key !== 'Enter' && e.key !== ' ') {
+                    return;
+                }
+                const tagElement = e.target.closest('.tag-clickable');
+                if (tagElement && tagElement.dataset.filterTag) {
+                    e.preventDefault();
+                    filterByTag(tagElement.dataset.filterTag);
                 }
             });
             
@@ -1624,6 +1804,8 @@
             });
         });
     </script>
+
+    </main>
 
     <!-- Footer -->
     <footer>

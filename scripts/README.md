@@ -16,8 +16,8 @@ This directory contains automated scripts for maintaining the Solutions Exchange
 
 **Usage:**
 ```bash
-# Requires GITHUB_TOKEN environment variable
-export GITHUB_TOKEN="your_token_here"
+# Requires the solutions_exchange_secret environment variable
+export solutions_exchange_secret="your_token_here"
 python scripts/update_repositories.py
 ```
 
@@ -48,7 +48,7 @@ python scripts/validate_data.py
 
 **Usage:**
 ```bash
-export GITHUB_TOKEN="your_token_here"
+export GH_SECRET="your_token_here"
 python scripts/manual_update.py
 ```
 
@@ -61,6 +61,30 @@ python scripts/manual_update.py
 - Data validation functions
 - Organization name mapping
 - Report generation
+
+### 📋 `solution_metadata.py`
+**Solution metadata standard** - Parses and validates the `solution.json` file a
+repository can publish to describe itself. See
+[`docs/SOLUTION_METADATA.md`](../docs/SOLUTION_METADATA.md) for the full standard.
+
+**Usage:**
+```bash
+python scripts/solution_metadata.py solution.json
+```
+
+Prints the metadata exactly as it would be published, reports problems on
+standard error and exits non-zero if there were any.
+
+### 📊 `data_quality_report.py`
+**Metadata completeness reporting** - Summarises how many indexed solutions have
+a description, licence, topics and a reuse contact, and names the ones that do not.
+
+**Usage:**
+```bash
+python scripts/data_quality_report.py            # human-readable summary
+python scripts/data_quality_report.py --markdown # for CI job summaries
+python scripts/data_quality_report.py --json     # machine-readable
+```
 
 ## Data Flow
 
@@ -88,10 +112,11 @@ The scripts are fully integrated with GitHub Actions for automated updates:
 
 ## Environment Variables
 
-| Variable | Required | Description |
-|----------|----------|-------------|
-| `GITHUB_TOKEN` | Yes | GitHub personal access token with repo access |
-| `GH_SECRET` | Alternative | Alternative name for GitHub token |
+| Variable | Required | Used by | Description |
+|----------|----------|---------|-------------|
+| `solutions_exchange_secret` | Yes | `update_repositories.py`, `repo_reuse_metrics.py`, `private_repo_and_user_count.py` | GitHub personal access token with repo access. This is the secret the daily GitHub Actions workflow supplies. |
+| `GH_SECRET` | Yes for `manual_update.py` | `manual_update.py` | GitHub token read by the manual helper, which also accepts `GITHUB_TOKEN`. |
+| `ALLOW_DATA_SHRINK` | No | `update_repositories.py` | Set to `1` to allow a run to write a repository set that is substantially smaller than the existing one. Without it, a large drop aborts the run so that a partial GitHub outage cannot wipe published data. |
 
 ## Output Files
 

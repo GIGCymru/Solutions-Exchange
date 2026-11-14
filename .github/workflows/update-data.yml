@@ -6,6 +6,11 @@ on:
     - cron: '0 6 * * *'
   workflow_dispatch: # Allow manual triggering
   push:
+    # Restricted to main: this job commits data back and publishes
+    # publish_dir to gh-pages, so running it from a feature branch would
+    # deploy unmerged code to the live site.
+    branches:
+      - main
     paths:
       - 'scripts/update_repositories.py'
       - 'scripts/private_repo_and_user_count.py'
@@ -111,9 +116,12 @@ jobs:
         echo "Organizations: $(jq .organizations data/private_metrics.json)" >> deployment-log.txt
         
     - name: Deploy to GitHub Pages
-      if: steps.check_changes.outputs.changes == 'true'
+      if: steps.check_changes.outputs.changes == 'true' && github.ref == 'refs/heads/main'
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./
-        exclude_assets: '.github,*.py,*.csv,*.md,*.docx,*.xlsx,*.png'
+        # Excludes source/docs assets, but must not exclude *.png: the NHS logos
+        # (assets/img/171259-nhs-logo-blue.png) and the hero background
+        # (assets/img/background.png, referenced from css/style.css) are PNGs.
+        exclude_assets: '.github,docs,tests,*.py,*.csv,*.md,*.docx,*.xlsx'
