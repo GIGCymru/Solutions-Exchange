@@ -25,6 +25,35 @@ body {
     line-height: 1.6;
 }
 
+/* Accessibility: skip link and visible focus indicators */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 1100;
+    padding: 0.75rem 1.25rem;
+    background-color: var(--accent-color);
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 0 0 6px 0;
+}
+
+.skip-link:focus {
+    left: 0;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
 /* Navigation Styling */
 .navbar {
     background: white !important;
