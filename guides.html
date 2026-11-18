@@ -347,6 +347,8 @@
                                         <li><strong>CONTRIBUTING.md:</strong> Provide clear guidelines for how others can contribute</li>
                                         <li><strong>.gitignore:</strong> Exclude sensitive files and build artifacts</li>
                                         <li><strong>Issue Templates:</strong> Create templates for bug reports and feature requests</li>
+                                        <li><strong>SECURITY.md:</strong> Explain how to report vulnerabilities privately</li>
+                                        <li><strong>CODEOWNERS:</strong> Automatically request review from the people responsible for each part of the code</li>
                                     </ul>
                                     
                                     <h5>Security Considerations</h5>
@@ -356,7 +358,10 @@
                                         <li><strong>Security Alerts:</strong> Enable GitHub security alerts and dependency scanning</li>
                                         <li><strong>Information Governance:</strong> Follow NHS Wales information governance policies</li>
                                         <li><strong>Code Scanning:</strong> Use GitHub's built-in security scanning tools</li>
-                                        <li><strong>Dependency Management:</strong> Keep dependencies up-to-date and review security advisories</li>
+                                        <li><strong>Dependency Management:</strong> Keep dependencies up-to-date with Dependabot alerts and version updates, and review security advisories</li>
+                                        <li><strong>Secret Scanning &amp; Push Protection:</strong> Enable secret scanning and push protection so credentials are blocked before they are committed. If a secret is exposed, revoke and rotate it &mdash; deleting it from history is not enough</li>
+                                        <li><strong>Least Privilege:</strong> Use short-lived or fine-grained tokens, grant only the permissions needed, and restrict the default <code>GITHUB_TOKEN</code> permissions in workflows</li>
+                                        <li><strong>Third-party Actions:</strong> Pin GitHub Actions to a full commit SHA and review them before use</li>
                                     </ul>
                                     
                                     <h5>Collaboration Workflows</h5>
@@ -365,8 +370,9 @@
                                         <li><strong>Feature Branches:</strong> Create separate branches for new developments</li>
                                         <li><strong>Pull Requests:</strong> Use pull requests for code reviews and collaboration</li>
                                         <li><strong>Code Reviews:</strong> Have team members review code before merging</li>
+                                        <li><strong>Protect Your Main Branch:</strong> Use branch protection rules or rulesets to require pull requests, approvals and passing status checks before merging</li>
                                         <li><strong>Release Management:</strong> Tag releases with semantic versioning (v1.0.0, v1.1.0, etc.)</li>
-                                        <li><strong>Continuous Integration:</strong> Set up automated testing and deployment where appropriate</li>
+                                        <li><strong>Continuous Integration:</strong> Set up automated testing and deployment with GitHub Actions where appropriate</li>
                                     </ul>
 
                                     <h5>Documentation Standards</h5>
@@ -414,6 +420,32 @@
                                         <li>Make the most of your GitHub Copilot licence</li>
                                     </ul>
 
+                                    <h5>Ways to Use Copilot</h5>
+                                    <ul>
+                                        <li><strong>Code completions:</strong> Inline suggestions as you type. These are included in paid plans and are not charged as premium requests</li>
+                                        <li><strong>Copilot Chat:</strong> Ask questions, explain code, generate tests and refactor in your IDE or on GitHub.com</li>
+                                        <li><strong>Agent mode:</strong> In supported IDEs, Copilot can plan and make multi-file edits, run commands and iterate on errors</li>
+                                        <li><strong>Copilot coding agent:</strong> Assign an issue to Copilot on GitHub and it works in the background, opening a pull request for you to review</li>
+                                        <li><strong>Copilot code review:</strong> Request an AI review on a pull request as a first pass before human review</li>
+                                        <li><strong>Copilot CLI:</strong> Use Copilot from the terminal to explain commands and carry out tasks</li>
+                                    </ul>
+
+                                    <h5>Choosing a Model</h5>
+                                    <ul>
+                                        <li><strong>Everyday coding, quick questions:</strong> Choose a fast, lightweight model (or the default/auto option)</li>
+                                        <li><strong>Complex debugging, architecture, multi-file changes:</strong> Choose a more capable reasoning model; expect slower, more costly responses</li>
+                                        <li><strong>Premium requests:</strong> Some models use more of your monthly premium request allowance than others (each model has a multiplier). Check the official comparison page for current multipliers</li>
+                                        <li><strong>Models change often:</strong> New models are added and old ones retired regularly, so rely on GitHub's documentation for the current list</li>
+                                    </ul>
+
+                                    <h5>Using Copilot Responsibly</h5>
+                                    <ul>
+                                        <li><strong>Always review output:</strong> AI-generated code can be wrong or insecure. Review and test it as you would any contribution</li>
+                                        <li><strong>Protect data:</strong> Never paste patient-identifiable data, credentials or other sensitive information into prompts</li>
+                                        <li><strong>Custom instructions:</strong> Add a <code>.github/copilot-instructions.md</code> file to give Copilot your project's conventions and context</li>
+                                        <li><strong>Follow local policy:</strong> Apply NHS Wales information governance and AI guidance</li>
+                                    </ul>
+
                                     <h5>Official GitHub Model Comparison Guide</h5>
                                     <p>GitHub maintains an up-to-date reference page that compares all available Copilot AI models across key dimensions such as context window size, supported features, and recommended use cases.</p>
 
@@ -435,7 +467,7 @@
 
                                     <div class="alert alert-info">
                                         <h6 class="alert-heading"><i class="fas fa-info-circle me-2"></i>Access Note</h6>
-                                        <p class="mb-0">Model availability depends on your GitHub Copilot plan. Some models may require a Copilot Enterprise or Copilot Business licence. If you need access to Copilot or specific models, contact the GitHub GIG Cymru team for guidance on the cost and access process.</p>
+                                        <p class="mb-0">Model availability depends on your GitHub Copilot plan. Some models, and features such as the coding agent, depend on your plan (Copilot Business or Copilot Enterprise) and on policies set by your organisation administrators. If you need access to Copilot or specific models, contact the GitHub GIG Cymru team for guidance on the cost and access process.</p>
                                     </div>
                                 </div>
                             </div>
@@ -488,6 +520,7 @@
                     <li>GitHub Copilot Business and Enterprise</li>
                     <li>GitHub Codespaces usage</li>
                     <li>GitHub Actions minutes</li>
+                    <li>Copilot premium requests beyond your plan's included allowance</li>
                     <li>Storage and package usage</li>
                 </ul>
 
@@ -498,6 +531,17 @@
                     Open GitHub Pricing Calculator
                 </a>
             </div>
+
+            <h5>What Drives Cost?</h5>
+
+            <ul>
+                <li><strong>Per-user licences:</strong> GitHub Enterprise and Copilot are charged per user per month.</li>
+                <li><strong>Premium requests:</strong> Copilot plans include a monthly allowance; use of advanced models and agent features beyond it can be billed.</li>
+                <li><strong>Usage-based services:</strong> Codespaces (compute and storage), Actions minutes (private repositories) and package storage are metered.</li>
+                <li><strong>Budgets:</strong> Administrators can set spending limits and monitor usage in billing settings.</li>
+            </ul>
+
+            <p class="small text-muted">Prices and allowances change, so always confirm the current figures in the calculator.</p>
 
             <h5>When Should You Use It?</h5>
 
